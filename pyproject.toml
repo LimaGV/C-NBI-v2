@@ -1,0 +1,36 @@
+[project]
+name = "c-nbi-v2"
+version = "0.1.0.dev0"
+description = "Clean, traceable C-NBI research environment"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy", "scipy", "pandas", "scikit-learn"]
+
+[dependency-groups]
+dev = ["pytest", "pytest-cov", "ruff", "mypy", "ipykernel", "jupyterlab"]
+
+[build-system]
+requires = ["uv_build==0.12.23"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "cnbi_v2"
+module-root = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-config --strict-markers"
+filterwarnings = ["error"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_configs = true
