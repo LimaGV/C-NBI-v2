@@ -50,9 +50,12 @@ PUBLIC_LARGE requer solução futura; não configuramos LFS.
 RESTRICTED mantém no Git somente metadados permitidos, hashes esperados,
 proveniência e código. Revisar metadados também quanto à confidencialidade.
 
-Nenhum dataset real foi incorporado. O contexto conceitual informado sobre CCD,
+Na Fase 0.5 nenhum dataset real foi incorporado. O contexto então informado sobre CCD,
 19 ensaios, 3 fatores, 8 respostas e 5 pontos centrais não foi convertido em dados,
 nem usado para preencher metadados por inferência.
+Na Fase 0.6, o arquivo real foi incorporado com hash e proveniência em
+data/metadata/turning_application/. O raw tem links externos e não é entrada
+computacional pronta; nenhuma observação foi reconstruída a partir do artigo.
 
 Inspeção: [scripts/data/README.md](../scripts/data/README.md).
 Políticas: [gestão](../docs/data_management.md) e [integridade](../docs/data_integrity.md).

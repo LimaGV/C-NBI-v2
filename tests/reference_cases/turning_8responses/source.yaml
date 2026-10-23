@@ -1,0 +1,81 @@
+reference_case_id: turning_8responses
+dataset_id: turning_application_ccd_19run
+source:
+  title: A hybrid multivariate normal boundary intersection approach with post-optimization assisted by mixture design of experiments
+  authors:
+    - Matheus Costa Pereira
+    - Caio Tertuliano Ribeiro
+    - Ronã Rinston Amaury Mendes
+    - Paulo Henrique da Silva Campos
+    - Anderson Paulo de Paiva
+  journal: Engineering Applications of Artificial Intelligence
+  year: 2025
+  volume: "162"
+  article_number: "112510"
+  doi: 10.1016/j.engappai.2025.112510
+  url: https://doi.org/10.1016/j.engappai.2025.112510
+  zotero_item_key: SMMX47JT
+  zotero_library: My Library
+  zotero_attachment_status: NO_CHILD_ATTACHMENT
+  fulltext_access: USER_PROVIDED_LOCAL_PDF
+  local_file_relative_to_documents: Dissertação/02_REFERENCIAS/artigos_pdf/A hybrid multivariate normal boundary intersection .pdf
+  pdf_sha256: 5717f7a90195157830e42e038782f43b2976c77813ccc11f2b3c01e3cc2be70a
+  page_count: 32
+  verification_status: FULLTEXT_VERIFIED
+  priority: CRITICAL_SOURCE
+  metadata_status: METADATA_VERIFIED
+  verification_date: "2026-10-23"
+  verification_coverage: Full text pages 1-32 read; Table 3 and relevant equations/tables inspected directly in rendered pages.
+  table: Table 3
+  table_pdf_page_1_based: 13
+  table_printed_page: "13"
+  quadratic_model: Equation (17), section 2.3, PDF/printed page 6
+  term_order_evidence: Equation (19) page 6; Table 6 page 18; discussion page 15
+evidence_class: LITERATURE
+coefficient_count: 80
+coefficient_order: [beta0, beta1, beta2, beta3, beta11, beta22, beta33, beta12, beta13, beta23]
+response_order: [T, MTTF, WR, Ra, Rt, Kp, ROI, OEE]
+excluded_columns: [VRF1, VRF2, VRF3]
+transcription:
+  method: Direct Table 3 transcription checked against rendered PDF and extracted text
+  decimals: Preserved as printed, three decimal places for coefficients
+  minus_sign: ASCII minus replaces the typographic minus only
+  rescaling_applied: false
+  significance_transcribed: false
+published_scaling:
+  WR: "1e-2"
+  ROI: "1e-2"
+  OEE: "1e-2"
+model_summary_scaling:
+  S: "1e-2"
+  R2_family: Percentage-scale entries preserved as printed, without conversion
+scaling_interpretation_status: PENDING_PHASE_1_VALIDATION
+scaling_caution: Table 2 gives WR in 1e-3 while Table 3 footnote gives WR/ROI/OEE in 1e-2; preserve the printed note and numbers without silently reconciling them.
+coding_scheme:
+  status: CODING_SCHEME_PENDING_VERIFICATION
+  verified_evidence:
+    - Table 6 page 18 is explicitly a coded CCD matrix.
+    - Tables 9-11 pages 19-20 label physical-valued setup columns x1/x2/x3.
+    - Table 1 page 11 physical levels differ from the incorporated workbook.
+  unresolved: Exact coding constants and unambiguous linkage of Table 3 coefficient convention to the raw factors.
+  candidate_factor_order: [Vc, f, ap]
+  beta_factor_mapping_status: PENDING_EXPLICIT_TABLE3_MAPPING_CONFIRMATION
+  beta_factor_mapping:
+    beta1:
+    beta2:
+    beta3:
+future_dimensions:
+  N: 19
+  n_x: 3
+  m: 8
+  p: 10
+  X: [19, 10]
+  Y: [19, 8]
+  B: [10, 8]
+  E: [19, 8]
+future_validation:
+  status: UNVERIFIED
+  tolerance:
+  bitwise_equality_required: false
+  reverse_reconstruction_allowed: false
+  production_code_may_load_expected_outputs: false

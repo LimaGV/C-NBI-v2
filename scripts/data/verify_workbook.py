@@ -24,9 +24,9 @@ def main(argv: list[str] | None = None) -> int:
             detail_limit=args.detail_limit,
         )
     except (OSError, ValueError) as error:
-        print(json.dumps({"error": str(error)}, ensure_ascii=False), file=sys.stderr)
+        print(json.dumps({"error": str(error)}, ensure_ascii=True), file=sys.stderr)
         return 2
-    print(json.dumps(asdict(report), indent=2, ensure_ascii=False, sort_keys=True))
+    print(json.dumps(asdict(report), indent=2, ensure_ascii=True, sort_keys=True))
     return 0
 
 

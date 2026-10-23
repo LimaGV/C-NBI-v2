@@ -35,4 +35,6 @@ PDF/EPUB/DJVU e outros binários locais são ignorados por padrão; repositório
 privado não concede direitos autorais. Não contornar proteção copiando texto
 integral para outra extensão.
 Zotero foi retestado somente em leitura; nenhum item modificado, excluído,
-importado/exportado. Nenhuma referência científica inventada ou adotada.
+importado/exportado. Na Fase 0.6, Pereira et al. (2025) foi registrado como
+R001, fonte FULLTEXT_VERIFIED/CRITICAL_SOURCE da golden reference, sem envio do
+PDF ou aceitação automática da metodologia v2. Nenhuma referência foi inventada.

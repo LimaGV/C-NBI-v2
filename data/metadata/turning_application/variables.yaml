@@ -1,0 +1,137 @@
+dataset_id: turning_application_ccd_19run
+unit_policy: Units below are publication context with explicit page evidence, not measurements inferred from workbook headers
+coding_status: CODING_SCHEME_PENDING_VERIFICATION
+beta_factor_mapping_status: PENDING_EXPLICIT_TABLE3_MAPPING_CONFIRMATION
+variables:
+  - name: run_id
+    role: identifier
+    raw_header: Exp
+    workbook_column: A
+    description: Explicit original experiment identifier, not an implicit Excel row number
+    dtype: integer
+    unit:
+    direction:
+    source: Workbook Plan1 A2:A20
+    raw_renamed: false
+  - name: Vc
+    role: factor
+    raw_header: cs
+    workbook_column: B
+    description: Cutting speed
+    unit: m/min
+    unit_source: Table 1, page 11
+    dtype: numeric
+    direction:
+    model_term_index:
+    notes: Canonical contextual alias; beta mapping and coding constants remain pending
+  - name: f
+    role: factor
+    raw_header: f
+    workbook_column: C
+    description: Feed rate
+    unit: mm/rev
+    unit_source: Table 1, page 11
+    dtype: numeric
+    direction:
+    model_term_index:
+  - name: ap
+    role: factor
+    raw_header: md
+    workbook_column: D
+    description: Depth of cut
+    unit: mm
+    unit_source: Table 1, page 11
+    dtype: numeric
+    direction:
+    model_term_index:
+  - name: T
+    role: response
+    workbook_column: E
+    raw_header: T
+    description: Mean tool life
+    unit: min
+    unit_source: Abstract page 1 and section 3 page 11
+    direction: maximize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+  - name: MTTF
+    role: response
+    workbook_column: F
+    raw_header: MTTF
+    description: Mean time to failure
+    unit: min
+    unit_source: Abstract page 1
+    direction: maximize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+  - name: WR
+    role: response
+    workbook_column: G
+    raw_header: WR
+    description: Wear rate
+    unit: mm/min
+    unit_source: Section 3, page 11, equation (38) and surrounding definitions
+    direction: minimize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+    published_table3_scaling: "1e-2"
+  - name: Ra
+    role: response
+    workbook_column: H
+    raw_header: Ra
+    description: Average surface roughness
+    unit: micrometre
+    unit_source: Section 3 page 11 and abstract page 1
+    direction: minimize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+  - name: Rt
+    role: response
+    workbook_column: I
+    raw_header: Rt
+    description: Total surface roughness
+    unit: micrometre
+    unit_source: Abstract page 1
+    direction: minimize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+  - name: Kp
+    role: response
+    workbook_column: J
+    raw_header: Kp
+    description: Process cost per part
+    unit: USD
+    unit_source: Section 3, page 12
+    direction: minimize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+  - name: ROI
+    role: response
+    workbook_column: K
+    raw_header: ROI
+    description: Return on investment
+    unit:
+    unit_note: Equation (40) defines a ratio; no unit annotation assumed for raw
+    direction: maximize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+    published_table3_scaling: "1e-2"
+  - name: OEE
+    role: response
+    workbook_column: L
+    raw_header: OEE
+    description: Overall equipment effectiveness
+    unit:
+    unit_note: Percentage/ratio representation requires explicit validation before use
+    direction: maximize
+    direction_source: Table 3, page 13
+    raw_dtype: external_formula
+    cached_dtype: numeric_unverified
+    published_table3_scaling: "1e-2"

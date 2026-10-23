@@ -52,3 +52,5 @@ Never use an Excel workbook with unresolved external links as the sole computati
 Somente .xlsx é suportado. .xls e .xlsm não são convertidos silenciosamente.
 Código 0 significa inspeção concluída com relatório, não aprovação científica;
 2 indica erro de entrada/leitura, com mensagem JSON em stderr.
+JSON usa escapes ASCII para Unicode; nomes e cabeçalhos são preservados após
+decodificação JSON, inclusive quando stdout do Windows usa cp1252/ASCII.
