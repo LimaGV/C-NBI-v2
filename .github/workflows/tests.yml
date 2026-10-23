@@ -1,4 +1,4 @@
-name: Infrastructure
+name: Quality
 
 on:
   push:
@@ -35,8 +35,8 @@ jobs:
         run: uv python install
       - name: Sync locked environment
         run: uv sync --locked
-      - name: Infrastructure tests
-        run: uv run pytest
+      - name: Tests and coverage
+        run: uv run pytest --cov=cnbi_v2 --cov-report=term-missing
       - name: Ruff
         run: uv run ruff check .
       - name: mypy

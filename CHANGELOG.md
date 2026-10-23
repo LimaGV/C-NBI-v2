@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — Fase 1 (fundação científica)
+- Base quadrática canônica e OLS multivariado estável, com equivalência univariada.
+- Resíduos, MSE, covariância residual bruta e fator V_X por QR/solve.
+- Covariância dos coeficientes por vec de colunas; leverage, covariância da média,
+  covariância cruzada e de diferenças com coeficientes compartilhados.
+- Resultado imutável, validação de posto/df/inputs e diagnóstico de simetria/PSD.
+- Derivações, fontes verificadas, claims C-RSM-01 a 06, ADR 0003 e testes analíticos.
+- Cobertura em CI com mínimo 96.15%, preservando a cobertura medida antes da fase.
+- Sem ajuste do dataset real, sampling, shrinkage, otimização ou NBI/CNBI.
+
 ## Unreleased — Fase 0.6 (dados e referências)
 - Turning reference dataset infrastructure: cópia raw byte-identical do CCD.xlsx,
   autorizada pelo usuário no repositório privado, com inspeção e proveniência.

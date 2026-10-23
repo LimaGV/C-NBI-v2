@@ -26,6 +26,12 @@ O locator de dependências do ambiente e o vínculo de PR na interface foram
 usados como suporte externo; o projeto continua executado por uv, sem dependência
 de codex_app para sua infraestrutura ou execução científica.
 Revalidar Serena, Context7 e OpenAI Docs MCP quando estiverem expostos.
+Fase 1: Zotero search/metadata/children usados para Díaz-García/Bashiri,
+Myers/Montgomery/Anderson-Cook, Johnson/Wichern e busca Khuri, somente leitura.
+Preprint arXiv primário e livro RSM local inspecionados por passagens; linked_url
+de Johnson/Wichern indisponível por timeout. Context7/Serena/Repomix continuam
+sem exposição; NumPy 2.5 consultado em documentação oficial via web.
+Busca focada rg e AST do Python foram usadas para navegação/auditoria.
 Não instalamos/reconfiguramos MCPs nem obtivemos credenciais.
 
 ## Ferramentas locais
