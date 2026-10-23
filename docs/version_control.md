@@ -7,8 +7,11 @@ main recebe somente estados testados, documentados, reproduzíveis e
 metodologicamente rastreáveis. Trabalhar em feature/*, experiment/*, fix/*,
 docs/*, release/*. Proibidos nomes final, final2, test, temp, new.
 Branch inicial: feature/00-project-foundation.
-main nasce com commit vazio 63dd373 para fornecer ancestral ao primeiro PR;
-não contém implementação.
+main nasceu com commit vazio 63dd373 para fornecer ancestral ao primeiro PR.
+O PR #1 foi integrado por squash autorizado em 2026-10-23, após CI verde e
+ausência de conflitos: 777a8fd07d6edf901acb46fcec6f97f2a0d1e7a4.
+A árvore desse squash foi conferida como idêntica ao HEAD revisado da Fase 0.
+A Fase 0.5 partiu dessa main limpa em feature/00-5-data-reference-foundation.
 
 ## Registro mínimo de mudança científica
 - O que mudou, por quê e definição matemática anterior/nova.

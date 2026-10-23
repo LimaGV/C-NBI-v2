@@ -1,14 +1,20 @@
 # Roadmap
 
-## Fase 0 — escopo desta tarefa
-Projeto isolado, ambiente, lock, CI, testes de infraestrutura, governança, dados,
-decisões e referências. Abrir PR para main e registrar verificações.
-Merge é ação posterior.
+## Fase 0 — infraestrutura concluída
+PR #1 integrado por squash após árvore limpa, ausência de conflitos e CI verde.
+Commit em main: 777a8fd07d6edf901acb46fcec6f97f2a0d1e7a4.
+Branch histórica: feature/00-project-foundation.
+
+## Phase 0.5 — Experimental data and scientific reference foundation
+Branch: feature/00-5-data-reference-foundation, criada da main atualizada e limpa.
+Camadas de dados, templates vazios, hashes, inspeção read-only .xlsx e integridade
+bibliográfica. Novo PR deve permanecer aberto, sem merge automático.
+Nenhum dataset real incorporado ou algoritmo científico implementado.
 
 ## Fase 1 — não iniciada
-Aguardar nova tarefa. Antes de ciência: definições matemáticas, pesquisa começando
-pelo Zotero, classificação de claims e MDRs. Não antecipar arquitetura ou defaults.
+Aguardar nova tarefa. Antes de ciência: matemática, Zotero, claims e MDRs.
+Não antecipar arquitetura ou defaults. Fases anteriores não foram renumeradas.
 
 ## Posteriormente — sem compromisso metodológico
-Experimentos e validação serão planejados após revisão das propostas.
-Não estão definidos solver, seeds, tolerâncias, H adaptativo ou cutoffs.
+Experimentos/validação após revisão. Nenhum solver, seed, H adaptativo, tolerância,
+RSM, NBI/CNBI, Monte Carlo, Pareto ou cutoff definido nesta fase.

@@ -1,18 +1,26 @@
-# Arquitetura inicial
+# Arquitetura — Fases 0/0.5
 
-Estado: infraestrutura, sem arquitetura científica escolhida.
-A única API de cnbi_v2 é __version__. _version.py contém a versão de
-desenvolvimento. Não existem solvers, RSM, Monte Carlo, âncoras, normalização,
-Pareto ou Simplex-Lattice implementados.
+Nenhuma arquitetura ou algoritmo científico escolhido.
+cnbi_v2 exporta __version__; _version.py mantém 0.1.0.dev0.
+cnbi_v2.data contém SHA-256 e inspeção .xlsx sem transformar dados.
 
-O layout src separa o pacote dos testes e evita mascarar instalação incorreta.
-c-nbi-v2 usa module-name = cnbi_v2 explicitamente: a normalização automática
-produziria c_nbi_v2. uv_build==0.12.23 é dependência exclusivamente de build,
-justificada pela instalação editável e empacotamento; não é runtime científico.
-O backend acompanha o uv local. O lock fixa versões de runtime e desenvolvimento.
+- data/hashing.py: hash em blocos, somente leitura.
+- data/workbooks.py: relatórios via dataclasses, leitura openpyxl e OOXML.
+- scripts/data/verify_workbook.py: JSON em stdout; sem save, recálculo ou snapshot.
+- data/: documentação/templates sem dataset real.
+- references/: fontes/notas/claims seletivos.
+- results/: saídas futuras, nunca dados brutos.
 
-Não foram criados módulos científicos antecipados. references/ organiza
-proveniência; experiments/ receberá protocolos; results/ contém saídas derivadas;
-notebooks/ é exploração; scripts/ tem somente verificação de ambiente.
-Documentação de software não justifica metodologia: ver
-integrations/software_documentation.md.
+Layout src evita mascarar instalação incorreta. uv_build==0.12.23 é dependência
+de build; module-name é explicitamente cnbi_v2.
+Runtime original: numpy, scipy, pandas, scikit-learn.
+Única dependência direta nova: openpyxl>=3.1,<4, resolvida como 3.1.5.
+et-xmlfile é transitiva; nenhum outro engine Excel adicionado.
+
+openpyxl não fornece stubs na distribuição instalada. mypy permanece strict;
+ignore_missing_imports é limitado a openpyxl/openpyxl.* e a ponte de worksheet
+usa Any explicitamente. Relatórios e APIs públicas próprios são anotados.
+
+Não há solver, RSM, regressão, Monte Carlo, âncoras, SVD metodológica, PA,
+Simplex-Lattice, payoff matrix, escolha de H, Pareto ou métricas multiobjetivo.
+Contagens estruturais de células não são resultados científicos.

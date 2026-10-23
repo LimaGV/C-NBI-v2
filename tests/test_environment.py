@@ -39,7 +39,7 @@ def test_version_matches_distribution_and_project() -> None:
     assert cnbi_v2.__version__ == importlib.metadata.version("c-nbi-v2")
 
 
-@pytest.mark.parametrize("module_name", ["numpy", "scipy", "pandas", "sklearn"])
+@pytest.mark.parametrize("module_name", ["numpy", "scipy", "pandas", "sklearn", "openpyxl"])
 def test_runtime_dependency_imports(module_name: str) -> None:
     module = importlib.import_module(module_name)
     assert module.__file__ is not None
@@ -49,7 +49,7 @@ def test_runtime_dependency_imports(module_name: str) -> None:
 def test_runtime_dependencies_are_only_the_requested_libraries() -> None:
     requirements = importlib.metadata.requires("c-nbi-v2") or []
     names = {re.split(r"[\s<>=!~;\[]", item, maxsplit=1)[0].lower() for item in requirements}
-    assert names == {"numpy", "scipy", "pandas", "scikit-learn"}
+    assert names == {"numpy", "scipy", "pandas", "scikit-learn", "openpyxl"}
 
 
 def test_legacy_package_is_unavailable_and_not_loaded() -> None:

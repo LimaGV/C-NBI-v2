@@ -1,14 +1,22 @@
-# Integridade dos dados
+# Integridade experimental
 
-Dados brutos são imutáveis. Preservar origem, responsável, data de obtenção,
-permissões, formato, esquema, unidades e SHA256. Correção produz nova versão
-derivada e mantém o original, com razão e transformação rastreáveis.
+The agent must never silently modify experimental raw data.
 
-Verificar checksum/esquema antes do uso; registrar faltantes, duplicados,
-unidades, restrições e exclusões. Não imputar, filtrar, normalizar ou regularizar
-silenciosamente: os critérios dependem de decisão científica.
+Raw são bytes exatamente recebidos, nunca editados in-place. Correções,
+exclusões, conversões, imputações e normalização exigem transformação explícita,
+reproduzível, versionada, documentada e testável em outra camada. Preservar
+original e razão. Snapshot também é imutável após criação e não substitui raw.
 
-Derivação registra entradas/hashes, commit, configuração, ambiente e saídas/hashes.
-Falha de integridade bloqueia o uso daquele conjunto; não substituí-lo em silêncio.
-Git não é backup da biblioteca Zotero ou de dados.
-Nenhum dataset adicionado ou transformado nesta fase.
+Never use an Excel workbook with unresolved external links as the sole computational source of truth.
+
+Excel é aceito como fonte primária. Snapshot futuro materializa valores usados
+por procedimento e validação explícitos, sem presumir correção de caches.
+O inspetor não gera snapshot. Ausência de link detectado não prova independência.
+
+Registrar origem, responsável, datas, permissões, esquema, unidades, desenho e
+SHA-256 de raw/snapshot/processed. Divergência de hash bloqueia uso até
+esclarecimento. Hash identifica bytes, não validade de valores.
+Derivação registra entrada, código/commit, ambiente, parâmetros e saída/hashes.
+Futuras linhas terão run_id explícito; linha Excel é coordenada, não ID.
+Resultados pertencem a results/, nunca a raw.
+Nenhum dataset foi incorporado, corrigido ou transformado nesta fase.

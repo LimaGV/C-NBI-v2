@@ -1,18 +1,26 @@
-# Gestão dos dados e artefatos
+# Gestão dos dados
 
-| Artefato | Política inicial |
-| --- | --- |
-| Código/governança | Git e revisão por PR |
-| Dados brutos/derivados | Fora do Git por padrão; acesso/backup definidos antes da coleta |
-| Manifestos pequenos | Git após revisão de conteúdo/permissões |
-| Resultados | results/ local ignorado; evidências pequenas só por decisão explícita |
-| Experimentos | Protocolos no Git; runs/ ignorado |
-| Notebooks | Remover saídas, dados e credenciais antes de commitar |
-| PDFs/anexos | Zotero canônico; inclusão seletiva com permissão |
-| BibTeX/notas | Metadados verificados e rastreáveis a Zotero |
-| Ambientes/secrets/caches | Nunca versionar |
+Excel (.xlsx) pode ser registro primário. Não exigir coleta em CSV.
+raw preserva bytes recebidos; snapshots preservam valores quando necessários;
+interim é regenerável; processed deriva de raw/snapshot + script;
+external identifica terceiros; metadata registra a cadeia.
 
-Planejar nomes, retenção, responsável, controle de acesso e restauração antes
-de produzir dados. Não adotar armazenamento externo, LFS ou cloud automaticamente.
-Registrar transferências e conferir hashes. Não copiar a biblioteca Zotero inteira.
-Somente leitura Zotero autorizada nesta fundação; não modificar/excluir itens.
+## Classificação por dataset, sem inferência
+- PUBLIC_SMALL: versionamento direto após confirmação/aprovação, com exceção
+  exata revisada no .gitignore, inclusive processed público pequeno.
+- PUBLIC_LARGE: solução futura apropriada; não configurar LFS automaticamente.
+- RESTRICTED: payload fora do Git; versionar somente metadata permitida,
+  hash esperado, provenance e código.
+
+Categoria desconhecida fica vazia. Ignorar payload por padrão não atribui classe.
+Não alterar ignore só para esconder dados reais ou limpar working tree.
+data/ não é ignorada inteira: README, metadata e schemas continuam versionáveis.
+Raw/snapshot são imutáveis; derivação registra entradas, hashes, commit,
+configuração, ambiente e saídas. Resultados ficam em results/, nunca em raw.
+
+local_library ignora binários, incluindo PDF/EPUB/DJVU; somente Markdown,
+BibTeX, YAML, JSON e CSV seletivos são elegíveis por padrão. Direitos continuam
+obrigatórios; não publicar obras integrais trocando sua extensão para texto.
+Revisar confidencialidade dos metadados, retenção, acesso e restauração.
+Não adotar cloud/LFS nem copiar a biblioteca Zotero automaticamente.
+Zotero somente leitura nesta fase; nenhum dataset/documento incorporado.

@@ -1,9 +1,11 @@
 # Fontes da metodologia
 
-Nenhuma metodologia/fonte científica aceita na fundação.
-C001–C008 aguardam pesquisa começando por Zotero, formalização matemática e MDR.
-ADR 0001 é diretriz de escopo, não evidência científica.
+Nenhuma metodologia ou referência científica aceita nas Fases 0/0.5.
+C001–C008 aguardam Zotero, formalização e MDR.
+ADRs 0001/0002 são de escopo/infraestrutura, não validade científica.
 
-Métodos futuros vinculam definição, claim ID, Zotero item/citekey, metadados,
-texto integral realmente inspecionado, passagens/páginas, MDR, pressupostos,
-testes, limitações e resultados afetados. Context7 sustenta software, não ciência.
+Decisões futuras exigem combinação pertinente de literatura verificada,
+derivação documentada ou experimento reproduzível. Vincular definição, claim,
+fonte/Zotero/citekey quando aplicável, cobertura real de leitura,
+páginas/equações verificadas, derivação/protocolo, MDR, pressupostos, testes,
+limitações e resultados afetados. Context7 sustenta software, não ciência.

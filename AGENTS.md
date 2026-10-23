@@ -60,11 +60,12 @@ Dependências novas exigem justificativa; mudanças acompanham uv.lock.
 Nunca desenvolver em main. Usar feature/*, experiment/*, fix/*, docs/*, release/*.
 Proibidos nomes final, final2, test, temp, new. main só recebe estados testados,
 documentados, reproduzíveis e metodologicamente rastreáveis por PR.
-Não fazer merge com CI falhando; não mergear esta fundação automaticamente.
+Não fazer merge com CI falhando ou conflito; novos PRs não têm merge automático.
+O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0.5.
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
-Classificar claims: LITERATURE, INTERNAL_EVIDENCE, PROPOSED.
+Classificar claims: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. Não escrever "a literatura mostra" sem fonte verificável.
 Dados brutos são imutáveis. Derivações exigem origem, hashes, commit, configuração,
@@ -73,7 +74,42 @@ automaticamente. Seguir docs/data_integrity.md e docs/data_management.md.
 
 ## External actions e secrets
 Não executar ações destrutivas ou persistentes desnecessárias sem autorização
-da tarefa. Esta fundação autoriza criar LimaGV/C-NBI-v2 privado, push e PR;
-não autoriza modificar a v1 ou fazer merge.
+da tarefa. A Fase 0.5 autoriza merge do PR #1 após checks e ausência de conflito,
+e criação/push/PR da nova branch. Não autoriza merge do novo PR ou alteração da v1.
 Nunca registrar tokens, API keys, passwords ou credentials. Não copiar .env,
 configuração global de agentes, credenciais ou conteúdo de keyring para o Git.
+
+## Experimental data integrity
+The agent must never silently modify experimental raw data.
+
+All corrections, transformations, exclusions, unit conversions or imputations must be:
+- explicit;
+- reproducible;
+- version controlled;
+- documented;
+- testable.
+
+If an experimental value must be corrected, raw remains unchanged.
+The correction must occur in a documented transformation step.
+Raw e snapshots são imutáveis; snapshot não substitui o original.
+Never use an Excel workbook with unresolved external links as the sole computational source of truth.
+Excel é formato primário aceito, mas código não depende de edição manual.
+Cada linha experimental deverá ter run_id explícito; linha Excel não é ID científico.
+Não incorporar dataset real ou criar snapshot sem operação explícita posterior.
+Classificação PUBLIC_SMALL/PUBLIC_LARGE/RESTRICTED exige evidência; não escolher
+por inferência, não configurar LFS automaticamente e não alterar .gitignore só
+para ocultar dados existentes. Processed exige raw/snapshot + script versionado.
+Resultados pertencem a results/, nunca a data/raw/.
+
+## Bibliographic integrity
+É proibido inventar ou inferir sem verificação DOI, título, autores, ano, journal,
+volume, issue, páginas, equações ou páginas que supostamente sustentem uma claim.
+Se desconhecido, deixar vazio ou marcar UNVERIFIED_METADATA.
+Toda decisão científica futura exige uma combinação pertinente de literatura
+verificada, derivação matemática documentada ou experimento reproduzível.
+Evidência interna não é literatura; hipótese proposta não é fato.
+Status de fonte: UNREAD, METADATA_VERIFIED, PARTIAL, FULLTEXT_VERIFIED, CRITICAL_SOURCE.
+CRITICAL_SOURCE expressa importância, não substitui evidência de leitura integral.
+Não enviar PDF/EPUB/DJVU ou outros documentos protegidos ao Git por padrão.
+Zotero continua canônico e somente leitura nesta fase; Git guarda seleções
+verificadas de BibTeX, notas, IDs, claims, DOI conhecido, proveniência e decisões.

@@ -23,8 +23,17 @@ report = {
     "dependencies": {
         name: importlib.metadata.version(name)
         for name in [
-            "numpy", "scipy", "pandas", "scikit-learn",
-            "pytest", "pytest-cov", "ruff", "mypy", "ipykernel", "jupyterlab",
+            "numpy",
+            "scipy",
+            "pandas",
+            "scikit-learn",
+            "openpyxl",
+            "pytest",
+            "pytest-cov",
+            "ruff",
+            "mypy",
+            "ipykernel",
+            "jupyterlab",
         ]
     },
 }

@@ -21,3 +21,16 @@ Páginas OpenAI acessadas pelos redirecionamentos oficiais de developers.openai.
 openaiDeveloperDocs MCP não foi chamado. SHAs da CI conferidos com git ls-remote:
 actions/checkout v7.0.1 e astral-sh/setup-uv v9.0.0.
 uv e backend mantidos em 0.12.23, sem upgrade global.
+
+## Fase 0.5 — fallback oficial (Context7 continua não exposto)
+Em 2026-10-23 foram consultados:
+- https://openpyxl.readthedocs.io/en/stable/tutorial.html
+- https://openpyxl.readthedocs.io/en/stable/optimized.html
+- https://openpyxl.readthedocs.io/en/stable/api/openpyxl.reader.excel.html
+- https://openpyxl.readthedocs.io/en/stable/formula.html
+- https://openpyxl.readthedocs.io/en/stable/defined_names.html
+- https://cli.github.com/manual/gh_pr_merge
+
+Uso: leitura .xlsx, fechamento explícito, dimensões incorretas,
+fórmulas preservadas e tokenização limitada; merge com head esperado.
+openpyxl resolvida como 3.1.5. Não é engine de cálculo.
