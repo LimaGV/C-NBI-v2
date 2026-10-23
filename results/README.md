@@ -1,5 +1,9 @@
 # Resultados computacionais
 
+Execução autorizada da Fase 1: turning_8responses_validation, a partir da
+revisão literal do CCD. Ver docs/mathematics/turning_real_validation.md.
+Os artefatos preservam divergências e não declaram reprodução de 80/80.
+
 ~~~text
 data → computation → results
 ~~~

@@ -121,10 +121,14 @@ def test_original_explicit_ids_and_response_formulas_are_preserved() -> None:
         workbook.close()
 
 
-def test_snapshot_and_processed_payloads_have_not_been_fabricated() -> None:
-    for layer in ["snapshots", "processed"]:
-        folder = ROOT / "data" / layer / "turning_application"
-        assert sorted(path.name for path in folder.iterdir()) == ["README.md"]
+def test_historical_raw_is_ineligible_and_only_explicit_literal_revision_is_processed() -> None:
+    folder = ROOT / "data/snapshots/turning_application"
+    assert sorted(path.name for path in folder.iterdir()) == ["README.md"]
+    processed = ROOT / "data/processed/turning_application"
+    assert sorted(path.name for path in processed.iterdir()) == [
+        "CCD_values_20261023.csv",
+        "README.md",
+    ]
     dataset = (META / "dataset.yaml").read_text(encoding="utf-8")
     assert "status: RAW_NOT_SELF_CONTAINED" in dataset
     assert "snapshot_status: SNAPSHOT_PENDING_EXTERNAL_SOURCE" in dataset

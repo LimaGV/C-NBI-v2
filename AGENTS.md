@@ -85,6 +85,11 @@ A tarefa da Fase 1 autoriza squash merge do PR #3 após CI verde e ausência
 de conflito, desenvolvimento/push/PR em feature/01-multivariate-rsm-foundation.
 O novo PR da Fase 1 não tem merge automático. Não acrescentar ferramentas de
 sampling, shrinkage, otimização, NBI/CNBI ou dependências sem justificativa.
+A tarefa posterior autoriza ajustar o CCD atualizado, preservar sua revisão
+literal separadamente e comparar os 80 coeficientes. A autorização privada
+do mesmo workbook é estendida somente a CCD_values_20261023.xlsx e à extração
+literal correspondente. Não sobrescrever CCD_original.xlsx; atualizar o PR #4,
+sem fazer merge ou iniciar outra fase.
 Nunca registrar tokens, API keys, passwords ou credentials. Não copiar .env,
 configuração global de agentes, credenciais ou conteúdo de keyring para o Git.
 
@@ -111,6 +116,10 @@ Table 3 de Pereira et al. (2025) é expected output, nunca observação experime
 Proibido reconstruir Y, imputar respostas ou ajustar dados para reproduzir
 coeficientes publicados. OLS/RSM e incerteza analítica estão autorizados na
 Fase 1 com dados sintéticos; não ajustar o raw experimental não autocontido.
+A revisão literal fornecida em 2026-10-23 pode ser ajustada com precisão integral.
+Coding nominal, escala de apresentação e hipóteses diagnósticas devem ser
+explícitos. Arredondamento de cópia de WR é diagnóstico opcional, excluído dos
+modelos reais e dos totais de validação; nunca alterar os valores experimentais.
 Monte Carlo e NBI/CNBI continuam fora do escopo autorizado.
 Classificação PUBLIC_SMALL/PUBLIC_LARGE/RESTRICTED exige evidência; não escolher
 por inferência, não configurar LFS automaticamente e não alterar .gitignore só

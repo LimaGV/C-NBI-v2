@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — validação aplicada da Fase 1
+- Nova revisão literal e autocontida do CCD, preservada junto ao raw histórico.
+- Extração dos tokens numéricos completos, oito RSMs reais e comparação dos
+  80 coeficientes sob quatro desenhos explícitos e duas escalas de apresentação.
+- Reprodução parcial: 50/80 pela nota literal; 70/80 sob escala diagnóstica,
+  ambos com desenho nominal rotacional. WR completo diverge nos dez termos.
+- Diagnóstico opcional de pré-arredondamento de WR reproduz 10/10, mas altera
+  19 observações da cópia e fica excluído dos modelos/validação reais.
+- Sem alteração da implementação matemática RSM ou dos coeficientes publicados.
+
 ## Unreleased — Fase 1 (fundação científica)
 - Base quadrática canônica e OLS multivariado estável, com equivalência univariada.
 - Resíduos, MSE, covariância residual bruta e fator V_X por QR/solve.

@@ -32,6 +32,9 @@ Preprint arXiv primário e livro RSM local inspecionados por passagens; linked_u
 de Johnson/Wichern indisponível por timeout. Context7/Serena/Repomix continuam
 sem exposição; NumPy 2.5 consultado em documentação oficial via web.
 Busca focada rg e AST do Python foram usadas para navegação/auditoria.
+Validação aplicada: Zotero buscou NIST, sem item pertinente (fallback textual
+retornou itens não relacionados, que não foram usados). Fórmula de CCD rotacional
+conferida diretamente no handbook oficial do NIST; nenhum metadado de item foi inventado.
 Não instalamos/reconfiguramos MCPs nem obtivemos credenciais.
 
 ## Ferramentas locais

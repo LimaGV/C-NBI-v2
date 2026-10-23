@@ -24,7 +24,9 @@ Base quadrática completa, OLS conjunto e univariado equivalente, resíduos/MSE,
 covariância residual bruta, covariância dos coeficientes e incerteza analítica
 das médias e diferenças. Fontes consultadas antes de implementação;
 ADR 0003, derivações e testes sintéticos. Branch feature/01-multivariate-rsm-foundation.
-Validação do dataset real e Table 3 continua pendente. Não iniciar próxima fase.
+Complemento: CCD literal real ajustado; reprodução parcial de Table 3, 50/80
+pela nota literal ou 70/80 sob escala diagnóstica, com desenho nominal rotacional.
+WR e divergências de escala/coding continuam pendentes. Não iniciar próxima fase.
 
 ## Posteriormente — sem compromisso metodológico
 Experimentos/validação após nova tarefa. Nenhum solver de otimização, seed do

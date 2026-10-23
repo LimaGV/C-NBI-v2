@@ -1,5 +1,13 @@
 # Turning application — published expected outputs
 
+## Estado aplicado atual
+A revisão literal do CCD foi ajustada preservando a precisão das células.
+O [relatório](../../../docs/mathematics/turning_real_validation.md) registra
+50/80 pela nota de escala e 70/80 com escala diagnóstica, sob CCD nominal
+rotacional. WR diverge com precisão integral; não se declara reprodução completa.
+Os coeficientes e source.yaml abaixo permanecem como originalmente registrados.
+As descrições documentais/futuras seguintes registram o estado da Fase 0.6.
+
 Golden reference documental da Table 3 de Pereira et al. (2025),
 DOI 10.1016/j.engappai.2025.112510, página impressa/PDF 13.
 PDF local conferido; metadados correspondentes ao item Zotero SMMX47JT.

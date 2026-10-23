@@ -1,5 +1,15 @@
 # Pereira et al. (2025) — hybrid VRF-NBI
 
+## Complemento empírico posterior
+O CCD literal atualizado foi ajustado com precisão integral. Ver
+[validação real](../../docs/mathematics/turning_real_validation.md): 50/80 pela
+nota literal e 70/80 sob escala diagnóstica com desenho nominal rotacional.
+WR com valores integrais diverge; uma cópia arredondada a três casas reproduz
+seus dez coeficientes, sem provar o preprocessing original. Não alterar a
+transcrição de Table 3 ou os valores experimentais com base nesse diagnóstico.
+Table 2 p.12 foi reconferida visualmente; PDF conserva o hash registrado.
+As lacunas descritas abaixo registram a investigação inicial da Fase 0.6.
+
 Title: A hybrid multivariate normal boundary intersection approach with post-optimization assisted by mixture design of experiments
 Authors: Matheus Costa Pereira; Caio Tertuliano Ribeiro; Ronã Rinston Amaury Mendes;
 Paulo Henrique da Silva Campos; Anderson Paulo de Paiva.

@@ -1,5 +1,13 @@
 # Turning application — proveniência experimental
 
+## Revisão atual
+Ver [values_20261023](values_20261023/README.md): atualização literal do CCD,
+autocontida e elegível para ajuste com precisão integral. O resultado publicado
+é reproduzido parcialmente, com hipóteses de coding/scaling explícitas.
+Os YAML/JSON abaixo preservam a evidência histórica da Fase 0.6.
+
+## Revisão histórica
+
 Fonte exata fornecida pelo usuário, relativa a Documents:
 Dissertação/02_REFERENCIAS/Dados/CCD.xlsx.
 Cópia local/Git: data/raw/turning_application/CCD_original.xlsx.

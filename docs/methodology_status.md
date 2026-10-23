@@ -1,5 +1,18 @@
 # Estado metodológico
 
+## Complemento aplicado — CCD literal ajustado
+O usuário forneceu revisão atualizada, com 19×11 entradas numéricas reais,
+sem fórmulas/dependências externas detectadas. O novo raw foi preservado e os
+oito modelos ajustados com a precisão integral das células; rank=10, nu=9.
+Relatório: [validação real](mathematics/turning_real_validation.md), ADR 0004 EXPERIMENTAL.
+Com desenho nominal rotacional: 50/80 pela nota literal de escala e 70/80 sob
+escala diagnóstica 10^-3, em conflito com a nota impressa 10^-2.
+WR diverge em 10/10 com precisão integral. Arredondar uma cópia de WR a três
+casas explica os coeficientes publicados, mas é diagnóstico a posteriori,
+excluído dos ajustes reais. C011 é PARTIALLY_SUPPORTED, sem validação integral.
+O raw histórico continua não autocontido; não foi sobrescrito nem ajustado.
+Nenhum Monte Carlo, shrinkage ou otimização foi iniciado.
+
 ## Fase 1 — fundação RSM e incerteza analítica
 
 Primeira implementação científica: base quadrática completa, OLS multivariado,
@@ -23,8 +36,9 @@ Dataset turning_application_ccd_19run incorporado como RAW_NOT_SELF_CONTAINED:
 SNAPSHOT_PENDING_EXTERNAL_SOURCE: caches existem, mas não foram certificados.
 Golden reference da Table 3 criada com 80 valores, fonte FULLTEXT_VERIFIED.
 CODING_SCHEME_PENDING_VERIFICATION; interpretação de escalas permanece pendente.
-Reprodução numérica dos coeficientes continua PROPOSED/UNVERIFIED.
-Nenhum dado experimental foi ajustado ou reconstruído. Ver data/metadata/turning_application/ e
+Na Fase 0.6, reprodução numérica ficou PROPOSED/UNVERIFIED; o complemento
+aplicado acima registra a evidência posterior. Não houve reconstrução de dados.
+Ver data/metadata/turning_application/ e
 tests/reference_cases/turning_8responses/; nenhuma resposta foi reconstruída.
 
 Dimensões estruturais: n=19,n_x=3,m=8,p=10; nu=9 se rank(X)=10.

@@ -6,8 +6,10 @@ Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
 Fase 0.6 integrada pelo PR #3. A Fase 1 implementa base quadrática, OLS
-multivariado e incerteza analítica, validados sinteticamente. O dataset real
-permanece sem ajuste e a reprodução da Table 3 continua pendente.
+multivariado e incerteza analítica, validados sinteticamente. O CCD atualizado
+foi ajustado com valores literais integrais; a Table 3 tem reprodução parcial
+condicional (70/80), com divergência de WR e da nota de escala explícitas.
+Ver [validação aplicada](docs/mathematics/turning_real_validation.md).
 
 A [v1](https://github.com/LimaGV/C-NBI/tree/cnbi-v1.0) é referência histórica.
 Não foram herdados módulos, arquitetura, ambiente ou parâmetros.

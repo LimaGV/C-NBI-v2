@@ -103,6 +103,11 @@ matriz (q,n_x) e retorna (q,m). Todas as APIs de incerteza de ponto exigem (n_x,
 
 ## Conexão com o caso de torneamento
 
+Atualização aplicada: o usuário forneceu revisão literal autocontida do CCD.
+Ver [validação real e limites](turning_real_validation.md): oito RSMs ajustados
+sem mudar a precisão das células; reprodução publicada parcial, com escalas e
+WR não reconciliados. O parágrafo seguinte descreve o estado inicial da Fase 1.
+
 Somente as dimensões verificadas são usadas: n=19, n_x=3, m=8, p=10.
 Se rank(X)=10, nu=9, B tem dimensão 10×8 e Sigma_hat_e teria dimensão 8×8.
 Isso é um fato estrutural condicionado ao posto, sem conclusão sobre shrinkage.

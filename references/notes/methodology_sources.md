@@ -15,7 +15,10 @@ sustentam a regressão e seus segundos momentos; ver
 [cobertura de leitura](rsm_foundation_sources.md). Não alegar leitura integral
 dos livros ou da versão final de Díaz-García/Bashiri (2014).
 C-RSM-01 a 06 ligam literatura, derivação e evidência sintética;
-adequação ao experimento real e reprodução da Table 3 continuam pendentes.
+adequação ao experimento real e reprodução integral da Table 3 não estão certificadas.
+No complemento aplicado, C011 passa a PARTIALLY_SUPPORTED: 50/80 pela nota
+literal ou 70/80 sob escala diagnóstica, com hipótese de CCD nominal rotacional.
+Ver turning_real_validation.md; nenhum valor experimental foi corrigido.
 
 Decisões futuras exigem combinação pertinente de literatura verificada,
 derivação documentada ou experimento reproduzível. Vincular definição, claim,

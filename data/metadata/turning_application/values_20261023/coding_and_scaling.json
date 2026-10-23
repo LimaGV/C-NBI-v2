@@ -1,0 +1,38 @@
+{
+  "production_model_changed": false,
+  "responses_fitted": "All eight original response columns, in their stored units and full float64 precision",
+  "design_cases": {
+    "physical_cells": "Actual B2:D20 values unchanged; primary cell-coordinate fit",
+    "affine_from_cells": {
+      "formula": "(physical-center)/factorial_half_range",
+      "center": [162.5, 0.16, 0.24],
+      "factorial_half_range": [62.5, 0.06, 0.09],
+      "evidence": "Five repeated center settings and the first eight factorial settings"
+    },
+    "table6_rounded_alpha": {
+      "source": "Pereira et al. (2025), Table 6, PDF page 18; factor columns in printed row order",
+      "alpha": 1.682,
+      "squares": "Recomputed by the complete quadratic basis, not copied from rounded printed squares"
+    },
+    "rotatable_alpha_hypothesis": {
+      "alpha_formula": "8**(1/4)",
+      "alpha": 1.681792830507429,
+      "source": "NIST/SEMATECH e-Handbook section 5.3.3.6.1, Table 3.23 and alpha formula",
+      "source_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3361.htm",
+      "status": "THEORETICAL_NOMINAL_CCD_HYPOTHESIS_CONSISTENT_WITH_PRINTED_ROUNDING",
+      "physical_factor_values_overwritten": false
+    }
+  },
+  "nominal_factor_order": ["Vc", "f", "ap"],
+  "beta_mapping_evidence": "Seven responses match all ten coefficients under the explicitly diagnostic scale and nominal rotatable design; not an independent confirmation of physical coding constants",
+  "published_scaling_unchanged": {"WR": "1e-2", "ROI": "1e-2", "OEE": "1e-2"},
+  "display_cases": {
+    "table3_footnote_1e-2": {"WR": 100, "ROI": 100, "OEE": 100},
+    "diagnostic_1e-3_NOT_FOOTNOTE": {"WR": 1000, "ROI": 1000, "OEE": 1000}
+  },
+  "display_multipliers_applied_after_OLS_only": true,
+  "unmentioned_responses_display_multiplier": 1,
+  "scaling_discrepancy_status": "UNRESOLVED_PUBLICATION_NOTE_CONFLICT",
+  "rounding_policy": "Half a unit in the last printed decimal, inclusive ties, plus 16*float64_eps*max(1,abs(calculated),abs(published)) solely for numerical boundaries",
+  "lossy_WR_diagnostic": "Optional post-hoc copy rounded to 3 decimals; all 19 observations would change. Excluded from actual fits and validation totals. Does not prove author preprocessing."
+}
