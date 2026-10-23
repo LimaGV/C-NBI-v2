@@ -4,7 +4,13 @@ version = "0.1.0.dev0"
 description = "Clean, traceable C-NBI research environment"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
-dependencies = ["numpy", "scipy", "pandas", "scikit-learn"]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "scikit-learn",
+    "openpyxl>=3.1,<4",
+]
 
 [dependency-groups]
 dev = ["pytest", "pytest-cov", "ruff", "mypy", "ipykernel", "jupyterlab"]
@@ -34,3 +40,7 @@ select = ["E", "F", "I", "UP", "B"]
 python_version = "3.12"
 strict = true
 warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["openpyxl", "openpyxl.*"]
+ignore_missing_imports = true

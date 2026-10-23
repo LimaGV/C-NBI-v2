@@ -20,7 +20,7 @@ ADR: interfaces, fronteiras e implicações de software.
 ## Evidência e alternativas
 Fontes verificáveis com Zotero key/citekey, DOI somente se conferido,
 METADATA_VERIFIED/FULLTEXT_VERIFIED e localização de passagens.
-Distinguir LITERATURE, INTERNAL_EVIDENCE, PROPOSED e limitações.
+Distinguir LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED e limitações.
 
 ## Decisão proposta
 Explicitar parâmetros/defaults, sem herdar a v1. Documentar efeitos em seed,

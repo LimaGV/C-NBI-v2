@@ -1,20 +1,38 @@
 # Referências científicas
 
-Zotero é fonte canônica da biblioteca pessoal e primeira consulta quando a
-referência puder já existir nela. Esta estrutura organiza materiais selecionados,
-sem copiar a biblioteca.
+Zotero é biblioteca pessoal canônica e primeira consulta de fonte potencialmente
+existente. Documentos locais não substituem a biblioteca.
 
-- bibliography/: BibTeX seletivo.
-- papers/: artigos com permissão.
-- theses_dissertations/: teses/dissertações.
-- books_notes/: notas autorais sobre livros.
-- standards_manuals/: normas/manuais, respeitando licenças.
-- notes/: índice, claims, fontes metodológicas e modelo de nota.
+~~~text
+Zotero / local documents
+        ↓
+verification
+        ↓
+source notes + BibTeX
+        ↓
+claims matrix
+        ↓
+ADR/MDR
+        ↓
+methodological implementation
+~~~
 
-METADATA_VERIFIED exige metadados realmente conferidos.
-FULLTEXT_VERIFIED exige inspeção real do documento completo, registrando
-passagens e localização. Resumo e conectividade não bastam.
-Nunca inventar DOI, título, autor, ano, páginas, equações, volume ou periódico.
+bibliography/ contém BibTeX seletivo; notes/ contém índice, templates, claims
+e fontes metodológicas. papers/, theses_dissertations/, books_notes/,
+standards_manuals/ e local_library/ não autorizam envio automático de documentos.
 
-Nesta fase: somente teste mínimo de leitura de coleções Zotero.
-Nenhuma referência científica adotada, exportada ou validada.
+Status: UNREAD, METADATA_VERIFIED, PARTIAL, FULLTEXT_VERIFIED, CRITICAL_SOURCE.
+CRITICAL_SOURCE indica importância, não leitura comprovada; registrar cobertura
+separadamente. FULLTEXT_VERIFIED exige inspeção integral efetiva, com passagens.
+Desconhecidos ficam vazios ou UNVERIFIED_METADATA; não inventar DOI, título,
+autores, ano, journal, volume, issue, páginas, equações ou suporte.
+
+Classes: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
+Literatura, derivação documentada, experimento interno e hipótese são distintos.
+Decisões futuras vinculam evidências pertinentes, pressupostos e limitações.
+
+PDF/EPUB/DJVU e outros binários locais são ignorados por padrão; repositório
+privado não concede direitos autorais. Não contornar proteção copiando texto
+integral para outra extensão.
+Zotero foi retestado somente em leitura; nenhum item modificado, excluído,
+importado/exportado. Nenhuma referência científica inventada ou adotada.

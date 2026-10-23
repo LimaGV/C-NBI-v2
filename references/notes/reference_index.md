@@ -1,9 +1,10 @@
 # Índice de referências
 
-Nenhuma referência científica incorporada nesta fundação.
+Nenhuma referência científica incorporada.
 
-| ID | Zotero library/item key | Citekey | Título verificado | Metadados | Texto integral | Nota/claims |
-| --- | --- | --- | --- | --- | --- | --- |
+| ID | Zotero key | BibTeX key | Título verificado | Local file / SHA-256 | Verification status | Evidence class | Nota / claims |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
-Usar METADATA_VERIFIED/FULLTEXT_VERIFIED somente após verificação efetiva,
-com data e evidência. Tabela vazia é intencional.
+Tabela vazia intencional. Desconhecido: vazio ou UNVERIFIED_METADATA.
+METADATA_VERIFIED exige campos conferidos; FULLTEXT_VERIFIED exige leitura
+integral real. CRITICAL_SOURCE não substitui cobertura documentada.

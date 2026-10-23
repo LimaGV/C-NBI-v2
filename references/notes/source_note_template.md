@@ -1,24 +1,47 @@
-# Nota de fonte — ID a atribuir
+# Source note — ID a atribuir
 
-- Zotero library/item key:
-- Citekey:
-- Título/autores/ano/DOI: somente campos verificados
-- URL/documento:
-- Edição/versão:
-- Metadados: UNVERIFIED / METADATA_VERIFIED
-- Texto integral: NOT_INSPECTED / FULLTEXT_VERIFIED
-- Data/responsável:
-- Evidência da inspeção integral:
+Title:
+Authors:
+Year:
+Source type:
+Journal / institution:
+DOI:
+BibTeX key:
+Zotero key:
+Local file:
+SHA-256:
 
-## Definições e pressupostos
-Separar afirmação da fonte e interpretação do projeto.
+Verification status: UNREAD
+Evidence class:
+Priority:
 
-## Passagens e equações
-Páginas/seções/equações reais; não inventar localização.
-Distinguir citação e paráfrase, respeitando direitos autorais.
+Metadata verification:
+Fulltext coverage:
+Verification date / responsible:
+Verification evidence:
+Edition / version / provenance:
 
-## Claims e decisões
-IDs, categoria/status, limites de suporte e ADR/MDR.
+## Why this source matters
 
-## Limitações
-Não promover hipótese com base só em metadados ou resumo.
+## Claims supported
+
+## Claims NOT supported
+
+## Relevant equations
+
+## Relevant pages / sections
+
+## Methodological use
+
+## Related ADRs
+
+## Related experiments
+
+## Notes
+
+Desconhecidos: vazio ou UNVERIFIED_METADATA.
+Verification status: UNREAD, METADATA_VERIFIED, PARTIAL, FULLTEXT_VERIFIED,
+CRITICAL_SOURCE. Importância não substitui evidência de leitura integral.
+Evidence class: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
+Registrar somente equações/passagens verificadas, separando citação, paráfrase e
+interpretação. Nunca inventar página que sustenta uma claim.
