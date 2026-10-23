@@ -156,6 +156,13 @@ def test_run_manifest_and_every_artifact_checksum(actual_run):
     for line in (output / "checksums.sha256").read_text().splitlines():
         digest, name = line.split("  ", 1)
         assert sha256_file(output / name) == digest
+    recorded = Path("results/turning_8responses_validation")
+    recorded_manifest = json.loads((recorded / "manifest.json").read_text())
+    assert recorded_manifest["working_tree_dirty_at_start"] is False
+    assert recorded_manifest["raw_unchanged"] is True
+    for line in (recorded / "checksums.sha256").read_text().splitlines():
+        digest, name = line.split("  ", 1)
+        assert sha256_file(recorded / name) == digest
 
 
 def test_new_and_historical_raw_are_separate_immutable_files():
@@ -166,3 +173,7 @@ def test_new_and_historical_raw_are_separate_immutable_files():
     )
     assert RAW.name != historical.name
     assert sha256_file(RAW) == RAW_SHA256
+    manifest = Path("data/metadata/turning_application/values_20261023/checksums.sha256")
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        digest, relative = line.split("  ", 1)
+        assert sha256_file(Path(relative)) == digest
