@@ -1,0 +1,48 @@
+dataset_id: turning_application_ccd_19run
+title: Turning process CCD with eight responses
+source:
+  type: experimental
+  raw_file: data/raw/turning_application/CCD_original.xlsx
+  original_file_name: CCD.xlsx
+  original_sheet: Plan1
+  source_selection: Exact file path explicitly provided by the user; no ambiguous automatic selection
+  associated_publication_doi: 10.1016/j.engappai.2025.112510
+design:
+  type: central_composite_design
+  n_runs: 19
+  n_factors: 3
+  n_responses: 8
+  center_points: 5
+  verification: Section 3 page 11; Table 2 page 12; workbook Plan1 A1:L20
+  raw_repeated_center_rows: [16, 17, 18, 19, 20]
+  alpha:
+  physical_ranges:
+factors: [Vc, f, ap]
+responses: [T, MTTF, WR, Ra, Rt, Kp, ROI, OEE]
+identifier:
+  raw_header: Exp
+  raw_column: A
+  explicit_ids_present: true
+  canonical_name_if_later_transformed: run_id
+  raw_renamed: false
+status: RAW_NOT_SELF_CONTAINED
+snapshot_status: SNAPSHOT_PENDING_EXTERNAL_SOURCE
+processed_status: NOT_CREATED
+coding_status: CODING_SCHEME_PENDING_VERIFICATION
+computational_use_ready: false
+cached_responses:
+  count_present_numeric: 152
+  validity_status: NOT_VERIFIED
+  materialized: false
+publication:
+  raw_private_repository_storage: EXPLICITLY_AUTHORIZED_BY_USER
+  authorization_date: "2026-10-23"
+  broader_access_category:
+  public_redistribution_authorized: false
+  license:
+  note: Narrow private-repository storage exception; no PUBLIC_SMALL classification or public license inferred
+limitations:
+  - All response cells E2:L20 contain external formulas.
+  - The external workbook version and cache freshness have not been verified.
+  - Table 1 physical factor levels differ from the raw workbook.
+  - Published outputs must never be used to reconstruct observations.

@@ -76,6 +76,10 @@ automaticamente. Seguir docs/data_integrity.md e docs/data_management.md.
 Não executar ações destrutivas ou persistentes desnecessárias sem autorização
 da tarefa. A Fase 0.5 autoriza merge do PR #1 após checks e ausência de conflito,
 e criação/push/PR da nova branch. Não autoriza merge do novo PR ou alteração da v1.
+A Fase 0.6 autoriza integrar o PR #2 após CI verde e ausência de conflito,
+incorporar o CCD.xlsx fornecido e enviar seu raw byte-identical ao repositório
+privado por autorização explícita adicional do responsável. A exceção cobre
+somente CCD_original.xlsx. O novo PR da Fase 0.6 não tem merge automático.
 Nunca registrar tokens, API keys, passwords ou credentials. Não copiar .env,
 configuração global de agentes, credenciais ou conteúdo de keyring para o Git.
 
@@ -96,6 +100,11 @@ Never use an Excel workbook with unresolved external links as the sole computati
 Excel é formato primário aceito, mas código não depende de edição manual.
 Cada linha experimental deverá ter run_id explícito; linha Excel não é ID científico.
 Não incorporar dataset real ou criar snapshot sem operação explícita posterior.
+Na Fase 0.6 o dataset turning_application_ccd_19run é incorporado como evidência
+raw com links externos, sem certificação dos caches, snapshot ou processed.
+Table 3 de Pereira et al. (2025) é expected output, nunca observação experimental.
+Proibido reconstruir Y, imputar respostas ou ajustar dados para reproduzir
+coeficientes publicados. Fase 1, OLS, RSM, Monte Carlo e NBI não estão autorizados.
 Classificação PUBLIC_SMALL/PUBLIC_LARGE/RESTRICTED exige evidência; não escolher
 por inferência, não configurar LFS automaticamente e não alterar .gitignore só
 para ocultar dados existentes. Processed exige raw/snapshot + script versionado.

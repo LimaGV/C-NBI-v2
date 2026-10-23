@@ -20,6 +20,11 @@ Teste Zotero somente de leitura de uma coleção; nenhum item/PDF/nota foi
 copiado, adicionado, alterado ou excluído. Conectividade não valida ciência.
 Fase 0.5: zotero_get_collections(limit=1) retestado com sucesso em 2026-10-23,
 somente leitura. Serena/Repomix/Context7/OpenAI Docs MCP continuam sem exposição.
+Fase 0.6: Zotero consultado em leitura para busca, metadados e anexos de SMMX47JT;
+nenhum anexo encontrado. PDF local verificado separadamente, sem alterar Zotero.
+O locator de dependências do ambiente e o vínculo de PR na interface foram
+usados como suporte externo; o projeto continua executado por uv, sem dependência
+de codex_app para sua infraestrutura ou execução científica.
 Revalidar Serena, Context7 e OpenAI Docs MCP quando estiverem expostos.
 Não instalamos/reconfiguramos MCPs nem obtivemos credenciais.
 

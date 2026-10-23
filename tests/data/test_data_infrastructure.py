@@ -3,6 +3,7 @@
 import hashlib
 import importlib
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -281,6 +282,26 @@ def test_cli_missing_file_is_actionable(tmp_path: Path) -> None:
     assert "Traceback" not in result.stderr
 
 
+def test_cli_unicode_is_lossless_with_ascii_stdout(tmp_path: Path) -> None:
+    path = tmp_path / "unicode-fixture.xlsx"
+    workbook = Workbook()
+    workbook.active.title = "Torneac\u0327a\u0303o"
+    workbook.active["A1"] = "Profundidade (\u03bcm)"
+    workbook.save(path)
+    workbook.close()
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/data/verify_workbook.py"), str(path)],
+        cwd=ROOT,
+        capture_output=True,
+        check=False,
+        env={**os.environ, "PYTHONIOENCODING": "ascii"},
+    )
+    assert result.returncode == 0, result.stderr
+    report = json.loads(result.stdout.decode("ascii"))
+    assert report["sheet_names"] == ["Torneac\u0327a\u0303o"]
+    assert report["sheets"][0]["columns"][0]["header"] == "Profundidade (\u03bcm)"
+
+
 @pytest.mark.parametrize(
     ("path", "ignored"),
     [
@@ -288,6 +309,7 @@ def test_cli_missing_file_is_actionable(tmp_path: Path) -> None:
         ("data/raw/README.md", False),
         ("data/raw/project/README.md", False),
         ("data/raw/private.xlsx", True),
+        ("data/raw/turning_application/CCD_original.xlsx", False),
         ("data/snapshots/values.xlsx", True),
         ("data/interim/converted.csv", True),
         ("data/processed/unapproved.csv", True),

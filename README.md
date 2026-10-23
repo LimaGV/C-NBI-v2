@@ -3,6 +3,8 @@
 Reimplementação limpa e independente do Combinatorial Normal Boundary
 Intersection. Versão **0.1.0.dev0**. Estado: fundação de infraestrutura.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
+Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
+os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
 Nenhum algoritmo científico implementado; Fase 1 não iniciada.
 
 A [v1](https://github.com/LimaGV/C-NBI/tree/cnbi-v1.0) é referência histórica.
@@ -37,6 +39,9 @@ Inspeção não recalcula fórmulas, resolve links ou certifica caches.
 Ver [opções e limites](scripts/data/README.md). Não incorpora dataset ou snapshot.
 Zotero/local documents → verificação → notas/BibTeX → claims → ADR/MDR.
 Documentos locais protegidos ficam fora do Git por padrão.
+O raw de torneamento foi autorizado especificamente no repositório privado.
+Ver [metadata e lacunas](data/metadata/turning_application/README.md) e
+[golden reference publicada](tests/reference_cases/turning_8responses/README.md).
 
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.

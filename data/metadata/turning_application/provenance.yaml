@@ -1,0 +1,65 @@
+dataset_id: turning_application_ccd_19run
+source:
+  path_anchor: USER_DOCUMENTS
+  relative_path: Dissertação/02_REFERENCIAS/Dados/CCD.xlsx
+  original_file_name: CCD.xlsx
+  size_bytes: 15427
+  source_sha256_before_copy: fd9c463efdcd62ff3d7eaa7eec18d9e112543675c30b1f36838beeb38deebf4a
+  source_sha256_after_copy: fd9c463efdcd62ff3d7eaa7eec18d9e112543675c30b1f36838beeb38deebf4a
+incorporation:
+  raw_file: data/raw/turning_application/CCD_original.xlsx
+  raw_sha256: fd9c463efdcd62ff3d7eaa7eec18d9e112543675c30b1f36838beeb38deebf4a
+  incorporated_at_utc: "2026-10-23T20:47:03.549721+00:00"
+  operator: Codex agent acting on the user's explicit task instruction
+  copy_method: PowerShell Copy-Item; byte copy without workbook deserialization or save
+  byte_identical: true
+  branch: feature/00-6-turning-reference-dataset
+  starting_main_commit: 5bc81a39294d14ac5154af672381f580fde76cc3
+  raw_incorporation_commit: PENDING_FIRST_COMMIT
+  git_storage_authorization: Explicit user authorization in this chat for the private repository
+inspection:
+  script: scripts/data/verify_workbook.py
+  command: uv run python scripts/data/verify_workbook.py data/raw/turning_application/CCD_original.xlsx --detail-limit 1000
+  cli_sha256_at_inspection: 5320970e4efea8e2828ce79edbeca98d3b24b13b0565b2a5923e8ef2ab7bb9dc
+  output: data/metadata/turning_application/workbook_inspection.json
+  read_only: true
+  recalculated: false
+  saved_workbook: false
+  formula_count: 152
+  formula_details_truncated: false
+  external_reference_assessment: DETECTED_UNRESOLVED
+  cached_values_present: 152
+  cached_values_trust: NOT_VERIFIED
+external_dependency:
+  workbook_basename: NBI Revisão.xlsm
+  sheet: Data
+  source_rows: "4:22"
+  response_source_columns:
+    T: B
+    MTTF: Q
+    WR: P
+    Ra: D
+    Rt: E
+    Kp: C
+    ROI: K
+    OEE: F
+  original_target_contains_decomposed_unicode: true
+  located_or_opened: false
+  version_sha256:
+  status: UNRESOLVED_UNVERIFIED_SOURCE_VERSION
+snapshot:
+  created: false
+  status: SNAPSHOT_PENDING_EXTERNAL_SOURCE
+  reason: Cached numbers exist but their provenance, freshness and correct experimental version are not guaranteed
+  required_evidence: Identified authoritative linked source/version and validated materialization, or an explicitly verified self-contained experimental source
+published_reference:
+  doi: 10.1016/j.engappai.2025.112510
+  zotero_item_key: SMMX47JT
+  local_pdf_relative_to_documents: Dissertação/02_REFERENCIAS/artigos_pdf/A hybrid multivariate normal boundary intersection .pdf
+  local_pdf_sha256: 5717f7a90195157830e42e038782f43b2976c77813ccc11f2b3c01e3cc2be70a
+  incorporated_pdf: false
+transformations: []
+reverse_reconstruction: false
+privacy:
+  user_home_omitted_from_source_path: true
+  external_target_home_segment_redacted_in_report: true
