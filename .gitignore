@@ -1,0 +1,45 @@
+# Ambientes, caches e builds
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+dist/
+build/
+*.egg-info/
+.ipynb_checkpoints/
+# Secrets e configuração privada
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets.*
+.codex/
+.serena/
+# Dados e resultados não são incorporados automaticamente
+/data/
+/results/*
+!/results/README.md
+/experiments/runs/
+references/papers/*
+!references/papers/README.md
+references/theses_dissertations/*
+!references/theses_dissertations/README.md
+references/books_notes/*
+!references/books_notes/README.md
+references/standards_manuals/*
+!references/standards_manuals/README.md
+repomix-output*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
