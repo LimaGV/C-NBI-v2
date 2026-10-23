@@ -14,7 +14,7 @@ TESTED exige chamada real bem-sucedida; metadados de ferramentas não bastam.
 | cua_repl | habilitado e previamente verificado | NOT_TESTED: não necessário | Suporte eventual | Não testado |
 | node_repl | habilitado e previamente verificado | NOT_TESTED: não necessário | Suporte eventual | Não testado |
 | code-review | disabled | DISABLED_BY_POLICY: não usado | Não depender | Não testado |
-| codex_app | disabled | DISABLED_BY_POLICY: não usado | Não depender | Não testado |
+| codex_app | disabled para infraestrutura | Sem dependência no projeto; attach_artifact foi usado apenas para associar o PR ao chat, por exigência da interface do ambiente | Metadado de interface, fora do fluxo científico | Somente associação do PR; nenhuma operação de código/ambiente |
 
 Teste Zotero somente de leitura de uma coleção; nenhum item/PDF/nota foi
 copiado, adicionado, alterado ou excluído. Conectividade não valida ciência.

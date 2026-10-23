@@ -61,8 +61,13 @@ gerenciado por uv; nenhum checkout da v1. Os testes verificam isso sem importar 
   A verificação não acessou nem exportou credenciais do sistema.
 
 Esses checks são de infraestrutura, sem validação matemática ou metodológica.
-A CI repete os checks em Windows e Ubuntu; a evidência remota é vinculada ao
-SHA na aba Actions e no PR de fundação, sem antecipar seu resultado neste registro.
+A CI repetiu os checks em Windows e Ubuntu para a fundação
+78568c9c8a61238f615b56f94456442b16125c71. Os quatro jobs (push e PR nos dois
+sistemas) concluíram com SUCCESS, incluindo sync, pytest, Ruff e mypy.
+Evidências: [push](https://github.com/LimaGV/C-NBI-v2/actions/runs/40012646633),
+[PR](https://github.com/LimaGV/C-NBI-v2/actions/runs/40012648564) e
+[PR aberto, sem merge](https://github.com/LimaGV/C-NBI-v2/pull/1).
+Este registro posterior não altera o código da fundação.
 
 ## GitHub e limitações
 Repositório criado e verificado privado: https://github.com/LimaGV/C-NBI-v2.
