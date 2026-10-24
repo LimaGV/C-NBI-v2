@@ -1,5 +1,29 @@
 # Estado metodológico
 
+## Fechamento da Fase 1 — qualidade e capacidade preditiva
+
+Implementados diagnósticos por resposta: SS, R²/R²_adj, MSE/S,
+leverages de treino, PRESS analítico/R²_pred, ANOVA global e pure error/LOF.
+Oráculos manuais, equivalência PRESS/LOOCV por refits e estados degenerados
+estão testados; derivação e fontes verificadas em
+[rsm_diagnostics.md](mathematics/rsm_diagnostics.md). ADR 0003 estendida;
+claims C-RSM-07 a 11 SUPPORTED nos pressupostos documentados.
+
+Os quatro ajustes anteriores são preservados, com a mesma Y integral e dez
+termos. Tabela principal em coordenadas físicas e comparação nominal condicional
+estão no [relatório aplicado](mathematics/turning_rsm_diagnostics.md).
+Foram detectadas 15 configurações e cinco corridas centrais idênticas (Exp 15-19),
+df_PE=4, df_LOF=5. A 5%, testes individuais indicam significância global das oito
+respostas e falta de ajuste em sete; WR não rejeita LOF nesse limiar.
+Não há declaração de adequação global só por R² elevado.
+
+Table 3 é secundária: método de R²_pred não especificado por PRESS/LOOCV;
+Ra/Rt divergem fortemente nesse indicador. WR e notas ROI/OEE continuam
+inconsistências de referência/publicação, sem alterações experimentais.
+WR arredondado é PUBLICATION_RECONCILIATION_NOTE, fora do pipeline oficial.
+Fase 1 concluída no escopo autorizado; nenhuma otimização ou fase seguinte
+iniciada. O PR #4 permanece para revisão, sem merge automático.
+
 ## Complemento aplicado — CCD literal ajustado
 O usuário forneceu revisão atualizada, com 19×11 entradas numéricas reais,
 sem fórmulas/dependências externas detectadas. O novo raw foi preservado e os

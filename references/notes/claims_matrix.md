@@ -29,6 +29,15 @@ suporte analítico delimitado na Fase 1; C002–C008 continuam sem aceitação.
 | C-RSM-04 | Cov(vec(B_hat))=Sigma⊗V_X; estimativa plug-in Sigma_hat_e⊗V_X | LITERATURE + MATHEMATICAL_DERIVATION | R003 p.3 escreve vec(B_hat^T); conversão explícita em docs/mathematics/rsm_uncertainty.md | SUPPORTED | ADR 0003 | vec por colunas de B_hat; normalidade adicional para matrix-normal |
 | C-RSM-05 | Cov(mu_hat(x))=h(x)Sigma; estimativa h(x)Sigma_hat_e | LITERATURE + MATHEMATICAL_DERIVATION | R003 p.3 Eqs.(5)-(6); R004 p.33 Eq.(2.40); propagação linear em rsm_uncertainty.md | SUPPORTED | ADR 0003 | Média estimada sem 1+h; não é erro de nova observação |
 | C-RSM-06 | Cov(mu_hat(x_a)-mu_hat(x_b))=[(z_a-z_b)^T V_X(z_a-z_b)]Sigma | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Derivação em rsm_uncertainty.md; tests/model/test_uncertainty.py | SUPPORTED | ADR 0003 | Inclui ambos os termos cruzados; zero se a=b; simetria a/b |
+| C-RSM-07 | R²=1-SSE/SST | LITERATURE + INTERNAL_EVIDENCE | R004 p.26 Eq.(2.25), PDF 44 lido; tests/model/test_diagnostics.py, oráculo manual | SUPPORTED | ADR 0003, fechamento | SST>0; resposta constante explicitamente indefinida |
+| C-RSM-08 | PRESS=sum_i(e_i/(1-h_ii))² | LITERATURE + INTERNAL_EVIDENCE | R004 p.40 Eqs.(2.51)-(2.52), PDF 58 lido/renderizado; oráculo manual | SUPPORTED | ADR 0003, fechamento | OLS identificável após excluir cada ponto; h próximo de um diagnosticado |
+| C-RSM-09 | PRESS analítico equivale ao squared LOOCV prediction error | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | R004 pp.39-40 Eqs.(2.50)-(2.52); derivação em rsm_diagnostics.md; refits explícitos em testes | SUPPORTED | ADR 0003, fechamento | Mesma base/OLS, exclusões de posto completo; não atribui esse método à Table 3 |
+| C-RSM-10 | SSE=SS_LOF+SS_PE | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | R004 p.45 Eqs.(2.60)-(2.64), PDF 63 lido/renderizado; oráculos com replicação | SUPPORTED | ADR 0003, fechamento | Fitted constante em cada configuração; soma ponderada evita cancelamento |
+| C-RSM-11 | Réplicas nas mesmas condições permitem separar pure error e lack of fit | LITERATURE + INTERNAL_EVIDENCE | R004 pp.44-46; NIST seção 4.4.4.6; 15 configurações e grupo Exp 15-19 detectados | SUPPORTED | ADR 0003, fechamento | F_LOF requer df_PE>0, df_LOF>0 e SS_PE>0; independência das réplicas é pressuposto experimental |
+
+O diagnóstico histórico C-PUB-WR-01 tem classe de uso
+`PUBLICATION_RECONCILIATION_NOTE`, fora do pipeline oficial de diagnósticos.
+Não autoriza arredondamento dos dados ou atribuição de preprocessing aos autores.
 
 Evidência interna não é literatura; derivação exige passos e revisão reais.
 Experimento implementado não aceita hipótese. Vincular fontes, passagens,

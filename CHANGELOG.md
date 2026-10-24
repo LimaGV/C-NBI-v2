@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — fechamento científico da Fase 1
+- Diagnósticos imutáveis por resposta: SS, R²/ajustado, S, PRESS/LOOCV,
+  R² predito, ANOVA global, pure error e lack of fit com estados indefinidos.
+- Inputs originais float64 preservados no ajuste para integridade e alinhamento.
+- Oráculos manuais, refits leave-one-out, replicação exata e invariância de escala.
+- Relatório e artefatos rastreáveis dos quatro ajustes reais já registrados;
+  Table 3 secundária, método R²_pred não especificado e divergências preservadas.
+- ADR 0003 e claims C-RSM-07 a 11 com fontes diretamente verificadas.
+- WR arredondado classificado PUBLICATION_RECONCILIATION_NOTE, fora do pipeline.
+- Dados integrais e todos os termos mantidos; sem otimização ou NBI/CNBI.
+
 ## Unreleased — validação aplicada da Fase 1
 - Nova revisão literal e autocontida do CCD, preservada junto ao raw histórico.
 - Extração dos tokens numéricos completos, oito RSMs reais e comparação dos

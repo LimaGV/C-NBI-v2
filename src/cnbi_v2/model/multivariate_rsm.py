@@ -36,8 +36,12 @@ class RSMFit:
 
     Response axes are retained for m=1. V_X is xtx_covariance_factor;
     design_r_factor is the reduced-QR upper triangular R used for leverage.
+    Original float64 inputs preserve observations and their row alignment for
+    diagnostics; they are never recovered by adding fitted values and residuals.
     """
 
+    experimental_factors: FloatArray
+    observed_responses: FloatArray
     coefficients: FloatArray
     fitted_values: FloatArray
     residuals: FloatArray
@@ -84,7 +88,8 @@ def fit_multivariate_rsm(factors: ArrayLike, responses: ArrayLike) -> RSMFit:
     Raw residual covariance is E_hat.T @ E_hat / (n-rank(X)).
     No raw-file access, implicit factor coding, or coefficient sampling occurs.
     """
-    design = quadratic_design(factors)
+    factor_values = _as_finite_real(factors, "factors")
+    design = quadratic_design(factor_values)
     observed = _as_finite_real(responses, "responses")
     if observed.ndim == 1:
         observed = observed.reshape(-1, 1)
@@ -112,6 +117,8 @@ def fit_multivariate_rsm(factors: ArrayLike, responses: ArrayLike) -> RSMFit:
     _check_symmetric_psd(residual_covariance, "residual_covariance")
     _check_symmetric_psd(xtx_covariance_factor, "xtx_covariance_factor")
     return RSMFit(
+        experimental_factors=factor_values,
+        observed_responses=observed,
         coefficients=coefficients,
         fitted_values=fitted_values,
         residuals=residuals,

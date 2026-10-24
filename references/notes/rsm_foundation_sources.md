@@ -49,6 +49,31 @@ FULLTEXT_VERIFIED; somente passagens efetivamente lidas são usadas nas claims.
 - p.33 (PDF 51), Eqs.(2.39)-(2.40): média predita e sua variância.
 - Passagens lidas diretamente; PDF 40 e 51 renderizadas para conferência visual.
 - Não se implementam os intervalos que também aparecem nas páginas consultadas.
+- Fechamento da Fase 1: metadados Zotero Z8Z2JEDC reconferidos. Leitura direta
+  adicional de pp.24-26 (PDF 42-44), Eqs.(2.20)-(2.26): ANOVA, R² e R²_adj;
+  pp.38-42 (PDF 56-60), Eqs.(2.44)-(2.54): H, leverage, PRESS por exclusão,
+  identidade e_i/(1-h_ii), R²_prediction e traço de H;
+  pp.44-46 (PDF 62-64), Eqs.(2.60)-(2.65): réplicas verdadeiras, PE/LOF,
+  decomposição, graus de liberdade e teste F. PDF 58 e 63 renderizadas e
+  inspecionadas. Não amplia o status para leitura integral do livro.
+
+## Fontes adicionais do fechamento da Fase 1
+
+- NIST/SEMATECH e-Handbook, seção 4.4.4.6, consultada diretamente em 2026-10-23:
+  https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd446.htm.
+  Réplicas nas mesmas condições, SS_PE/df n-n_u, SS_LOF/df n_u-p e teste F.
+  Evidência complementar; não se inventa Zotero key nem DOI para a página.
+- SciPy, documentação oficial `scipy.stats.f`, consultada em 2026-10-23:
+  https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html.
+  `sf(x,dfn,dfd)` é cauda superior, potencialmente mais precisa que 1-cdf.
+  Referência de API, não justificativa científica; runtime locked SciPy 1.18.1.
+  Context7 não exposto; fallback oficial registrado. URL versionada 1.18.1
+  indisponível no navegador de busca; documentação estável identifica 1.18.0.
+  Na retomada de finalização em 2026-10-24, Context7 ficou exposto: resolução
+  SciPy -> /scipy/scipy e query_docs confirmaram sf como survival function
+  (1-CDF), citando o tutorial oficial de distribuições de probabilidade.
+  Consulta complementar de API, sem substituir a fundamentação científica ou
+  modificar a implementação já validada.
 
 ## R005 — Johnson e Wichern (2007)
 

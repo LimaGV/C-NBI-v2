@@ -100,6 +100,9 @@ normalidade, significância, convexidade ou direção de otimização foi inferi
 
 ## Diagnóstico de WR, sem substituir o modelo real
 
+Classificação: `PUBLICATION_RECONCILIATION_NOTE`. Esse experimento histórico
+é excluído do pipeline oficial de diagnósticos do fechamento da Fase 1.
+
 Com dados completos e desenho nominal rotacional, os coeficientes de WR,
 apresentados somente aqui com ×1000, são:
 

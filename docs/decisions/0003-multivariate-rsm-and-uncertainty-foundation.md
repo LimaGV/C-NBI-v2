@@ -69,6 +69,31 @@ não implica adoção de shrinkage. A próxima fase exige nova tarefa.
 
 ## Revisão e histórico
 
+### Fechamento autorizado da Fase 1 — diagnósticos (2026-10-23)
+
+Estende o escopo aceito, por solicitação explícita do responsável, com as
+definições de [rsm_diagnostics.md](../mathematics/rsm_diagnostics.md).
+Mantém a mesma base e OLS, sem remoção de termos por significância.
+PRESS é analítico e validado por LOOCV explícito; pure error usa igualdade exata
+dos fatores e LOF só é testado quando seus graus de liberdade e denominador
+permitem. Ausências têm representação tipada e razão explícita.
+H diagonal é obtida das normas de linhas de Q, com verificação de limites/traço.
+Dois inputs imutáveis fundamentais são preservados em RSMFit: fatores e Y;
+as métricas ficam no módulo separado. Isso conserva os valores reais e a
+associação entre observações, evitando reconstrução de dados por soma numérica.
+
+A revisão literal do raw é a entrada canônica e não é arredondada. Os quatro
+desenhos já registrados recebem diagnósticos separados; a tabela principal
+usa physical_cells, e a comparação secundária usa também a hipótese nominal
+rotacional explicitamente identificada. Não se altera codificação para coincidir
+com a publicação. Table 3 permanece secundária; seu R²_pred não tem método
+PRESS/LOOCV explicitamente identificado no artigo inspecionado.
+O diagnóstico histórico de WR arredondado é PUBLICATION_RECONCILIATION_NOTE,
+fora do pipeline oficial. As inconsistências de WR/escala ROI/OEE não são
+tratadas como defeitos da implementação. ADR 0004 existente não é sobrescrita.
+Claims C-RSM-07 a 11 ligam literatura, derivação e testes; gate e execução
+aplicada são registrados no relatório de diagnósticos e no PR #4, sem merge.
+
 Decisão aceita no escopo solicitado pelo responsável em 2026-10-23.
 Resultados efetivos do gate estão na [verificação da Fase 1](../phase_1_verification.md);
 CI remota vinculada ao SHA no PR. A aceitação não certifica o dataset real.

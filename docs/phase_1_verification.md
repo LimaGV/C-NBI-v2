@@ -4,6 +4,20 @@ Data: 2026-10-23. Versão 0.1.0.dev0.
 Branch: feature/01-multivariate-rsm-foundation.
 Commit/PR: SHA efetivo e CI vinculados no PR após commit, sem hash autorreferente.
 
+## Fechamento científico posterior — diagnósticos
+
+O registro abaixo descreve o gate inicial e preserva seu estado histórico.
+Após a incorporação literal autorizada, o fechamento acrescenta SS/R²/S,
+PRESS/LOOCV, ANOVA global e PE/LOF, com
+[definição matemática](mathematics/rsm_diagnostics.md) e
+[resultados reais](mathematics/turning_rsm_diagnostics.md).
+237 testes; cobertura 98.47% (516/524), novo módulo 160/160, model/ 100%.
+Sem dependência nova, alteração de raw, remoção de termos ou algoritmo posterior.
+ADR 0003 estendida e claims C-RSM-07 a 11; PR #4 mantido sem merge.
+Gate final reconferido em 2026-10-24: uv sync --locked, pytest -v,
+pytest --cov=cnbi_v2, Ruff e mypy src aprovados (10 source files).
+Raw histórico/literal, CSV literal, golden reference e lock preservados.
+
 ## Preparação Git
 
 Working tree estava limpo. PR #3 aberto com head
