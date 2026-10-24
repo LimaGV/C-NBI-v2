@@ -67,3 +67,14 @@ post hoc; stop1300 retrospectivamente estável até2000. PA e37 IDs preservados.
 Decisões sobre H da malha, pesos e NBI exigem escopo/validação próprios após
 revisão dos resultados PA e da estabilidade da política. Nada disso foi iniciado;
 não há clustering, fronteira Pareto ou métricas de desempenho multiobjetivo.
+
+## Fase 6 — local NBI / Simplex-Lattice and internal H sensitivity
+
+PR #8 integrated by authorized squash1053f297ad9263d3219532c14f7dfc19fb42c29a,
+with four green checks and clean tree. Branch feature/06-simplex-lattice-local-nbi.
+Implement the37 frozen B2000 subsets and original nominal coded RSMs on the
+unchanged ball, local payoff normalization and ideal-oriented unit CHIM normal.
+Analytic-Jacobian SLSQP, independent acceptance and deterministic continuation;
+H2,4,5,10,20 are exact memberships of H20. Full8-response ND and internal
+coverage only support H sensitivity. ADR0010 ACCEPTED; no final H automatically
+accepted, no external front/benchmark, new PA/MC/anchors or automatic next phase.

@@ -66,6 +66,19 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Fase 6 explicitamente autorizada após squash do PR #8 com CI verde: branch
+feature/06-simplex-lattice-local-nbi. Consumir somente os37 IDs de B=2000,
+RSMs codificados nominais e anchors/payoff preservados, bola alpha=8**0.25,
+direções originais e sem RC. NBI local com normalização por subset, normal
+unitária orientada ao ideal, igualdade e Jacobianos analíticos, SLSQP e
+aceitação independente. Simplex-Lattice H={2,4,5,10,20}, malha-mãe20 com
+membership inteiro exato; não resolver pesos repetidos. Reavaliar8 respostas
+antes de deduplicação/ND full-space e cobertura interna em normalização global
+fixa da Fase5. H20 é referência interna, sem verdade Pareto ou H final aceito.
+ADR0010 ACCEPTED somente nesse escopo. Sem nova PA/MC/anchors, benchmark,
+NSGA/MOEA/D/VRF ou métricas externas. Sem merge do novo PR ou próxima fase.
+Escopos abaixo são históricos.
+
 Revisão explicitamente autorizada antes do merge do PR #8: alterar somente a
 política de early stop e sua sensibilidade, na mesma branch. Preservar a v1 e
 todos os artefatos anteriores. V2 PROPOSED_REVISED, post hoc no caso turning:

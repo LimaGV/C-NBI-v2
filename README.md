@@ -1,5 +1,13 @@
 # C-NBI v2
 
+Fase6: Simplex-Lattice e NBI local determinístico sobre os37 subsets congelados
+de B=2000. Normalização local por subset, normal unitária orientada ao ideal e
+SLSQP com Jacobianos analíticos/aceitação independente. H2,4,5,10,20 por
+membership inteiro da malha-mãe20; cobertura/ND full-space somente para
+sensibilidade interna. [Definição](docs/mathematics/local_nbi.md), ADR0010
+ACCEPTED no escopo solicitado; nenhum H final aceito ou benchmark externo.
+O texto abaixo preserva o estado anterior da Fase5.
+
 Fase 5: normalização fixa nominal, CHIM centralizado e screening espectral
 PA inspirado, calibrado pela incerteza do ensemble congelado da Fase 4.
 Ver [formulação/API](docs/mathematics/chim_parallel_analysis.md),

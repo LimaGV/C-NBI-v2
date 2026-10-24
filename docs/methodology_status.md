@@ -1,5 +1,16 @@
 # Estado metodológico
 
+## Fase 6 — local NBI e sensibilidade interna de H
+
+Autorizada após squash do PR #8 com CI verde (main1053f29).37 IDs de B2000
+preservados:19 pares+18 trios+0 quartetos. NBI nominal codificado na bola
+alpha=8**.25, sem RC; normalização local por subset, normal unitária orientada
+à origem ideal, igualdade, Jacobianos analíticos e SLSQP com aceitação independente.
+Malha-mãe20, membership inteiro para H2,4,5,10,20; reavaliar8 respostas antes
+de ND e cobertura interna na normalização global fixa. ADR0010 ACCEPTED nesse
+escopo, C-NBI-01/02/03/04. Nenhum H final aceito ou benchmark externo.
+As seções seguintes preservam os estados históricos; nenhuma nova PA/MC/anchors.
+
 ## Fase 5 — revisão exclusiva da política de early stop no PR #8
 
 Política v1 preservada byte-identical em docs/policies/history/; resultados

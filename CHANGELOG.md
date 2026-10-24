@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Fase 6 local NBI / Simplex-Lattice
+- Malhas de composições inteiras e nesting exato em H20 para H2,4,5,10,20.
+- Geometria local, normal unitária orientada ao ideal e SLSQP com Jacobianos analíticos.
+- Aceitação independente, continuação/retries determinísticos e proveniência de cada tentativa.
+- Reavaliação das oito respostas antes de ND full-space e cobertura interna entre resoluções.
+- ADR0010 ACCEPTED no escopo solicitado; nenhum H final aceito automaticamente.
+- Seleção B2000 preservada; sem novos anchors/MC/PA/RC ou benchmarks externos.
+
 ## Unreleased — revisão proposta da política de early stop da Fase 5
 - V1 preservada com hash original; política v2 PROPOSED_REVISED, explicitamente post hoc.
 - Gaps adjacentes normalizados do q95, tolerância operacional estrita0.05 e janela3.

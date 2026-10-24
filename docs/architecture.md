@@ -73,3 +73,21 @@ A política original é avaliada retrospectivamente e permanece PROPOSED.
 A revisão v2 é PROPOSED_REVISED, post hoc no caso real, ADR 0009 PROPOSED;
 somente a análise de stopping muda. Os runners históricos usam a v1 arquivada.
 Sem shrinkage, Simplex-Lattice, escolha de H da malha, Pareto ou NBI/CNBI.
+
+## Phase 6 — local NBI and internal resolution sensitivity
+
+simplex/lattice.py generates immutable lexicographic weak compositions, beta
+and exact integer parent membership. nbi/geometry.py constructs a local nominal
+normalization and unique unit ideal-oriented left-null normal. nbi/solver.py
+provides analytic equality/sphere derivatives, SLSQP options, independently
+checked trials, deterministic retries and nearest-weight continuation.
+nbi/sensitivity.py preserves decision-origin mappings, roundoff-only equality,
+full-space nondominance and blocked Euclidean directed distances.
+
+scripts/validation/turning_local_nbi.py pins the37 B=2000 identities, nominal
+coded model/anchor/payoff and Phase5 global normalization hashes. It solves the
+H20 parent once per subset, re-evaluates all8 responses before diagnostics and
+exports one parent NPZ plus membership/provenance, attempt logs and H summaries.
+No fitter, anchor optimizer, PA or Monte Carlo dependency is executed by this
+workflow. The existing shared quadratic evaluators and normalization helpers
+are consumed unchanged. No new dependency or parallelism; strict mypy retained.
