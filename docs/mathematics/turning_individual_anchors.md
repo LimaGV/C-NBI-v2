@@ -179,6 +179,9 @@ descritivo de Mahalanobis.
 ## Artefatos, reexecução e qualidade
 
 Run: results/phase_02_anchors/turning_original_codes_20261024/.
+Execução arquivada a partir do commit limpo
+03ff09ee79a588e9c461c4b9db5d1e89d4bcbf88; manifesto dirty=false,
+hashes dos inputs/código conferidos contra os blobs desse commit.
 Contém metadata, coded_models/coded_factors, response_region,
 experimental_mahalanobis, anchors_sphere, anchors_response_region,
 anchor_comparison, payoff_sphere, payoff_response_region, cutoff_coverage,

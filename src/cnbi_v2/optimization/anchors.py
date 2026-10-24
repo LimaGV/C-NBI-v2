@@ -169,7 +169,7 @@ def solve_response_region_anchor(
                 float(np.linalg.norm(model.quadratic, ord=2)) * radius**2)
     if scale == 0:
         scale = 1.0
-    if gr >= 0:  # No tolerance needed for the exact feasible-subset argument.
+    if gr >= 0 and gs >= -options.sphere_tolerance:
         trial = RCTrial(sphere.point, sphere.point, sphere.objective, distance, gs, gr,
                         True, 0, "Certified sphere optimum is response-region feasible", 0, True)
         return ResponseRegionAnchor(

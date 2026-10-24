@@ -47,6 +47,13 @@ both payoff matrices and cutoff sensitivity. No published numbers generate data.
 Source commit is recorded by metadata.json during the archived run, from a clean
 working tree before the output directory is created. Reviewed small outputs
 are subsequently versioned with an exact .gitignore exception for the run.
+Actual source commit: 03ff09ee79a588e9c461c4b9db5d1e89d4bcbf88,
+metadata dirty=false; every listed input hash also matches its committed blob.
+The archive-delivery revision additionally enforces the actual sphere margin on
+the certificate-reuse route, tested with an intentionally erroneous helper.
+All real archived sphere margins are nonnegative; reexecution with that guard
+preserved every numerical CSV byte-for-byte. This is an acceptance-validation
+guard, not a change to the model, solver optimum or archived observations.
 Every output has SHA256 in checksums.sha256; code/data/lock input hashes,
 model coefficient hash, solver options, complete start proposals and decisions
 are versioned. Existing output directories cannot be overwritten by the runner.

@@ -1,6 +1,6 @@
 """Analytic global oracles, independent optimizers, geometry and payoff orientation."""
 
-from dataclasses import FrozenInstanceError
+from dataclasses import FrozenInstanceError, replace
 from types import SimpleNamespace
 
 import numpy as np
@@ -186,7 +186,7 @@ def test_rc_manual_oracle_multistart_and_payoff(j, direction, expected):
     assert classify_response_distance(result.distance_squared, .25, 1e-6) == "BOUNDARY_NEAR"
 
 
-def test_feasible_classical_anchor_reused_with_global_certificate():
+def test_feasible_classical_anchor_reused_with_global_certificate(monkeypatch):
     models = identity_models()
     _, region = identity_cloud()
     result = solve_response_region_anchor(models, 0, Direction.MAX, 1, region, 2, [[0, 0]])
@@ -194,6 +194,15 @@ def test_feasible_classical_anchor_reused_with_global_certificate():
     assert result.solver == "SPHERE_GLOBAL_CERTIFICATE"
     assert_allclose(result.point, [1, 0])
     assert len(result.trials) == 1
+    # The reuse route also verifies the actual ball margin independently; an
+    # erroneous certified-helper output cannot bypass RC feasibility checking.
+    import cnbi_v2.optimization.anchors as module
+    invalid = replace(solve_quadratic_ball(models[0], 1, Direction.MAX),
+                      point=np.array([2., 0.]))
+    monkeypatch.setattr(module, "solve_quadratic_ball", lambda *args: invalid)
+    checked = solve_response_region_anchor(models, 0, Direction.MAX, 1, region, 10, [[0, 0]])
+    assert checked.sphere_margin >= -checked.options.sphere_tolerance
+    assert not checked.global_optimum_certified
 
 
 @pytest.mark.parametrize("objective", [0, 1])
