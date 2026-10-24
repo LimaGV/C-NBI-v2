@@ -181,6 +181,14 @@ novo diagnostics.py 100% (160/160), model/ 100%. Oráculos manuais de SS/R²/F e
 PRESS, LOOCV explícito uni/multirresposta, polinômio exato, R²_pred negativo,
 replicação exata, cenários PE/LOF e todos os casos degenerados passam.
 As identidades anteriores de covariância e incerteza permanecem verificadas.
+O primeiro gate remoto revelou diferença LAPACK Windows/Ubuntu de até
+7.10542736e-12 nos coeficientes físicos, com erro relativo máximo 2.77976713e-12;
+o limite fixo 2e-14 do novo teste de preservação era excessivamente estrito.
+Somente esse teste passou a comparar erros por norma máxima de cada coluna B,
+com margem eps*max(n,p)*condition(X), derivada da escala de erro de primeira
+ordem e do rcond já existente. Isso distingue arredondamento de plataforma,
+sobretudo com condition(X_fisico)≈1.1e7, sem alterar qualquer coeficiente, solver,
+tolerância de posto, intervalo de arredondamento publicado ou arquivo numérico.
 Gate final de 2026-10-24: uv sync --locked, pytest -v, pytest --cov=cnbi_v2,
 Ruff e mypy src aprovados (10 arquivos de produção no mypy). CI remota
 vinculada ao head no PR #4. A retomada preservou metodologia e números já obtidos.

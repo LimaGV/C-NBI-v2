@@ -47,5 +47,17 @@
     "git diff --check": "PASSED"
   },
   "ci": "Check the final PR head; remote checks are separate from this local gate.",
-  "scope": "Preserved full-precision observations, existing models/codings and numerical results. No term removal, optimization, Monte Carlo or NBI/CNBI."
+  "scope": "Preserved full-precision observations, existing models/codings and numerical results. No term removal, optimization, Monte Carlo or NBI/CNBI.",
+  "ci_portability_followup": {
+    "initial_failed_run": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40091027772",
+    "platform": "ubuntu-latest",
+    "failure": "New coefficient-artifact comparison required rtol=2e-14, atol=1e-15 across LAPACK builds.",
+    "observed_max_absolute_difference": 7.10542736e-12,
+    "observed_max_relative_difference": 2.77976713e-12,
+    "validation_only_correction": "Compare coefficient error normalized by each response column maximum, with bound eps*max(n,p)*condition(X), using the existing fitter rank tolerance.",
+    "production_code_changed": false,
+    "numeric_results_changed": false,
+    "publication_rounding_intervals_changed": false,
+    "local_gate_after_test_correction": "237 passed; coverage 98.47%, diagnostics/model 100%; Ruff and mypy passed. Remote final-head gate tracked in PR checks."
+  }
 }
