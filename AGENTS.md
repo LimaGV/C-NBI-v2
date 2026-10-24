@@ -66,6 +66,16 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Esta tarefa autoriza a Fase 3 em feature/03-multivariate-coefficient-monte-carlo,
+após squash do PR #5 com checks verdes. Usar o mesmo ajuste codificado da Fase 2,
+matrix-normal plug-in conjunta, Sigma_e bruta, seed 777 explícita e um ensemble
+2000×10×8. Sensibilidade em 100:100:2000 por prefixos do mesmo ensemble.
+ADR 0006 ACCEPTED no escopo solicitado; early stop futuro da PA PROPOSED,
+registrado antes dos resultados e não aplicado agora. Sem reotimizar anchors,
+payoff por réplica, bootstrap, shrinkage, NBI/C-NBI/PA ou início da Fase 4.
+O novo PR não tem merge automático. METHODOLOGICAL_DECISION é classe explícita
+adicional de evidência para o calendário B/seed decidido pelo responsável.
+
 Esta tarefa autoriza a Fase 2 em feature/02-individual-anchors-response-region,
 após squash do PR #4 com checks verdes: anchors individuais, payoff clássica e
 ablação experimental de região de respostas. ADR 0005 permanece EXPERIMENTAL.
@@ -75,7 +85,8 @@ equivalência que falhou. Não inventar inverse coding ou coordenadas físicas.
 Dados continuam integrais. O novo PR não tem merge automático. Monte Carlo,
 NBI/C-NBI, CHIM combinatorial, PA, shrinkage e etapas posteriores seguem fora.
 
-Classificar claims: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
+Classificar claims: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION,
+METHODOLOGICAL_DECISION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. Não escrever "a literatura mostra" sem fonte verificável.
 Dados brutos são imutáveis. Derivações exigem origem, hashes, commit, configuração,

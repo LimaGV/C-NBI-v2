@@ -13,7 +13,15 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest", "pytest-cov", "ruff", "mypy", "ipykernel", "jupyterlab"]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+    "ipykernel",
+    "jupyterlab",
+    "matplotlib>=3.10,<4",
+]
 
 [build-system]
 requires = ["uv_build==0.12.23"]

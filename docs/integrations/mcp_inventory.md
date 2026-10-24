@@ -65,3 +65,19 @@ Executados: Git 2.54.0.windows.1, uv 0.12.23, rg 15.2.0, gh 2.97.0.
 gh autenticado como LimaGV; criação/push/PR via CLI, sem GitHub MCP.
 fd e ast-grep não encontrados no PATH nem nas pastas locais verificadas.
 Não instalar substitutos ou tratar o alias sg como ast-grep.
+
+## Fase 3 — uso efetivo
+
+Serena: manual inicial lido, sessão b3010349 no projeto C-NBI-v2/LSP Python;
+RSMFit, fit_multivariate_rsm, coefficient_covariance e loader codificado
+inspecionados semanticamente antes de criar os módulos independentes.
+Nenhum módulo científico anterior foi alterado.
+Context7: resolve/query para NumPy Generator/PCG64/standard_normal, SciPy
+solve_triangular e Matplotlib Figure/Agg. A busca SciPy retornou material
+insuficiente; assinatura e comportamento foram conferidos na documentação
+oficial de solve_triangular. Referências de APIs na documentação matemática.
+Zotero não foi necessário para novas claims de literatura: a covariância é
+derivada diretamente, e resultados novos são evidência interna/decisão explícita.
+Nenhum item bibliográfico ou documento protegido foi escrito/exportado.
+Git/gh autenticado para preflight, squash autorizado e entrega do PR.
+Matplotlib no grupo dev justificado pelo PNG solicitado; runtime preservado.

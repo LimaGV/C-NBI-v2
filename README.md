@@ -1,14 +1,16 @@
 # C-NBI v2
 
-Fase 2: anchors individuais e comparação experimental de região 8-D de respostas.
-Ver [formulação](docs/mathematics/individual_anchors.md),
-[região/cutoffs](docs/mathematics/multivariate_response_region.md) e
-[validação](docs/phase_2_verification.md). ADR 0005 EXPERIMENTAL.
+Fase 3: Monte Carlo conjunto matrix-normal plug-in dos coeficientes codificados.
+Um ensemble 2000×10×8, seed 777 e 20 prefixos em 100:100:2000.
+Ver [formulação/API](docs/mathematics/coefficient_monte_carlo.md),
+[resultados](docs/mathematics/turning_coefficient_mc.md) e
+[validação](docs/phase_3_verification.md). ADR 0006 ACCEPTED no escopo solicitado;
+early stop futuro da PA PROPOSED e não aplicado. Anchors da Fase 2 preservados.
 A planilha original define um caso codificado distinto do modelo físico;
 nenhuma resposta experimental foi alterada. NBI/C-NBI ainda não implementados.
 
 Reimplementação limpa e independente do Combinatorial Normal Boundary
-Intersection. Versão **0.1.0.dev0**. Estado: anchors nominais experimentais da Fase 2.
+Intersection. Versão **0.1.0.dev0**. Estado: coefficient Monte Carlo da Fase 3.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
@@ -73,14 +75,16 @@ Ver [definição e API](docs/mathematics/multivariate_rsm.md),
 [derivações da incerteza](docs/mathematics/rsm_uncertainty.md) e
 [ADR 0003](docs/decisions/0003-multivariate-rsm-and-uncertainty-foundation.md).
 Há otimização individual nominal de quadráticas e ablação de região de respostas.
-Monte Carlo, shrinkage e NBI/C-NBI permanecem fora da implementação.
+`cnbi_v2.uncertainty` adiciona amostragem conjunta dos coeficientes e diagnósticos
+de prefixos, sem reotimizar anchors. Shrinkage e NBI/C-NBI não implementados.
 
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.
 main é destino de PR aprovado. A Fase 0 entrou pelo PR #1 após CI verde;
 as Fases 0.5 e 0.6 foram integradas pelos PRs #2 e #3. A Fase 1 usa
 feature/01-multivariate-rsm-foundation, integrada pelo PR #4 com autorização.
-A Fase 2 usa feature/02-individual-anchors-response-region, sem merge automático.
+A Fase 2 foi integrada por squash no PR #5 com autorização para a Fase 3.
+A Fase 3 usa feature/03-multivariate-coefficient-monte-carlo; novo PR sem merge automático.
 
 - [Contrato dos agentes](AGENTS.md)
 - [Arquitetura](docs/architecture.md) e [roadmap](ROADMAP.md)

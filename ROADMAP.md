@@ -37,6 +37,15 @@ Original coded inputs verificados; equivalência ao modelo físico falhou e é
 registrada como caso distinto após priorização da planilha pelo responsável.
 Nenhum anchor afetado pelos três cutoffs avaliados. Não adotar RC automaticamente.
 
-## Posteriormente — sem compromisso metodológico
-Nova tarefa necessária para etapas posteriores. Sem seed do C-NBI, H adaptativo,
-NBI/CNBI, Monte Carlo, Pareto ou cutoff estatístico canônico definido.
+## Fase 3 — coefficient Monte Carlo conjunto
+PR #5 integrado por squash 74d6723 com autorização e CI verde. Mesmo modelo
+codificado, covariância residual bruta, matrix-normal plug-in conjunta,
+seed PCG64 777 e um ensemble 2000×10×8. Vinte prefixos 100:100:2000,
+diagnósticos/figura/manifests. ADR 0006 ACCEPTED neste escopo.
+Política futura de early stop da PA PROPOSED, não aplicada.
+
+## Posteriormente — nova tarefa necessária
+Fase 4 poderá propagar coeficientes aos anchors/payoffs, com nova validação
+de otimização por réplica. Não iniciada. PA e sua política operacional exigem
+implementação e validação próprias; erros de momentos não escolhem B.
+Sem H adaptativo, NBI/CNBI, Pareto ou cutoff estatístico canônico definido.
