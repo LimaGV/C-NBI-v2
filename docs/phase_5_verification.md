@@ -46,6 +46,14 @@ and artifact checksums are verified before publication. One compact grouped
 noise-spectrum NPZ, one nominal-geometry NPZ and text tables preserve every
 decision and all 20 prefixes. Nonempty run directories cannot be overwritten.
 
+Canonical archive turning_fixed_nominal_chim_pa_777_20261024, actual source
+257d1942b452c427b5f8ef7924fddf31975c3ad3, dirty=false. All 21 input hashes
+match committed source blobs and all ten artifact checksums passed. A separate
+deterministic replay reproduced every noise spectrum bitwise. Global leading
+dimension 2, 19 pairs/18 triples/0 quadruples selected at B=2000, numerical rank 7.
+EARLY_STOP_NOT_REACHED; max decision-quantile relative changes never fell below
+1%, so no retrospective early-stop stability claim or policy promotion.
+
 ADR 0008 ACCEPTED. C-PA-01/02/03/04 recorded with explicit derivation/decision/
 definition evidence. Literature coverage remains PARTIAL where only abstract or
 selected HTML passages were inspected; no claim of Horn equivalence.
