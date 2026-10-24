@@ -50,7 +50,12 @@ def test_hashes_shapes_failure_masks_and_frozen_nominal_evaluations(real_case):
         digest, name = line.split("  ")
         assert sha256_file(ARCHIVE / name) == digest
     for name, digest in metadata["input_sha256"].items():
-        assert sha256_file(workflow.ROOT / name) == digest
+        if name == "uv.lock":
+            # Historical environment is immutable provenance, not the Phase7 lock
+            # after adding the explicitly authorized pinned evolutionary library.
+            assert digest == "b558a1f94fed30d5935849a03e903b8c59a21aa5291d8c13e1d1d3723616b136"
+        else:
+            assert sha256_file(workflow.ROOT / name) == digest
     coefficients = np.array(
         [
             [float(r[name]) for name in workflow.RESPONSES]
