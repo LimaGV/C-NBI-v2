@@ -1,5 +1,37 @@
 # Estado metodológico
 
+## Fase 5 — revisão exclusiva da política de early stop no PR #8
+
+Política v1 preservada byte-identical em docs/policies/history/; resultados
+anteriores imutáveis. V2 PROPOSED_REVISED: gap q95 adjacente normalizado,
+tolerância estrita0.05 (cinco pontos percentuais), janela de três checkpoints
+elegíveis, primeira500/600/700, dimensão e IDs exatos. Monitores: todos os gaps
+globais e trios/quartetos selecionados de forma estável; nenhum gap de pares.
+Definida post hoc após a primeira trajetória; não é validação externa da regra.
+ADR 0009 PROPOSED; claims C-PA-05/06/07 delimitadas como decisão/definições.
+Aplicação aos espectros salvos: stop1300, dimensão2 e os mesmos37 IDs até2000;
+potencial redução de35% das réplicas. B=2000 continua a referência científica
+com19 pares+18 trios+0 quartetos. Não houve alteração de PASS/FAIL, normalização
+ou geometria; análise sem novos draws, otimização ou SVD. Sem nova fase ou merge.
+As seções seguintes preservam a execução original e fases anteriores.
+
+## Fase 5 — geometria CHIM e screening espectral local
+
+PR #7 integrado por squash ccf951a com CI verde, main atualizada e limpa.
+Nominal sphere-only da Fase 2 e ensemble exato da Fase 4, sem novos draws/anchors.
+Orientação MIN, normalização nominal fixa e geometria Z[C,C] H_k. Ruído definido
+por Delta[C,C] H_k, sem centralização adicional entre réplicas ou clipping.
+PA-inspired uncertainty screening q95 linear, comparação estrita, todos k-1
+componentes para seleção local e passes líderes para dimensão global.
+Todos 28/56/70 candidatos avaliados, sem gate global, qmax, volume ou filtros
+de deslocamento/erros do sampler. Vinte prefixos e B=2000 referência científica.
+Política original de early stop avaliada retrospectivamente, mantida PROPOSED.
+Ver [matemática](mathematics/chim_parallel_analysis.md),
+[caso real](mathematics/turning_chim_pa.md), [gate](phase_5_verification.md).
+ADR 0008 ACCEPTED; C-PA-01/02/03/04. Sem equivalência alegada à PA clássica de Horn.
+Sem H da malha, pesos, NBI/C-NBI, clustering ou métricas Pareto; próxima fase não iniciada.
+As seções seguintes são históricas e preservam o escopo de cada fase anterior.
+
 ## Fase 4 — propagação aos anchors e payoff matrices
 
 PR #6 integrado por squash 3ea6c6e após CI verde e ausência de conflitos.

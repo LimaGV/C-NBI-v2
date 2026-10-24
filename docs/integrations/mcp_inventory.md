@@ -94,3 +94,33 @@ derivação direta com contraexemplo e definição de método, sem nova atribui�
 bibliográfica. Nenhuma escrita/exportação Zotero ou cópia de documento protegido.
 Git/gh para preflight PR #6, squash autorizado, branch e entrega.
 Nenhum RNG, paralelismo, otimização RC ou análise dimensional nova executada.
+
+## Fase 5 — uso efetivo
+
+Serena: manual inicial lido, sessão 17ca9d27 em C-NBI-v2/LSP Python. Pacote novo
+chim/ separado; nenhum módulo científico anterior editado nesta fase.
+Context7 resolveu NumPy e verificou SVD stacked/compute_uv=False/ordem,
+matrix_rank e quantile(method=linear). Nenhuma dependência nova.
+Zotero buscado primeiro: Horn RCPDPDRD, Jolliffe/Cadima A7EM5INX, Das/Dennis
+5R3KLTFK e Xia/Zhou LPLWLE39, metadados conferidos; nenhum anexo disponível.
+Fontes primárias HTML: abstract Horn no publisher e seção 2(a) Jolliffe/Cadima
+no PMC. PARTIAL explicitado; sem FULLTEXT_VERIFIED artificial ou atribuição de
+equivalência à PA clássica. Sem escrita Zotero ou publicação de documentos.
+Git/gh para preparação, squash autorizado do PR #7 e entrega do novo PR.
+
+## Fase 5 — revisão exclusiva da política antes do merge do PR #8
+
+Serena: manual lido, sessão a7883fe2 ativada em C-NBI-v2/LSP Python;
+símbolos/referências do avaliador v1 e dos caminhos de policy nos runners
+históricos inspecionados. Ciência anterior preservada; somente caminhos da
+política histórica mudaram para o arquivo byte-identical arquivado.
+Context7: resolve NumPy/Matplotlib, queries oficiais sobre quantile linear,
+overwrite_input=False e Figure/FigureCanvasAgg/savefig. Sem dependência nova.
+Zotero e novas fontes externas não necessários: revisão é decisão explícita
+e definição matemática, sem atribuição bibliográfica nova. Nenhuma escrita
+Zotero, exportação de PDF, GitHub MCP, subagente ou ferramenta de UI.
+Git/gh para conferir branch/HEAD/PR/checks, push e atualização do mesmo PR #8.
+Sem merge. O workflow revisado lê apenas os espectros/decisões já arquivados;
+sentinelas proíbem RNG, OLS, optimizer, normalização, CHIM e SVD durante sua
+execução. A suíte de regressão continua testando os módulos anteriores em
+diretórios temporários; não substitui nem altera qualquer resultado canônico.

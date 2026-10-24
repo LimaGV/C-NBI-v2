@@ -8,14 +8,14 @@ Nunca escrever "a literatura mostra" sem fonte diretamente verificável.
 C001–C008 nasceram como propostas do responsável na Fase 0. C001 recebe
 suporte analítico delimitado na Fase 1. C002 é especificada pela ADR 0006;
 C006 é delimitada pela decisão C-MC-03. C003 é especificada na Fase 4;
-as propostas restantes continuam pendentes.
+C004 é especificada na Fase 5; as propostas restantes continuam pendentes.
 
 | Claim ID | Claim | Evidence class | Evidence | Status | Related ADR | Notes |
 |---|---|---|---|---|---|---|
 | C001 | Incerteza analítica RSM multivariada sob projeto fixo e erros de covariância comum | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-RSM-01 a 06; R003/R004; tests/model | SUPPORTED | ADR 0003 | Escopo analítico; não valida sampling, ótimos ou dataset real |
 | C002 | Perturbação conjunta dos coeficientes | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-MC-01/02 | SUPPORTED | ADR 0006 | Matrix-normal plug-in implementada; não valida ótimos por réplica ou PA |
 | C003 | Reotimizar âncoras por réplica | METHODOLOGICAL_DECISION | C-MC-04, solicitação explícita da Fase 4 | SUPPORTED | ADR 0007 | Implementação/certificados na esfera principal; sem PA ou RC |
-| C004 | PA local em estudo | PROPOSED | Contexto do responsável; evidência pendente | UNVERIFIED | MDR pendente | Não implementado |
+| C004 | PA local calibrada pela incerteza Monte Carlo da payoff | METHOD_DEFINITION | C-PA-03 e solicitação explícita da Fase 5 | SUPPORTED | ADR 0008 | Screening definido na v2; sem equivalência alegada à PA original de Horn |
 | C005 | q_C sem hard cutoff automático | PROPOSED | Salvaguarda do responsável; validade pendente | UNVERIFIED | MDR pendente | Sem cutoff definido |
 | C006 | B=2000 não é teorema ou valor universal ótimo | METHODOLOGICAL_DECISION | C-MC-03, diretriz explícita da Fase 3 | SUPPORTED | ADR 0006 | Máximo 2000 adotado para sensibilidade, não escolhido por menor erro observado |
 | C007 | Simplex-Lattice, H inteiro, Delta=1/H | PROPOSED | Diretriz do responsável; derivação pendente | UNVERIFIED | MDR pendente | Não implementado |
@@ -73,3 +73,20 @@ decisões, commits e resultados afetados ao atualizar.
 | C-MC-04 | For each sampled coefficient matrix, individual anchors are recomputed before constructing its payoff | METHODOLOGICAL_DECISION | Explicit Phase 4 instruction; anchor_reoptimization.py; nominal repeated-2000 control counts 16000 calls | SUPPORTED | Main sphere only, unchanged solver; nominal anchors are diagnostic references |
 | C-MC-05 | Fixed nominal anchors do not propagate coefficient uncertainty into optimizer location | MATHEMATICAL_DERIVATION | anchor_monte_carlo.md: f_theta=-(x-theta)^2, x_star=theta versus fixed zero; direct oracle test | SUPPORTED | Response uncertainty at a fixed point is a different object; no unverified attribution to prior work |
 | C-MC-06 | Phase 4 payoffs are A[b,i,j]=f_i[b](x_j_star[b]) | METHOD_DEFINITION | Explicit definition, ADR 0007, payoff orientation/permutation/diagonal tests | SUPPORTED | Native units, same replica on both axes; does not define normalization, CHIM, PA or Nadir |
+
+## Fase 5 — centered CHIM / local PA (ADR 0008 ACCEPTED)
+
+| Claim ID | Claim | Evidence class | Evidence | Status | Limits |
+|---|---|---|---|---|---|
+| C-PA-01 | Affine CHIM dimension is rank of the centered vertex matrix Z_C H_k | MATHEMATICAL_DERIVATION | Equal centered/reference-difference column spans in chim_parallel_analysis.md; synthetic ranks/permutations | SUPPORTED | Numeric rank needs a roundoff diagnostic, separate from statistical screening |
+| C-PA-02 | Every Monte Carlo perturbation uses the same nominal payoff normalization | METHODOLOGICAL_DECISION | Explicit Phase 5 instruction, ADR 0008, fixed normalization invariance tests | SUPPORTED | No per-replica u/a, clipping or across-replica recentering |
+| C-PA-03 | A local subset is retained iff all k-1 observed singular values strictly exceed corresponding q95 uncertainty thresholds | METHOD_DEFINITION | ADR 0008, strict/all-component decision tests, archived threshold trajectories | SUPPORTED | PA-inspired screening, not Horn equivalence or simultaneous error-control guarantee; no qmax/volume/global gate |
+| C-PA-04 | B sensitivity uses nested prefixes 100,200,...,2000 of the same frozen ensemble | METHODOLOGICAL_DECISION | Original policy and explicit Phase 5 scope; prefix tests | SUPPORTED | B=2000 reference; proposed early stop evaluated retrospectively, not automatically promoted |
+
+## Fase 5 — proposed stopping revision (ADR 0009 PROPOSED)
+
+| Claim ID | Claim | Evidence class | Evidence | Status | Limits |
+|---|---|---|---|---|---|
+| C-PA-05 | Monte Carlo spectral convergence is monitored using normalized adjacent gaps of the q95 singular-value spectrum rather than isolated relative changes of each q95 threshold | METHODOLOGICAL_DECISION | Explicit revision request; policy v2; ADR 0009; spectral_gap_stop.py | SUPPORTED | Proposed operational decision, defined post hoc after first turning sensitivity; no universal or externally validated convergence claim |
+| C-PA-06 | For ordered nondegenerate q95, normalized adjacent gap is g_r=(q_r-q_(r+1))/q_r | METHOD_DEFINITION | chim_parallel_analysis.md; known-gap and positive common-scale tests | SUPPORTED | Numerical max(q_r,epsilon_q), zero-pair contract and ordering roundoff are explicit; gaps are not PA selection or dimension filters |
+| C-PA-07 | Revised stopping requires three consecutive eligible checkpoints with unchanged dimension, unchanged subset IDs and stable monitored gaps in both transitions | METHOD_DEFINITION | Policy v2; ADR 0009; synthetic identity/window/strict-boundary oracles and archived real retrospective analysis | SUPPORTED | Operational strict .05, earliest700; monitors global plus stable selected k>=3 only; implementation tests and same-case retrospective stability do not validate universal statistical performance |

@@ -1,0 +1,21 @@
+{
+  "policy_id": "future_pa_adjacent_checkpoint_stability_v1",
+  "status": "PROPOSED",
+  "checkpoints": [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000],
+  "minimum_eligible_B": 500,
+  "comparison_lag": 100,
+  "selected_subsets_rule": "exact equality of subset sets, including their identities",
+  "global_dimension_rule": "exact equality of the PA global dimensional decision",
+  "quantiles_rule": "same decision-quantile identities and every relative change strictly less than tolerance",
+  "quantile_relative_tolerance": 0.01,
+  "quantile_relative_change": "abs(q_B-q_previous)/max(abs(q_B),abs(q_previous),epsilon_q)",
+  "epsilon_q": 2.2250738585072014e-308,
+  "epsilon_q_definition": "smallest positive normal float64, only numerical zero protection",
+  "production_rule": "first eligible checkpoint meeting all three conditions simultaneously",
+  "maximum_B": 2000,
+  "not_reached_status": "EARLY_STOP_NOT_REACHED",
+  "validation_rule": "evaluate every prefix through B=2000 even if production could stop earlier",
+  "moment_errors_are_stop_criteria": false,
+  "applied_in_phase_3": false,
+  "phase_3_actual_status": "NOT_APPLIED_PHASE_3"
+}

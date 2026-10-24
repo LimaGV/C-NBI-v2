@@ -215,7 +215,7 @@ def run_anchor_mc(output: Path, *, run_id: str) -> dict:
     input_paths = [ENSEMBLE, METADATA, NOMINAL, RAW, ROOT / "uv.lock", Path(__file__),
                    ROOT / "scripts/validation/turning_anchors.py",
                    ROOT / "scripts/validation/turning_reference.py",
-                   ROOT / "docs/policies/pa_early_stop_policy.json",
+                   ROOT / "docs/policies/history/pa_early_stop_policy_v1.json",
                    *sorted((ROOT / "src/cnbi_v2/model").glob("*.py")),
                    *sorted((ROOT / "src/cnbi_v2/uncertainty").glob("*.py")),
                    *sorted((ROOT / "src/cnbi_v2/optimization").glob("*.py")),

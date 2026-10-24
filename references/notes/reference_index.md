@@ -18,3 +18,10 @@ Fontes da Fase 1:
 
 METADATA_VERIFIED exige campos conferidos; FULLTEXT_VERIFIED exige leitura
 integral real. CRITICAL_SOURCE não substitui cobertura documentada.
+
+Fontes da Fase 5 (notas seletivas, sem PDF):
+
+| ID | Zotero key | Fonte | Cobertura real | Nota |
+|---|---|---|---|---|
+| R006 | RCPDPDRD | Horn (1965), DOI 10.1007/BF02289447 | PARTIAL, abstract do publisher; metadados confirmados | [Nota](phase_05_sources.md); contexto PA, sem equivalência metodológica |
+| R007 | A7EM5INX | Jolliffe/Cadima (2016), DOI 10.1098/rsta.2015.0202 | PARTIAL, seção 2(a), texto HTML em torno Eqs.(2.2)-(2.5) | [Nota](phase_05_sources.md); contexto SVD/centralização |
