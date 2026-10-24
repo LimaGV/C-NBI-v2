@@ -44,8 +44,16 @@ seed PCG64 777 e um ensemble 2000×10×8. Vinte prefixos 100:100:2000,
 diagnósticos/figura/manifests. ADR 0006 ACCEPTED neste escopo.
 Política futura de early stop da PA PROPOSED, não aplicada.
 
+## Fase 4 — reotimização por réplica e payoff ensemble
+PR #6 integrado por squash 3ea6c6e com quatro checks verdes e autorização.
+Branch feature/04-monte-carlo-anchor-reoptimization. Ensemble exato da Fase 3,
+2000 réplicas × 8 objetivos, solver global quadrático inalterado sobre bola,
+certificados independentes e falhas explícitas. Payoffs naturais por réplica,
+distribuições dos anchors/ótimos e todos os prefixos 100:100:2000.
+ADR 0007 ACCEPTED no escopo solicitado; sem RC ou early stop.
+
 ## Posteriormente — nova tarefa necessária
-Fase 4 poderá propagar coeficientes aos anchors/payoffs, com nova validação
-de otimização por réplica. Não iniciada. PA e sua política operacional exigem
-implementação e validação próprias; erros de momentos não escolhem B.
+Fase 5 deverá definir normalização, CHIM/edge matrix e análise dimensional
+antes de construir esses objetos. PA e sua política operacional exigem
+implementação e validação próprias; diagnósticos de prefixos não escolhem B.
 Sem H adaptativo, NBI/CNBI, Pareto ou cutoff estatístico canônico definido.

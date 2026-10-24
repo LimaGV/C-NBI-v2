@@ -66,6 +66,16 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Esta tarefa autoriza a Fase 4 em feature/04-monte-carlo-anchor-reoptimization,
+após squash do PR #6 com CI verde. Consumir exatamente o ensemble versionado da
+Fase 3, sem novos draws ou alteração de seed/Sigma_e. Reotimizar cada réplica e
+resposta com solve_quadratic_ball inalterado, na bola alpha=8**0.25, sem RC.
+Certificar soluções, preservar índices e registrar falhas sem substitutos;
+payoff natural própria de cada réplica. ADR 0007 ACCEPTED no escopo solicitado;
+METHOD_DEFINITION é classe adicional explícita para C-MC-06.
+Sem normalização, CHIM, edge matrix, SVD/PA, subsets, NBI/C-NBI ou Fase 5.
+Novo PR sem merge automático. Políticas das fases anteriores são históricas.
+
 Esta tarefa autoriza a Fase 3 em feature/03-multivariate-coefficient-monte-carlo,
 após squash do PR #5 com checks verdes. Usar o mesmo ajuste codificado da Fase 2,
 matrix-normal plug-in conjunta, Sigma_e bruta, seed 777 explícita e um ensemble
@@ -86,7 +96,7 @@ Dados continuam integrais. O novo PR não tem merge automático. Monte Carlo,
 NBI/C-NBI, CHIM combinatorial, PA, shrinkage e etapas posteriores seguem fora.
 
 Classificar claims: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION,
-METHODOLOGICAL_DECISION, PROPOSED.
+METHODOLOGICAL_DECISION, METHOD_DEFINITION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. Não escrever "a literatura mostra" sem fonte verificável.
 Dados brutos são imutáveis. Derivações exigem origem, hashes, commit, configuração,

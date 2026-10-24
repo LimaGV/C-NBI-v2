@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Fase 4 anchor/payoff Monte Carlo
+- Consumo rastreável do ensemble exato da Fase 3, sem novos draws ou ajustes.
+- Reotimização por réplica/resposta com solver global sobre bola inalterado.
+- Extração coeficientes → quadráticas compartilhada com o caminho nominal.
+- Certificados independentes, índices/máscaras imutáveis e logs sem substituição em falha.
+- Ensembles de anchors/valores ótimos/payoffs naturais e diagnósticos dos 20 prefixos.
+- ADR 0007 ACCEPTED e claims C-MC-04/05/06, com política PA ainda PROPOSED e não aplicada.
+- Sem RC, normalização, shrinkage, CHIM/SVD/PA, subsets ou NBI/C-NBI; dependências preservadas.
+
 ## Unreleased — Fase 3 coefficient Monte Carlo
 - Sampler matrix-normal plug-in conjunto, Sigma_e bruta, QR/solve e Cholesky/PSD explícito.
 - Resultado imutável, seed PCG64 explícita, igualdade de prefixos e chunks testada.

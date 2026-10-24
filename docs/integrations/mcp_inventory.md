@@ -81,3 +81,16 @@ derivada diretamente, e resultados novos são evidência interna/decisão explí
 Nenhum item bibliográfico ou documento protegido foi escrito/exportado.
 Git/gh autenticado para preflight, squash autorizado e entrega do PR.
 Matplotlib no grupo dev justificado pelo PNG solicitado; runtime preservado.
+
+## Fase 4 — uso efetivo
+
+Serena: manual inicial lido, sessão 296ab1d2 em C-NBI-v2/LSP Python;
+referências de quadratic_responses e dependências/payoff inspecionadas antes
+de expor sua mesma transformação para arrays. Solver global não alterado.
+Context7: resolve NumPy e duas queries focadas, para quantile(method=linear)/std
+ddof=1 e NPZ com Unicode fixo/allow_pickle=False. Sem dependência nova.
+Zotero não necessário para novas fontes: as claims são decisão explícita,
+derivação direta com contraexemplo e definição de método, sem nova atribuição
+bibliográfica. Nenhuma escrita/exportação Zotero ou cópia de documento protegido.
+Git/gh para preflight PR #6, squash autorizado, branch e entrega.
+Nenhum RNG, paralelismo, otimização RC ou análise dimensional nova executada.

@@ -1,19 +1,20 @@
 # Matriz de afirmações metodológicas
 
 Evidence class: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION,
-METHODOLOGICAL_DECISION, PROPOSED.
+METHODOLOGICAL_DECISION, METHOD_DEFINITION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. SUPPORTED exige evidência direta, pressupostos e limites explícitos.
 Nunca escrever "a literatura mostra" sem fonte diretamente verificável.
 C001–C008 nasceram como propostas do responsável na Fase 0. C001 recebe
 suporte analítico delimitado na Fase 1. C002 é especificada pela ADR 0006;
-C006 é delimitada pela decisão C-MC-03. As demais propostas continuam pendentes.
+C006 é delimitada pela decisão C-MC-03. C003 é especificada na Fase 4;
+as propostas restantes continuam pendentes.
 
 | Claim ID | Claim | Evidence class | Evidence | Status | Related ADR | Notes |
 |---|---|---|---|---|---|---|
 | C001 | Incerteza analítica RSM multivariada sob projeto fixo e erros de covariância comum | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-RSM-01 a 06; R003/R004; tests/model | SUPPORTED | ADR 0003 | Escopo analítico; não valida sampling, ótimos ou dataset real |
 | C002 | Perturbação conjunta dos coeficientes | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-MC-01/02 | SUPPORTED | ADR 0006 | Matrix-normal plug-in implementada; não valida ótimos por réplica ou PA |
-| C003 | Reotimizar âncoras por réplica | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
+| C003 | Reotimizar âncoras por réplica | METHODOLOGICAL_DECISION | C-MC-04, solicitação explícita da Fase 4 | SUPPORTED | ADR 0007 | Implementação/certificados na esfera principal; sem PA ou RC |
 | C004 | PA local em estudo | PROPOSED | Contexto do responsável; evidência pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C005 | q_C sem hard cutoff automático | PROPOSED | Salvaguarda do responsável; validade pendente | UNVERIFIED | MDR pendente | Sem cutoff definido |
 | C006 | B=2000 não é teorema ou valor universal ótimo | METHODOLOGICAL_DECISION | C-MC-03, diretriz explícita da Fase 3 | SUPPORTED | ADR 0006 | Máximo 2000 adotado para sensibilidade, não escolhido por menor erro observado |
@@ -64,3 +65,11 @@ decisões, commits e resultados afetados ao atualizar.
 | C-MC-01 | For DeltaB=C_X G L_Sigma^T with iid standard-normal G, Cov(vec(DeltaB))=Sigma tensor V_X | MATHEMATICAL_DERIVATION | docs/mathematics/coefficient_monte_carlo.md; root identities and column-vec tests | SUPPORTED | Conditional plug-in law, C_X C_X^T=V_X and L_Sigma L_Sigma^T=Sigma; not a posterior |
 | C-MC-02 | Empirical Monte Carlo moments approach the plug-in theoretical moments as B increases | INTERNAL_EVIDENCE | Synthetic six-SE tests; run turning_original_codes_mc_777_20261024: E_mu .00948444 to .00216433, E_K .285882 to .0615535, all 20 prefixes archived | SUPPORTED | Finite-seed evidence consistent with convergence, not a monotonic theorem or universal B; covariance blocks tested separately |
 | C-MC-03 | B=100:100:2000 is a sensitivity schedule, not a universal optimum | METHODOLOGICAL_DECISION | Explicit Phase 3 instruction, ADR 0006, coefficient_checkpoints() | SUPPORTED | Final B not selected by minimum observed error; future PA early stop PROPOSED and not applied |
+
+## Fase 4 — anchor reoptimization (ADR 0007 ACCEPTED)
+
+| Claim ID | Claim | Evidence class | Evidence | Status | Limits |
+|---|---|---|---|---|---|
+| C-MC-04 | For each sampled coefficient matrix, individual anchors are recomputed before constructing its payoff | METHODOLOGICAL_DECISION | Explicit Phase 4 instruction; anchor_reoptimization.py; nominal repeated-2000 control counts 16000 calls | SUPPORTED | Main sphere only, unchanged solver; nominal anchors are diagnostic references |
+| C-MC-05 | Fixed nominal anchors do not propagate coefficient uncertainty into optimizer location | MATHEMATICAL_DERIVATION | anchor_monte_carlo.md: f_theta=-(x-theta)^2, x_star=theta versus fixed zero; direct oracle test | SUPPORTED | Response uncertainty at a fixed point is a different object; no unverified attribution to prior work |
+| C-MC-06 | Phase 4 payoffs are A[b,i,j]=f_i[b](x_j_star[b]) | METHOD_DEFINITION | Explicit definition, ADR 0007, payoff orientation/permutation/diagonal tests | SUPPORTED | Native units, same replica on both axes; does not define normalization, CHIM, PA or Nadir |

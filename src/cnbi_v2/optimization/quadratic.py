@@ -7,7 +7,7 @@ from itertools import combinations
 import numpy as np
 from numpy.typing import ArrayLike
 
-from cnbi_v2.model import RSMFit
+from cnbi_v2.model import RSMFit, quadratic_term_names
 from cnbi_v2.model.quadratic_design import FloatArray, _as_finite_real
 
 
@@ -61,10 +61,21 @@ class QuadraticResponse:
 
 def quadratic_responses(fit: RSMFit) -> tuple[QuadraticResponse, ...]:
     """Extract beta0,b,Q from the unchanged canonical coefficient order."""
-    n = fit.n_factors
+    return quadratic_responses_from_coefficients(fit.coefficients, fit.n_factors)
+
+
+def quadratic_responses_from_coefficients(
+    coefficients: ArrayLike, n_factors: int,
+) -> tuple[QuadraticResponse, ...]:
+    """The same canonical extraction for fitted or sampled coefficient matrices."""
+    n_terms = len(quadratic_term_names(n_factors))
+    values = _as_finite_real(coefficients, "coefficients")
+    if values.ndim != 2 or values.shape[0] != n_terms or values.shape[1] == 0:
+        raise ValueError("coefficients must have shape (full quadratic terms, responses)")
+    n = n_factors
     models = []
-    for j in range(fit.n_responses):
-        beta = fit.coefficients[:, j]
+    for j in range(values.shape[1]):
+        beta = values[:, j]
         matrix = np.diag(beta[1 + n:1 + 2 * n])
         for index, (a, b) in enumerate(combinations(range(n), 2), start=1 + 2 * n):
             matrix[a, b] = matrix[b, a] = beta[index] / 2

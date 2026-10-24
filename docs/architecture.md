@@ -24,6 +24,14 @@ Layout src com distribuição c-nbi-v2 e import cnbi_v2. A versão permanece
   QR/solve e Cholesky/PSD, Generator(PCG64), arrays imutáveis e streaming de lotes.
 - `uncertainty/mc_sensitivity.py`: prefixos e erros agregados de momentos,
   sem early stop ou dependência de optimization/.
+- `optimization/quadratic.py`: extração única de coeficientes para quadráticas,
+  exposta para arrays e compartilhada pelo antigo caminho RSMFit.
+- `uncertainty/anchor_reoptimization.py`: usa extração e solve_quadratic_ball
+  existentes em cada réplica, verifica certificados e constrói payoff natural;
+  resultado imutável com máscaras, casos e falhas identificadas, sem RNG/RC.
+- `scripts/validation/turning_anchor_mc.py`: verifica o NPZ/metadata da Fase 3,
+  carrega nominal da Fase 2 apenas como referência, executa e arquiva o ensemble,
+  resumos completos e prefixos; bloqueia resumos em caso de falha.
 - `scripts/validation/turning_coefficient_mc.py`: carrega o caso codificado
   verificado da Fase 2, ajusta uma vez pelo fitter existente e arquiva um ensemble.
   Importar o loader não executa o fluxo de anchors; sentinelas testam esse limite.
@@ -42,6 +50,8 @@ de import-untyped nas APIs SciPy utilizadas.
 [ADR 0003](decisions/0003-multivariate-rsm-and-uncertainty-foundation.md) e
 [matemática](mathematics/multivariate_rsm.md) definem convenções e pressupostos.
 ADR 0005 EXPERIMENTAL acrescenta anchors nominais e duas payoffs; ADR 0006
-ACCEPTED acrescenta somente propagação conjunta de coeficientes e sensibilidade.
-Não há reotimização por réplica, shrinkage, CHIM, PA, Simplex-Lattice, escolha de H,
-Pareto ou NBI/CNBI. A futura política PA é especificação PROPOSED, sem execução.
+ACCEPTED acrescenta propagação conjunta de coeficientes e sensibilidade.
+ADR 0007 ACCEPTED acrescenta reotimização por réplica e payoff natural, sem
+alterar o solver global ou adicionar dependências. Sem shrinkage, CHIM, PA,
+Simplex-Lattice, escolha de H, Pareto ou NBI/CNBI. A futura política PA é
+especificação PROPOSED, sem execução.
