@@ -1,0 +1,42 @@
+{
+  "executed_at_utc": "2026-10-23T22:34:39.790481+00:00",
+  "git_commit": "384bb974f4ec2b7e25ad5c39aef9250014650d56",
+  "git_branch": "feature/01-multivariate-rsm-foundation",
+  "git_working_tree_dirty": true,
+  "command": "uv run python -m scripts.validation.turning_diagnostics",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "openpyxl": "3.1.5"
+  },
+  "input_sha256": {
+    "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "data/processed/turning_application/CCD_values_20261023.csv": "dd204e53d68436e0ff840d260a0903ee30789dd28ee1934b4f1bbce50a5aa02e",
+    "tests/reference_cases/turning_8responses/expected_model_summary.csv": "e9c19da0ae4f62f39e7ac0e69809bdd35597a159d26a5a3a0479ff90563ac298",
+    "uv.lock": "b340406d8ba351aaa19d159ce6e095e3fef54a0c169f471ca3bb6d71c2dc1895",
+    "scripts/validation/turning_diagnostics.py": "bdfc771e036bdc20120c5cb251d3c34276fe5a8092abc1bae0c1bfa3bff69b39",
+    "scripts/validation/turning_reference.py": "5f53e419be4f6c81e85a053f830ef37e921a897761036ce0b55d00bab7dbb684",
+    "src/cnbi_v2/model/__init__.py": "7a67c146d48dae3d12b39de2af672b92b78f9aac8997b4c630a9d17ba9e16c85",
+    "src/cnbi_v2/model/diagnostics.py": "83f10ef258f3bd637729569a453746f8193e099625020f67fb694f1dcd860abb",
+    "src/cnbi_v2/model/multivariate_rsm.py": "666cd1f968ea6fdc618b7faa25b62333cb534c991b1c7448c44a0973bdbf9e01",
+    "src/cnbi_v2/model/quadratic_design.py": "efdedfde5f607f771dae9b5567d2c7a359f7564386a360cbebd116ef15867cf3",
+    "src/cnbi_v2/model/uncertainty.py": "2339f627bbbe2dd7a74037abe534c6ef2501465df87eef4beb4ac3ad10cc05db"
+  },
+  "raw_before_sha256": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+  "raw_after_sha256": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+  "output_sha256": {
+    "all_cases_model_diagnostics.csv": "a3c8f34a073983d753f2ed2ee3b6481cec8cef0bef59bfec71d530113010f7f1",
+    "anova.csv": "6cd2a3e8c0b7810a2093ffa7c2dc6cb0a47517a842f9d2d181a0ff1d508f4121",
+    "lack_of_fit.csv": "7d989ec56e99322797850cecdd2501b46c6de9e5c1f402244b790d324ad99e99",
+    "model_diagnostics.csv": "d717ffae510cf25e6c190175f6250d747de6c38780e6e03822f88b1a43a5e775",
+    "press_residuals.csv": "31fdbd0ea6defccf7f2b88d6a848960ba8165305d1dbd510c13a63117803d575",
+    "published_summary_comparison.csv": "fcc3c69e29da0974ab00d858499965d7f8e4a24ae71f6a57f61dcf0cc205e16a",
+    "README.md": "abcce85854a9749950501cb0c7442e3f58aa71f5364a4bbda963ca8b4c5cb966",
+    "summary.json": "6be43b630df0e05053a0085022f320df54210f1a3e6d98e23354e30230335089"
+  },
+  "canonical_data_rounded": false,
+  "wr_rounding_experiment_executed": false,
+  "models_or_coding_changed": false
+}

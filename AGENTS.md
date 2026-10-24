@@ -10,7 +10,8 @@ arquitetura ou preservar thresholds e decisões por continuidade.
 A distribuição é c-nbi-v2; o import é cnbi_v2.
 
 ## Scientific change policy
-A fundação contém somente infraestrutura. Não iniciar Fase 1 sem nova tarefa.
+A Fase 1 foi autorizada explicitamente: base quadrática, OLS multivariado e
+incerteza analítica, com validação sintética e ADR 0003. Fases posteriores exigem nova tarefa.
 Nenhuma mudança metodológica sem definição matemática, evidência, ADR/MDR,
 testes e validação. Hipótese experimental não vira metodologia oficial.
 Registrar o que mudou, por quê, branch, commit, decisão, testes, resultados
@@ -80,6 +81,15 @@ A Fase 0.6 autoriza integrar o PR #2 após CI verde e ausência de conflito,
 incorporar o CCD.xlsx fornecido e enviar seu raw byte-identical ao repositório
 privado por autorização explícita adicional do responsável. A exceção cobre
 somente CCD_original.xlsx. O novo PR da Fase 0.6 não tem merge automático.
+A tarefa da Fase 1 autoriza squash merge do PR #3 após CI verde e ausência
+de conflito, desenvolvimento/push/PR em feature/01-multivariate-rsm-foundation.
+O novo PR da Fase 1 não tem merge automático. Não acrescentar ferramentas de
+sampling, shrinkage, otimização, NBI/CNBI ou dependências sem justificativa.
+A tarefa posterior autoriza ajustar o CCD atualizado, preservar sua revisão
+literal separadamente e comparar os 80 coeficientes. A autorização privada
+do mesmo workbook é estendida somente a CCD_values_20261023.xlsx e à extração
+literal correspondente. Não sobrescrever CCD_original.xlsx; atualizar o PR #4,
+sem fazer merge ou iniciar outra fase.
 Nunca registrar tokens, API keys, passwords ou credentials. Não copiar .env,
 configuração global de agentes, credenciais ou conteúdo de keyring para o Git.
 
@@ -104,7 +114,13 @@ Na Fase 0.6 o dataset turning_application_ccd_19run é incorporado como evidênc
 raw com links externos, sem certificação dos caches, snapshot ou processed.
 Table 3 de Pereira et al. (2025) é expected output, nunca observação experimental.
 Proibido reconstruir Y, imputar respostas ou ajustar dados para reproduzir
-coeficientes publicados. Fase 1, OLS, RSM, Monte Carlo e NBI não estão autorizados.
+coeficientes publicados. OLS/RSM e incerteza analítica estão autorizados na
+Fase 1 com dados sintéticos; não ajustar o raw experimental não autocontido.
+A revisão literal fornecida em 2026-10-23 pode ser ajustada com precisão integral.
+Coding nominal, escala de apresentação e hipóteses diagnósticas devem ser
+explícitos. Arredondamento de cópia de WR é diagnóstico opcional, excluído dos
+modelos reais e dos totais de validação; nunca alterar os valores experimentais.
+Monte Carlo e NBI/CNBI continuam fora do escopo autorizado.
 Classificação PUBLIC_SMALL/PUBLIC_LARGE/RESTRICTED exige evidência; não escolher
 por inferência, não configurar LFS automaticamente e não alterar .gitignore só
 para ocultar dados existentes. Processed exige raw/snapshot + script versionado.

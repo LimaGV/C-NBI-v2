@@ -26,7 +26,31 @@ O locator de dependências do ambiente e o vínculo de PR na interface foram
 usados como suporte externo; o projeto continua executado por uv, sem dependência
 de codex_app para sua infraestrutura ou execução científica.
 Revalidar Serena, Context7 e OpenAI Docs MCP quando estiverem expostos.
+Fase 1: Zotero search/metadata/children usados para Díaz-García/Bashiri,
+Myers/Montgomery/Anderson-Cook, Johnson/Wichern e busca Khuri, somente leitura.
+Preprint arXiv primário e livro RSM local inspecionados por passagens; linked_url
+de Johnson/Wichern indisponível por timeout. Context7/Serena/Repomix continuam
+sem exposição; NumPy 2.5 consultado em documentação oficial via web.
+Busca focada rg e AST do Python foram usadas para navegação/auditoria.
+Validação aplicada: Zotero buscou NIST, sem item pertinente (fallback textual
+retornou itens não relacionados, que não foram usados). Fórmula de CCD rotacional
+conferida diretamente no handbook oficial do NIST; nenhum metadado de item foi inventado.
 Não instalamos/reconfiguramos MCPs nem obtivemos credenciais.
+Fechamento da Fase 1: metadados Zotero Z8Z2JEDC reconferidos em leitura;
+passagens de ANOVA/R²/PRESS/LOF verificadas no livro local e NIST oficial.
+Context7 segue não exposto; `scipy.stats.f.sf` conferido na documentação
+oficial estável (1.18.0; runtime locked 1.18.1). URL 1.18.1 indisponível via web.
+Não se usou Context7 como fonte de validade científica.
+
+Retomada de finalização em 2026-10-24: Context7 e Serena passaram a estar
+expostos. Context7 resolve_library_id(SciPy) selecionou /scipy/scipy e query_docs
+reconferiu a survival function (1-CDF); a assinatura F já havia sido verificada
+na documentação oficial específica. Não houve mudança de API ou cálculo.
+O manual inicial Serena respondeu; a sessão apontou para o diretório de contexto,
+sem language servers, diferente do repositório C-NBI-v2. Não se fez onboarding,
+migração ou edição semântica: código já estava implementado e esta retomada
+se limitou ao gate, documentação e entrega Git. Os registros anteriores de
+indisponibilidade permanecem como histórico, não como estado atual.
 
 ## Ferramentas locais
 Executados: Git 2.54.0.windows.1, uv 0.12.23, rg 15.2.0, gh 2.97.0.

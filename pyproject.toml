@@ -41,6 +41,10 @@ python_version = "3.12"
 strict = true
 warn_unused_configs = true
 
+[tool.coverage.report]
+precision = 2
+fail_under = 96.15
+
 [[tool.mypy.overrides]]
 module = ["openpyxl", "openpyxl.*"]
 ignore_missing_imports = true

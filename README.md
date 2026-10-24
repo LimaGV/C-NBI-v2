@@ -1,11 +1,15 @@
 # C-NBI v2
 
 Reimplementação limpa e independente do Combinatorial Normal Boundary
-Intersection. Versão **0.1.0.dev0**. Estado: fundação de infraestrutura.
+Intersection. Versão **0.1.0.dev0**. Estado: fundação RSM multivariada.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
-Nenhum algoritmo científico implementado; Fase 1 não iniciada.
+Fase 0.6 integrada pelo PR #3. A Fase 1 implementa base quadrática, OLS
+multivariado e incerteza analítica, validados sinteticamente. O CCD atualizado
+foi ajustado com valores literais integrais; a Table 3 tem reprodução parcial
+condicional (70/80), com divergência de WR e da nota de escala explícitas.
+Ver [validação aplicada](docs/mathematics/turning_real_validation.md).
 
 A [v1](https://github.com/LimaGV/C-NBI/tree/cnbi-v1.0) é referência histórica.
 Não foram herdados módulos, arquitetura, ambiente ou parâmetros.
@@ -17,6 +21,7 @@ Python **3.12.15** e uv **0.12.23**. Na raiz:
 uv sync --locked
 uv run python -c "import sys, cnbi_v2; print(sys.executable); print(cnbi_v2.__file__)"
 uv run pytest
+uv run pytest --cov=cnbi_v2
 uv run ruff check .
 uv run mypy src
 uv run python scripts/verify_environment.py
@@ -43,10 +48,30 @@ O raw de torneamento foi autorizado especificamente no repositório privado.
 Ver [metadata e lacunas](data/metadata/turning_application/README.md) e
 [golden reference publicada](tests/reference_cases/turning_8responses/README.md).
 
+## RSM e incerteza analítica
+`cnbi_v2.model` fornece `quadratic_design`, `quadratic_term_names`,
+`fit_multivariate_rsm`, `RSMFit` e as covariâncias analíticas dos coeficientes,
+das médias preditas e de diferenças. Não há codificação ou normalização implícita.
+
+```python
+from cnbi_v2.model import fit_multivariate_rsm, mean_prediction_covariance
+
+# Exemplo inteiramente sintético; Y vetorial conserva um eixo de resposta.
+fit = fit_multivariate_rsm([[-2], [-1], [0], [1], [2]], [1, 2, 1, 3, 5])
+mean = fit.predict([0.5])
+estimated_mean_covariance = mean_prediction_covariance(fit, [0.5])
+```
+
+Ver [definição e API](docs/mathematics/multivariate_rsm.md),
+[derivações da incerteza](docs/mathematics/rsm_uncertainty.md) e
+[ADR 0003](docs/decisions/0003-multivariate-rsm-and-uncertainty-foundation.md).
+Nenhum Monte Carlo, shrinkage ou método de otimização foi implementado.
+
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.
 main é destino de PR aprovado. A Fase 0 entrou pelo PR #1 após CI verde;
-a Fase 0.5 usa feature/00-5-data-reference-foundation, sem merge automático.
+as Fases 0.5 e 0.6 foram integradas pelos PRs #2 e #3. A Fase 1 usa
+feature/01-multivariate-rsm-foundation, com novo PR sem merge automático.
 
 - [Contrato dos agentes](AGENTS.md)
 - [Arquitetura](docs/architecture.md) e [roadmap](ROADMAP.md)

@@ -1,5 +1,15 @@
 # Pereira et al. (2025) — hybrid VRF-NBI
 
+## Complemento empírico posterior
+O CCD literal atualizado foi ajustado com precisão integral. Ver
+[validação real](../../docs/mathematics/turning_real_validation.md): 50/80 pela
+nota literal e 70/80 sob escala diagnóstica com desenho nominal rotacional.
+WR com valores integrais diverge; uma cópia arredondada a três casas reproduz
+seus dez coeficientes, sem provar o preprocessing original. Não alterar a
+transcrição de Table 3 ou os valores experimentais com base nesse diagnóstico.
+Table 2 p.12 foi reconferida visualmente; PDF conserva o hash registrado.
+As lacunas descritas abaixo registram a investigação inicial da Fase 0.6.
+
 Title: A hybrid multivariate normal boundary intersection approach with post-optimization assisted by mixture design of experiments
 Authors: Matheus Costa Pereira; Caio Tertuliano Ribeiro; Ronã Rinston Amaury Mendes;
 Paulo Henrique da Silva Campos; Anderson Paulo de Paiva.
@@ -49,7 +59,7 @@ documental; CCD.xlsx é evidência experimental preservada separadamente.
   e Table 1 página 11; Table 2 página 12. Layout também verificado no workbook.
 A matriz de claims identifica a natureza distinta da evidência documental/raw.
 
-## Claims NOT supported
+## Claims NOT supported na verificação histórica da Fase 0.6
 - C011: reprodução numérica dos coeficientes a partir do raw incorporado.
   Continua PROPOSED/UNVERIFIED.
 - Caches do Excel serem atuais/corretos ou equivalentes à fonte experimental oficial.
@@ -84,3 +94,25 @@ A seção Data availability, página 30, identifica o repositório
 https://github.com/Matheuscp98/Normal-Boundary-Intersection.git e material
 suplementar. Foram apenas identificados no texto; não foram baixados ou importados.
 Nenhum dado foi preenchido a partir da Table 2 ou da Table 3.
+
+## Atualização — fechamento da Fase 1 (2026-10-23)
+
+A nota acima preserva o estado histórico de incorporação. A revisão literal
+posterior e a implementação/validação estão em turning_real_validation.md e
+turning_rsm_diagnostics.md. C011 agora é PARTIALLY_SUPPORTED conforme a claims
+matrix, sem reprodução integral 80/80. O raw histórico não foi ajustado.
+
+Foi auditado novamente o texto local verificado, com busca por PRESS,
+leave-one-out, R² predicted e cross-validation e leitura das passagens de
+modelagem/validação nas pp.6,9-10,12-13,22-24. Table 3 p.13 apresenta R² pred.,
+mas não foi encontrada definição explícita por PRESS/LOOCV para esse resumo.
+Cross-validation em cinco folds e treino/teste 80/20 nas pp.22-23 refere-se
+ao estudo de machine learning/dados simulados, não define o R² pred. da Table 3.
+Status da comparabilidade: PUBLISHED_R2_PRED_METHOD_UNSPECIFIED; comparação
+numérica é secundária, inclusive quando há coincidência de arredondamento.
+S tem nota própria 10^-2, aplicada separadamente das escalas dos coeficientes.
+
+WR com precisão integral é canônico. O diagnóstico histórico de arredondamento
+tem classificação PUBLICATION_RECONCILIATION_NOTE e fica fora do pipeline
+oficial. Divergências WR e escala de ROI/OEE são inconsistências da publicação/
+reference case; não são classificadas como defeito da implementação.

@@ -1,0 +1,63 @@
+{
+  "record_type": "PHASE_1_DIAGNOSTICS_VALIDATION",
+  "validation_date_local": "2026-10-24",
+  "validated_source_commit": "ac6e7a98842e1f1c32fd2240e2a266738264fcd9",
+  "branch": "feature/01-multivariate-rsm-foundation",
+  "pull_request": "https://github.com/LimaGV/C-NBI-v2/pull/4",
+  "source_working_tree_clean_before_record": true,
+  "original_execution_commit": "384bb974f4ec2b7e25ad5c39aef9250014650d56",
+  "original_execution_working_tree_dirty": true,
+  "execution_input_hashes_match_validated_commit_blobs": true,
+  "execution_input_sha256": {
+    "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "data/processed/turning_application/CCD_values_20261023.csv": "dd204e53d68436e0ff840d260a0903ee30789dd28ee1934b4f1bbce50a5aa02e",
+    "tests/reference_cases/turning_8responses/expected_model_summary.csv": "e9c19da0ae4f62f39e7ac0e69809bdd35597a159d26a5a3a0479ff90563ac298",
+    "uv.lock": "b340406d8ba351aaa19d159ce6e095e3fef54a0c169f471ca3bb6d71c2dc1895",
+    "scripts/validation/turning_diagnostics.py": "bdfc771e036bdc20120c5cb251d3c34276fe5a8092abc1bae0c1bfa3bff69b39",
+    "scripts/validation/turning_reference.py": "5f53e419be4f6c81e85a053f830ef37e921a897761036ce0b55d00bab7dbb684",
+    "src/cnbi_v2/model/__init__.py": "7a67c146d48dae3d12b39de2af672b92b78f9aac8997b4c630a9d17ba9e16c85",
+    "src/cnbi_v2/model/diagnostics.py": "83f10ef258f3bd637729569a453746f8193e099625020f67fb694f1dcd860abb",
+    "src/cnbi_v2/model/multivariate_rsm.py": "666cd1f968ea6fdc618b7faa25b62333cb534c991b1c7448c44a0973bdbf9e01",
+    "src/cnbi_v2/model/quadratic_design.py": "efdedfde5f607f771dae9b5567d2c7a359f7564386a360cbebd116ef15867cf3",
+    "src/cnbi_v2/model/uncertainty.py": "2339f627bbbe2dd7a74037abe534c6ef2501465df87eef4beb4ac3ad10cc05db"
+  },
+  "preserved_numeric_artifact_sha256": {
+    "all_cases_model_diagnostics.csv": "a3c8f34a073983d753f2ed2ee3b6481cec8cef0bef59bfec71d530113010f7f1",
+    "anova.csv": "6cd2a3e8c0b7810a2093ffa7c2dc6cb0a47517a842f9d2d181a0ff1d508f4121",
+    "lack_of_fit.csv": "7d989ec56e99322797850cecdd2501b46c6de9e5c1f402244b790d324ad99e99",
+    "model_diagnostics.csv": "d717ffae510cf25e6c190175f6250d747de6c38780e6e03822f88b1a43a5e775",
+    "press_residuals.csv": "31fdbd0ea6defccf7f2b88d6a848960ba8165305d1dbd510c13a63117803d575",
+    "published_summary_comparison.csv": "fcc3c69e29da0974ab00d858499965d7f8e4a24ae71f6a57f61dcf0cc205e16a"
+  },
+  "numeric_artifacts_regenerated_during_finalization": false,
+  "original_manifest_preserved": true,
+  "quality": {
+    "uv sync --locked": "PASSED; 115 packages resolved, 112 checked; no dependency change",
+    "uv run pytest -v": "PASSED; 237 tests",
+    "uv run pytest --cov=cnbi_v2": {
+      "status": "PASSED",
+      "tests": 237,
+      "covered_statements": 516,
+      "statements": 524,
+      "coverage_percent": 98.47,
+      "new_diagnostics_module_coverage_percent": 100.0
+    },
+    "uv run ruff check .": "PASSED",
+    "uv run mypy src": "PASSED; 10 source files",
+    "git diff --check": "PASSED"
+  },
+  "ci": "Check the final PR head; remote checks are separate from this local gate.",
+  "scope": "Preserved full-precision observations, existing models/codings and numerical results. No term removal, optimization, Monte Carlo or NBI/CNBI.",
+  "ci_portability_followup": {
+    "initial_failed_run": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40091027772",
+    "platform": "ubuntu-latest",
+    "failure": "New coefficient-artifact comparison required rtol=2e-14, atol=1e-15 across LAPACK builds.",
+    "observed_max_absolute_difference": 7.10542736e-12,
+    "observed_max_relative_difference": 2.77976713e-12,
+    "validation_only_correction": "Compare coefficient error normalized by each response column maximum, with bound eps*max(n,p)*condition(X), using the existing fitter rank tolerance.",
+    "production_code_changed": false,
+    "numeric_results_changed": false,
+    "publication_rounding_intervals_changed": false,
+    "local_gate_after_test_correction": "237 passed; coverage 98.47%, diagnostics/model 100%; Ruff and mypy passed. Remote final-head gate tracked in PR checks."
+  }
+}

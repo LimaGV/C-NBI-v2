@@ -4,12 +4,12 @@ Evidence class: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. SUPPORTED exige evidência direta, pressupostos e limites explícitos.
 Nunca escrever "a literatura mostra" sem fonte diretamente verificável.
-C001–C008 foram preservados da Fase 0 como propostas do responsável,
-sem referências científicas adotadas ou preenchidas por inferência.
+C001–C008 nasceram como propostas do responsável na Fase 0. C001 recebe
+suporte analítico delimitado na Fase 1; C002–C008 continuam sem aceitação.
 
 | Claim ID | Claim | Evidence class | Evidence | Status | Related ADR | Notes |
 |---|---|---|---|---|---|---|
-| C001 | Incerteza RSM multivariada | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
+| C001 | Incerteza analítica RSM multivariada sob projeto fixo e erros de covariância comum | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-RSM-01 a 06; R003/R004; tests/model | SUPPORTED | ADR 0003 | Escopo analítico; não valida sampling, ótimos ou dataset real |
 | C002 | Perturbação conjunta dos coeficientes | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C003 | Reotimizar âncoras por réplica | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C004 | PA local em estudo | PROPOSED | Contexto do responsável; evidência pendente | UNVERIFIED | MDR pendente | Não implementado |
@@ -19,8 +19,25 @@ sem referências científicas adotadas ou preenchidas por inferência.
 | C008 | H adaptativo indefinido | PROPOSED | Questão em aberto do responsável | UNVERIFIED | MDR pendente | Nenhuma regra escolhida |
 | C009 | The turning application uses full quadratic response surface models for eight original responses. | LITERATURE | R001, Eq. (17) p.6, seção 3 p.12 e Table 3 p.13 | SUPPORTED | docs/decisions/0002-turning-reference-case.md | Descrição publicada; não implementação v2 |
 | C010 | The experimental application contains 19 CCD runs, three factors, eight responses and five center points. | LITERATURE + INTERNAL_EVIDENCE | R001 seção 3 p.11/Table 2 p.12; DATASET_METADATA e Plan1!A1:L20 | SUPPORTED | docs/decisions/0002-turning-reference-case.md | Estrutura/layout verificados; respostas vinculadas externamente |
-| C011 | The published coefficients can be reproduced numerically from the incorporated experimental dataset. | PROPOSED | Golden reference registrada; experimento computacional ainda não realizado | UNVERIFIED | docs/decisions/0002-turning-reference-case.md | Depende de fonte experimental validada, coding/scaling e arredondamento |
+| C011 | The published coefficients can be reproduced numerically from the incorporated experimental dataset. | INTERNAL_EVIDENCE | Validação literal em docs/mathematics/turning_real_validation.md; 50/80 nota literal, 70/80 escala diagnóstica sob CCD nominal | PARTIALLY_SUPPORTED | ADR 0004 | Não reproduz 80/80 preservando precisão; WR diverge; coding físico e nota de escala pendentes |
 | C012 | The incorporated raw workbook has unresolved external response dependencies. | INTERNAL_EVIDENCE | workbook_inspection.json, 152 fórmulas E2:L20 e relação OOXML | SUPPORTED | docs/decisions/0002-turning-reference-case.md | RAW_NOT_SELF_CONTAINED; caches não certificados |
+| C-DATA-01 | A revisão CCD_values_20261023 possui 19×11 entradas numéricas literais, além de 19 IDs | INTERNAL_EVIDENCE | Inspeção e extração OOXML da nova revisão, SHA 7f905b7a... | SUPPORTED | ADR 0004 | Nova revisão não sobrescreve o raw histórico C012 |
+| C-PUB-WR-01 | Uma cópia de WR arredondada a três casas antes do OLS reproduz os dez coeficientes sob desenho nominal e escala diagnóstica | INTERNAL_EVIDENCE | wr_rounding_hypothesis.json e teste reprodutível | SUPPORTED | ADR 0004 | Diagnóstico altera 19 valores da cópia, não entra nos modelos reais; não prova preprocessing dos autores |
+| C-RSM-01 | Y=XB+E com projeto comum e base quadrática completa | LITERATURE | R003 seção 2 pp.2-3 Eq.(3); R004 pp.16-17 Eqs.(2.12)-(2.15) | SUPPORTED | ADR 0003 | X fixo, posto completo; respostas compartilham o projeto |
+| C-RSM-02 | Sigma_hat_e=E_hat^T E_hat/nu, nu=n-rank(X), é estimador não viesado de Sigma | LITERATURE + MATHEMATICAL_DERIVATION | R003 p.3; R004 pp.22-23 Eqs.(2.17)-(2.18); derivação por projetor em docs/mathematics/multivariate_rsm.md | SUPPORTED | ADR 0003 | Média zero, observações não correlacionadas e covariância comum; nu>0 |
+| C-RSM-03 | diag(Sigma_hat_e)_j=MSE_j | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Produto de cada coluna residual; tests/model/test_multivariate_rsm.py | SUPPORTED | ADR 0003 | Caso manual e equivalência univariada, sem validação experimental |
+| C-RSM-04 | Cov(vec(B_hat))=Sigma⊗V_X; estimativa plug-in Sigma_hat_e⊗V_X | LITERATURE + MATHEMATICAL_DERIVATION | R003 p.3 escreve vec(B_hat^T); conversão explícita em docs/mathematics/rsm_uncertainty.md | SUPPORTED | ADR 0003 | vec por colunas de B_hat; normalidade adicional para matrix-normal |
+| C-RSM-05 | Cov(mu_hat(x))=h(x)Sigma; estimativa h(x)Sigma_hat_e | LITERATURE + MATHEMATICAL_DERIVATION | R003 p.3 Eqs.(5)-(6); R004 p.33 Eq.(2.40); propagação linear em rsm_uncertainty.md | SUPPORTED | ADR 0003 | Média estimada sem 1+h; não é erro de nova observação |
+| C-RSM-06 | Cov(mu_hat(x_a)-mu_hat(x_b))=[(z_a-z_b)^T V_X(z_a-z_b)]Sigma | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Derivação em rsm_uncertainty.md; tests/model/test_uncertainty.py | SUPPORTED | ADR 0003 | Inclui ambos os termos cruzados; zero se a=b; simetria a/b |
+| C-RSM-07 | R²=1-SSE/SST | LITERATURE + INTERNAL_EVIDENCE | R004 p.26 Eq.(2.25), PDF 44 lido; tests/model/test_diagnostics.py, oráculo manual | SUPPORTED | ADR 0003, fechamento | SST>0; resposta constante explicitamente indefinida |
+| C-RSM-08 | PRESS=sum_i(e_i/(1-h_ii))² | LITERATURE + INTERNAL_EVIDENCE | R004 p.40 Eqs.(2.51)-(2.52), PDF 58 lido/renderizado; oráculo manual | SUPPORTED | ADR 0003, fechamento | OLS identificável após excluir cada ponto; h próximo de um diagnosticado |
+| C-RSM-09 | PRESS analítico equivale ao squared LOOCV prediction error | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | R004 pp.39-40 Eqs.(2.50)-(2.52); derivação em rsm_diagnostics.md; refits explícitos em testes | SUPPORTED | ADR 0003, fechamento | Mesma base/OLS, exclusões de posto completo; não atribui esse método à Table 3 |
+| C-RSM-10 | SSE=SS_LOF+SS_PE | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | R004 p.45 Eqs.(2.60)-(2.64), PDF 63 lido/renderizado; oráculos com replicação | SUPPORTED | ADR 0003, fechamento | Fitted constante em cada configuração; soma ponderada evita cancelamento |
+| C-RSM-11 | Réplicas nas mesmas condições permitem separar pure error e lack of fit | LITERATURE + INTERNAL_EVIDENCE | R004 pp.44-46; NIST seção 4.4.4.6; 15 configurações e grupo Exp 15-19 detectados | SUPPORTED | ADR 0003, fechamento | F_LOF requer df_PE>0, df_LOF>0 e SS_PE>0; independência das réplicas é pressuposto experimental |
+
+O diagnóstico histórico C-PUB-WR-01 tem classe de uso
+`PUBLICATION_RECONCILIATION_NOTE`, fora do pipeline oficial de diagnósticos.
+Não autoriza arredondamento dos dados ou atribuição de preprocessing aos autores.
 
 Evidência interna não é literatura; derivação exige passos e revisão reais.
 Experimento implementado não aceita hipótese. Vincular fontes, passagens,
