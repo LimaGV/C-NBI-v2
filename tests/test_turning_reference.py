@@ -128,6 +128,7 @@ def test_historical_raw_is_ineligible_and_only_explicit_literal_revision_is_proc
     assert sorted(path.name for path in processed.iterdir()) == [
         "CCD_values_20261023.csv",
         "README.md",
+        "original_coded_factors.csv",
     ]
     dataset = (META / "dataset.yaml").read_text(encoding="utf-8")
     assert "status: RAW_NOT_SELF_CONTAINED" in dataset

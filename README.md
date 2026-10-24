@@ -1,7 +1,14 @@
 # C-NBI v2
 
+Fase 2: anchors individuais e comparação experimental de região 8-D de respostas.
+Ver [formulação](docs/mathematics/individual_anchors.md),
+[região/cutoffs](docs/mathematics/multivariate_response_region.md) e
+[validação](docs/phase_2_verification.md). ADR 0005 EXPERIMENTAL.
+A planilha original define um caso codificado distinto do modelo físico;
+nenhuma resposta experimental foi alterada. NBI/C-NBI ainda não implementados.
+
 Reimplementação limpa e independente do Combinatorial Normal Boundary
-Intersection. Versão **0.1.0.dev0**. Estado: fundação RSM multivariada.
+Intersection. Versão **0.1.0.dev0**. Estado: anchors nominais experimentais da Fase 2.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
@@ -65,13 +72,15 @@ estimated_mean_covariance = mean_prediction_covariance(fit, [0.5])
 Ver [definição e API](docs/mathematics/multivariate_rsm.md),
 [derivações da incerteza](docs/mathematics/rsm_uncertainty.md) e
 [ADR 0003](docs/decisions/0003-multivariate-rsm-and-uncertainty-foundation.md).
-Nenhum Monte Carlo, shrinkage ou método de otimização foi implementado.
+Há otimização individual nominal de quadráticas e ablação de região de respostas.
+Monte Carlo, shrinkage e NBI/C-NBI permanecem fora da implementação.
 
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.
 main é destino de PR aprovado. A Fase 0 entrou pelo PR #1 após CI verde;
 as Fases 0.5 e 0.6 foram integradas pelos PRs #2 e #3. A Fase 1 usa
-feature/01-multivariate-rsm-foundation, com novo PR sem merge automático.
+feature/01-multivariate-rsm-foundation, integrada pelo PR #4 com autorização.
+A Fase 2 usa feature/02-individual-anchors-response-region, sem merge automático.
 
 - [Contrato dos agentes](AGENTS.md)
 - [Arquitetura](docs/architecture.md) e [roadmap](ROADMAP.md)

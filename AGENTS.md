@@ -66,6 +66,15 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Esta tarefa autoriza a Fase 2 em feature/02-individual-anchors-response-region,
+após squash do PR #4 com checks verdes: anchors individuais, payoff clássica e
+ablação experimental de região de respostas. ADR 0005 permanece EXPERIMENTAL.
+A clarificação do responsável prioriza a planilha sobre o artigo; os códigos
+originais verificados são um caso distinto do modelo físico, sem afirmar
+equivalência que falhou. Não inventar inverse coding ou coordenadas físicas.
+Dados continuam integrais. O novo PR não tem merge automático. Monte Carlo,
+NBI/C-NBI, CHIM combinatorial, PA, shrinkage e etapas posteriores seguem fora.
+
 Classificar claims: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. Não escrever "a literatura mostra" sem fonte verificável.

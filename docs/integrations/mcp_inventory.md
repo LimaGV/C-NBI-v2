@@ -53,6 +53,14 @@ se limitou ao gate, documentação e entrega Git. Os registros anteriores de
 indisponibilidade permanecem como histórico, não como estado atual.
 
 ## Ferramentas locais
+
+Fase 2: Serena ativada no repositório C-NBI-v2 com LSP Python; RSMFit, ordem
+canônica e referências inspecionados antes de acrescentar módulos separados.
+Context7 testado para SciPy SLSQP/brentq e NumPy quantile(method=linear).
+Zotero consultado em leitura para Maia, Khuri/Conlon e Das/Dennis. Sem item Maia;
+tese local 2020 identificada pelo título e repositório institucional, passagens
+renderizadas. Originais do autor consultados via gh e planilha local, somente
+leitura. Nenhuma escrita Zotero, cópia de PDF ou dependência nova.
 Executados: Git 2.54.0.windows.1, uv 0.12.23, rg 15.2.0, gh 2.97.0.
 gh autenticado como LimaGV; criação/push/PR via CLI, sem GitHub MCP.
 fd e ast-grep não encontrados no PATH nem nas pastas locais verificadas.
