@@ -238,7 +238,7 @@ R007/Jolliffe-Cadima were checked with explicitly PARTIAL coverage; this is
 PA-inspired uncertainty screening, with no claimed classical equivalence or
 simultaneous testing guarantee.
 
-## Recommendation for the next separately authorized phase
+## Original recommendation before the stopping-policy revision below
 
 Use **B=2000 and these 37 subsets** as the present reference selection. Retain
 the stopping policy as PROPOSED and do not deploy early termination from this

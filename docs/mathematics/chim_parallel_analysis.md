@@ -114,7 +114,9 @@ All 357 decision quantiles are tracked: 7 global +28+2*56+3*70 local values.
 Selection stability compares exact IDs, not counts. Quantile identity/order is
 also checked, so thresholds cannot be compared after relabeling components.
 
-Consume docs/policies/pa_early_stop_policy.json unchanged, including epsilon_q
+The original analysis consumed docs/policies/pa_early_stop_policy.json unchanged.
+That v1 policy is now preserved in docs/policies/history/pa_early_stop_policy_v1.json,
+including epsilon_q
 and PROPOSED status. First eligibility is 500 vs400. At every eligible checkpoint
 require simultaneously equal selected ID sets, equal global dimension and
 
@@ -155,3 +157,96 @@ See [real report](turning_chim_pa.md) and [verification](../phase_5_verification
 
 No new dependency, RC, lattice resolution H, weights, NBI/C-NBI, clustering or
 Pareto metrics are implemented. H_k denotes centering only, not lattice H.
+
+## Spectral-gap convergence and revised early-stop policy
+
+The explicit pre-merge PR #8 revision changes **only** stopping sensitivity.
+Policy v2 is `PROPOSED_REVISED`, ADR 0009 is `PROPOSED`. V1 and its original
+not-reached outcome remain in the immutable original run. Historical metadata
+refers to files at its recorded source commit; its original policy path now
+contains v2, while the byte-identical v1 is available under `policies/history/`.
+The historical Phase 3/4/5 runners point to that v1 archive for reproducibility.
+
+Let q_r(B)=Q_.95[sigma_r_noise[1:B]], with the same explicit linear method.
+Each noise replica is descending, hence its componentwise quantiles are ordered.
+For a spectrum with R>=2 components define
+
+\[
+d_r(B)=q_r(B)-q_{r+1}(B),\qquad
+g_r(B)=\frac{d_r(B)}{\max(q_r(B),\epsilon_q)},\qquad
+\Delta g_r(B)=|g_r(B)-g_r(B-100)|.
+\]
+
+For nondegenerate spectra 0<=g_r<=1. For c>0 with both representations above
+the numerical floor, (c*q_r-c*q_(r+1))/(c*q_r)=g_r: common positive spectral
+scale cancels. The gap change is **absolute in normalized-gap units**, without
+another division by g. Operational tau_g=.05 means strictly less than five
+percentage points, not 5% statistical error or a universal convergence bound.
+For example .0321 means 3.21 percentage points.
+
+The canonical zero-protected expression is the difference divided by max(q_r,
+epsilon_q). The alternative 1-q_(r+1)/q_r is equivalent only when q_r is above
+the floor; it must not produce gap one for a zero/zero pair. Use the unchanged
+float64.tiny numerical epsilon, 2.2250738585072014e-308. If both adjacent values
+are <=epsilon_q, set g=0 and flag DEGENERATE_Q95_SPECTRUM. This introduces no
+statistical regularization. Reject inversions larger than
+8*eps64*max(q_1,epsilon_q); smaller negative differences are zeroed in the gap
+only. q95 values themselves are preserved. Nondegenerate positive scaling must
+also remain representable in float64.
+
+The global seven-component spectrum has six gaps. Report g1 (ranks1–2), and
+`critical_global_gap=g2` (ranks2–3) for the observed PA dimension2. This identifies
+the noise-spectrum separation around the supported/unsupported rank transition;
+gaps do not determine dimension. A pair has one relevant component and **no**
+adjacent gap. A trio has one gap and a quartet two.
+
+For each B use the window W_B=(B-200,B-100,B), all three already >=500.
+Thus the first eligible full window is (500,600,700), not (300,400,500).
+Require jointly:
+
+1. All three global PA dimensions are exactly equal.
+2. All three full selected ID sets are exactly equal, including pair identities.
+3. The monitor set contains every global gap and every gap from the same
+   selected local k>=3 spectra in this window.
+4. Every monitored gap satisfies Delta_g<.05 in **both** transitions.
+
+Compute both transition maxima over the same current-window monitor set G_B.
+The first successful eligible B is the proposed stop. The global critical gap
+alone is insufficient. Neither observed singular values, PA margins, isolated
+q95 changes nor sampler moments enter the new convergence criterion. The
+original q95 relative-change maximum remains only a legacy diagnostic column.
+The strict observed>q95 decision, all-component local selection and leading
+global dimension definitions are unchanged; there is no minimum-gap PA filter.
+
+For rows with unequal selected sets, the diagnostic local monitor set is the
+intersection of selected k>=3 identities in the window. Exact-set inequality
+still rejects stopping. Before three points are available, use only the
+available points for diagnostics. In the long CSV, `monitored_for_early_stop`
+means membership in that row's window monitor set; eligibility is reported
+separately. Store local monitor IDs and gap counts in window_monitoring.csv.
+No local monitor means its maximum is blank/None; the global gaps still enter.
+`previous_transition_monitored_gap_max_change` recomputes the earlier transition
+using G_B, not the earlier checkpoint's different monitor set.
+
+Continue validation through2000. For a stop below2000 compare its dimension and
+selected IDs with **every** later checkpoint. Any decision divergence, even if
+the final state returns, is PREMATURE_STOP_DETECTED. If all decisions remain
+equal, report EARLY_STOP_RETROSPECTIVELY_DECISION_STABLE. Report
+post_stop_max_gap_change separately, with the stop-window monitor set frozen
+over all later adjacent transitions; gap fluctuation alone is not premature.
+Reference-only and absent stops provide no later validation evidence.
+
+The rule was specified **after inspection of the first turning sensitivity
+trajectory**. Its application here is post hoc, not external validation of
+five percentage points. The v2 JSON is frozen before its archived application;
+independent synthetic cases and other applications must test it unchanged.
+Current synthetic tests validate formulas/software contracts, not universal
+statistical performance. No external validity or policy acceptance is inferred.
+
+`uv run python -m scripts.validation.turning_spectral_gap_stop --run-id <fresh_id>`
+loads pinned pa_noise_singular_values.npz and archived observed/decision CSVs.
+Only q95 prefixes, gaps and the policy are recomputed. Before exporting results,
+all7140 q95/margin/observed/PASS rows, dimensions, counts and IDs are checked
+exactly against history. Integrated sentinels forbid RNG, fitter, optimizer,
+normalization, CHIM and SVD. A separate output directory preserves the entire
+original archive and its checksums. No downstream phase is started.

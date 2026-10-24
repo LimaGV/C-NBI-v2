@@ -59,6 +59,9 @@ exato da Fase 4; orientação MIN, normalização fixa e CHIM centralizado.
 Todos 154 subsets avaliados por q95 espectral da perturbação, sem filtros legados.
 Vinte prefixos e validação retrospectiva da política PA original; B=2000 referência.
 ADR 0008 ACCEPTED, política de early stop PROPOSED, sem promoção automática.
+Revisão antes do merge do PR #8: política v2 PROPOSED_REVISED com gaps q95
+normalizados, janela3 e tolerância estrita0.05. ADR 0009 PROPOSED, definição
+post hoc; stop1300 retrospectivamente estável até2000. PA e37 IDs preservados.
 
 ## Posteriormente — nova tarefa necessária
 Decisões sobre H da malha, pesos e NBI exigem escopo/validação próprios após

@@ -26,7 +26,7 @@ from .turning_reference import RAW, RAW_SHA256, RESPONSES, ROOT, TERMS, write_cs
 
 PHASE_2_RUN = "turning_original_codes_20261024"
 PHASE_2_MODELS = ROOT / "results/phase_02_anchors" / PHASE_2_RUN / "coded_models.csv"
-POLICY = ROOT / "docs/policies/pa_early_stop_policy.json"
+POLICY = ROOT / "docs/policies/history/pa_early_stop_policy_v1.json"
 RUN_ID = "turning_original_codes_mc_777_20261024"
 B_MAX = 2000
 

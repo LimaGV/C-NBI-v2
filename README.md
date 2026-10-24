@@ -5,7 +5,9 @@ PA inspirado, calibrado pela incerteza do ensemble congelado da Fase 4.
 Ver [formulação/API](docs/mathematics/chim_parallel_analysis.md),
 [resultados](docs/mathematics/turning_chim_pa.md) e
 [validação](docs/phase_5_verification.md). ADR 0008 ACCEPTED no escopo solicitado;
-política de early stop avaliada retrospectivamente e mantida PROPOSED.
+política de early stop original preservada e v2 de gaps espectrais
+PROPOSED_REVISED, post hoc. Revisão no mesmo PR #8: stop retrospectivo em1300,
+mesma dimensão2 e37 IDs até2000; B=2000 continua referência. ADR 0009 PROPOSED.
 A planilha original define um caso codificado distinto do modelo físico;
 nenhuma resposta experimental foi alterada. NBI/C-NBI ainda não implementados.
 

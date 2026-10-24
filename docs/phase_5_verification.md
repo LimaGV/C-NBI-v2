@@ -60,3 +60,7 @@ selected HTML passages were inspected; no claim of Horn equivalence.
 Early-stop policy is evaluated retrospectively but stays PROPOSED; B=2000 is
 always the scientific reference, including if a premature stop is detected.
 No H resolution, lattice, NBI/C-NBI, clustering, Pareto metrics or later phase.
+
+The later explicitly requested pre-merge stopping-only revision is documented
+separately in [phase_5_gap_revision_verification.md](phase_5_gap_revision_verification.md).
+The original results and ADR 0008 above remain historical and unchanged.

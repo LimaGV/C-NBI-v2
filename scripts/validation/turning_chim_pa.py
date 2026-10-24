@@ -35,7 +35,7 @@ PAYOFFS = PHASE4 / "payoff_samples.npz"
 ANCHORS = PHASE4 / "anchor_samples.npz"
 METADATA = PHASE4 / "metadata.json"
 CERTIFICATES = PHASE2 / "solver_diagnostics.json"
-POLICY = ROOT / "docs/policies/pa_early_stop_policy.json"
+POLICY = ROOT / "docs/policies/history/pa_early_stop_policy_v1.json"
 INPUT_HASHES = {
     NOMINAL: "2e410a2d3e222047442d75d526166c6af5e5d6787c2c93dcbe2b184003e124c2",
     PAYOFFS: "98a12097a25cf2178e8ffce79499ad627cfb8345fd00a31b3b1521d88c6407d1",

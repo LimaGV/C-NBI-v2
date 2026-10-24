@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — revisão proposta da política de early stop da Fase 5
+- V1 preservada com hash original; política v2 PROPOSED_REVISED, explicitamente post hoc.
+- Gaps adjacentes normalizados do q95, tolerância operacional estrita0.05 e janela3.
+- Monitores globais e locais selecionados estáveis, identidades completas e retrospectiva.
+- Reuso exclusivo dos espectros salvos; nenhum threshold, PASS/FAIL ou ID anterior muda.
+- Stop retrospectivo1300; mesma decisão até2000, redução potencial35% de réplicas.
+- ADR 0009 PROPOSED, C-PA-05/06/07 e validação externa futura necessária.
+- Sem MC/anchors/payoffs/normalização/CHIM/SVD novos na análise, H, NBI/C-NBI ou merge.
+
 ## Unreleased — Fase 5 centered CHIM / local PA
 - Orientação MIN e normalização fixa definida somente pela payoff sphere nominal.
 - Geometria Z[C,C] H_k e SVD da perturbação Monte Carlo; arrays naturais preservados.

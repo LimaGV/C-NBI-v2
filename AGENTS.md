@@ -66,6 +66,17 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Revisão explicitamente autorizada antes do merge do PR #8: alterar somente a
+política de early stop e sua sensibilidade, na mesma branch. Preservar a v1 e
+todos os artefatos anteriores. V2 PROPOSED_REVISED, post hoc no caso turning:
+gaps adjacentes normalizados do q95, tolerância estrita 0.05 (pontos percentuais),
+janela de três checkpoints elegíveis (primeira 500/600/700), dimensão e IDs
+exatamente estáveis. Monitorar global e trios/quartetos selecionados estáveis;
+pares apenas pela identidade. Reusar espectros salvos, sem MC/anchors/payoffs/
+normalização/CHIM/SVD novos. PA e seleção B=2000 permanecem inalteradas.
+ADR 0009 PROPOSED; regra congelada para validação externa futura. Sem merge,
+H, NBI/C-NBI ou fase nova. O escopo original abaixo é histórico.
+
 Esta tarefa autoriza a Fase 5 em feature/05-chim-svd-local-pa após squash do PR #7
 com CI verde. Consumir payoff sphere nominal da Fase 2 e ensemble exato da Fase 4.
 Orientação comum MIN e normalização fixa nominal, CHIM centralizado Z_C H_k,

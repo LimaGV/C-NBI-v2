@@ -107,3 +107,20 @@ Fontes primárias HTML: abstract Horn no publisher e seção 2(a) Jolliffe/Cadim
 no PMC. PARTIAL explicitado; sem FULLTEXT_VERIFIED artificial ou atribuição de
 equivalência à PA clássica. Sem escrita Zotero ou publicação de documentos.
 Git/gh para preparação, squash autorizado do PR #7 e entrega do novo PR.
+
+## Fase 5 — revisão exclusiva da política antes do merge do PR #8
+
+Serena: manual lido, sessão a7883fe2 ativada em C-NBI-v2/LSP Python;
+símbolos/referências do avaliador v1 e dos caminhos de policy nos runners
+históricos inspecionados. Ciência anterior preservada; somente caminhos da
+política histórica mudaram para o arquivo byte-identical arquivado.
+Context7: resolve NumPy/Matplotlib, queries oficiais sobre quantile linear,
+overwrite_input=False e Figure/FigureCanvasAgg/savefig. Sem dependência nova.
+Zotero e novas fontes externas não necessários: revisão é decisão explícita
+e definição matemática, sem atribuição bibliográfica nova. Nenhuma escrita
+Zotero, exportação de PDF, GitHub MCP, subagente ou ferramenta de UI.
+Git/gh para conferir branch/HEAD/PR/checks, push e atualização do mesmo PR #8.
+Sem merge. O workflow revisado lê apenas os espectros/decisões já arquivados;
+sentinelas proíbem RNG, OLS, optimizer, normalização, CHIM e SVD durante sua
+execução. A suíte de regressão continua testando os módulos anteriores em
+diretórios temporários; não substitui nem altera qualquer resultado canônico.

@@ -1,5 +1,20 @@
 # Estado metodológico
 
+## Fase 5 — revisão exclusiva da política de early stop no PR #8
+
+Política v1 preservada byte-identical em docs/policies/history/; resultados
+anteriores imutáveis. V2 PROPOSED_REVISED: gap q95 adjacente normalizado,
+tolerância estrita0.05 (cinco pontos percentuais), janela de três checkpoints
+elegíveis, primeira500/600/700, dimensão e IDs exatos. Monitores: todos os gaps
+globais e trios/quartetos selecionados de forma estável; nenhum gap de pares.
+Definida post hoc após a primeira trajetória; não é validação externa da regra.
+ADR 0009 PROPOSED; claims C-PA-05/06/07 delimitadas como decisão/definições.
+Aplicação aos espectros salvos: stop1300, dimensão2 e os mesmos37 IDs até2000;
+potencial redução de35% das réplicas. B=2000 continua a referência científica
+com19 pares+18 trios+0 quartetos. Não houve alteração de PASS/FAIL, normalização
+ou geometria; análise sem novos draws, otimização ou SVD. Sem nova fase ou merge.
+As seções seguintes preservam a execução original e fases anteriores.
+
 ## Fase 5 — geometria CHIM e screening espectral local
 
 PR #7 integrado por squash ccf951a com CI verde, main atualizada e limpa.

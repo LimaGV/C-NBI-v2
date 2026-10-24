@@ -9,7 +9,7 @@ import pytest
 
 from cnbi_v2.chim import PACheckpoint, evaluate_early_stop, policy_from_mapping
 
-POLICY = Path(__file__).resolve().parents[2] / "docs/policies/pa_early_stop_policy.json"
+POLICY = Path(__file__).resolve().parents[2] / "docs/policies/history/pa_early_stop_policy_v1.json"
 
 
 def records(*, premature=False, unstable_quantiles=False):

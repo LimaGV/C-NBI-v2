@@ -1,5 +1,12 @@
 # Fixed-normalization centered CHIM uncertainty screening
 
+The original run below is immutable. Proposed v2 stopping diagnostics are stored
+separately in `turning_spectral_gap_policy_v2_20261024/`: saved noise arrays only,
+no SVD or upstream scientific pipeline execution. B_stop_gap=1300, dimension2,
+same37 selected IDs through2000, retrospective decision stability, potential35%
+replica reduction. Policy PROPOSED_REVISED, explicitly post hoc, ADR0009 PROPOSED;
+not external validation or acceptance. B=2000 remains the complete reference.
+
 Reviewed run: turning_fixed_nominal_chim_pa_777_20261024. Exact Phase 2 sphere
 nominal payoff and frozen Phase 4 samples; no draws, fitting, reoptimization or RC.
 Fixed nominal MIN orientation/normalization, centered vertex geometry, SVD of
