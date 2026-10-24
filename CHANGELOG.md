@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — Fase 5 centered CHIM / local PA
+- Orientação MIN e normalização fixa definida somente pela payoff sphere nominal.
+- Geometria Z[C,C] H_k e SVD da perturbação Monte Carlo; arrays naturais preservados.
+- Avaliação de todos 28 pares, 56 trios e 70 quartetos, seleção estrita por todos k-1 componentes.
+- Quantis q95 linear, dimensão global por passes líderes e padrões não monotônicos explícitos.
+- Vinte prefixos, trajetória de todos 357 quantis e avaliação retrospectiva da política original.
+- B=2000 referência científica; política de early stop permanece PROPOSED, sem promoção automática.
+- ADR 0008, claims C-PA-01/02/03/04 e fontes verificadas com cobertura delimitada.
+- Sem novos draws, reotimização, clipping, RC, qmax/volume filter, H da malha ou NBI/C-NBI.
+
 ## Unreleased — Fase 4 anchor/payoff Monte Carlo
 - Consumo rastreável do ensemble exato da Fase 3, sem novos draws ou ajustes.
 - Reotimização por réplica/resposta com solver global sobre bola inalterado.

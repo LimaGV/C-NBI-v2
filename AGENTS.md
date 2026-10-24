@@ -66,6 +66,17 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Esta tarefa autoriza a Fase 5 em feature/05-chim-svd-local-pa após squash do PR #7
+com CI verde. Consumir payoff sphere nominal da Fase 2 e ensemble exato da Fase 4.
+Orientação comum MIN e normalização fixa nominal, CHIM centralizado Z_C H_k,
+SVD da perturbação e PA local q95 linear com comparação estrita em todos k-1
+componentes. Avaliar todos 28/56/70 subsets, sem filtro pela dimensão global,
+qmax, volume, deslocamento de anchors ou métricas do sampler. B=2000 referência;
+20 prefixos e avaliação retrospectiva da política PA original, sem promovê-la.
+ADR 0008 ACCEPTED neste escopo. Sem novos draws, reotimização, RC, clipping,
+H/Simplex-Lattice, NBI/C-NBI, clustering ou métricas Pareto. Novo PR sem merge
+automático; nenhuma fase posterior iniciada. Escopos anteriores são históricos.
+
 Esta tarefa autoriza a Fase 4 em feature/04-monte-carlo-anchor-reoptimization,
 após squash do PR #6 com CI verde. Consumir exatamente o ensemble versionado da
 Fase 3, sem novos draws ou alteração de seed/Sigma_e. Reotimizar cada réplica e

@@ -52,8 +52,15 @@ certificados independentes e falhas explícitas. Payoffs naturais por réplica,
 distribuições dos anchors/ótimos e todos os prefixos 100:100:2000.
 ADR 0007 ACCEPTED no escopo solicitado; sem RC ou early stop.
 
+## Fase 5 — centered CHIM / uncertainty-calibrated local PA
+PR #7 integrado por squash ccf951a após quatro checks verdes e autorização.
+Branch feature/05-chim-svd-local-pa. Payoff nominal sphere da Fase 2 e ensemble
+exato da Fase 4; orientação MIN, normalização fixa e CHIM centralizado.
+Todos 154 subsets avaliados por q95 espectral da perturbação, sem filtros legados.
+Vinte prefixos e validação retrospectiva da política PA original; B=2000 referência.
+ADR 0008 ACCEPTED, política de early stop PROPOSED, sem promoção automática.
+
 ## Posteriormente — nova tarefa necessária
-Fase 5 deverá definir normalização, CHIM/edge matrix e análise dimensional
-antes de construir esses objetos. PA e sua política operacional exigem
-implementação e validação próprias; diagnósticos de prefixos não escolhem B.
-Sem H adaptativo, NBI/CNBI, Pareto ou cutoff estatístico canônico definido.
+Decisões sobre H da malha, pesos e NBI exigem escopo/validação próprios após
+revisão dos resultados PA e da estabilidade da política. Nada disso foi iniciado;
+não há clustering, fronteira Pareto ou métricas de desempenho multiobjetivo.

@@ -1,16 +1,16 @@
 # C-NBI v2
 
-Fase 4: reotimização dos anchors e payoffs por réplica do ensemble congelado
-da Fase 3. Solver global quadrático inalterado na bola alpha=8**0.25, sem RC.
-Ver [formulação/API](docs/mathematics/anchor_monte_carlo.md),
-[resultados](docs/mathematics/turning_anchor_mc.md) e
-[validação](docs/phase_4_verification.md). ADR 0007 ACCEPTED no escopo solicitado;
-early stop futuro da PA PROPOSED e não aplicado. Evidências anteriores preservadas.
+Fase 5: normalização fixa nominal, CHIM centralizado e screening espectral
+PA inspirado, calibrado pela incerteza do ensemble congelado da Fase 4.
+Ver [formulação/API](docs/mathematics/chim_parallel_analysis.md),
+[resultados](docs/mathematics/turning_chim_pa.md) e
+[validação](docs/phase_5_verification.md). ADR 0008 ACCEPTED no escopo solicitado;
+política de early stop avaliada retrospectivamente e mantida PROPOSED.
 A planilha original define um caso codificado distinto do modelo físico;
 nenhuma resposta experimental foi alterada. NBI/C-NBI ainda não implementados.
 
 Reimplementação limpa e independente do Combinatorial Normal Boundary
-Intersection. Versão **0.1.0.dev0**. Estado: anchor/payoff Monte Carlo da Fase 4.
+Intersection. Versão **0.1.0.dev0**. Estado: centered CHIM / local PA da Fase 5.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
@@ -77,7 +77,8 @@ Ver [definição e API](docs/mathematics/multivariate_rsm.md),
 Há otimização individual nominal de quadráticas e ablação de região de respostas.
 `cnbi_v2.uncertainty` fornece amostragem conjunta dos coeficientes, diagnósticos
 de prefixos e reotimização por réplica com payoff natural e certificados.
-Shrinkage, CHIM/PA e NBI/C-NBI não implementados.
+`cnbi_v2.chim` acrescenta normalização fixa, SVD e seleção PA local, com todos
+os prefixos até B=2000. Shrinkage, H da malha e NBI/C-NBI não implementados.
 
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.
@@ -86,7 +87,8 @@ as Fases 0.5 e 0.6 foram integradas pelos PRs #2 e #3. A Fase 1 usa
 feature/01-multivariate-rsm-foundation, integrada pelo PR #4 com autorização.
 A Fase 2 foi integrada por squash no PR #5 com autorização para a Fase 3.
 A Fase 3 foi integrada por squash no PR #6 com autorização para a Fase 4.
-A Fase 4 usa feature/04-monte-carlo-anchor-reoptimization; novo PR sem merge automático.
+A Fase 4 foi integrada por squash no PR #7 com autorização para a Fase 5.
+A Fase 5 usa feature/05-chim-svd-local-pa; novo PR sem merge automático.
 
 - [Contrato dos agentes](AGENTS.md)
 - [Arquitetura](docs/architecture.md) e [roadmap](ROADMAP.md)

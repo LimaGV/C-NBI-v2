@@ -94,3 +94,16 @@ derivação direta com contraexemplo e definição de método, sem nova atribui�
 bibliográfica. Nenhuma escrita/exportação Zotero ou cópia de documento protegido.
 Git/gh para preflight PR #6, squash autorizado, branch e entrega.
 Nenhum RNG, paralelismo, otimização RC ou análise dimensional nova executada.
+
+## Fase 5 — uso efetivo
+
+Serena: manual inicial lido, sessão 17ca9d27 em C-NBI-v2/LSP Python. Pacote novo
+chim/ separado; nenhum módulo científico anterior editado nesta fase.
+Context7 resolveu NumPy e verificou SVD stacked/compute_uv=False/ordem,
+matrix_rank e quantile(method=linear). Nenhuma dependência nova.
+Zotero buscado primeiro: Horn RCPDPDRD, Jolliffe/Cadima A7EM5INX, Das/Dennis
+5R3KLTFK e Xia/Zhou LPLWLE39, metadados conferidos; nenhum anexo disponível.
+Fontes primárias HTML: abstract Horn no publisher e seção 2(a) Jolliffe/Cadima
+no PMC. PARTIAL explicitado; sem FULLTEXT_VERIFIED artificial ou atribuição de
+equivalência à PA clássica. Sem escrita Zotero ou publicação de documentos.
+Git/gh para preparação, squash autorizado do PR #7 e entrega do novo PR.

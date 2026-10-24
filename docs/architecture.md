@@ -36,6 +36,15 @@ Layout src com distribuição c-nbi-v2 e import cnbi_v2. A versão permanece
   verificado da Fase 2, ajusta uma vez pelo fitter existente e arquiva um ensemble.
   Importar o loader não executa o fluxo de anchors; sentinelas testam esse limite.
 - `references/`: notas selecionadas e claims; PDFs ficam fora do Git.
+- `chim/normalization.py`: orientação comum, Utopia/amplitudes fixas nominais,
+  validação de ótimo/amplitude, Z/Delta imutáveis sem clipping.
+- `chim/geometry.py`: centralização H_k, SVD e diferença de vértices como diagnóstico de rank.
+- `chim/parallel_analysis.py`: candidatos programáticos, espectros da perturbação,
+  quantis q95 por prefixo, seleção local completa e dimensão global com flags.
+- `chim/early_stop.py`: consome a política registrada, compara identidades e
+  todos os quantis, avalia retrospectivamente sem truncar a trajetória.
+- `scripts/validation/turning_chim_pa.py`: valida os artefatos congelados,
+  executa screening determinístico, exporta thresholds/decisões/spectra/hashes.
 - `data/`: raw autorizado e imutável, metadata/provenance, snapshot real pendente.
 - `tests/model/`: fixtures sintéticas e oráculos analíticos independentes.
 - `tests/reference_cases/`: expected outputs publicados, sem import pela produção.
@@ -52,6 +61,7 @@ de import-untyped nas APIs SciPy utilizadas.
 ADR 0005 EXPERIMENTAL acrescenta anchors nominais e duas payoffs; ADR 0006
 ACCEPTED acrescenta propagação conjunta de coeficientes e sensibilidade.
 ADR 0007 ACCEPTED acrescenta reotimização por réplica e payoff natural, sem
-alterar o solver global ou adicionar dependências. Sem shrinkage, CHIM, PA,
-Simplex-Lattice, escolha de H, Pareto ou NBI/CNBI. A futura política PA é
-especificação PROPOSED, sem execução.
+alterar o solver global ou adicionar dependências. ADR 0008 ACCEPTED acrescenta
+CHIM centralizado e screening espectral PA inspirado, sem alterar módulos anteriores.
+A política original é avaliada retrospectivamente e permanece PROPOSED.
+Sem shrinkage, Simplex-Lattice, escolha de H da malha, Pareto ou NBI/CNBI.
