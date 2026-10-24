@@ -124,3 +124,15 @@ Sem merge. O workflow revisado lê apenas os espectros/decisões já arquivados;
 sentinelas proíbem RNG, OLS, optimizer, normalização, CHIM e SVD durante sua
 execução. A suíte de regressão continua testando os módulos anteriores em
 diretórios temporários; não substitui nem altera qualquer resultado canônico.
+
+## Fase 6 — uso efetivo
+
+Serena: manual lido, sessão a61a6c93 ativa em C-NBI-v2/LSP Python. Novos pacotes
+simplex/nbi separados; APIs e tipos existentes lidos, ciência anterior preservada.
+Context7 resolveu SciPy/NumPy; consultas específicas de SLSQP com Jacobianos,
+SVD/U/rank e cdist Euclidiana. Documentação primária e limitações na nota de fontes.
+Zotero buscado primeiro, somente leitura: Normal-Boundary e Das/Dennis5R3KLTFK,
+metadados conferidos, sem anexos. METADATA_VERIFIED, sem leitura integral alegada
+ou exportação de documentos. Método exato vem do pedido/ADR e derivações diretas.
+Git/gh para revisão/checks/squash autorizado do PR #8 e branch da Fase6.
+Sem GitHub MCP, UI, subagentes, nova dependência ou paralelismo.
