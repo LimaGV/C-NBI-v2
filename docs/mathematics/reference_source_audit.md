@@ -45,6 +45,8 @@ the separately identified V1 general `BUDGET_POLICY.md` rule
 max(50000,400*C(m+3,4)) at m8. It is deliberately larger than historical
 applied19800; it is not the old applied budget or a mathematical constant.
 Both current algorithms receive the same cap and30 seeds1001..1030.
+Pymoo's generation count includes the evaluated initial population:400 means
+the initial330 evaluations plus399 variation cycles of330, totaling132000.
 
 ## Explicit library and representation differences
 

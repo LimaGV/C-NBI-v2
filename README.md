@@ -12,6 +12,11 @@ decisões históricas reavaliadas. H5 usa referência sem qualquer origem CNBI.
 Sem verdade Pareto, superioridade ou benchmark final. O texto seguinte mantém
 o histórico das fases anteriores.
 
+Execução Fase7 concluída:60 runs,7920000 avaliações de busca; P_all=22523 ND,
+P_minus_CNBI=18503 ND e zero origens CNBI no alvo independente de H5.
+[Resultados completos, saturação e limites](docs/mathematics/turning_pareto_reference.md),
+[gate de integridade](docs/phase_7_verification.md).
+
 Fase6: Simplex-Lattice e NBI local determinístico sobre os37 subsets congelados
 de B=2000. Normalização local por subset, normal unitária orientada ao ideal e
 SLSQP com Jacobianos analíticos/aceitação independente. H2,4,5,10,20 por

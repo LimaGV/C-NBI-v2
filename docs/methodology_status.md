@@ -1,5 +1,29 @@
 # Estado metodológico
 
+## Fase 7 — referência empírica multi-família e family LOO
+
+Fase7 concluída no escopo solicitado, após squash do PR9 em main b94be85.
+Baseline operacional definido pelo responsável: H5 (492 subproblemas,411 decisões
+únicas,408 ND); H20 preservado como resolução fina auxiliar da mesma família CNBI.
+Essa decisão atualiza a recomendação operacional, sem alterar a Fase6 abaixo.
+RSMs nominais codificados, esfera alpha=8**.25, direções e normalização global
+fixa da Fase5 consumidos sem alteração. Nenhum MC/anchors/PA/NBI real reexecutado.
+
+Calibração aplicada V1 transferida por autorização explícita; pymoo0.6.2 pinado.
+30 seeds1001..1030 por EA,132000 NFE de busca/run,7920000 no total. Pools ND:
+NSGA3=8754,MOEAD=9743,CNBI20=4417,VRF histórico reavaliado=66. VRF tem decisões
+verificadas; respostas antigas não são entradas canônicas. P_all=22523 ND.
+LOO reconstruído com exclusão prévia de toda a família, deduplicação numérica e
+ND; P_minus_CNBI=18503 ND, zero origens CNBI. H5 não contribui ao envelope comum.
+30 runs não certificam saturação; alvos LOO distintos não definem ranking.
+Métricas comuns self-included e sanity H5 independentes estão separadas.
+
+ADR0011 ACCEPTED, C-REF-01..04 como definições/decisões; sem verdade Pareto,
+superioridade ou benchmark final. Refinamento adaptativo H5→H20 e HV futuros.
+Ver [resultados e limites](mathematics/turning_pareto_reference.md),
+[definição](mathematics/pareto_reference_leave_one_out.md),
+[verificação](phase_7_verification.md). Estados abaixo são históricos.
+
 ## Fase 6 — local NBI e sensibilidade interna de H
 
 Autorizada após squash do PR #8 com CI verde (main1053f29).37 IDs de B2000

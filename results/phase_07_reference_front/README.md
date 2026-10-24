@@ -5,8 +5,9 @@ versioned. It uses frozen current nominal RSMs and fixed Phase5 normalization.
 Do not call the combined envelope a true Pareto front.
 
 Reproduce search (explicitly launches60 real runs,132000 optimizer NFE each):
-`uv run python -m scripts.validation.turning_reference_campaign`
-from a clean committed checkout. Existing compatible checkpoints are hash-checked;
+`uv run python -m scripts.validation.turning_reference_campaign --output <new-empty-directory>`
+from a clean committed checkout. Existing compatible per-run checkpoints are
+hash-checked; the runner writes launch/materialization/completion files, so always
 use a separate output directory to keep the archived campaign immutable.
 Run directories require the protocol/input/engine identities to match.
 
