@@ -63,10 +63,10 @@ Revisão antes do merge do PR #8: política v2 PROPOSED_REVISED com gaps q95
 normalizados, janela3 e tolerância estrita0.05. ADR 0009 PROPOSED, definição
 post hoc; stop1300 retrospectivamente estável até2000. PA e37 IDs preservados.
 
-## Posteriormente — nova tarefa necessária
-Decisões sobre H da malha, pesos e NBI exigem escopo/validação próprios após
-revisão dos resultados PA e da estabilidade da política. Nada disso foi iniciado;
-não há clustering, fronteira Pareto ou métricas de desempenho multiobjetivo.
+## Gate histórico antes da autorização da Fase6
+A autorização original da Fase5 reservava H/pesos/NBI a uma tarefa posterior.
+A tarefa explícita da Fase6 abaixo delimita esse novo escopo; os resultados
+e critérios estatísticos anteriores permanecem preservados.
 
 ## Fase 6 — local NBI / Simplex-Lattice and internal H sensitivity
 
@@ -78,3 +78,11 @@ Analytic-Jacobian SLSQP, independent acceptance and deterministic continuation;
 H2,4,5,10,20 are exact memberships of H20. Full8-response ND and internal
 coverage only support H sensitivity. ADR0010 ACCEPTED; no final H automatically
 accepted, no external front/benchmark, new PA/MC/anchors or automatic next phase.
+
+Resultado real:4557/4557 subproblemas aceitos, sem falhas finais. H20 produz4417
+pontos ND full-space e permanece referência interna, sem H final aceito.
+
+## Posteriormente — nova tarefa necessária
+
+Escolha definitiva de H e validação/comparações externas exigem autorização,
+critérios e evidência próprios. Nenhuma próxima fase ou benchmark foi iniciado.

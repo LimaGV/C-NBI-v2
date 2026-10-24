@@ -9,6 +9,10 @@ alpha=8**.25, sem RC; normalização local por subset, normal unitária orientad
 Malha-mãe20, membership inteiro para H2,4,5,10,20; reavaliar8 respostas antes
 de ND e cobertura interna na normalização global fixa. ADR0010 ACCEPTED nesse
 escopo, C-NBI-01/02/03/04. Nenhum H final aceito ou benchmark externo.
+Execução concluída:4557/4557 aceitos, zero falhas finais e duas tentativas iniciais
+resolvidas por retry. H20 tem4476 decisões únicas e4417 ND full-space; H10 tem
+q95 de cobertura interna0.0979495. H20 segue referência interna recomendada,
+sem H final aceito. Ver [relatório](mathematics/turning_local_nbi_h_sensitivity.md).
 As seções seguintes preservam os estados históricos; nenhuma nova PA/MC/anchors.
 
 ## Fase 5 — revisão exclusiva da política de early stop no PR #8

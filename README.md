@@ -6,6 +6,8 @@ SLSQP com Jacobianos analíticos/aceitação independente. H2,4,5,10,20 por
 membership inteiro da malha-mãe20; cobertura/ND full-space somente para
 sensibilidade interna. [Definição](docs/mathematics/local_nbi.md), ADR0010
 ACCEPTED no escopo solicitado; nenhum H final aceito ou benchmark externo.
+Aplicação concluída:4557/4557 aceitos; zero falhas finais. H20:4417 ND full-space.
+[Resultados e limites](docs/mathematics/turning_local_nbi_h_sensitivity.md).
 O texto abaixo preserva o estado anterior da Fase5.
 
 Fase 5: normalização fixa nominal, CHIM centralizado e screening espectral

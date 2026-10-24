@@ -13,3 +13,10 @@ cannot be overwritten. H20 is an internal finest resolution, not true Pareto.
 No final H accepted, external benchmark, automatic merge or new phase.
 
 See docs/mathematics/local_nbi.md and turning_local_nbi_h_sensitivity.md.
+
+Observed application:4557/4557 accepted, zero final failures, two deterministic
+retries, no tolerance changes. H20:4476 unique decisions,4417 nondominated;
+H10:1310 nondominated, coverage q95.0979495/max.1987793 against ND20. Parent
+solve time7.483s; complete workflow10.283s on recorded environment. H20 remains
+an internal validation recommendation, not a final accepted H or true front.
+Twelve checksums verified against clean source d8d3de5; about5.05MB payload.
