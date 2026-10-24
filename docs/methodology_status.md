@@ -1,5 +1,21 @@
 # Estado metodológico
 
+## Fase 4 — propagação aos anchors e payoff matrices
+
+PR #6 integrado por squash 3ea6c6e após CI verde e ausência de conflitos.
+Consumo do ensemble congelado da Fase 3, sem novos draws, mudança de seed,
+Sigma_e ou OLS. Cada objetivo é reotimizado em cada réplica na bola codificada
+alpha=8**0.25, com o solver global e tolerâncias da Fase 2 preservados.
+Payoff própria por réplica, nas escalas naturais, com identidade diagonal.
+Certificados independentes, falhas com índices/máscaras e nenhum substituto.
+Resumos descritivos de deslocamento/ótimos e 20 prefixos; sem early stop.
+Ver [formulação](mathematics/anchor_monte_carlo.md),
+[relatório aplicado](mathematics/turning_anchor_mc.md),
+[gate](phase_4_verification.md). ADR 0007 ACCEPTED; C-MC-04/05/06 registradas.
+RC permanece EXPERIMENTAL/ABLATION ONLY, sem aplicação neste pipeline.
+Não há normalização, CHIM, edge/SVD/PA, subconjuntos, NBI/C-NBI ou início da Fase 5.
+As seções seguintes são históricas e descrevem o escopo de cada fase anterior.
+
 ## Fase 3 — propagação conjunta plug-in de coeficientes
 
 PR #5 integrado por squash 74d6723 após CI verde e ausência de conflitos.
