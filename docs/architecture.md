@@ -11,17 +11,27 @@ Layout src com distribuição c-nbi-v2 e import cnbi_v2. A versão permanece
   estimativa residual bruta e resultado imutável RSMFit com predict.
 - `model/uncertainty.py`: covariâncias analíticas plug-in de coeficientes,
   médias, pontos cruzados e diferenças; não contém sampling ou otimização.
+- `model/diagnostics.py`: SS/R²/S, PRESS, ANOVA e pure error/LOF por resposta.
+- `optimization/quadratic.py`: f=beta0+b'x+x'Qx, direções explícitas e arrays imutáveis.
+- `optimization/trust_region.py`: solução global sobre bola com certificado KKT/PSD.
+- `optimization/response_region.py`: nuvem observada, Mahalanobis por Cholesky,
+  cutoff legado experimental, sem confundir S_Y com Sigma_e/h*Sigma_e.
+- `optimization/anchors.py`: RC multistart, margens verificadas, atalho global
+  para anchor clássico já admissível e payoff orientada respostas×anchors.
+- `scripts/validation/turning_anchors.py`: extração de códigos originais por opção
+  explícita, execução nominal e artefatos separados; não depende de PDFs ou v1.
 - `references/`: notas selecionadas e claims; PDFs ficam fora do Git.
 - `data/`: raw autorizado e imutável, metadata/provenance, snapshot real pendente.
 - `tests/model/`: fixtures sintéticas e oráculos analíticos independentes.
 - `tests/reference_cases/`: expected outputs publicados, sem import pela produção.
 
-Runtime: numpy, scipy, pandas, scikit-learn, openpyxl. A Fase 1 usa somente
-NumPy entre as dependências numéricas existentes; não adiciona statsmodels ou
+Runtime: numpy, scipy, pandas, scikit-learn, openpyxl. RSM usa NumPy e os
+diagnósticos/otimização usam SciPy já disponível; não adiciona statsmodels ou
 novas dependências. NumPy 2.5.4 conforme lock, Python 3.12, uv_build==0.12.23.
-mypy strict preservado; exceção de stubs continua limitada a openpyxl.
+mypy strict preservado; exceção global de stubs para openpyxl e ignores locais
+de import-untyped nas APIs SciPy utilizadas.
 
 [ADR 0003](decisions/0003-multivariate-rsm-and-uncertainty-foundation.md) e
 [matemática](mathematics/multivariate_rsm.md) definem convenções e pressupostos.
-Não há Monte Carlo, shrinkage, âncoras, payoff, CHIM, PA, Simplex-Lattice,
-escolha de H, Pareto, NBI/CNBI ou módulos de otimização.
+ADR 0005 EXPERIMENTAL acrescenta anchors nominais e duas payoffs. Não há
+Monte Carlo, shrinkage, CHIM, PA, Simplex-Lattice, escolha de H, Pareto ou NBI/CNBI.

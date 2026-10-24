@@ -28,6 +28,15 @@ Complemento: CCD literal real ajustado; reprodução parcial de Table 3, 50/80
 pela nota literal ou 70/80 sob escala diagnóstica, com desenho nominal rotacional.
 WR e divergências de escala/coding continuam pendentes. Não iniciar próxima fase.
 
+## Fase 2 — anchors e payoff, comparação experimental da região de respostas
+PR #4 integrado por squash 64b09f9, com checks verdes e autorização explícita.
+Branch feature/02-individual-anchors-response-region, ADR 0005 EXPERIMENTAL.
+TRS global sobre bola codificada, payoff clássica e restrição de nuvem 8-D,
+cutoff legado explícito e multistart determinístico para os casos RC necessários.
+Original coded inputs verificados; equivalência ao modelo físico falhou e é
+registrada como caso distinto após priorização da planilha pelo responsável.
+Nenhum anchor afetado pelos três cutoffs avaliados. Não adotar RC automaticamente.
+
 ## Posteriormente — sem compromisso metodológico
-Experimentos/validação após nova tarefa. Nenhum solver de otimização, seed do
-C-NBI, H adaptativo, NBI/CNBI, Monte Carlo, Pareto ou cutoff definido nesta fase.
+Nova tarefa necessária para etapas posteriores. Sem seed do C-NBI, H adaptativo,
+NBI/CNBI, Monte Carlo, Pareto ou cutoff estatístico canônico definido.

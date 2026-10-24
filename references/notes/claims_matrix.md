@@ -40,5 +40,17 @@ O diagnóstico histórico C-PUB-WR-01 tem classe de uso
 Não autoriza arredondamento dos dados ou atribuição de preprocessing aos autores.
 
 Evidência interna não é literatura; derivação exige passos e revisão reais.
+
+## Fase 2 — anchors e região de respostas (ADR 0005 EXPERIMENTAL)
+
+| Claim ID | Claim | Evidence class | Evidence | Status | Limits |
+|---|---|---|---|---|---|
+| C-ANCHOR-01 | Anchors individuais são obtidos otimizando cada objetivo separadamente na região admissível | LITERATURE + INTERNAL_EVIDENCE | R001 seção 4.1/Table 4 pp.13-14; tests/optimization | SUPPORTED | Suporte à definição; nenhum NBI implementado |
+| C-ANCHOR-02 | Quadrática completa sobre bola Euclidiana é um quadratic trust-region problem com caracterização global KKT/PSD | MATHEMATICAL_DERIVATION + LITERATURE + INTERNAL_EVIDENCE | individual_anchors.md; Moré 1993 PDF p.3 diretamente lido; oráculos interiores/fronteira/hard case | SUPPORTED | Precisão numérica/certificado explicitados; não se transfere globalidade ao problema RC geral |
+| C-RC-01 | Uma restrição de distância quadrática pode limitar os vetores previstos a uma região multivariada especificada durante a definição dos anchors | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Maia 2020 pp.21/84 lidas/renderizadas; formulação e geometria em multivariate_response_region.md | SUPPORTED | Antecedente do estágio, não identidade entre a fórmula Khuri e a nuvem centrada na média escolhida aqui |
+| C-RC-02 | O cutoff finite-sample apropriado ao caso n=19,m=8 está estabelecido | PROPOSED | Revisão focada distingue conteúdo populacional, média, predição, tolerância e quantil empírico | UNVERIFIED | Chi-square .95 é EXPERIMENTAL; nenhuma adoção automática |
+| C-CODING-01 | Códigos e fatores físicos originais foram verificados por IDs, mas seus ajustes quadráticos não são equivalentes | INTERNAL_EVIDENCE | Original Data!B4:H22, hash fonte e phase_02_coding.json; teste de fitted discrepancy | SUPPORTED | Clarificação do responsável prioriza planilha; sem transformação contínua/inversa certificada |
+| C-RC-03 | Nesta formulação 8-D, os oito anchors clássicos estão dentro dos três cutoffs avaliados | INTERNAL_EVIDENCE | Run turning_original_codes_20261024, comparação e sensibilidade | EXPERIMENTAL | Resultado do modelo codificado distinto; não prova adequação estatística ou inutilidade universal de RC |
+| C-RC-04 | Admissibilidade dos vetores completos nos anchors não implica admissibilidade do Utopia montado pela diagonal da payoff | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Contraexemplo 2-D em individual_anchors.md/testes; utopia_diagnostic.json no caso real | SUPPORTED | Não é nova formulação; nenhuma garantia de atingibilidade conjunta da diagonal |
 Experimento implementado não aceita hipótese. Vincular fontes, passagens,
 decisões, commits e resultados afetados ao atualizar.

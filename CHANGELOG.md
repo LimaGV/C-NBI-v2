@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — Fase 2 experimental
+- Quadráticas naturais com b/Q e extração correta de interações beta_ij/2.
+- Solver global do problema quadrático sobre bola, com caso singular e certificado KKT/PSD.
+- Região 8-D da nuvem de respostas observadas, Cholesky e cutoff legado explícito.
+- Anchors RC por multistart determinístico e verificação independente de margens;
+  reutilização exata do anchor global clássico quando já admissível.
+- Duas payoff matrices separadas, Utopia diagonal, comparação e sensibilidade de cutoff.
+- Códigos originais literais extraídos com proveniência; gate de equivalência física
+  falhou, registrado como caso distinto após priorização da planilha pelo responsável.
+- ADR 0005 EXPERIMENTAL e claims/fontes delimitadas; nenhuma adoção definitiva de RC.
+- Sem Monte Carlo, NBI/C-NBI ou fase posterior.
+
 ## Unreleased — fechamento científico da Fase 1
 - Diagnósticos imutáveis por resposta: SS, R²/ajustado, S, PRESS/LOOCV,
   R² predito, ANOVA global, pure error e lack of fit com estados indefinidos.

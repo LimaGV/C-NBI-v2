@@ -1,5 +1,35 @@
 # Estado metodológico
 
+## Fase 2 — comparação experimental de anchors nominais
+
+PR #4 integrado por squash após todos os checks verdes; main limpa, branch
+feature/02-individual-anchors-response-region. ADR 0005 EXPERIMENTAL.
+Implementados anchors clássicos quadráticos sobre bola codificada e payoff,
+mais região 8-D de respostas observadas e anchors RC por multistart SLSQP,
+com atalho exato quando o anchor clássico global já é admissível.
+
+Codificação original verificada em NBI Revisão.xlsm!Original Data!C4:E22,
+axiais +/-1.682. Fonte prioritária por clarificação explícita do responsável.
+O gate de equivalência física/codificada FALHOU; o caso codificado é distinto,
+sem inventar decodificação contínua nem coordenadas físicas dos novos anchors.
+Respostas canônicas e resultados anteriores permanecem intactos.
+
+Na formulação cloud escolhida: phi=mean(Y), S_Y=cov(Y,ddof=1), posto 8.
+Cutoff chi-square_8(.95) é legado/EXPERIMENTAL, não confiança exata.
+Os oito anchors estão dentro; ambas as payoffs coincidem e não há deslocamento
+ou custo de objetivo. Quantil empírico .95 e chi-square .99 também não alteram
+os anchors. Recomendação: manter RC como ablação/candidato experimental, sem
+torná-lo obrigatório; C-RC-02 continua UNVERIFIED.
+O Utopia diagonal permanece fora da região descritiva (D²≈70560.14), embora
+os oito anchors estejam dentro. Restringir anchors individualmente não garante
+admissibilidade da diagonal; C-RC-04 registra a não implicação e contraexemplo.
+
+Ver [anchors](mathematics/individual_anchors.md),
+[região](mathematics/multivariate_response_region.md),
+[fontes](../references/notes/phase_02_sources.md) e
+[relatório aplicado](mathematics/turning_individual_anchors.md).
+Nenhum NBI/C-NBI, CHIM, Monte Carlo, PA, seleção de subconjuntos ou shrinkage.
+
 ## Fechamento da Fase 1 — qualidade e capacidade preditiva
 
 Implementados diagnósticos por resposta: SS, R²/R²_adj, MSE/S,
