@@ -49,6 +49,10 @@ The source is committed before the canonical archive is executed, so metadata
 records its actual clean source commit. Reviewed small artifacts are committed
 afterwards, with an exact .gitignore run exception. Input hashes must match that
 source commit's blobs; output hashes are in metadata and checksums.sha256.
+Actual numerical source commit: 5a102dd337a5c9b7108fac6997b612c7d02a8684,
+dirty=false. Every recorded input was verified against that commit and its
+current file; all seven artifact checksums passed. One float64 finite samples
+array (2000,10,8), no redundant ensembles. PNG visually inspected.
 The [applied report](mathematics/turning_coefficient_mc.md) records the actual
 source commit, object hashes, 20 diagnostics and file checks.
 

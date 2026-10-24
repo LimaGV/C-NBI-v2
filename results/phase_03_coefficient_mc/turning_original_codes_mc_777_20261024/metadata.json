@@ -1,0 +1,273 @@
+{
+  "run_id": "turning_original_codes_mc_777_20261024",
+  "executed_at_utc": "2026-10-24T14:24:42.399902+00:00",
+  "git_commit": "5a102dd337a5c9b7108fac6997b612c7d02a8684",
+  "git_working_tree_dirty": false,
+  "git_branch": "feature/03-multivariate-coefficient-monte-carlo",
+  "dataset_sha256": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+  "model_identifier": "turning_original_codes_20261024/original_spreadsheet_codes_1_682",
+  "phase_2_coefficient_file_sha256": "9d5590b5f2ba43592fa13753cd86afaa583fadbbd4f0d180acb1b5eef0b3e3e9",
+  "phase_2_coefficient_match": "ALLCLOSE_rtol_1e-12_atol_1e-13",
+  "coding": "original_spreadsheet_codes_1_682",
+  "factor_order": [
+    "Vc",
+    "f",
+    "ap"
+  ],
+  "n_observations": 19,
+  "p": 10,
+  "m": 8,
+  "residual_degrees_of_freedom": 9,
+  "coefficient_order": [
+    "beta0",
+    "beta1",
+    "beta2",
+    "beta3",
+    "beta11",
+    "beta22",
+    "beta33",
+    "beta12",
+    "beta13",
+    "beta23"
+  ],
+  "design_term_order": [
+    "intercept",
+    "x1",
+    "x2",
+    "x3",
+    "x1^2",
+    "x2^2",
+    "x3^2",
+    "x1*x2",
+    "x1*x3",
+    "x2*x3"
+  ],
+  "response_order": [
+    "T",
+    "MTTF",
+    "WR",
+    "Ra",
+    "Rt",
+    "Kp",
+    "ROI",
+    "OEE"
+  ],
+  "sampling_method": "MATRIX_NORMAL_PLUGIN",
+  "sampling_formula": "B_hat + C_X @ G @ L_Sigma.T",
+  "covariance_estimator": "raw E.T @ E / nu, no shrinkage",
+  "theoretical_covariance": "Sigma_hat_e tensor V_X; column-stacked vec",
+  "seed": 777,
+  "rng": "Generator(PCG64)",
+  "B_max": 2000,
+  "batch_size": 100,
+  "checkpoints": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    2000
+  ],
+  "ensemble_count": 1,
+  "samples_index_order": "samples[replica,term,response]",
+  "normal_order": "flat float64 standard_normal -> C reshape(B,p,m); response fastest",
+  "normal_count": 160000,
+  "dtype": "float64",
+  "mode": "validation/sensitivity",
+  "mean_norm_floor": 2.220446049250313e-16,
+  "factorization_method": {
+    "design": "solve_triangular(R,I), upper reduced QR",
+    "residual": "CHOLESKY_SPD"
+  },
+  "psd_eigenvalue_tolerance": 3.4069534015912904e-14,
+  "zeroed_negative_eigenvalues": 0,
+  "design_reconstruction_max_abs": 0.0,
+  "residual_reconstruction_max_abs": 1.7763568394002505e-15,
+  "object_identities": {
+    "B_hat": {
+      "sha256": "024158093941f9442b7250deceb4b5dc6580fbfd85458add5606850139acb0be",
+      "dtype": "float64",
+      "shape": [
+        10,
+        8
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "V_X": {
+      "sha256": "0e5d964454fe6f7db36ac921d2a110cf629201d50b02f517d1484a86f4f76fee",
+      "dtype": "float64",
+      "shape": [
+        10,
+        10
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "Sigma_hat_e": {
+      "sha256": "9c990a6240cf186f51b57eaf41bb1a2dc40fd59a801cf3dc51274fc192319aeb",
+      "dtype": "float64",
+      "shape": [
+        8,
+        8
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "R": {
+      "sha256": "7636507c37a4c4e8cec572aedeb10aed31db8b6502a66955ca4e8ce73ca71a84",
+      "dtype": "float64",
+      "shape": [
+        10,
+        10
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "C_X": {
+      "sha256": "0b15a0fb6ac294ce4da9de3fad903b6abd2615dd753a91f150905f95aa21441f",
+      "dtype": "float64",
+      "shape": [
+        10,
+        10
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "L_Sigma": {
+      "sha256": "5380d837d7e7f4e68e5c6080c6e8ffe7f1bfc33f274e888435c552b74514fc03",
+      "dtype": "float64",
+      "shape": [
+        8,
+        8
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "Sigma_effective": {
+      "sha256": "9c990a6240cf186f51b57eaf41bb1a2dc40fd59a801cf3dc51274fc192319aeb",
+      "dtype": "float64",
+      "shape": [
+        8,
+        8
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    },
+    "samples": {
+      "sha256": "1dcb502be87330097a113b9ed6bf0ade06abc6754c35ac8eade28cb2b69620af",
+      "dtype": "float64",
+      "shape": [
+        2000,
+        10,
+        8
+      ],
+      "memory_order": "C",
+      "machine_byte_order": "little"
+    }
+  },
+  "early_stop_policy": {
+    "policy_id": "future_pa_adjacent_checkpoint_stability_v1",
+    "status": "PROPOSED",
+    "checkpoints": [
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000
+    ],
+    "minimum_eligible_B": 500,
+    "comparison_lag": 100,
+    "selected_subsets_rule": "exact equality of subset sets, including their identities",
+    "global_dimension_rule": "exact equality of the PA global dimensional decision",
+    "quantiles_rule": "same decision-quantile identities and every relative change strictly less than tolerance",
+    "quantile_relative_tolerance": 0.01,
+    "quantile_relative_change": "abs(q_B-q_previous)/max(abs(q_B),abs(q_previous),epsilon_q)",
+    "epsilon_q": 2.2250738585072014e-308,
+    "epsilon_q_definition": "smallest positive normal float64, only numerical zero protection",
+    "production_rule": "first eligible checkpoint meeting all three conditions simultaneously",
+    "maximum_B": 2000,
+    "not_reached_status": "EARLY_STOP_NOT_REACHED",
+    "validation_rule": "evaluate every prefix through B=2000 even if production could stop earlier",
+    "moment_errors_are_stop_criteria": false,
+    "applied_in_phase_3": false,
+    "phase_3_actual_status": "NOT_APPLIED_PHASE_3"
+  },
+  "early_stop_minimum_B": 500,
+  "early_stop_quantile_tolerance": 0.01,
+  "early_stop_applied": false,
+  "early_stop_status": "NOT_APPLIED_PHASE_3",
+  "anchors_reoptimized": false,
+  "per_replica_payoff_computed": false,
+  "observed_responses_modified": false,
+  "raw_unchanged": true,
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "openpyxl": "3.1.5"
+  },
+  "input_sha256": {
+    "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "data/processed/turning_application/original_coded_factors.csv": "96ba3ca12794357c9c598428dd2aa775fae2ae6f6a53c8afd40128e9384030f1",
+    "data/metadata/turning_application/phase_02_coding.json": "3f9e9664036006036eaa2311f3835e649cac7ab972f430356c52515d895468f2",
+    "results/phase_02_anchors/turning_original_codes_20261024/coded_models.csv": "9d5590b5f2ba43592fa13753cd86afaa583fadbbd4f0d180acb1b5eef0b3e3e9",
+    "docs/policies/pa_early_stop_policy.json": "e738a49b7df5aca0beaca8ed7a4229dbbfeed2aecd5160de0a4414eda73b43db",
+    "uv.lock": "b558a1f94fed30d5935849a03e903b8c59a21aa5291d8c13e1d1d3723616b136",
+    "scripts/validation/turning_coefficient_mc.py": "c6f4c2f0f37b6dcd914cc39177d6369c236b0fccd519f70497373c097c9f4369",
+    "scripts/validation/turning_anchors.py": "ede9dbc7d554587415df95fc00f7088385807003b271b24c115d5491db52b716",
+    "scripts/validation/turning_reference.py": "5f53e419be4f6c81e85a053f830ef37e921a897761036ce0b55d00bab7dbb684",
+    "src/cnbi_v2/model/__init__.py": "7a67c146d48dae3d12b39de2af672b92b78f9aac8997b4c630a9d17ba9e16c85",
+    "src/cnbi_v2/model/diagnostics.py": "83f10ef258f3bd637729569a453746f8193e099625020f67fb694f1dcd860abb",
+    "src/cnbi_v2/model/multivariate_rsm.py": "666cd1f968ea6fdc618b7faa25b62333cb534c991b1c7448c44a0973bdbf9e01",
+    "src/cnbi_v2/model/quadratic_design.py": "efdedfde5f607f771dae9b5567d2c7a359f7564386a360cbebd116ef15867cf3",
+    "src/cnbi_v2/model/uncertainty.py": "2339f627bbbe2dd7a74037abe534c6ef2501465df87eef4beb4ac3ad10cc05db",
+    "src/cnbi_v2/uncertainty/__init__.py": "1be2edb0f3788ed8e7ed169e0ba6f1969ff1887cf51802c45f3a7794d087697b",
+    "src/cnbi_v2/uncertainty/coefficient_sampling.py": "1b7847e4a9d022b2bf9ac5d404e45f7a99e2506eaa0c343f42c4d159caefbbe3",
+    "src/cnbi_v2/uncertainty/mc_sensitivity.py": "b7d41528c121f0f33e103d8b703d1bed3392ab568fa448b08a47b70756649691",
+    "src/cnbi_v2/data/__init__.py": "72c7ef8141b56981471e2342a74688f8a59465a886401984ffe03f45291f5faf",
+    "src/cnbi_v2/data/hashing.py": "946d6a612b3ec360085d1846367258cc71826b84740029734fd31d921cd0a6e0",
+    "src/cnbi_v2/data/workbooks.py": "7d90f943fff3a5243b69e9e1def058a4e59e408cb58160f5dd0fd8c9ad3107ea"
+  },
+  "artifact_sha256": {
+    "coefficient_samples.npz": "5df42af4ef36fe6e2ce1948897d12a0d90a4a9f3449b1180898cf6adc9d84674",
+    "empirical_covariance_B2000.npy": "db74262e9b20e58929ce57981957d985106d287c060d6872e12719cbf37d2f01",
+    "empirical_summary_B2000.json": "77987410655abf8b2b2a3dfa6224cbc1557d7e5762839a55324112d3a3966ba3",
+    "mc_convergence.png": "6337ada1d0f4b8f62a4bcdaa09baec319aa51099e93b9f5221cec6eaa7465bdd",
+    "mc_prefix_sensitivity.csv": "4cfb0802cd24b9e218172cb790f894a13748d2ec31fad1c0f46358c83a2484dd",
+    "theoretical_covariance.npy": "e9008001123795715ff4b8200263610a6a8696714985a44bafa1f990e123284e"
+  },
+  "command": "uv run python -m scripts.validation.turning_coefficient_mc --run-id turning_original_codes_mc_777_20261024 --seed 777",
+  "output_directory": "explicit --output if supplied; otherwise results/phase_03_coefficient_mc/run_id"
+}
