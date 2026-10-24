@@ -1,0 +1,59 @@
+{
+  "nfe": 132000,
+  "nfe_max": 132000,
+  "generations": 400,
+  "population": 330,
+  "seed": 1023,
+  "family": "MOEAD",
+  "repair_operations": 131839,
+  "runtime": 109.26100709999446,
+  "config_hash": "36b80259b1794b910cb95f6ba3c962f9c9af844952328da16d16681201e27d6e",
+  "identity": {
+    "config": {
+      "family": "MOEAD",
+      "n_partitions": 4,
+      "generations": 400,
+      "sbx_probability": 1.0,
+      "sbx_eta": 10.0,
+      "pm_eta": 30.0,
+      "n_neighbors": 66,
+      "prob_neighbor_mating": 0.9
+    },
+    "protocol_sha256": "9ffc90951ea0c3d7b7393560d6fa5359b3260039cf1b280810e8192ec6473b6a",
+    "input_sha256": {
+      "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+      "results/phase_02_anchors/turning_original_codes_20261024/coded_models.csv": "9d5590b5f2ba43592fa13753cd86afaa583fadbbd4f0d180acb1b5eef0b3e3e9",
+      "results/phase_02_anchors/turning_original_codes_20261024/anchors_sphere.csv": "462b6b18002c2ae784758a26ebe500bf95de3a8ff1c504aab6986924d9d5bafd",
+      "results/phase_02_anchors/turning_original_codes_20261024/payoff_sphere.csv": "2e410a2d3e222047442d75d526166c6af5e5d6787c2c93dcbe2b184003e124c2",
+      "results/phase_02_anchors/turning_original_codes_20261024/metadata.json": "880971d1bbf449e10f4abe6ca949998ecb59eac39f28b382e2d7902604be61af",
+      "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/nominal_normalization.csv": "bc19f7ef44d5ee86b10b4fb789fe55742b0dc6dc2119277d5811e7464bb76dc0",
+      "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/selected_subsets_B2000.csv": "198d03f7756ba9f0633d87a6142e5ac6da014a135f78df405994cc10b6b77e46",
+      "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/metadata.json": "61f84b930aa8b0adb9a9bc48f2129dbcc675f73bc582d7053f500188d5f87992",
+      "results/phase_06_local_nbi/turning_local_nbi_h20_20261024/metadata.json": "7ef4f92954deabe3dbf996e3bb046d0987c3e59b201f81742cbabfea688d9683",
+      "results/phase_06_local_nbi/turning_local_nbi_h20_20261024/local_nbi_solutions_H20.npz": "e05eac81ad87f69d395d8b250cf03016a036a4921f4d98b9e7d505cb74f8c135",
+      "results/phase_06_local_nbi/turning_local_nbi_h20_20261024/provenance.csv": "28c91fdcf1ab14078f46eb1b69dd931171176ba72a9657f2fa09a719a9721307",
+      "data/external/turning_reference/vrf_historical_decisions.csv": "f41b338c8927c635d18e60ab363c900116e9a7894177b9d740a433581fd2661a",
+      "references/metadata/phase_07_v1/applied_ea_calibration.json": "0417657aa8847c3bef551eaaa259adf4f149b0e44e9063be5709d0b0eed7ff5b",
+      "references/metadata/phase_07_v1/source_provenance.json": "1f6f7164ca99c67abe4c73911613f8defebfc28fa4916e45fc36e662557a06cb"
+    },
+    "engine_sha256": {
+      "src/cnbi_v2/reference/__init__.py": "1be0cfb9f9f09bbe82b3f966a31e027b77538ad31ef1c1526835babf52de0539",
+      "src/cnbi_v2/reference/problem.py": "7c286497715f0bf8f0a7ab332c7daed9b18e7cb480342a7962ceb798ed311c5c",
+      "src/cnbi_v2/reference/evolutionary.py": "abffc8a2bbc788e4f31ca46615c0cb42fe16140d04ef267864af9b76fbd20a1e",
+      "src/cnbi_v2/reference/pools.py": "2349075348a76c7c6a9d4ca9f80d8662f4c44d1ace713b6d6bfbacdd87a72ea8",
+      "scripts/validation/turning_reference_campaign.py": "ceb91769e7ede1fb63b79eb7ca91819f8a8e4cab330ca5596990bfa60affcb91",
+      "docs/policies/pareto_reference_protocol.json": "9ffc90951ea0c3d7b7393560d6fa5359b3260039cf1b280810e8192ec6473b6a",
+      "uv.lock": "b4f3b4bae5340256e3afda7c0ca869eb92d3678a9281d07ac730ef711302389a"
+    }
+  },
+  "ND": 330,
+  "validation_evaluations": 330,
+  "validation_max_absolute_error": 1.4210854715202004e-14,
+  "archive_sha256": "be75707f045b3d04753f0f97814856d2ff18a544371a220381769dcc97bbe804",
+  "git_commit": "8d77bc99596e8b01eff4d2829ada48b5ed5c8c07",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pymoo": "0.6.2"
+  }
+}

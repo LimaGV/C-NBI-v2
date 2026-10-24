@@ -52,8 +52,13 @@ V2 adds pinned `pymoo==0.6.2` rather than implementing either EA. Classes:
 `pymoo.algorithms.moo.nsga3.NSGA3`, `pymoo.algorithms.moo.moead.MOEAD`.
 Version and transitive resolution are in uv.lock. Context7 pymoo documentation
 was consulted for algorithms/operators/repair, then installed source inspected
-for signatures/defaults. A SciPy Context7 query failed; KDTree API is checked
-against the installed implementation and independent distance oracles.
+for signatures/defaults. A SciPy Context7 query failed; KDTree API was checked
+against the installed implementation, the official documentation and independent
+distance oracles. Software sources: [pymoo NSGA3](https://pymoo.org/algorithms/moo/nsga3.html),
+[MOEAD](https://pymoo.org/algorithms/moo/moead.html),
+[SciPy cKDTree.query](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.cKDTree.query.html).
+These establish API behavior, not scientific validity. Historical library version
+is not asserted from absent environment evidence; current version is pinned/recorded.
 
 Explicit preserved operator defaults: SBX prob_var=.5, prob_exch=1,
 prob_bin=.5, two offspring; PM individual probability1/3 and per-variable1/3,
@@ -104,3 +109,10 @@ The Phase6 integrity test retains the archived **historical uv.lock digest**
 instead of requiring that historical dependency environment to equal the newly
 extended environment. All other Phase6 inputs/results remain byte checked.
 No saved scientific artifact or previous test result is rewritten.
+
+Supplementary cross-checks after protocol freezing verified literal equality of
+all66 extracted coordinate strings and inspected all20 historical applied EA
+final-front CSVs (10 seeds each). Their row counts, sphere checks and hashes are
+in `references/metadata/phase_07_v1/historical_decision_audit.json`. They remain
+excluded from the principal EA pools; this cross-check does not change any
+operator, seed, budget, eligibility rule or scientific input.

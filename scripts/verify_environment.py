@@ -28,6 +28,7 @@ report = {
             "pandas",
             "scikit-learn",
             "openpyxl",
+            "pymoo",
             "pytest",
             "pytest-cov",
             "ruff",
