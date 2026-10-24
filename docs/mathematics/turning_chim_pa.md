@@ -249,3 +249,188 @@ visible in the CSVs and are not altered to match legacy counts.
 No RC, clipping, volume/qmax gate, new Monte Carlo, anchor reoptimization,
 shrinkage, lattice H/weights, NBI/C-NBI, clustering, nondominance or Pareto metrics.
 No subsequent phase was started automatically.
+
+## Spectral-gap convergence and revised early-stop policy
+
+Explicit pre-merge PR #8 revision, **policy v2 PROPOSED_REVISED**, ADR 0009
+**PROPOSED**. The policy was defined after inspecting the original turning
+trajectory; this is a **post-hoc same-case analysis**, not external validation
+of the five-percentage-point rule. V1 and all original artifacts above remain
+byte-identical and retain their historical not-reached outcome.
+
+The revised run is
+[turning_spectral_gap_policy_v2_20261024](../../results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/).
+It consumes only saved spectra and observed/decision CSVs. No new draws,
+anchors, payoffs, normalization, CHIM or SVD are executed by the revision.
+All 7140 historical q95/observed/margin/PASS rows and every prefix dimension,
+selection count and exact ID set matched. No gap became a PA filter.
+
+The old criterion max_q abs(q_B-q_previous)/max(abs(q_B),abs(q_previous),epsilon_q)
+<.01 is now a legacy diagnostic only. It could be controlled by one of the357
+individual thresholds, including small/rejected-subset values. The revised
+object is the relative spectral shape:
+
+\[
+d_r=q_r-q_{r+1},\qquad
+g_r=\frac{q_r-q_{r+1}}{\max(q_r,\epsilon_q)},\qquad
+\Delta g_r=|g_r(B)-g_r(B-100)|<.05.
+\]
+
+Five percentage points is an operational tolerance, not statistical error.
+The same six global gaps and all stable selected local k>=3 gaps must satisfy
+it in both transitions of a three-eligible-checkpoint window. Pair identities
+remain part of the exact-set stability requirement, without artificial gaps.
+The first eligible window is500/600/700. Observed singular values still define
+PASS/FAIL but do not measure Monte Carlo convergence. No degeneracy was found:
+**DEGENERATE_Q95_SPECTRUM: NOT_DETECTED**.
+
+### Complete global gap trajectory
+
+Normalized gaps below are fractions; all six are in
+[global_spectral_gap_trajectory.csv](../../results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/global_spectral_gap_trajectory.csv).
+Global dimension is2 at every checkpoint; g2 is the critical rank2–3 gap.
+
+| B | g1 | critical g2 | g3 | g4 | g5 | g6 |
+|---|---|---|---|---|---|---|
+| 100 | 0.481936 | 0.479340 | 0.504007 | 0.545430 | 0.745182 | 0.883507 |
+| 200 | 0.447858 | 0.489214 | 0.540333 | 0.557870 | 0.698702 | 0.887914 |
+| 300 | 0.483887 | 0.487773 | 0.506012 | 0.597728 | 0.647739 | 0.894714 |
+| 400 | 0.493176 | 0.473635 | 0.508880 | 0.602387 | 0.652967 | 0.885949 |
+| 500 | 0.479678 | 0.472247 | 0.522879 | 0.608500 | 0.658027 | 0.884872 |
+| 600 | 0.479678 | 0.481047 | 0.513938 | 0.601830 | 0.663856 | 0.890749 |
+| 700 | 0.494390 | 0.466836 | 0.524350 | 0.595338 | 0.668423 | 0.889063 |
+| 800 | 0.493355 | 0.467488 | 0.529357 | 0.596182 | 0.668077 | 0.879191 |
+| 900 | 0.493684 | 0.472008 | 0.536420 | 0.590231 | 0.667375 | 0.881223 |
+| 1000 | 0.480148 | 0.483991 | 0.538496 | 0.587318 | 0.669888 | 0.881066 |
+| 1100 | 0.486014 | 0.479604 | 0.540969 | 0.589255 | 0.662095 | 0.880771 |
+| 1200 | 0.488791 | 0.472127 | 0.541467 | 0.581894 | 0.669869 | 0.880478 |
+| 1300 | 0.486010 | 0.476673 | 0.537859 | 0.581997 | 0.672889 | 0.879640 |
+| 1400 | 0.482508 | 0.477924 | 0.542472 | 0.578416 | 0.674380 | 0.879446 |
+| 1500 | 0.481364 | 0.482359 | 0.535944 | 0.581894 | 0.680701 | 0.876590 |
+| 1600 | 0.478924 | 0.480751 | 0.535814 | 0.575575 | 0.687772 | 0.876353 |
+| 1700 | 0.481364 | 0.481014 | 0.534730 | 0.578950 | 0.687242 | 0.873828 |
+| 1800 | 0.477846 | 0.483122 | 0.536191 | 0.577448 | 0.685946 | 0.873412 |
+| 1900 | 0.476846 | 0.482502 | 0.535947 | 0.582950 | 0.684242 | 0.872898 |
+| 2000 | 0.477628 | 0.478315 | 0.535105 | 0.582851 | 0.685740 | 0.874638 |
+
+![Global normalized q95 gaps g1 and critical g2](../../results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/global_q95_spectral_gaps.png)
+
+### Transition and window sensitivity
+
+Change columns are **percentage points** (100 times the absolute normalized-gap
+change). The current and preceding transitions use the same monitor set for
+the window ending at B. Before a complete/eligible window these are diagnostics
+only. Exact dimension/selection equality is also required; a small gap change
+alone never triggers stopping.
+
+| B | Global max change (pp) | Selected local max change (pp) | Overall current transition (pp) | Two-transition window max (pp) | Eligible | Exact selection stable for3 | Stop condition |
+|---|---|---|---|---|---|---|---|
+| 100 | — | — | — | — | False | False | False |
+| 200 | 4.647998 | 5.440219 | 5.440219 | — | False | False | False |
+| 300 | 5.096332 | 5.239781 | 5.239781 | 5.440219 | False | False | False |
+| 400 | 1.413831 | 2.592290 | 2.592290 | 5.239781 | False | False | False |
+| 500 | 1.399881 | 2.475080 | 2.475080 | 2.592290 | False | False | False |
+| 600 | 0.894067 | 2.294828 | 2.294828 | 2.475080 | False | False | False |
+| 700 | 1.471211 | 0.700043 | 1.471211 | 2.294828 | True | False | False |
+| 800 | 0.987147 | 1.848241 | 1.848241 | 1.848241 | True | False | False |
+| 900 | 0.706325 | 1.311697 | 1.311697 | 1.848241 | True | False | False |
+| 1000 | 1.353598 | 1.150614 | 1.353598 | 1.353598 | True | False | False |
+| 1100 | 0.779285 | 1.522144 | 1.522144 | 1.522144 | True | False | False |
+| 1200 | 0.777379 | 1.169563 | 1.169563 | 1.522144 | True | False | False |
+| 1300 | 0.454600 | 0.971192 | 0.971192 | 1.169563 | True | True | True |
+| 1400 | 0.461269 | 1.179158 | 1.179158 | 1.179158 | True | True | True |
+| 1500 | 0.652808 | 0.804398 | 0.804398 | 1.179158 | True | True | True |
+| 1600 | 0.707089 | 0.809266 | 0.809266 | 0.809266 | True | True | True |
+| 1700 | 0.337476 | 0.795895 | 0.795895 | 0.809266 | True | True | True |
+| 1800 | 0.351724 | 0.893146 | 0.893146 | 0.893146 | True | True | True |
+| 1900 | 0.550278 | 0.643292 | 0.643292 | 0.893146 | True | True | True |
+| 2000 | 0.418717 | 0.848871 | 0.848871 | 0.848871 | True | True | True |
+
+The local monitor set is the intersection of selected k>=3 identities in each
+window; exact equality of the full selections is independently required. The
+relevant window sets can be specified without repeating IDs on every row.
+Let M be these18 final selected trios:
+
+`C_1_4_6`, `C_1_4_7`, `C_1_5_6`, `C_1_5_7`, `C_1_7_8`, `C_2_4_6`, `C_2_4_7`, `C_2_5_6`, `C_2_5_7`, `C_2_7_8`, `C_3_4_6`, `C_3_4_7`, `C_3_5_6`, `C_3_5_7`, `C_3_7_8`, `C_4_7_8`, `C_5_7_8`, `C_6_7_8`.
+
+All relevant eligible windows contain no selected quartet. Every row also
+monitors all6 global gaps. Pair selection is checked by full IDs, not gaps.
+
+| Window ending B | Local monitor IDs | Total gaps | Full selected-ID equality in window |
+|---|---|---|---|
+| 700,800,900 | M except C_5_7_8 | 23 | False |
+| 1000 | M except C_5_7_8, plus C_3_6_8 | 24 | False |
+| 1100,1200 | M | 24 | False |
+| 1300,1400,...,2000 | M | 24 | True |
+
+Exact IDs for every window, including all pairs in the full selected set, are
+in [window_monitoring.csv](../../results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/window_monitoring.csv).
+All4040 gaps, including unmonitored spectra, are in spectral_gap_trajectories.csv;
+flags identify monitor membership. No pair gap was fabricated.
+
+### First stop and retrospective decisions
+
+The **computed first joint success is B_stop_gap=1300**, using1100/1200/1300.
+Earlier eligible windows fail exact selected-ID equality, even when counts
+coincide. At1300 all24 monitored gaps satisfy the strict limit in both
+transitions: maximum **1.1695626398 pp** for1100→1200 and **0.9711924477 pp**
+for1200→1300. The global maximum for the latest transition is0.4546002924 pp.
+
+At the stop: global dimension2, **19 pairs+18 triples+0 quadruples=37 subsets**.
+Their complete identities are exactly the original37 listed above and stored
+in selected_subsets_B2000.csv. The revised early_stop_validation.json also
+records the full stop and reference ID lists, independently compared:
+
+- same_final_selection=true; same_final_dimension=true.
+- Every later checkpoint1400,1500,...,2000 preserves both decisions.
+- EARLY_STOP_RETROSPECTIVELY_DECISION_STABLE; changed_later_checkpoints=[].
+- post_stop_max_gap_change=0.011791584724043402, or **1.1791584724 pp**, at1400.
+- No post-stop transition violates .05. A gap-only violation would still be
+  reported separately rather than classified as a premature decision.
+- replicate_reduction_fraction=1-1300/2000=0.35, **35% potential replica
+  reduction** (700 replicas), not measured wall-clock savings. The full frozen
+  ensemble already existed and was retained as the scientific reference.
+
+### Provenance, integrity and validation limits
+
+Source committed before canonical execution:
+**5a2b6cdb8595c5524af5cdfe2af076a2125366b8**, dirty=false.
+Original archive commit fc57b05c96a72a8cc6128f49ef270a689cc9bac0.
+All17 input hashes match that clean source commit's Git blobs; all7 output
+hashes passed. Policy v2 SHA-256:
+`70f1ea6b7a771dc3355d04589340997ed3c5d7085271a3a13f217c65f1f43fec`.
+Original noise NPZ remains
+`4496326958f35ad7a322702e43db3d99eade1497d98e0b179974d424b5e71dba`.
+
+| Revised artifact | SHA-256 |
+|---|---|
+| early_stop_validation.json | 47747a4361629f10c8ffbac72f22a793cbcbe009d72894863f87ad2080adabc2 |
+| global_q95_spectral_gaps.png | 7dc1ebe87d893a013ca13e0d00166e523de415bfe46e6e8a99450f17af1f6fc7 |
+| global_spectral_gap_trajectory.csv | a882ca7879b02a17f4c3804053a98d305b222dd3c7a1105135bd32a4025643c9 |
+| metadata.json | bfdcb1451c7e63ac87ef27aaeca8a25f7ca1d1cc7ca8f56c9806a394f9e842ec |
+| prefix_pa_sensitivity.csv | 37d7ee806258b32713bd8dc00bc9d8eff1878901256a15a159b1f83e14e6cc2e |
+| spectral_gap_trajectories.csv | fc4b9eb4a1d0e37e6aabdd80d6405915f07d68d0e2ea2f206f181d56c7bf59a4 |
+| window_monitoring.csv | 1c971729f7ad4421003525d32a4d86d4f954ffb5d25495098cef27951888d903 |
+
+Manifest:
+[checksums.sha256](../../results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/checksums.sha256).
+The original Phase2/3/4/5 scientific artifacts, raw data, model/optimizer/sampler
+modules, normalization/geometry/PA-selection code, uv.lock and ADR0008 have no
+diff from the pre-revision head. Only the historical policy paths changed in
+old runner scripts. No upstream canonical workflow was invoked for this analysis.
+Regression tests exercise prior modules in temporary directories and cannot
+replace the preserved scientific archives.
+
+Final local gate: **502 tests passed**, coverage **99.50% (1577/1585 statements)**,
+new spectral_gap_stop.py159/159 and chim/100%; Ruff passes, strict mypy passes
+on26 source files, locked sync and git diff --check pass. Eight previously
+uncovered workbook-inspection statements are unchanged. The dedicated revised
+workflow integration test forbids SVD, RNG, fitting, optimizer and all original
+pipelines; independent checks cover every saved gap and window/decision identity.
+
+ADR0009 remains PROPOSED, policy v2 PROPOSED_REVISED, claims C-PA-05/06/07
+are supported decision/definition records within their stated limits. Freeze
+this exact rule for independent synthetic/application validation; neither these
+implementation tests nor this same-case retrospective outcome establish
+universal validity. Keep B=2000 as the complete scientific reference. No merge,
+lattice H, NBI/C-NBI or new phase was started.

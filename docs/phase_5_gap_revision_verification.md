@@ -50,3 +50,21 @@ No data/model/solver/sampler/normalization/geometry/PA-selection change, no new
 dependency or lock change, and ADR 0008 remains byte-identical. ADR 0009 is
 PROPOSED; C-PA-05/06/07 are decision/definition claims, not statistical validity
 claims. Freeze v2 for future independent synthetic/application validation.
+
+## Completed local gate and canonical application
+
+Source commit5a2b6cdb8595c5524af5cdfe2af076a2125366b8 was clean at the canonical
+revision run. All17 input hashes match Git blobs at that commit; all7 output
+checksums passed. The original archive is unchanged. The revised run is
+turning_spectral_gap_policy_v2_20261024, B_stop_gap1300, same dimension2 and37
+IDs through2000. Retrospective status EARLY_STOP_RETROSPECTIVELY_DECISION_STABLE;
+post-stop maximum gap change1.1791584724 pp; potential replica reduction35%.
+
+uv sync --locked PASS; pytest502 passed in34.70s; coverage99.50%
+(1577/1585), new module159/159 and chim/100%; Ruff PASS; strict mypy PASS
+on26 source files; git diff --check PASS. Eight old workbook-inspection lines
+remain uncovered. No dependency change. All historical production scientific
+modules/artifacts, raw/processed data and ADR0008 have zero diff from fc57b05.
+
+Delivered-head Ubuntu/Windows push/pull-request CI results and final commit are
+recorded in the updated PR #8 and final delivery report, after the push. No merge.
