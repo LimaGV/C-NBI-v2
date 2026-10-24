@@ -53,6 +53,15 @@ adds outputs/report. Verify input hashes against those source blobs and every
 output checksum before publication. One anchor NPZ and one payoff NPZ, not
 2000 CSVs; fixed-width Unicode and allow_pickle=False, no object arrays.
 
+Canonical archive: turning_original_codes_anchor_mc_777_20261024, source
+ac9eb72af9f91de2b860df4b17ba8ab417e94e07, dirty=false. All 26 input hashes
+match that commit's Git blobs; all nine artifact checksums passed. Actual
+16000 attempted, 16000 certified, zero failures, 2000 valid payoffs and exact
+diagonal equality. Compute 4.436183499987237 s; measured workflow 4.640420899959281 s.
+An additional complete serial replay produced bitwise equal arrays/certificates/
+cases/payoffs in the same environment, with no new draws or changes to inputs.
+Ra: 420 interior and 1580 boundary. Full tables and all 20 prefixes in the report.
+
 See [mathematics](mathematics/anchor_monte_carlo.md),
 [applied report](mathematics/turning_anchor_mc.md), ADR 0007 ACCEPTED and claims
 C-MC-04/05/06. Timing is serial and descriptive. The future PA early-stop policy
