@@ -172,6 +172,9 @@ efetivamente executado preservam a identidade dessa versão. O fechamento regist
 separadamente o commit que contém esse código e o gate aprovado, evitando SHA
 autorreferente. Não se regravam os arquivos numéricos para mudar a proveniência.
 PDFs e bibliotecas pessoais não são incorporados.
+O [registro do gate](../phase_1_diagnostics_validation.json) vincula os hashes
+executados ao commit ac6e7a98842e1f1c32fd2240e2a266738264fcd9, confirma
+identidade dos blobs versionados e preserva os hashes de todos os CSVs numéricos.
 
 Validação: 237 testes passam, cobertura total 98.47% (516/524 statements),
 novo diagnostics.py 100% (160/160), model/ 100%. Oráculos manuais de SS/R²/F e

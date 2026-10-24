@@ -17,6 +17,8 @@ ADR 0003 estendida e claims C-RSM-07 a 11; PR #4 mantido sem merge.
 Gate final reconferido em 2026-10-24: uv sync --locked, pytest -v,
 pytest --cov=cnbi_v2, Ruff e mypy src aprovados (10 source files).
 Raw histórico/literal, CSV literal, golden reference e lock preservados.
+Identidade dos inputs executados e do código versionado, commit do gate e
+hashes numéricos preservados: [registro](phase_1_diagnostics_validation.json).
 
 ## Preparação Git
 
