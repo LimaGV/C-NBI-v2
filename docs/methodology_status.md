@@ -1,5 +1,21 @@
 # Estado metodológico
 
+## Fase 3 — propagação conjunta plug-in de coeficientes
+
+PR #5 integrado por squash 74d6723 após CI verde e ausência de conflitos.
+Mesmo ajuste codificado original da Fase 2: B_hat, R/V_X e Sigma_e=E'E/9,
+sem misturar modelos físicos ou publicados. Sampler matrix-normal conjunto,
+seed 777 via Generator(PCG64), resultado imutável e reprodutibilidade de prefixos/lotes.
+Um ensemble 2000×10×8 e 20 prefixos 100:100:2000 em validation/sensitivity mode.
+Derivação e [API](mathematics/coefficient_monte_carlo.md),
+[relatório aplicado](mathematics/turning_coefficient_mc.md),
+[gate](phase_3_verification.md). ADR 0006 ACCEPTED no escopo solicitado.
+Política futura de early stop PA PROPOSED, sem aplicação nesta fase;
+erros de momentos não selecionam B. C-MC-01/02/03 delimitam a evidência.
+RSM, dados integrais e anchors anteriores preservados. Sem reotimização, payoff
+por réplica, shrinkage, bootstrap, CHIM, NBI/C-NBI, PA ou início da Fase 4.
+As seções seguintes são registros históricos de suas respectivas fases.
+
 ## Fase 2 — comparação experimental de anchors nominais
 
 PR #4 integrado por squash após todos os checks verdes; main limpa, branch

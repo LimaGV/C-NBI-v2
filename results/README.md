@@ -14,4 +14,6 @@ manifesto com SHA/versão/dirty, ambiente/lock, parâmetros, decisões, entradas
 hashes, comandos e saídas/hashes. Linha Excel não substitui identificador.
 
 Saídas locais ignoradas por padrão; evidências pequenas só após revisão de
-conteúdo, permissões e rastreabilidade. Nenhuma execução científica nesta fase.
+conteúdo, permissões e rastreabilidade. Cada fase registra suas execuções.
+Fase 3: um ensemble conjunto dos coeficientes em phase_03_coefficient_mc/,
+20 prefixos do mesmo arquivo e diagnósticos de momentos; nenhuma reotimização.

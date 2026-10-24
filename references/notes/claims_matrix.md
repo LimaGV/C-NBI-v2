@@ -1,20 +1,22 @@
 # Matriz de afirmações metodológicas
 
-Evidence class: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION, PROPOSED.
+Evidence class: LITERATURE, INTERNAL_EVIDENCE, MATHEMATICAL_DERIVATION,
+METHODOLOGICAL_DECISION, PROPOSED.
 Status: SUPPORTED, PARTIALLY_SUPPORTED, EXPERIMENTAL, UNVERIFIED, REJECTED,
 SUPERSEDED. SUPPORTED exige evidência direta, pressupostos e limites explícitos.
 Nunca escrever "a literatura mostra" sem fonte diretamente verificável.
 C001–C008 nasceram como propostas do responsável na Fase 0. C001 recebe
-suporte analítico delimitado na Fase 1; C002–C008 continuam sem aceitação.
+suporte analítico delimitado na Fase 1. C002 é especificada pela ADR 0006;
+C006 é delimitada pela decisão C-MC-03. As demais propostas continuam pendentes.
 
 | Claim ID | Claim | Evidence class | Evidence | Status | Related ADR | Notes |
 |---|---|---|---|---|---|---|
 | C001 | Incerteza analítica RSM multivariada sob projeto fixo e erros de covariância comum | LITERATURE + MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-RSM-01 a 06; R003/R004; tests/model | SUPPORTED | ADR 0003 | Escopo analítico; não valida sampling, ótimos ou dataset real |
-| C002 | Perturbação conjunta dos coeficientes | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
+| C002 | Perturbação conjunta dos coeficientes | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | C-MC-01/02 | SUPPORTED | ADR 0006 | Matrix-normal plug-in implementada; não valida ótimos por réplica ou PA |
 | C003 | Reotimizar âncoras por réplica | PROPOSED | Diretriz do responsável; fonte pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C004 | PA local em estudo | PROPOSED | Contexto do responsável; evidência pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C005 | q_C sem hard cutoff automático | PROPOSED | Salvaguarda do responsável; validade pendente | UNVERIFIED | MDR pendente | Sem cutoff definido |
-| C006 | B=2000 não normativo | PROPOSED | Salvaguarda do responsável; validade pendente | UNVERIFIED | MDR pendente | Sem B adotado |
+| C006 | B=2000 não é teorema ou valor universal ótimo | METHODOLOGICAL_DECISION | C-MC-03, diretriz explícita da Fase 3 | SUPPORTED | ADR 0006 | Máximo 2000 adotado para sensibilidade, não escolhido por menor erro observado |
 | C007 | Simplex-Lattice, H inteiro, Delta=1/H | PROPOSED | Diretriz do responsável; derivação pendente | UNVERIFIED | MDR pendente | Não implementado |
 | C008 | H adaptativo indefinido | PROPOSED | Questão em aberto do responsável | UNVERIFIED | MDR pendente | Nenhuma regra escolhida |
 | C009 | The turning application uses full quadratic response surface models for eight original responses. | LITERATURE | R001, Eq. (17) p.6, seção 3 p.12 e Table 3 p.13 | SUPPORTED | docs/decisions/0002-turning-reference-case.md | Descrição publicada; não implementação v2 |
@@ -54,3 +56,11 @@ Evidência interna não é literatura; derivação exige passos e revisão reais
 | C-RC-04 | Admissibilidade dos vetores completos nos anchors não implica admissibilidade do Utopia montado pela diagonal da payoff | MATHEMATICAL_DERIVATION + INTERNAL_EVIDENCE | Contraexemplo 2-D em individual_anchors.md/testes; utopia_diagnostic.json no caso real | SUPPORTED | Não é nova formulação; nenhuma garantia de atingibilidade conjunta da diagonal |
 Experimento implementado não aceita hipótese. Vincular fontes, passagens,
 decisões, commits e resultados afetados ao atualizar.
+
+## Fase 3 — joint coefficient Monte Carlo (ADR 0006 ACCEPTED)
+
+| Claim ID | Claim | Evidence class | Evidence | Status | Limits |
+|---|---|---|---|---|---|
+| C-MC-01 | For DeltaB=C_X G L_Sigma^T with iid standard-normal G, Cov(vec(DeltaB))=Sigma tensor V_X | MATHEMATICAL_DERIVATION | docs/mathematics/coefficient_monte_carlo.md; root identities and column-vec tests | SUPPORTED | Conditional plug-in law, C_X C_X^T=V_X and L_Sigma L_Sigma^T=Sigma; not a posterior |
+| C-MC-02 | Empirical Monte Carlo moments approach the plug-in theoretical moments as B increases | INTERNAL_EVIDENCE | Synthetic six-SE tests and all 20 real prefix diagnostics; canonical archive pending execution | UNVERIFIED | Finite-seed evidence cannot require monotonic error or establish a universal B; full covariance blocks tested separately |
+| C-MC-03 | B=100:100:2000 is a sensitivity schedule, not a universal optimum | METHODOLOGICAL_DECISION | Explicit Phase 3 instruction, ADR 0006, coefficient_checkpoints() | SUPPORTED | Final B not selected by minimum observed error; future PA early stop PROPOSED and not applied |

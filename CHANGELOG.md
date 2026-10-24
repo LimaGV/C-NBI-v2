@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Fase 3 coefficient Monte Carlo
+- Sampler matrix-normal plug-in conjunto, Sigma_e bruta, QR/solve e Cholesky/PSD explícito.
+- Resultado imutável, seed PCG64 explícita, igualdade de prefixos e chunks testada.
+- Ensemble real único 2000×10×8, seed 777, 20 diagnósticos de momentos e figura PNG.
+- Metadata, hashes de objetos/inputs/artefatos, ADR 0006 e claims C-MC-01 a 03.
+- Política futura de early stop da PA PROPOSED, registrada e não aplicada.
+- Matplotlib no grupo dev para a figura solicitada; runtime sem dependência nova.
+- Sem reotimizar anchors, payoff por réplica, shrinkage, bootstrap ou NBI/C-NBI/PA.
+
 ## Unreleased — Fase 2 experimental
 - Quadráticas naturais com b/Q e extração correta de interações beta_ij/2.
 - Solver global do problema quadrático sobre bola, com caso singular e certificado KKT/PSD.
