@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Fase 7 empirical reference / family LOO
+- Reutilização autorizada da calibração aplicada V1, com fontes/hashes e diferenças explícitas.
+- NSGA-III/MOEA-D consolidados em pymoo0.6.2, esfera explícita e orçamento comum congelado.
+- Pools finais de30 seeds por família, referência comum e reconstrução leave-one-family-out.
+- H5 baseline operacional por decisão do responsável; H20 auxiliar da mesma família CNBI.
+- Reavaliação canônica dos66 vetores VRF históricos; respostas antigas não incorporadas.
+- Proveniência por origem, saturação interna, contribuição/remoção e sanity check H5 independente.
+- ADR0011 ACCEPTED e C-REF-01..04; sem verdade Pareto, superioridade ou benchmark final.
+
 ## Unreleased — Fase 6 local NBI / Simplex-Lattice
 - Malhas de composições inteiras e nesting exato em H20 para H2,4,5,10,20.
 - Geometria local, normal unitária orientada ao ideal e SLSQP com Jacobianos analíticos.

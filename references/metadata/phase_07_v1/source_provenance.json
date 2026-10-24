@@ -1,0 +1,84 @@
+{
+  "v1_commit": "7bd4915a9aea94b9dca1d70014ba5186b4b4e44d",
+  "historical_submodule_commit": "bdd64313b55e275c3e2cec321ea5d86012917a1a",
+  "user_authorization": "reuse V1 metaheuristic calibration in Phase 7; no legacy algorithm imports/environment reuse",
+  "source_files": {
+    "applied_calibration": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/tuning/selected_parameters.json",
+      "bytes": 365,
+      "sha256": "0417657aa8847c3bef551eaaa259adf4f149b0e44e9063be5709d0b0eed7ff5b"
+    },
+    "applied_run_manifest": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/run_manifest.json",
+      "bytes": 964,
+      "sha256": "6406e30b0e4dbee18ec217a917e3710c9b1b944778a62b8c500da7dfa2762456"
+    },
+    "applied_calibration_results": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/tuning/calibration_results.csv",
+      "bytes": 26009,
+      "sha256": "9a79ffa1e3255af68b81fae9bea3ce302b74c479fec608381237a04616d88abf"
+    },
+    "historical_vrf_csv": {
+      "project_relative_path": "derived_amm_20261020/provenance/vrf_final_objectives_from_saved_coefficients.csv",
+      "bytes": 13802,
+      "sha256": "e1bea7d1ac4e7bfc5fafa87a1c0da6e958c9c3604ec4fe107d21a49b585e2e29"
+    },
+    "historical_vrf_workbook": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/data/applied/VRF_Pareto.xlsx",
+      "bytes": 26444,
+      "sha256": "8dea2916ccd7a24e2796e8759ce563c8de98ca343a229a03b5c48374a4c99ab4"
+    },
+    "historical_postprocessing_code": {
+      "project_relative_path": "derived_amm_20261020/provenance/applied_data.py",
+      "bytes": 4409,
+      "sha256": "4b6f3abeec6f948887175e3a7adf44b3983b0d72057406f2ed9bf23b8db49abd"
+    },
+    "historical_budget_policy": {
+      "project_relative_path": "cnbi_experiments/BUDGET_POLICY.md",
+      "bytes": 917,
+      "sha256": "9741c6681c1601178149ac4c1cf1e1ae65602f72cad8a127d0839cf45c841675"
+    },
+    "historical_ea_code": {
+      "project_relative_path": "cnbi_experiments/comparators.py",
+      "bytes": 18855,
+      "sha256": "bc2ae8d2a199470d1160b0ea035ae483456ea481c4ba2377a24af7e4b5ad1f45"
+    },
+    "historical_nsga3_example": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/final_fronts/nsga3_seed001.csv",
+      "bytes": 70191,
+      "sha256": "37f748db38cf6184ac0d843386e9b867e0af02aea82b7b869fbf8d3ce5b52886"
+    },
+    "historical_moead_example": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/final_fronts/moead_seed001.csv",
+      "bytes": 58795,
+      "sha256": "525413c2df7e94d3c7625db7dd4b7ac84eedca238d102687c25699c6b006c5a6"
+    },
+    "applied_notebook": {
+      "project_relative_path": "CNBI-Synthetic-Benchmarks/notebooks/12_cenario_aplicado_EAs_orcamento_igual_corrigido.ipynb",
+      "bytes": 11503,
+      "sha256": "27b563a32abb42dc4121728d487196c0b8a24aa747c6dca5969dafcdc8d4204c"
+    }
+  },
+  "coordinates": {
+    "source_columns": [
+      "cs",
+      "f",
+      "md"
+    ],
+    "canonical_columns": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "rows": 66,
+    "transformation": "literal coordinate strings only; no inferred/reconstructed decisions; every historical response column omitted",
+    "source_semantics": "historical applied coded cutting speed/feed/depth axes in their original order",
+    "historical_export_processing": "source export already sanitized/deduplicated/ND-filtered under old models; source code recorded; no historic values used as canonical objectives"
+  },
+  "extracted_decisions_sha256": "f41b338c8927c635d18e60ab363c900116e9a7894177b9d740a433581fd2661a",
+  "calibration_copy_sha256": "0417657aa8847c3bef551eaaa259adf4f149b0e44e9063be5709d0b0eed7ff5b",
+  "historical_applied_optimizer_nfe": 19800,
+  "historical_applied_budget_cap": 19830,
+  "historical_eas_in_principal_pools": false,
+  "reason": "new 30-seed common-budget canonical runs define the EA pools; old responses/models are not current canonical evidence"
+}

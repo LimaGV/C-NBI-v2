@@ -1,5 +1,22 @@
 # C-NBI v2
 
+Fase7: construção de referência Pareto **empírica** multi-família e
+leave-one-family-out, com RSMs atuais, esfera e normalização global congelados.
+H5 é o baseline operacional definido pelo responsável (492 subproblemas,
+411 decisões únicas,408 ND); H20 é auxiliar da mesma família CNBI.
+[Definição](docs/mathematics/pareto_reference_leave_one_out.md),
+[auditoria prévia](docs/mathematics/reference_source_audit.md), ADR0011 ACCEPTED.
+A calibração aplicada V1 foi autorizada para os operadores de NSGA-III/MOEA-D;
+pymoo0.6.2, orçamento comum132000 e30 seeds por família. VRF entra somente por
+decisões históricas reavaliadas. H5 usa referência sem qualquer origem CNBI.
+Sem verdade Pareto, superioridade ou benchmark final. O texto seguinte mantém
+o histórico das fases anteriores.
+
+Execução Fase7 concluída:60 runs,7920000 avaliações de busca; P_all=22523 ND,
+P_minus_CNBI=18503 ND e zero origens CNBI no alvo independente de H5.
+[Resultados completos, saturação e limites](docs/mathematics/turning_pareto_reference.md),
+[gate de integridade](docs/phase_7_verification.md).
+
 Fase6: Simplex-Lattice e NBI local determinístico sobre os37 subsets congelados
 de B=2000. Normalização local por subset, normal unitária orientada ao ideal e
 SLSQP com Jacobianos analíticos/aceitação independente. H2,4,5,10,20 por
@@ -33,7 +50,8 @@ condicional (70/80), com divergência de WR e da nota de escala explícitas.
 Ver [validação aplicada](docs/mathematics/turning_real_validation.md).
 
 A [v1](https://github.com/LimaGV/C-NBI/tree/cnbi-v1.0) é referência histórica.
-Não foram herdados módulos, arquitetura, ambiente ou parâmetros.
+Não foram herdados módulos, arquitetura ou ambiente. A transferência explícita
+de parâmetros na Fase7 é delimitada na auditoria e no protocolo versionado.
 
 ## Ambiente
 Python **3.12.15** e uv **0.12.23**. Na raiz:

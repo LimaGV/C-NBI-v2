@@ -66,6 +66,20 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Fase7 autorizada após squash do PR #9 com CI verde, branch
+feature/07-pareto-reference-loo. H_base5 é decisão operacional do responsável;
+H20 continua auxiliar da mesma família CNBI. Construir referência empírica pooled
+e leave-one-family-out, sem auto-inclusão CNBI ao avaliar H5. Reavaliar todos x
+elegíveis nos RSMs atuais; respostas históricas não são canônicas. Usuário autoriza
+explicitamente transferir a calibração das metaheurísticas V1, mantendo fonte,
+hashes e diferenças explícitas; não importar seus módulos ou reutilizar ambiente.
+Usar pymoo consolidado/pinado, orçamento comum e30 seeds fixas, esfera por
+amostragem factível/repair radial explícito. Congelar protocolo antes das runs.
+Preservar proveniências, reconstruir ND após exclusão de família e distinguir
+métricas LOO de métricas comuns self-included. ADR0011 ACCEPTED nesse escopo.
+Sem rerodar MC/anchors/PA/NBI, sem verdade Pareto, superioridade, benchmark final,
+refinamento adaptativo implementado ou merge do novo PR. Escopos abaixo históricos.
+
 Fase 6 explicitamente autorizada após squash do PR #8 com CI verde: branch
 feature/06-simplex-lattice-local-nbi. Consumir somente os37 IDs de B=2000,
 RSMs codificados nominais e anchors/payoff preservados, bola alpha=8**0.25,

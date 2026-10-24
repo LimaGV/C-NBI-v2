@@ -49,7 +49,7 @@ def test_runtime_dependency_imports(module_name: str) -> None:
 def test_runtime_dependencies_are_only_the_requested_libraries() -> None:
     requirements = importlib.metadata.requires("c-nbi-v2") or []
     names = {re.split(r"[\s<>=!~;\[]", item, maxsplit=1)[0].lower() for item in requirements}
-    assert names == {"numpy", "scipy", "pandas", "scikit-learn", "openpyxl"}
+    assert names == {"numpy", "scipy", "pandas", "scikit-learn", "openpyxl", "pymoo"}
 
 
 def test_legacy_package_is_unavailable_and_not_loaded() -> None:
