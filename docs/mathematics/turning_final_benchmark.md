@@ -95,6 +95,16 @@ congelada.468 coincidentes/24 divergentes; máximoΔx3.1181207107 e
 máximoΔz0.5942667068. Trajetórias de continuação distintas atingem branches
 locais factíveis. O diagnóstico explica a correção; não seleciona o baseline.
 
+Auditoria adicional:H20 standalone difere do H20 histórico em1/4557 subproblemas
+acima do mesmo limite diagnóstico x1e-5:linha4552,C_6_7_8,composição[18,1,1],
+máximoΔx1.3274507752,t histórico.007262385 e novo-.010981157. Ambas soluções
+foram aceitas; a causa exata da diferença entre essas execuções não foi
+determinada. A geometria desse subset foi verificada como igual. O arquivo
+historical_h20_reproduction_audit.json preserva o caso. Não se alterou solver,
+start ou saída para recuperar a solução histórica; H20 continua observação
+auxiliar própria,não garantia de repetição do arquivo anterior. Isso não muda
+a identidade bitwise das cinco execuções H5 nem sua definição oficial.
+
 ## Resoluções independentes e custo
 
 | H | Subproblems | Accepted | Unique | ND | GD | IGD | HV | Spacing | Sparsity |

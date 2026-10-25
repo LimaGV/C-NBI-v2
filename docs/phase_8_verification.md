@@ -47,6 +47,13 @@ all other-method metric numbers exactly. Family LOO targets differ; no naive
 cross-family LOO ranking. New CNBI independent assessment uses the complete
 frozen reference; all K curves keep complete targets. H5 FPS/K66 uses409 ND.
 
+The additional H20 historical audit found1/4557 discrepancy above x1e-5:
+row4552,C_6_7_8,[18,1,1],maxDeltaX1.3274507752; both accepted,the verified
+subset geometry is identical and the exact cause remains undetermined. This
+is explicitly documented,not repaired by changing solver/starts/results.
+H5 five repetitions remain bitwise identical. H20 is auxiliary,n1 only.
+See historical_h20_reproduction_audit.json and the main report.
+
 ## Forty requested delivery items
 
 | Items | Evidence |
