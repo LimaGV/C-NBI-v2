@@ -9,6 +9,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.ticker import NullFormatter
+
+from cnbi_v2.data import sha256_file
 
 from . import turning_benchmark_inputs as data
 from .turning_final_benchmark import COMMON, LOO, finalize_archive
@@ -68,6 +71,8 @@ def figures(output):
         formats=["pdf", "svg", "png"],
         png_dpi=600,
         uncertainty="IQR across EA runs; q05-q95 across reference subsets",
+        renderer_source=Path(__file__).relative_to(data.ROOT).as_posix(),
+        renderer_sha256=sha256_file(Path(__file__)),
     )
     (folder / "visual_mapping.json").write_text(
         json.dumps(visual, indent=2) + "\n", encoding="utf-8"
@@ -120,6 +125,7 @@ def figures(output):
         x = [int(r["K_R"]) for r in ref_k]
         ax.plot(x, [float(r[metric]) for r in ref_k], marker="o", color="#444444")
         ax.set_xscale("log")
+        ax.xaxis.set_minor_formatter(NullFormatter())
         ax.set_xticks(x, [str(v) for v in x], rotation=25)
         ax.set(
             xlabel="Reference cardinality K_R (log scale)",
@@ -159,6 +165,7 @@ def figures(output):
                     ax.fill_between(x, low, high, color=color, alpha=0.14)
             ax.axvline(66, color="#888888", linewidth=0.7, linestyle=":")
             ax.set_xscale("log")
+            ax.xaxis.set_minor_formatter(NullFormatter())
             ax.set_xticks(
                 [20, 40, 66, 100, 200, 303], ["20", "40", "66", "100", "200", "303"], rotation=30
             )
@@ -219,6 +226,8 @@ def figures(output):
                             fontsize=7,
                         )
             ax.set_xscale("log")
+            ax.xaxis.set_minor_formatter(NullFormatter())
+            ax.set_xticks([2, 5, 10, 20, 50, 100], ["2", "5", "10", "20", "50", "100"])
             ax.set(xlabel="End-to-end processing time /s (log scale)", ylabel=metric)
             ax.set_title(
                 "Fixed common HV reference point"
