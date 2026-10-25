@@ -66,6 +66,23 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Fase8 autorizada após squash do PR10 com CI verde, branch
+feature/08-reference-sensitivity-final-benchmark. Reusar histórico/legado por
+autorização explícita; VRF somente pelos66 pontos reavaliados e preservados na
+Fase7, sem executar algoritmo ou timing VRF. Preservar H5 oficial408, modelos,
+normalização,37 subsets, solver/aceitação, MC/anchors/PA e dados anteriores.
+Sensibilidade por100 subconjuntos pareados sem reposição e composição/K antes
+do benchmark; cinco métricas GD/IGD/HV/Spacing/Sparsity, definições aplicadas V1
+auditadas, FPS determinístico aninhado e referência completa nas curvas de K.
+Timing H5 exige equivalência com o baseline extraído da Fase6: o gate de
+desenvolvimento encontrou24/492 divergências acima de1e-5, inclusive branches
+locais distintas. Não atribuir runtime do H5 direto ao conjunto oficial408;
+Responsável decidiu preservar408, concluir também qualidade8B e registrar custo
+CNBI pendente por falta de equivalência. Não executar campanha de timing CNBI;
+timing dos EAs permanece autorizado no protocolo original, sequencial/controlado.
+Sem retunar, relaxar gate,
+alterar baseline, refinamento adaptativo ou merge do novo PR. Escopos abaixo históricos.
+
 Fase7 autorizada após squash do PR #9 com CI verde, branch
 feature/07-pareto-reference-loo. H_base5 é decisão operacional do responsável;
 H20 continua auxiliar da mesma família CNBI. Construir referência empírica pooled

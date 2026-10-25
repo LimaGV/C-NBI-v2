@@ -1,0 +1,45 @@
+{
+  "source_context": "V1 archived corrected applied results, not current canonical objectives",
+  "v1_commit": "7bd4915a9aea94b9dca1d70014ba5186b4b4e44d",
+  "sources": {
+    "early_notebook": {
+      "path": "CNBI-Synthetic-Benchmarks/notebooks/04_analise_resultados.ipynb",
+      "sha256": "8606f8ded02abe756c7362b08a67a83e20dee79079560c07da96d1944462c6ea",
+      "bytes": 14156
+    },
+    "corrected_applied_notebook": {
+      "path": "CNBI-Synthetic-Benchmarks/notebooks/11_comparacao_fronteiras_8D_corrigida.ipynb",
+      "sha256": "feea841f076a25a2b4975ba0a144e5bfecf6158ca3b857ee6c81035253b869ef",
+      "bytes": 16633
+    },
+    "corrected_applied_metrics": {
+      "path": "CNBI-Synthetic-Benchmarks/results/applied/comparison_8d_corrected/metricas_por_seed.csv",
+      "sha256": "2065297d010f9d2679efff0759e6313ffd54843aba23072cb2bb0a8a2af13d16",
+      "bytes": 2833
+    },
+    "historical_applied_reference": {
+      "path": "CNBI-Synthetic-Benchmarks/data/reference_fronts/referencia_pareto_8D_nsga3_moead.csv",
+      "sha256": "df6c13355e4f99600598b66233cc9cf8791db234a42d47b8b0ddfbec5a8e7c63",
+      "bytes": 9989705
+    },
+    "historical_nsga_seed1": {
+      "path": "CNBI-Synthetic-Benchmarks/results/applied/applied_8d_equal_budget/final_fronts/nsga3_seed001.csv",
+      "sha256": "37f748db38cf6184ac0d843386e9b867e0af02aea82b7b869fbf8d3ce5b52886",
+      "bytes": 70191
+    }
+  },
+  "canonical_spacing": "sample SD(ddof=1) of nearest OTHER Euclidean neighbor distances",
+  "sparsity": "mean nearest OTHER Euclidean neighbor distance",
+  "early_spacing_divergence": "04 notebook used population SD ddof0; not used by corrected applied metricas_por_seed.csv",
+  "historical_hv_rule": "lower=min(0,global_min); worst=global_max; ref=max(1.1,worst+.05*max(worst-lower,1)) elementwise",
+  "historical_hv_estimator": "4 scrambled Sobol sequences, seed20260..20263, power14 each; common box",
+  "fixture": {
+    "path": "tests/reference_cases/legacy_metrics/spacing_oracle.npz",
+    "sha256": "8f3cd596883b30cfa15165e56c655ba2493cf9fdc6a67af39aabe21ed937c59d",
+    "rows": 330,
+    "Spacing_published": 0.04501054580599567,
+    "Sparsity_published": 0.049105932312835714,
+    "Spacing_earlier_ddof0": 0.04494229626589356
+  },
+  "legacy_execution": "only data reads and isolated metric formulas; no optimizer or VRF execution"
+}

@@ -1,0 +1,137 @@
+{
+  "protocol_id": "turning_reference_sensitivity_cardinality_cost_v1",
+  "status": "ACCEPTED_SCOPE_WITH_CNBI_TIMING_GATE_FAILED",
+  "main_merge_commit": "f904e8de0810324b4456cf2ad7de59ca2c6b5ab4",
+  "primary_metrics": [
+    "GD",
+    "IGD",
+    "HV",
+    "Spacing",
+    "Sparsity"
+  ],
+  "metric_frame": "fixed Phase5 global normalized MIN, no clipping",
+  "spacing": "sample SD ddof1 of Euclidean nearest other neighbor distance; corrected V1 applied outputs verified",
+  "sparsity": "mean Euclidean nearest other neighbor distance; lower indicates density, not universal quality",
+  "gd_igd": "arithmetic mean Euclidean nearest target distances, p1",
+  "hv_reference_rule": "lower=min(0,all_candidate_min); ref=max(1.1,all_candidate_max+.05*max(all_candidate_max-lower,1)), elementwise; preserved corrected V1 rule",
+  "hv_quadrature": {
+    "method": "common-box scrambled Sobol indicator integration",
+    "power": 16,
+    "replicates": 4,
+    "seeds": [
+      20260,
+      20261,
+      20262,
+      20263
+    ],
+    "rng": "PCG64 via explicit scipy rng=Generator; distinct from legacy seed=RandomState interface",
+    "bitorder": "little",
+    "precision_diagnostics_powers": [
+      14,
+      15,
+      16
+    ],
+    "change_reason": "same HV integral and historical reference rule; four times the dyadic nodes per scramble versus old power14, common nodes for every set and paired sensitivity",
+    "error_reporting": "mean across4 scrambles and sample SD/sqrt4; no exact HV claim"
+  },
+  "reference_runs": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "B_ref": 100,
+  "reference_subsampling_rng": "PCG64(20261024)",
+  "reference_subsampling_rule": "100 distinct sorted subsets of r seed indices without replacement; one generator consumed in ascending r; same subset for both EA families; r30 singleton; prefixes secondary",
+  "reference_families": [
+    "NSGA3",
+    "MOEAD",
+    "VRF"
+  ],
+  "excluded_family": "CNBI all resolutions",
+  "reference_K": [
+    250,
+    500,
+    1000,
+    2500,
+    5000,
+    10000,
+    18503
+  ],
+  "reference_final": "frozen Phase7 P_minus_CNBI,18503 ND, empirical not ground truth",
+  "reference_retained_in_benchmark": "complete P_all or complete family LOO, never R_K",
+  "baseline": "frozen Phase7 CNBI5 pool408 from Phase6 H20 membership",
+  "baseline_H": 5,
+  "VRF": {
+    "source": "Phase7 historical reevaluated66 decisions",
+    "optimization_executions": 0,
+    "timing_executions": 0,
+    "runtime_status": "NOT_MEASURED_USER_FORBIDS_VRF_EXECUTION"
+  },
+  "farthest": "objective extrema first in objective order; dedup repeated extreme indices; then largest minimum squared Euclidean distance; exact ties lowest stable archived source-row ID; one complete ordering per set",
+  "K_common": 66,
+  "K_four": [
+    20,
+    30,
+    40,
+    50,
+    66
+  ],
+  "K_extended_candidates": [
+    100,
+    150,
+    200,
+    250,
+    300
+  ],
+  "K_max_rule": "minimum genuine unique-ND cardinality across CNBI5 and all60 stochastic runs, not average",
+  "numerical_equality": "unchanged frozen Phase6 x dedup and z dominance vector; cached pair graph reproduces subset-specific first representatives and ND",
+  "near_duplicate_diagnostic_threshold": 1.4901161193847656e-08,
+  "near_duplicate_diagnostic_action": "report only, remove nothing",
+  "postprocessing_workers": 6,
+  "timing": {
+    "primary_cost": "processing end-to-end wall time; never artificial NFE equivalence",
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "generations": [
+      50,
+      100,
+      200,
+      300,
+      400
+    ],
+    "configuration": "exact Phase7 EA scientific configuration, no tuning",
+    "execution": "same hardware/Python/env/commit, single numerical thread, methods sequential, no concurrent science jobs",
+    "warmup": "one unreported run of each EA at frozen config, seed1000",
+    "callback": "read-only snapshots/ND; no RNG calls or evolution changes, metrics after measured campaign",
+    "CNBI_status": "PENDING_H5_DIRECT_EQUIVALENCE_FAILED",
+    "CNBI_user_decision": "preserve408 and finish Phase8B quality; report CNBI cost pending, no attribution of direct H5 runtime",
+    "CNBI_timing_executions": 0,
+    "H5_x_tolerance_predeclared": 1e-05,
+    "H5_z_tolerance_predeclared": 1e-05,
+    "observed_H5_disagreements": 24,
+    "VRF_status": "HISTORICAL_ONLY_NO_EXECUTION"
+  },
+  "statistics": "no pseudo-replication deterministic methods; native30 EA runs, deterministic single fronts; strict better fractions and score-oriented midrank percentile; no inferential p tests",
+  "colors": {
+    "CNBI5": "#426b8a",
+    "VRF": "#b5804b",
+    "NSGA3": "#63856a",
+    "MOEAD": "#88729c"
+  },
+  "adaptive_refinement": "NOT_STARTED",
+  "new_synthetic_scenarios": "NOT_STARTED",
+  "automatic_merge": false
+}
