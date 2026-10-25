@@ -1,272 +1,223 @@
-# Fase8 — sensibilidade e benchmark controlado, escopo revisado
+# Fase8 — correção do baseline operacional standalone
 
-8A e qualidade8B concluídas preservando exatamente os408 pontos oficiais do H5.
-Execução VRF foi explicitamente proibida: somente66 pontos históricos reavaliados
-na Fase7 entram na qualidade. Após falha do gate H5 direto, o responsável escolheu
-preservar408 e registrar custo CNBI como pendente. A comparação temporal tem apenas
-NSGA-III/MOEA-D; não há tempo comparável de CNBI ou VRF.
+C-NBI(H=5) significa **execução standalone H5**. H20 é somente sensibilidade
+de alta resolução. Esta correção foi explicitamente solicitada antes do merge
+do PR11, na mesma branch feature/08-reference-sensitivity-final-benchmark.
+Não é uma nova fase ou método. A escolha anterior de408/custo pendente está
+SUPERSEDED. O conjunto antigo chama-se CNBI_H5_extracted_from_H20_parent_grid.
 
-Branch `feature/08-reference-sensitivity-final-benchmark`; PR10 revisado com quatro
-checks verdes/sem conflitos, squash em main f904e8de0810324b4456cf2ad7de59ca2c6b5ab4.
-Código8A limpo3ac57ecb9dcd9912e0ebe4576a772471c902e8e3;
-timing limpo70883d7c8dc5954f3438b0b43e5274b07cf16e0a;
-qualidade8B limpa a0b38817e99cc91c8a6e244fd38ad8e6d87c4fd1. Metadados registram
-as versões distintas de cálculo/relatório e hashes, sem reescrever execuções.
+## Execução e independência
 
-Definições completas: [matemática](reference_sensitivity_and_cardinality_control.md),
-ADR0012 e protocolo JSON. GD/IGD são médias de distância Euclidiana, p1. HV é
-volume dominado estimado em quatro redes Sobol comuns,2^16 pontos cada; não exato.
-Spacing é SD amostral(ddof1) de nearest-neighbor Euclidiano e Sparsity sua média,
-conforme resultados aplicados corrigidos V1; a divergência ddof0 anterior foi auditada.
-Nenhuma normalização por método/run/K ou clipping. Mesmo frame global nominal Fase5.
+Protocolo e fonte foram commitados em3e23701 (hash completo em launch.json).
+37 subsets congelados, modelos/anchors/payoff locais e normalização global
+Fase5, SLSQP/Jacobianos e warm starts originais. Aceitação: solver success,
+finitude, eq_norm<=1e-4 e sphere_margin>=-1e-9; nenhuma tolerância relaxada.
+Fonte do runner recebeu depois apenas formatação; o hash da execução continua
+preservado no commit/launch, sem reescrever o resultado histórico.
 
+Todos os nove solves medidos e o warm-up H2 ocorreram com os diretórios de
+resultados das Fases6/7 fisicamente renomeados e indisponíveis. Foram restaurados
+em finally; completion.json registra a operação. O pipeline oficial recebe
+apenas evidências upstream das Fases2/5 e protocolo congelado; nenhum arquivo
+H20 define H5. Cada resolução constrói sua própria malha e trajetória.
 
-## Tabela A — desempenho nativo
+H5:492 subproblemas/492 aceitos/0 falhas/411 decisões únicas/**409 ND**.
+As cinco repetições têm x,z,t e demais arrays científicos bitwise idênticos
+(tolerância pré-declarada absoluta1e-12,relativa0). Repetições quantificam ruído
+de runtime, não replicações de qualidade. O baseline é a primeira execução,
+sem escolha de solução por melhoria de métricas.
 
+## Referências e preservação
 
-| Method | Unique ND | GD | IGD | HV estimate | Spacing | Sparsity | T_total/s |
-|---|---|---|---|---|---|---|---|
-| CNBI5 | 408 | 0.001109372 | 0.1487117 | 0.6673368 | 0.03182528 | 0.03730441 | pending |
-| VRF | 66 | 0.001087944 | 0.2745194 | 0.4915679 | 0.00665316 | 0.09306867 | pending |
-| NSGA3 | 330 [0] | 0.005971838 [0.002375885] | 0.07880341 [0.008891651] | 0.7695703 [0.01326684] | 0.04925109 [0.0038903] | 0.05306125 [0.005493395] | 17.4856 [0.090247] |
-| MOEAD | 327 [3.75] | 0 [0] | 0.1844776 [0.00496609] | 0.6615785 [0.002778956] | 0.04293534 [0.000830451] | 0.0161297 [0.0004948644] | 82.98164 [0.2632369] |
+O alvo independente R_minus_CNBI permanece byte-identical:18503 ND, zero CNBI.
+Não houve nova amostragem:506 referências de runs e seis composições foram
+reavaliadas pela mesma linhagem salva; FPS da referência foi reutilizado.
+Modelos/raw, MC/anchors/PA e37 subsets,30 runs por EA,66 pontos VRF e todo timing
+EA permanecem preservados. Nenhuma execução VRF ou EA nova.
 
+O alvo comum22523 da Fase7 é retido **somente como alvo histórico congelado**:
+HISTORICAL_COMMON_H20_TARGET. Ele contém a família CNBI antiga/H20 e não é uma
+nova referência comum auto-incluindo H5 standalone. Assim, a análise principal
+independente do CNBI usa R_minus_CNBI. Tabelas comparativas históricas abaixo
+servem para continuidade, preservando cada número dos demais métodos. Não se
+reconstrói um pooled novo nem se alegam novas propriedades de auto-inclusão.
+LOO dos outros métodos conserva seus próprios alvos; não permite ranking direto
+entre famílias por GD/IGD. HV/Spacing/Sparsity não dependem desses alvos.
 
-## Tabela B — cardinalidade igualada em66
+## Baseline oficial, alvo independente
 
-
-| Method | Unique ND | GD | IGD | HV estimate | Spacing | Sparsity |
+| Variant | N | GD | IGD | HV estimate | Spacing | Sparsity |
 |---|---|---|---|---|---|---|
-| CNBI5 | 66 | 0.001664502 | 0.1705072 | 0.5977026 | 0.05366976 | 0.2145634 |
-| VRF | 66 | 0.001087944 | 0.2745194 | 0.4915679 | 0.00665316 | 0.09306867 |
-| NSGA3 | 66 [0] | 0.0109365 [0.005228899] | 0.1152924 [0.008598793] | 0.6821735 [0.01660693] | 0.04504133 [0.01437159] | 0.2165136 [0.01212377] |
-| MOEAD | 66 [0] | 0 [0] | 0.1904529 [0.004801735] | 0.6559003 [0.003039483] | 0.07737204 [0.00254931] | 0.08660058 [0.001465055] |
+| Native | 409 | 0.0394917342 | 0.141143732 | 0.739028525 | 0.0321274244 | 0.0387891739 |
+| K66 | 66 | 0.0432970632 | 0.160237687 | 0.673161931 | 0.056733601 | 0.223549913 |
 
+## Comparação nativa com alvo histórico fixo
 
-Tabelas A/B usam o mesmo alvo P_all22523, rótulo COMMON_REFERENCE_SELF_INCLUDED.
-GD/IGD têm self-inclusion por família; particularmente GD zero de MOEAD decorre
-de seus pontos presentes no envelope e não comprova convergência independente.
-Valores dos EAs são mediana[IQR] de30 runs, salvo tempo, que tem10 seeds controladas.
-CNBI/VRF são observações únicas; o zero de IQR aritmético dos CSVs singleton não é
-variabilidade algorítmica e não é apresentado como uma banda determinística.
+| Method | N ND | GD | IGD | HV estimate | Spacing | Sparsity |
+|---|---|---|---|---|---|---|
+| CNBI5 | 409 | 0.00210207344 | 0.126956844 | 0.739028525 | 0.0321274244 | 0.0387891739 |
+| VRF | 66 | 0.00108794394 | 0.274519431 | 0.491567866 | 0.00665316046 | 0.0930686674 |
+| NSGA3 | 330 | 0.00597183765 | 0.0788034094 | 0.769570317 | 0.0492510857 | 0.0530612513 |
+| MOEAD | 327 | 0 | 0.184477648 | 0.661578496 | 0.0429353379 | 0.016129703 |
 
-Contagens nativas: CNBI492 resultados de subproblemas,489 ND antes de deduplicar,
-411 decisões únicas antes de ND e408 ND genuínos. EAs retornam330 por run; NSGA3
-tem330 ND genuínos, MOEAD303..330 (mediana327). VRF tem66 decisões retidas no
-export histórico; o N original pré-processamento não é conhecido por esse export.
-Kmax comum é303, o mínimo real de todas as frentes, nunca a média. K usa20/30/40/
-50/66/100/150/200/250/300/303; VRF para em66. Uma ordenação FPS por frente conserva
-extremos e produz todos os prefixos aninhados. A referência completa não é reduzida.
-Tempos não são atribuídos artificialmente à redução K; ela é pós-processamento de qualidade.
+## K66 com alvo histórico fixo
 
+| Method | N ND | GD | IGD | HV estimate | Spacing | Sparsity |
+|---|---|---|---|---|---|---|
+| CNBI5 | 66 | 0.00414168426 | 0.152271779 | 0.673161931 | 0.056733601 | 0.223549913 |
+| VRF | 66 | 0.00108794394 | 0.274519431 | 0.491567866 | 0.00665316046 | 0.0930686674 |
+| NSGA3 | 66 | 0.0109365035 | 0.115292358 | 0.682173497 | 0.0450413322 | 0.216513574 |
+| MOEAD | 66 | 0 | 0.190452919 | 0.655900341 | 0.0773720407 | 0.086600576 |
 
-## Tabela C — sensibilidade ao número de runs
+EAs:medianas de30 runs; distribuições/IQR estão nos CSVs. CNBI e VRF são
+observações únicas. GD zero MOEAD é consequência de auto-inclusão no alvo
+histórico, não prova de convergência independente. Ordenações dos outros
+métodos não mudaram. FPS novo usa409 pontos genuínos, extremos e desempate
+determinístico já definidos. K=20/30/40/50/66/100/150/200/250/300/303;
+Kmax comum303 continua o mínimo real; VRF encerra em66. Todos os alvos são
+completos nas curvas. ReduçãoK não recebe artificialmente o tempo do solve.
 
+## Impacto antigo versus standalone — alvo independente
 
-| r | Reference size median | GD H5 median | IGD H5 median | HV reference median |
-|---|---|---|---|---|
-| 5 | 3265.5 | 0.06795285 | 0.165076 | 0.8587841 |
-| 10 | 6380.5 | 0.05496746 | 0.1660021 | 0.8767405 |
-| 15 | 9448 | 0.0491133 | 0.1665065 | 0.8855784 |
-| 20 | 12490 | 0.04489724 | 0.1669434 | 0.891811 |
-| 25 | 15502 | 0.04163344 | 0.1673088 | 0.8964537 |
-| 30 | 18503 | 0.03956715 | 0.1676468 | 0.8994063 |
-
-
-## Composição e contribuição marginal
-
-
-| Reference | ND | GD H5 | IGD H5 | HV estimate |
-|---|---|---|---|---|
-| N | 8754 | 0.0403134 | 0.1224824 | 0.8945298 |
-| M | 9743 | 0.3852789 | 0.2083976 | 0.7035033 |
-| NM | 18440 | 0.04005009 | 0.1678085 | 0.8993796 |
-| NMV | 18503 | 0.03956715 | 0.1676468 | 0.8994063 |
-| MV | 9809 | 0.2777979 | 0.207788 | 0.7459225 |
-| NV | 8817 | 0.03983046 | 0.1224669 | 0.8945565 |
-
-| Added family | Base | Delta ND | Delta HV | Delta GD H5 | Delta IGD H5 |
-|---|---|---|---|---|---|
-| VRF | NM | 63 | 2.6720727655304977e-05 | -0.0004829421628501501 | -0.00016170121684708216 |
-| NSGA3 | MV | 8694 | 0.15348385965249323 | -0.2382307174614943 | -0.04014122975910481 |
-| MOEAD | NV | 9686 | 0.00484981206945112 | -0.00026330308663328333 | 0.04517983998615081 |
-
-
-## Cardinalidade da referência
-
-
-| K_R | GD H5 | IGD H5 | HV reference estimate |
+| Metric | Old H5-from-H20 | Standalone H5 | Delta |
 |---|---|---|---|
-| 250 | 0.08105401 | 0.1224036 | 0.7972664 |
-| 500 | 0.06789276 | 0.1215209 | 0.8336867 |
-| 1000 | 0.05283944 | 0.119816 | 0.8587641 |
-| 2500 | 0.0432894 | 0.1194329 | 0.8824921 |
-| 5000 | 0.04024395 | 0.1211003 | 0.8939687 |
-| 10000 | 0.03960272 | 0.1363013 | 0.8989922 |
-| 18503 | 0.03956715 | 0.1676468 | 0.8994063 |
+| N_unique_ND | 408 | 409 | 1 |
+| GD | 0.0395671528 | 0.0394917342 | -7.54185833e-05 |
+| IGD | 0.167646775 | 0.141143732 | -0.0265030432 |
+| HV | 0.667336813 | 0.739028525 | 0.0716917123 |
+| Spacing | 0.0318252849 | 0.0321274244 | 0.000302139518 |
+| Sparsity | 0.0373044091 | 0.0387891739 | 0.00148476483 |
 
+Os492 pares são listados em parent_vs_standalone_all492.csv e os24 divergentes
+em historical_24_divergent_cases_named.csv:subset,beta,composição,parent row,distâncias
+Linf/L2 em x e oito z,delta t e dominância nos dois sentidos com a tolerância
+congelada.468 coincidentes/24 divergentes; máximoΔx3.1181207107 e
+máximoΔz0.5942667068. Trajetórias de continuação distintas atingem branches
+locais factíveis. O diagnóstico explica a correção; não seleciona o baseline.
 
-## Conclusões da Fase8A
+## Resoluções independentes e custo
 
-GD continua melhorando: mediana em25=.0416334 contra30=.0395672 (cerca de5% de
-redução); não há certificado de saturação total. IGD varia pouco entre25=.167309
-e30=.167647 (cerca de.20%); HV do envelope passa de.896454 a.899406 (cerca de.33%).
-As distribuições100-subset, seus oito resumos e os prefixos históricos estão nos
-artefatos. Aumento de ND não é, isoladamente, insuficiência da referência.
+| H | Subproblems | Accepted | Unique | ND | GD | IGD | HV | Spacing | Sparsity |
+|---|---|---|---|---|---|---|---|---|---|
+| 2 | 165 | 165 | 84 | 83 | 0.0430041168 | 0.216970517 | 0.548162367 | 0.0675401232 | 0.0573622067 |
+| 4 | 365 | 365 | 284 | 282 | 0.0407298962 | 0.159862855 | 0.702087119 | 0.0320658297 | 0.0408850493 |
+| 5 | 492 | 492 | 411 | 409 | 0.0394917342 | 0.141143732 | 0.739028525 | 0.0321274244 | 0.0387891739 |
+| 10 | 1397 | 1397 | 1316 | 1310 | 0.0392704674 | 0.0989103818 | 0.765148036 | 0.0199956801 | 0.0259587614 |
+| 20 | 4557 | 4557 | 4476 | 4417 | 0.0391708757 | 0.0654449733 | 0.83102799 | 0.0125130503 | 0.0169743058 |
 
-A composição importa. Remover NSGA3 reduz HV em.153484 e eleva GD_H5 a.277798;
-remover MOEAD reduz HV em.00484981, mas muda IGD_H5 de.167647 para.122467 pela
-mudança de distribuição do alvo. O envelope geométrico depende bastante de NSGA3;
-MOEAD altera fortemente a ponderação empírica por pontos, sem ganho proporcional
-de HV. Não se definiu limiar arbitrário para a palavra “excessivo”.
+GD/IGD da tabela acima usam R_minus_CNBI,18503 pontos. Zero falhas em todo H.
 
-VRF acrescenta63 ND líquidos, melhora GD em.000482942 e IGD em.000161701 no
-NM→NMV. Ganho de HV=.0000267207, SE quadratura pareada=.0000154272 (apenas poucos
-nós de integração); não estabelecer significância/precisão excessiva desse pequeno
-volume. Sem NSGA, porém, VRF acrescenta cerca de.04242 de HV a MOEAD: redundância
-marginal depende dos demais geradores, não apenas de possuir66 pontos.
+| H | Time/s | n | Median | IQR | Min | Max |
+|---|---|---|---|---|---|---|
+| 2 | T_solver | 1 | 0.1278705 | not estimated | 0.1278705 | 0.1278705 |
+| 2 | T_total | 1 | 0.1619907 | not estimated | 0.1619907 | 0.1619907 |
+| 4 | T_solver | 1 | 0.5157723 | not estimated | 0.5157723 | 0.5157723 |
+| 4 | T_total | 1 | 0.577301 | not estimated | 0.577301 | 0.577301 |
+| 5 | T_solver | 5 | 1.2371551 | 0.0108254997 | 1.2327023 | 1.275901 |
+| 5 | T_total | 5 | 1.3138283 | 0.0130340999 | 1.3120026 | 1.3543456 |
+| 10 | T_solver | 1 | 1.9273538 | not estimated | 1.9273538 | 1.9273538 |
+| 10 | T_total | 1 | 2.2143211 | not estimated | 2.2143211 | 2.2143211 |
+| 20 | T_solver | 1 | 7.6987894 | not estimated | 7.6987894 | 7.6987894 |
+| 20 | T_total | 1 | 9.6730097 | not estimated | 9.6730097 | 9.6730097 |
 
-Cardinalidade do alvo altera IGD materialmente: KR10000→18503 muda IGD de.136301
-para.167647 (+cerca de23%), enquanto GD melhora apenas cerca de.09% e HV cresce
-cerca de.046%. FPS torna o alvo reduzido menos concentrado; IGD é média ponderada
-por seus pontos. Não confundir crescimento/densificação com piora do H5 fixo.
+T_solver soma chamadas solve_nbi_lattice; T_total inclui verificação/leitura de
+inputs,malha,geometrias,NBI,reavaliação8respostas,dedup e ND, além da coleta de
+starts/trials. Exclui serialização em disco e métricas externas, realizadas
+depois. Um warm-up H2 não medido foi descartado; H5 tem cinco medições, demais
+H uma observação cada, sem estimativa de dispersão. Arrays de cada run estão
+ligados às suas medidas em standalone_resolution_metrics.csv.
 
-R30 é defensável como alvo empírico finito completo deste protocolo, com essas
-sensibilidades explícitas; não como referência universal ou comprovadamente
-saturada. Ele foi reconstruído idêntico à Fase7:18503 ND, zero origens CNBI.
-Foi congelado sem acrescentar runs. As reduções são diagnóstico, não substituto
-do alvo no benchmark final. Não há erro de construção que justifique trocar R30;
-a falha H5 refere-se à execução/custo do baseline, preservado pelo responsável.
+Mesma máquina Intel i5-12400F/Windows11, Python3.12.15 e ambiente travado,
+uma thread numérica e execução sequencial; hardware/isolamento em launch.json.
+Timing EA preservado:10 seeds,NSGA17.4856s[IQR.090247],MOEAD82.9816s[IQR.263237].
+As campanhas têm datas/commits próprios, registrados sem atribuir-lhes um commit
+comum fictício. Hardware/ambiente são iguais; ruído de carga/frequência permanece
+uma limitação. A diferença de custo não é uma equivalência por NFE.
 
+## Sensibilidade atualizada e interpretação
 
-## Robustez independente H5 e resoluções auxiliares
-
-
-| H | ND | GD to R30 | IGD to R30 | HV estimate | Runtime |
-|---|---|---|---|---|---|
-| 2 | 82 | 0.04239855 | 0.220905 | 0.5130246 | pending |
-| 4 | 281 | 0.04051362 | 0.1760363 | 0.6294335 | pending |
-| 5 | 408 | 0.03956715 | 0.1676468 | 0.6673368 | pending |
-| 10 | 1310 | 0.03927047 | 0.09891025 | 0.765148 | pending |
-| 20 | 4417 | 0.0391376 | 0.06544497 | 0.831028 | pending |
-
-
-Os cinco conjuntos acima são memberships do H20 preservado; não são novas execuções isoladas. H5 oficial continua408. Referência R30 exclui toda CNBI. Os resultados LOO das demais famílias estão nos CSVs, com alvos próprios; não devem ser ordenados como se fossem a mesma referência.
-
-
-## Tabela D — custo controlado, somente EAs
-
-
-| Method | Generation | T_total median/s | IGD common median | HV estimate median | ND median |
-|---|---|---|---|---|---|
-| NSGA3 | 50 | 2.168276 | 0.08112549 | 0.7674126 | 330 |
-| NSGA3 | 100 | 4.377896 | 0.07848903 | 0.7630171 | 330 |
-| NSGA3 | 200 | 8.750034 | 0.07945884 | 0.7724094 | 330 |
-| NSGA3 | 300 | 13.12917 | 0.07776254 | 0.7676063 | 330 |
-| NSGA3 | 400 | 17.48403 | 0.08015605 | 0.7715811 | 330 |
-| MOEAD | 50 | 10.16679 | 0.197313 | 0.6495608 | 313.5 |
-| MOEAD | 100 | 20.56096 | 0.1926636 | 0.6596145 | 314.5 |
-| MOEAD | 200 | 41.38649 | 0.1867216 | 0.6625137 | 324 |
-| MOEAD | 300 | 62.1476 | 0.1862161 | 0.6620528 | 324.5 |
-| MOEAD | 400 | 82.97739 | 0.185004 | 0.6615852 | 327.5 |
-
-
-## Interpretação integrada e perguntas finais
-
-**Cardinalidade:** NSGA3 oferece menor IGD e maior HV que H5 neste caso, inclusive
-K66; portanto a diferença não é explicada só por N. H5 passa de HV.667337 nativo
-para.597703 em66 (-cerca de10.4%) e IGD.148712→.170507. MOEAD perde menos de1%
-de HV em66, mas mantém IGD pior que H5: muitos de seus pontos densificam uma
-região menor. A ordem H5/MOEAD por HV se inverte: H5 ligeiramente maior nativo,
-MOEAD maior em66. A ordem H5/NSGA por Spacing também muda. Nenhum único ranking
-resume os cinco indicadores. Spacing muito baixo do VRF não equivale a cobertura:
-seu IGD permanece.274519 e HV.491568. Sparsity menor pode significar concentração.
-
-**Convergência/cobertura H5:** independente R30, GD=.0395672 e IGD=.167647;
-common self-included, GD=.00110937. O contraste impede usar GD comum muito baixo
-como prova independente. A limitação mais visível é cobertura/resolução, porém
-não se pode atribuí-la exclusivamente a H: o gate revelou branches locais
-dependentes do caminho de continuação. Maior lacuna de referência→H5 é.338097,
-perto de x codificado(-.51136,-.19551,-1.59019); a separação mais forte é em z_Kp,
-com trade-offs ROI/OEE. Os50 maiores gaps estão preservados sem inferir unidades.
-
-**Custo:** i5-12400F,6 cores/12 lógicos, Windows11, Python3.12.15 e ambiente
-travado, thread numérica1, métodos sequenciais, ausência de Python externo ativo
-no gate. Cada EA tem10 seeds1001..1010 e um warm-up400 gerações excluído. Todos20
-resultados finais são bitwise iguais aos arquivados da Fase7; callback não mudou
-evolução. T_total inclui preparação/avaliação/dedup/ND e observer, cujo overhead
-é separado; core também é registrado. Métricas foram calculadas depois do timing.
-
-NSGA em50 gerações usa mediana2.16828s com IGD comum.0811255 e HV.767413;
-MOEAD em400 usa82.9774s com IGD.185004 e HV.661585. No plano das dez configurações
-medianas medidas, nenhuma MOEAD é ND em(T,IGD) ou(T,-HV). Isso caracteriza apenas
-os EAs e este setup/calibração; não demonstra dominância estatística universal.
-As curvas são populações correntes, não archives acumuladas, e podem ser
-não monotônicas. Tempos finais de30 runs paralelas anteriores são históricos,
-não usados como custo comparável. NFE não vira falsa unidade equivalente NBI.
-
-**CNBI/VRF no custo:** indisponível por motivos distintos. H5 direto diverge em24/
-492 pesos (maxΔx3.11812, maxΔz.594267), apesar de geometrias iguais/restrições
-satisfeitas. O responsável manteve408 e aceitou custo CNBI pendente; zero repetições
-de timing CNBI. VRF foi proibido de executar: zero otimizações/timings e nenhum
-runtime inventado. Não é possível responder se H5 ocupa região competitiva no
-plano qualidade×tempo nem se H5→H10/H20 compensa custo. Qualidade de memberships
-mais finos pode ser descrita, mas proporcionalidade ao tempo permanece aberta.
-
-**Coarse-to-fine:**408 pontos oferecem uma representação exploratória com extremos
-e lacunas identificáveis; dados mais finos melhoram cobertura. Isso apoia somente
-uma motivação geométrica para exploração/refinamento. O H5 oficial foi extraído
-do H20 e não reproduziu a execução H5 isolada; os resultados não demonstram que
-essa exploração seja produzida pelo algoritmo coarse isolado ou que seja barata.
-Resolver formalmente inicializações/continuação e equivalência é pré-condição
-de uma futura comparação temporal CNBI, sem trocar os408 nesta entrega.
-
-Os resultados não autorizam vencedor universal, p-values contra réplicas falsas,
-refinamento adaptativo automático ou novos cenários. HV é aproximação QMC com
-precisão auditada, alvos LOO diferem e referência comum contém auto-inclusão.
-
-
-## Proporções de runs melhores e posição percentual do H5
-
-
-| Variant | EA | Metric | Fraction better than H5 | H5 percentile (higher better) |
+| r | Reference N median | GD H5 median | IGD H5 median | HV reference median |
 |---|---|---|---|---|
-| native | NSGA3 | GD | 0.0 | 100.0 |
-| native | NSGA3 | IGD | 1.0 | 0.0 |
-| native | NSGA3 | HV | 1.0 | 0.0 |
-| native | NSGA3 | Spacing | 0.0 | 100.0 |
-| native | NSGA3 | Sparsity | 0.0 | 100.0 |
-| native | MOEAD | GD | 1.0 | 0.0 |
-| native | MOEAD | IGD | 0.0 | 100.0 |
-| native | MOEAD | HV | 0.0 | 100.0 |
-| native | MOEAD | Spacing | 0.0 | 100.0 |
-| native | MOEAD | Sparsity | 1.0 | 0.0 |
-| K66 | NSGA3 | GD | 0.0 | 100.0 |
-| K66 | NSGA3 | IGD | 1.0 | 0.0 |
-| K66 | NSGA3 | HV | 1.0 | 0.0 |
-| K66 | NSGA3 | Spacing | 0.8 | 20.0 |
-| K66 | NSGA3 | Sparsity | 0.4 | 60.0 |
-| K66 | MOEAD | GD | 1.0 | 0.0 |
-| K66 | MOEAD | IGD | 0.0 | 100.0 |
-| K66 | MOEAD | HV | 1.0 | 0.0 |
-| K66 | MOEAD | Spacing | 0.0 | 100.0 |
-| K66 | MOEAD | Sparsity | 1.0 | 0.0 |
+| 5 | 3265.5 | 0.0672978676 | 0.139564683 | 0.858784146 |
+| 10 | 6380.5 | 0.0546076529 | 0.140237098 | 0.876740475 |
+| 15 | 9448 | 0.0488386917 | 0.140537196 | 0.885578356 |
+| 20 | 12490 | 0.0446702693 | 0.140745468 | 0.891810966 |
+| 25 | 15502 | 0.041537991 | 0.14095986 | 0.896453692 |
+| 30 | 18503 | 0.0394917342 | 0.141143732 | 0.899406333 |
 
+| Composition | Reference N | GD H5 | IGD H5 | HV reference |
+|---|---|---|---|---|
+| N | 8754 | 0.0403662247 | 0.107790282 | 0.8945298 |
+| M | 9743 | 0.373089203 | 0.171262438 | 0.703503318 |
+| NM | 18440 | 0.0399734952 | 0.141244763 | 0.899379612 |
+| NMV | 18503 | 0.0394917342 | 0.141143732 | 0.899406333 |
+| MV | 9809 | 0.267597289 | 0.170846547 | 0.745922473 |
+| NV | 8817 | 0.0398844637 | 0.107817303 | 0.89455652 |
 
-As mesmas comparações com VRF, as proporções de empate, média/SD/IQR/q05/q95/mínimo/máximo de todas as métricas e todas as30 runs estão nos CSVs completos. Percentis usam score orientado (HV positivo, demais negativos), com meia massa nos empates. Não são p-values; empates de HV podem ser quantização.
+| Reference K | GD H5 | IGD H5 |
+|---|---|---|
+| 250 | 0.080009514 | 0.113108816 |
+| 500 | 0.0675770292 | 0.113438597 |
+| 1000 | 0.0523572619 | 0.111424565 |
+| 2500 | 0.0431439656 | 0.109078949 |
+| 5000 | 0.0402761072 | 0.108327739 |
+| 10000 | 0.0395310458 | 0.116469489 |
+| 18503 | 0.0394917342 | 0.141143732 |
 
+Medianas/IQR/q05/q95 e506 linhas por subamostra foram atualizadas somente em
+GD/IGD de H5. Cardinalidades/HV/composição de origens/índices/lineages permanecem
+os originais. A referência não tem saturação certificada:25→30 ainda reduz GD
+em cerca de4.9%; IGD permanece sensível à densidade do alvo. Composição depende
+fortemente do NSGA; contribuição marginal de VRF/MOEA em HV é condicional e
+permanece idêntica ao arquivo anterior, inclusive SE pareado da quadratura.
 
-## Figuras e reprodutibilidade
+O novo H5 melhora IGD independente em15.81% e HV em10.74% sobre o subconjunto
+histórico,mas GD muda pouco e Spacing/Sparsity aumentam. A correção não é uma
+melhoria geral do solver nem prova global. Ao igualar66 soluções, NSGA mantém
+IGD/HV melhores no alvo histórico, e H5 mantém HV maior que MOEA tanto nativo
+como K66. A reversão H5/MOEA por HV registrada antes deixa de ocorrer; não
+transportar aquela conclusão para o novo baseline.
 
+No plano do alvo histórico,H5 oferece uma alternativa rápida com qualidade
+inferior ao NSGA nos indicadores de cobertura, sem um vencedor universal.
+H10 é dominado por NSGA geração50 nos pares(T,IGD)/(T,-HV) de medianas; H20
+oferece maior HV e menor IGD que essas configurações EA,com custo9.673s, e
+aparece na envoltória qualidade-custo. Isso é comparação descritiva condicionada
+ao alvo histórico/medianas,preservando auto-inclusão dos EAs e antigos CNBI;
+não é teste estatístico ou certificado da frente verdadeira. H5→H10 reduz IGD
+independente29.92% e aumenta HV3.53% por1.69x tempo; H5→H20 reduz IGD53.63%
+e aumenta HV12.45% por7.36x tempo. Não há razão escalar universal para chamar
+esses ganhos proporcionais ao custo; a escolha depende da qualidade desejada.
 
-14 figuras em PDF/SVG e PNG600dpi, cores/markers centralizados em `figures/visual_mapping.json`, legendas e dados completos preservados. Faixas das curvas de runs são q05–q95 das100 subamostras, não IC; curvas dos EAs em K/tempo usam mediana e IQR. Figuras comuns/LOO estão identificadas.
+GD independente~.0395 indica proximidade ao alvo amostrado,sem prova de
+convergência global. A redução IGD com H mostra lacuna de cobertura/resolução,
+mas o diagnóstico24/492 impede atribuir tudo apenas à densidade da malha.
+cnbi5_coverage_gaps.csv localiza as50 maiores lacunas em códigos originais,
+sem inferir unidades físicas. A geometria e o baixo custo standalone sustentam
+H5 como malha exploratória para possível investigação coarse-to-fine; nenhum
+refinamento foi iniciado e a política adaptativa não foi validada.
 
-| Artifact | SHA256 |
-|---|---|
-| metadata.json | d067a23760141269c69f604be9d4e4a4a2f0fab6f9bfe361c265af825f4b0c18 |
-| checksums.sha256 | c0e8ab1ccd8d4b8d42ca03dffec22afb86200d4dc371da5993276001bf3b3988 |
-| reference_final.npz | 9b3c727c6dc73fa304fd66f3532f36ed345014113c09bb8fd6118025e7ada041 |
-| hv_reference_point.json | 95b219f84474e913dfde0b863a9799744eaafca878bed083da6f986237dd4d95 |
+HV usa os mesmos bounds/seeds/power16/quatro scrambles,sem clipping ou novo
+reference point. É estimativa de quadratura com SE, não volume exato.
+Spacing=SD amostral(ddof1) dos vizinhos Euclidianos e Sparsity=média,com
+dependência de densidade. Nenhuma mudança nas cinco definições congeladas.
 
+## Artefatos, rastreabilidade e verificação
 
-Input hashes completos em metadata.json; raw, modelos, normalização, IDs dos37 subsets, fases anteriores e resultados publicados não foram modificados. Otimização adaptativa, novos cenários sintéticos e merge automático não iniciados.
+Arquivo oficial:results/phase_08_final_benchmark/turning_standalone_correction_20261025.
+O anterior turning_reference_sensitivity_20261024 permanece byte-identical,
+classificado historical_parent_grid_analysis. Seu manifesto continua
+c0e8ab1ccd8d4b8d42ca03dffec22afb86200d4dc371da5993276001bf3b3988.
+Phase6 também permanece íntegra:nenhum artefato anterior foi apagado/reescrito.
+
+launch.json identifica commit/config/hardware/inputs antes dos solves;
+metadata.json identifica execução da análise e hashes das referências reusadas;
+checksums.sha256 cobre todos os payloads novos,menos o próprio manifesto.
+As doze figuras novas têm PDF/SVG/PNG600dpi e captions; os gráficos estruturais
+de cardinalidade/HV da referência anteriores permanecem válidos e preservados.
+Validação de software,40 itens de entrega,ADR0012 e claims C-BENCH-01..07 em
+docs/phase_8_verification.md. PR11 permanece aberto,sem merge automático.
+
+Nenhum raw/modelo alterado,dado reconstruído,refit,MC,PA,anchor,VRF,EA,retuning,
+novo subset ou mudança de SLSQP/starts/tolerância. Sem refinamento adaptativo,
+novos cenários sintéticos ou novas metaheurísticas.

@@ -1,4 +1,7 @@
-"""Phase8B quality and post-timing indicators. No optimizers execute here."""
+"""Historical parent-grid Phase8B reproduction; official correction is standalone.
+
+Use turning_standalone_analysis for the corrected H5. No optimizers execute here.
+"""
 
 import argparse
 import importlib.metadata
@@ -166,7 +169,7 @@ def run(output):
     if not (output / "timing_completion.json").exists():
         raise ValueError("finish isolated EA timing before other scientific postprocessing")
     policy = json.loads(data.POLICY.read_text())
-    inputs = data.load_inputs()
+    inputs = data.load_historical_parent_grid_inputs()
     x, z = inputs["x"], inputs["z"]
     with np.load(output / "dominance_index.npz", allow_pickle=False) as d:
         index = DominanceIndex(

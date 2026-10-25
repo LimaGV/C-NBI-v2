@@ -1,4 +1,8 @@
-"""Phase8A only: postprocess frozen fronts; never execute any VRF/EA campaign."""
+"""Historical parent-grid Phase8A reference construction, retained for provenance.
+
+Reevaluate corrected H5 with turning_standalone_analysis and the saved references;
+do not regenerate the stored subsamplings. No VRF/EA campaign executes here.
+"""
 
 import argparse
 import hashlib
@@ -171,7 +175,7 @@ def run(output):
     if launch["working_tree_dirty_at_launch"]:
         raise ValueError("freeze and commit sensitivity code/config before the scientific study")
     write_json(output / "phase8a_launch.json", launch)
-    inputs = data.load_inputs()
+    inputs = data.load_historical_parent_grid_inputs()
     x, z = inputs["x"], inputs["z"]
     np.savez_compressed(output / "canonical_candidates.npz", x=x, natural_f=inputs["f"], z=z)
     data.table(

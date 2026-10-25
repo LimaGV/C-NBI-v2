@@ -1,4 +1,4 @@
-"""Materialize principal tables, archived-resolution diagnostics and the case report."""
+"""Historical parent-grid report; current report is turning_standalone_report."""
 
 import json
 import subprocess
@@ -37,7 +37,7 @@ def run(output=data.OUTPUT):
         subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True).strip()
     )
     meta = json.loads((output / "metadata.json").read_text())
-    inputs = data.load_inputs()
+    inputs = data.load_historical_parent_grid_inputs()
     z = inputs["z"]
     h = meta["hv_reference"]
     grid = HVGrid(np.array(h["lower"]), np.array(h["reference"]))

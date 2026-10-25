@@ -1,4 +1,8 @@
-"""Read-only canonical lineage and unchanged direct-NBI equivalence audit."""
+"""Historical parent-grid lineage/audit; never the official standalone H5 loader.
+
+Official Phase8 correction: turning_cnbi_standalone + turning_standalone_analysis.
+The preserved408-point archive is historical_parent_grid_analysis.
+"""
 
 import csv
 import json
@@ -33,7 +37,7 @@ def table(path, records):
     write_csv(path, keys, [[r[k] for k in keys] for r in records])
 
 
-def load_inputs():
+def load_historical_parent_grid_inputs():
     folder = phase7.OUTPUT
     for line in (folder / "checksums.sha256").read_text().splitlines():
         digest, name = line.split("  ")

@@ -1,4 +1,4 @@
-# ADR0012 â€” Reference sensitivity, cardinality control and computational cost
+# ADR0012 — Reference sensitivity, cardinality control and computational cost
 
 Status: **ACCEPTED — standalone operational-resolution correction authorized 2026-10-25**.
 
@@ -31,7 +31,6 @@ the owner's explicit baseline definition; execution validation is recorded in
 the updated Phase8 verification/report.
 
 ## Superseded pre-correction decision (audit history)
-
 
 Freeze H5's408 official Phase7 points, the current originally coded nominal RSMs,
 37 subsets, normalization, solver/options/acceptance and all earlier artifacts.
@@ -78,7 +77,7 @@ No solver/start/tolerance/baseline change is authorized by that choice.
 The owner also explicitly forbids VRF execution. Use only the66 historical
 reevaluated Phase7 points; no optimization or timing VRF. Missing comparable
 runtime is explicit. Cost curves/efficiency analysis can characterize the EAs;
-they cannot establish CNBI or VRF qualityâ€“cost competitiveness.
+they cannot establish CNBI or VRF quality–cost competitiveness.
 
 No adaptive refinement, new synthetic scenarios, retuning, pseudo-replication,
 ground-truth claim or automatic merge. Full frozen configuration and visual mapping

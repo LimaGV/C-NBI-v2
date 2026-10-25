@@ -109,13 +109,24 @@ decisões, commits e resultados afetados ao atualizar.
 | C-REF-03 | C-NBI H5 and H20 belong to the same method family for leave-one-out evaluation | METHODOLOGICAL_DECISION | Explicit Phase7 owner instruction, ADR0011; whole-CNBI exclusion contract | SUPPORTED | H5 operational baseline; H20 auxiliary contributor; H5 excluded from common pool inputs; adaptation future |
 | C-REF-04 | Historical solutions enter the canonical reference only when they can be evaluated consistently under the current canonical RSM problem | METHODOLOGICAL_DECISION | Source audit,66 literal VRF decision vectors and reevaluation tests; old objectives omitted | SUPPORTED | Historical export already filtered; no new proof of historical algorithm fidelity or use of unverifiable old objectives |
 
-## Fase 8 — sensitivity and controlled benchmark (ADR0012 revised scope)
+## Fase 8 — standalone operational correction (ADR0012)
+
+The current official baseline is standalone H5. The previous408-point set is
+CNBI_H5_extracted_from_H20_parent_grid, historical_parent_grid_analysis.
+Other-method numbers,zero-CNBI reference and all earlier artifacts are preserved.
 
 | Claim ID | Claim | Evidence class | Evidence | Status | Limits |
 |---|---|---|---|---|---|
 | C-BENCH-01 | The final benchmark uses GD, IGD, HV, Spacing, and Sparsity as its primary performance indicators | METHOD_DEFINITION | Explicit Phase8 task; preserved V1 applied definitions, numerical oracle and tests | SUPPORTED | HV is shared-node quadrature with SE/precision diagnostics; Spacing ddof1 differs from earlier ddof0; no universal quality interpretation of Sparsity |
 | C-BENCH-02 | Cardinality-controlled comparisons use deterministic farthest-point reduction in the common normalized objective space | METHOD_DEFINITION | Nested/extreme/tie/unique-index tests,62 saved orderings, K66 and complete curves | SUPPORTED | Postselection of genuine native points; no duplication/interpolation or reduction of the benchmark target |
 | C-BENCH-03 | The empirical reference sensitivity is evaluated with respect to number of stochastic runs, method composition, and reference cardinality | METHODOLOGICAL_DECISION | 506 run references, six compositions, seven K_R levels, paired source lineage and figures | SUPPORTED | Fixed H5; finite30-run target, no true-front or automatic saturation claim; IGD strongly depends on empirical point density |
-| C-BENCH-04 | Processing time is reported as the primary computational-cost measure, with dedicated controlled timing measurements | METHODOLOGICAL_DECISION | Sequential10-seed EA campaign, hardware/thread/commit metadata and exact Phase7 final-array checks | SUPPORTED | Measured cost scope is EAs only: CNBI gate failed and VRF execution forbidden; no CNBI/VRF cost ranking or false NFE conversion |
-| C-BENCH-05 | C-NBI H5 is the baseline resolution; other H values are used only to characterize resolution-cost behavior | METHODOLOGICAL_DECISION | Explicit owner instruction and revised-scope decision; preserved408 H5 and archived resolution-quality table | PARTIALLY_SUPPORTED | Baseline and auxiliary-resolution roles preserved; CNBI cost trajectory could not be validated, so only historical membership quality is reported |
-| C-BENCH-06 | Direct isolated H5 does not reproduce the official H5 membership-derived front under the unchanged solver in this case | INTERNAL_EVIDENCE | h5_direct_equivalence.csv/npz/json:24/492 above predeclared1e-5 bounds; owner chose preserve408/cost pending | SUPPORTED | Feasible local branches depend on continuation/warm-start path; no claim of universal failure, repaired baseline or altered solver/tolerance |
+| C-BENCH-04 | Processing time is reported as the primary computational-cost measure, with dedicated controlled timing measurements | METHODOLOGICAL_DECISION | Preserved10-seed EA timing and independent standalone H2/H4/H5/H10/H20 executions; launch/completion records | SUPPORTED | H5 five identical-output runtime repetitions; other H one observation each; same hardware/env but distinct campaign dates; no VRF timing or universal efficiency claim |
+| C-BENCH-05 | C-NBI H5 is the baseline resolution; other H values characterize resolution-cost behavior | METHODOLOGICAL_DECISION | Explicit pre-merge baseline correction; standalone_resolution_metrics.csv | SUPPORTED | H20 high-resolution sensitivity only; no parent-grid membership defines lower-H outputs; single observations for non-H5 costs |
+| C-BENCH-06 | The official C-NBI H=5 applied baseline is produced by a direct standalone H=5 execution using492 local NBI subproblems | INTERNAL_EVIDENCE | H5_rep1/official_cnbi5, five bitwise-identical runs, parent result directories unavailable during solves | SUPPORTED |492 accepted,411 unique,409 ND; first run defines baseline regardless of quality; unchanged solver/starts/tolerances |
+| C-BENCH-07 | H=2,H=4,H=10 and H=20 are independent resolution-sensitivity executions and are not parent grids defining the H=5 baseline | INTERNAL_EVIDENCE | Nine standalone measured outputs,own mesh/trajectory and quality-runtime pairing; protocol/records/independence tests | SUPPORTED | Only resolution operational definition corrected;37 subsets and canonical scientific pipeline unchanged; old Phase6 parent analysis remains historical |
+
+The earlier C-BENCH-06 statement about24/492 parent/direct divergences remains
+historical internal evidence (named24-case diagnostic). Its former implication
+that408 was the official baseline/cost pending is SUPERSEDED by the explicit
+standalone correction. Historical Phase7/C-REF role statements retain their
+original phase scope; current operational H5 is defined by C-BENCH-06 above.

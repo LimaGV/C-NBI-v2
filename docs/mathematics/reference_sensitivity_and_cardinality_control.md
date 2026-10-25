@@ -90,7 +90,7 @@ R_r,b=ND(union of final ND runs of NSGA3 and MOEAD for the same selected r seeds
 plus constant VRF), with r5/10/15/20/25/30. No CNBI at any resolution.
 One PCG64(20261024) stream produces100 distinct sorted seed subsets without
 replacement for each r<30, consumed in ascending r. At30 there is one full set;
-prefixes are secondary diagnostics. The H5 candidate remains exactly408 points.
+prefixes are secondary diagnostics. The corrected H5 candidate is the standalone409-point front; the earlier408-point parent-derived candidate is historical.
 
 Record GD/IGD(H5,R), HV(R), cardinality and exclusive family contributions.
 Mean/median/sampleSD/IQR/q05/q95/min/max describe the100-subset distributions;
@@ -119,7 +119,7 @@ the extended grid uses the actual minimum unique-ND count over H5 and all60 EA
 runs, not a mean or extrapolation. Native N_returned, N_ND_before_dedup and genuine
 unique-ND cardinality are distinct and recorded.
 
-Common results are `COMMON_REFERENCE_SELF_INCLUDED`. Family LOO results are
+The old common target is retained only as `HISTORICAL_COMMON_H20_TARGET`, not as a newly self-included pooled target for standalone H5. Other method numbers remain unchanged; independent CNBI assessment uses the frozen18503-point zero-CNBI target. Family LOO results are
 `LEAVE_ONE_FAMILY_OUT`; their targets differ and cannot automatically rank
 methods. Deterministic fronts are single observations, not fake replications.
 Better-run fractions use strict comparisons; score-oriented midrank percentiles
@@ -133,17 +133,36 @@ optimization, response evaluation and final numerical dedup/ND. Solver/core time
 is separately reported where available; NFE is technical information, not an
 artificial equivalence between RSM calls and SLSQP/Jacobian subproblems.
 
-The requested H5 direct-equivalence gate failed at24/492 weights with unchanged
-geometry/solver/options. Both paths are feasible but reach different local
-branches. The owner explicitly preserves the408 official points and accepts
-CNBI cost as pending. No direct-H5 or parent-H20 runtime is assigned to this
-baseline, and no CNBI timing repetitions are performed. VRF timing is forbidden
-by the owner; its historical quality results remain eligible.
+The earlier parent/direct equivalence failure (24/492) established trajectory
+sensitivity and remains historical evidence. By the explicit pre-merge correction,
+the official operational baseline is now standalone H5. Use the exact Phase6
+solver/options/Jacobians/acceptance/starts and37 frozen subsets, construct each
+lattice independently, and recompose eight responses before fixed-global-frame
+deduplication/ND. No H20 result defines a lower-H output.
 
-Controlled timing is consequently restricted to EAs:10 seeds1001..1010, same
-frozen Phase7 config, warm-up and strictly sequential execution on one machine,
-one numerical thread, same commit/environment. Read-only checkpoints50/100/200/
-300/400 must not change RNG, population, selection, operators or termination.
-Noninterference tests compare final arrays. Quality metrics are evaluated after
-timing; observer overhead is explicitly measured. Cost-efficiency conclusions
-cannot be extended to CNBI/VRF while comparable times are unavailable.
+Each H2/H4/H5/H10/H20 is measured with its own scientific output. H5 has five
+runtime repetitions with a predeclared absolute1e-12/relative0 scientific check;
+the observed arrays are bitwise identical. Other H have one measured run each,
+so no runtime variability estimate. One unreported H2 warm-up precedes timing.
+End-to-end includes input preparation,mesh,geometry,NBI,eight-response evaluation,
+start/trial observation,dedup and ND; excludes disk serialization and external
+quality metrics. Solver time is the sum of lattice solver calls. Repetitions
+are runtime noise only, not quality replicates. The first H5 run is official.
+
+Actual Phase6/7 result directories were temporarily renamed during all measured
+solves and restored in finally, proving computational independence from H20.
+Options/numerical equality bounds are explicitly frozen in
+`docs/policies/cnbi_standalone_correction.json`, so no Phase6 result is needed at
+runtime. The old benchmark_cardinality_cost.json remains a byte-preserved
+historical execution protocol, superseded only in baseline/cost scope.
+
+EA controlled timing and all30-run quality arrays remain unchanged. Shared
+historical-target time plots add the corrected CNBI runs, never pair old CNBI
+quality with new runtime. Hardware/environment match; campaign dates/source
+commits are separately recorded. VRF execution/timing remains forbidden.
+
+Reuse the saved512 reference lineages,506 run-sensitivity rows,100-subset indices
+and reference FPS ordering; reevaluate only GD/IGD for the corrected H5. Reference
+cardinalities/HV/origins do not change. The entire prior Phase8 result directory
+is historical_parent_grid_analysis and byte-identical. The official correction
+is turning_standalone_correction_20261025, still within Phase8/PR11.
