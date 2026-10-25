@@ -1,0 +1,328 @@
+{
+  "csv_numeric_parsing": "stdlib csv with explicit Python int/float literal conversion; 17 significant digits in visual tables; no pandas float inference",
+  "base_commit": "d938695b7fdaf9c871d331a42ff277e0c3fbd2d1",
+  "coding": {
+    "coding_id": "original_spreadsheet_codes_1_682",
+    "status": "VERIFIED_ORIGINAL_CODES_DISTINCT_FROM_PHYSICAL_MODEL",
+    "source_file_name": "NBI Revisão.xlsm",
+    "source_sha256": "7792a25a8c88d29206665d8797587dc6a11e932e1a8bba0a1ac8b539385f7d4e",
+    "source_sheet": "Original Data",
+    "source_range": "B4:H22",
+    "run_id_range": "B4:B22",
+    "coded_range": "C4:E22",
+    "physical_range": "F4:H22",
+    "source_read_only": true,
+    "source_unchanged": true,
+    "source_cells": "numeric literals",
+    "canonical_dataset_sha256": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "extracted_csv_sha256": "96ba3ca12794357c9c598428dd2aa775fae2ae6f6a53c8afd40128e9384030f1",
+    "n_runs": 19,
+    "coded_factor_order": [
+      "Vc",
+      "f",
+      "ap"
+    ],
+    "source_axial_code": 1.682,
+    "sphere_radius": 1.681792830507429,
+    "sphere_definition": "x.T x <= (8**0.25)**2",
+    "continuous_physical_coded_transform": null,
+    "physical_coordinates_for_new_anchors": "UNDEFINED_NO_VERIFIED_TRANSFORM",
+    "physical_coded_fitted_equivalence_gate": "FAILED",
+    "maximum_fitted_difference_by_response": {
+      "T": 0.4791758801158892,
+      "MTTF": 0.3773253999689672,
+      "WR": 8.354094577897424e-05,
+      "Ra": 0.010539654572135015,
+      "Rt": 0.025572992119533566,
+      "Kp": 0.044398084398670434,
+      "ROI": 0.005972971506008673,
+      "OEE": 0.006776310568389121
+    },
+    "maximum_fitted_difference_over_response_range": {
+      "T": 0.011831503212738004,
+      "MTTF": 0.009237203393537376,
+      "WR": 0.009871443368447082,
+      "Ra": 0.005067141621218757,
+      "Rt": 0.003970961509244343,
+      "Kp": 0.011934968924373773,
+      "ROI": 0.02565766916211087,
+      "OEE": 0.023374488218570872
+    },
+    "owner_clarification": "a planilha esta correta o artigo esta errado",
+    "interpretation": "Prioritize original spreadsheet codes as a distinct coded-input case; no claim of equivalent physical reparameterization.",
+    "changes_to_observed_responses": "NONE",
+    "factorial_corners_outside_requested_ball": 8
+  },
+  "response_order": [
+    "T",
+    "MTTF",
+    "WR",
+    "Ra",
+    "Rt",
+    "Kp",
+    "ROI",
+    "OEE"
+  ],
+  "directions": [
+    "MAX",
+    "MAX",
+    "MIN",
+    "MIN",
+    "MIN",
+    "MIN",
+    "MAX",
+    "MAX"
+  ],
+  "factor_order": [
+    "Vc (cs)",
+    "f",
+    "ap (md)"
+  ],
+  "nominal_payoff_orientation": "rows responses,columns anchors; transposed for plots",
+  "pca": {
+    "mean": [
+      0.2884364414156444,
+      0.32538511136047576,
+      0.15684114466234322,
+      0.3026417239282001,
+      0.30593708593762314,
+      0.4279711821296601,
+      0.603142767304429,
+      0.3856211165410919
+    ],
+    "components": [
+      [
+        0.37490892018172406,
+        0.3772407528212478
+      ],
+      [
+        0.38150919973909436,
+        0.3478623607125649
+      ],
+      [
+        0.34775713478063863,
+        0.22332275429142057
+      ],
+      [
+        0.31044026857982737,
+        -0.18173901243922025
+      ],
+      [
+        0.305407305569482,
+        -0.16799202836312346
+      ],
+      [
+        -0.2842759126376092,
+        0.7899157766482623
+      ],
+      [
+        -0.401272277544616,
+        0.038598381942754945
+      ],
+      [
+        0.4018457283695503,
+        -0.010048895644137065
+      ]
+    ],
+    "explained_variance_ratio": [
+      0.6915827160785951,
+      0.1619988248733888,
+      0.12665587986142898,
+      0.018659592386025964,
+      0.000995432629690843,
+      7.963497241307601e-05,
+      2.6312952183755337e-05,
+      1.60624627348741e-06
+    ],
+    "n": 18503,
+    "scaling": "none beyond frozen global MIN normalization",
+    "sign_rule": "largest absolute loading positive; first index breaks ties"
+  },
+  "pca_fit": "independent frozen18503-point reference only",
+  "representatives": {
+    "NSGA3": {
+      "seed": 1002,
+      "stored_IGD": 0.06317478116100282,
+      "rule": "minimum frozen native IGD on historical common target; smallest seed on exact tie",
+      "use": "display representative only; no new run or metric"
+    },
+    "MOEAD": {
+      "seed": 1025,
+      "stored_IGD": 0.17773678054734138,
+      "rule": "minimum frozen native IGD on historical common target; smallest seed on exact tie",
+      "use": "display representative only; no new run or metric"
+    }
+  },
+  "visual_performance": {
+    "formula": "(hi_i-z_i)/(hi_i-lo_i)",
+    "lower": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "upper": [
+      1.1572538788009328,
+      1.1860931596020998,
+      1.0810738970453975,
+      1.1173472515454093,
+      1.1030866531070553,
+      1.180963349244484,
+      1.0,
+      1.0007334981806217
+    ],
+    "bounds_source": "full canonical Phase7 candidates plus official standalone H5; frozen global MIN z",
+    "purpose": "display only; official normalization/metrics unchanged"
+  },
+  "conflict": "A3=loss(anchor_i,response_j)-loss(anchor_j,response_i), supplementary asymmetry only",
+  "ellipse_source": "results/phase_04_anchor_mc/turning_original_codes_anchor_mc_777_20261024/payoff_samples.npz",
+  "ellipse_source_sha256": "98a12097a25cf2178e8ffce79499ad627cfb8345fd00a31b3b1521d88c6407d1",
+  "ellipse_definition": "sample mean/covariance ddof1,n2000,chi2_2(.95); descriptive covariance-based MC uncertainty ellipse,not exact confidence region",
+  "coefficient_intervals": "normal Wald beta +/- norm.ppf(.975)*SE from frozen analytic coefficient covariance; approximate,not multiplicity-adjusted",
+  "selected_local_subsets": [
+    "C_1_4",
+    "C_7_8",
+    "C_1_4_6",
+    "C_6_7_8"
+  ],
+  "selection_rule": "first and last lexicographic pair and trio; independent of outcome",
+  "local_coordinates": {
+    "C_1_4": {
+      "basis": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "normal": [
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "normal_in_projection": [
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "indices": [
+        0,
+        3
+      ]
+    },
+    "C_7_8": {
+      "basis": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "normal": [
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "normal_in_projection": [
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "indices": [
+        6,
+        7
+      ]
+    },
+    "C_1_4_6": {
+      "basis": [
+        [
+          -0.543028337601481,
+          -0.6853889002411148
+        ],
+        [
+          -0.5533596877513774,
+          0.7266361591314916
+        ],
+        [
+          0.6315958205478174,
+          0.04734920980237656
+        ]
+      ],
+      "origin": [
+        0.5196597923296036,
+        0.43031634193215273,
+        0.6008846325413283
+      ],
+      "normal": [
+        -0.485141505117886,
+        -0.40717680215642454,
+        -0.7738506133599818
+      ],
+      "normal_in_projection": [
+        0.0,
+        -9.020562075079397e-17
+      ],
+      "indices": [
+        0,
+        3,
+        5
+      ]
+    },
+    "C_6_7_8": {
+      "basis": [
+        [
+          -0.5742021230046269,
+          0.8126450024494906
+        ],
+        [
+          -0.5770478183842354,
+          -0.487922680429242
+        ],
+        [
+          0.5807820049166244,
+          0.31865272306479775
+        ]
+      ],
+      "origin": [
+        0.3512171341721655,
+        0.3484156387803667,
+        0.6558555816552364
+      ],
+      "normal": [
+        -0.09949885391725181,
+        -0.6549406638931022,
+        -0.7491012647489095
+      ],
+      "normal_in_projection": [
+        -5.551115123125783e-17,
+        -9.159339953157541e-16
+      ],
+      "indices": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "gridlines": false,
+  "gridline_exceptions": [],
+  "reference_points": 18503,
+  "reference_CNBI_origins": 0,
+  "official_CNBI_ND": 409,
+  "missing_runtime": "VRF-NBI: no reproducible timing; no new execution",
+  "historical_contributions": "D5 only: Phase7 historical common envelope,CNBI=H20,not official H5 contribution"
+}
