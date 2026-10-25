@@ -1,0 +1,78 @@
+{
+  "method": "MOEAD",
+  "seed": 1008,
+  "NFE": 132000,
+  "T_total": 82.56839390005916,
+  "optimizer_seconds_excluding_observer": 82.47206720011309,
+  "observer_seconds": 0.08892279979772866,
+  "cpu_seconds": 81.171875,
+  "N_returned": 330,
+  "N_unique_ND": 327,
+  "phase7_final_exact": true,
+  "phase7_final_max_x_error": 0.0,
+  "config_hash": "bd32ca54c1fbd1d7eb2aca851ec6f1e768dfb9a358ae1514a6ecad96d1cf455f",
+  "git_commit": "70883d7c8dc5954f3438b0b43e5274b07cf16e0a",
+  "archive_sha256": "793473ae1d0c42b3c9a7f89d278820c7015e04ddb51761a14627f11b04bf6f5c",
+  "checkpoints": [
+    {
+      "generation": 50,
+      "nfe": 16500,
+      "N_returned": 330,
+      "N_ND_before_dedup": 330,
+      "N_unique_ND": 317,
+      "T_total": 10.127630100003444,
+      "cpu_seconds": 10.015625,
+      "observer_seconds_cumulative": 0.017368200002238154
+    },
+    {
+      "generation": 100,
+      "nfe": 33000,
+      "N_returned": 330,
+      "N_ND_before_dedup": 330,
+      "N_unique_ND": 311,
+      "T_total": 20.555106000043452,
+      "cpu_seconds": 20.296875,
+      "observer_seconds_cumulative": 0.03521879995241761
+    },
+    {
+      "generation": 200,
+      "nfe": 66000,
+      "N_returned": 330,
+      "N_ND_before_dedup": 330,
+      "N_unique_ND": 328,
+      "T_total": 41.239529000013135,
+      "cpu_seconds": 40.515625,
+      "observer_seconds_cumulative": 0.052957599866203964
+    },
+    {
+      "generation": 300,
+      "nfe": 99000,
+      "N_returned": 330,
+      "N_ND_before_dedup": 330,
+      "N_unique_ND": 313,
+      "T_total": 61.88794400007464,
+      "cpu_seconds": 60.8125,
+      "observer_seconds_cumulative": 0.0704137998400256
+    },
+    {
+      "generation": 400,
+      "nfe": 132000,
+      "N_returned": 330,
+      "N_ND_before_dedup": 330,
+      "N_unique_ND": 327,
+      "T_total": 82.56441920006182,
+      "cpu_seconds": 81.171875,
+      "observer_seconds_cumulative": 0.08892279979772866
+    }
+  ],
+  "configuration": {
+    "family": "MOEAD",
+    "n_partitions": 4,
+    "generations": 400,
+    "sbx_probability": 1.0,
+    "sbx_eta": 10.0,
+    "pm_eta": 30.0,
+    "n_neighbors": 66,
+    "prob_neighbor_mating": 0.9
+  }
+}

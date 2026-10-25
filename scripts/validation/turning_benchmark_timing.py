@@ -55,7 +55,8 @@ def hardware_and_isolation():
     $active=@(Get-Process python -ErrorAction SilentlyContinue | Where-Object {
         $_.Id -ne PARENT_PID -and $before.ContainsKey($_.Id) -and ($_.CPU-$before[$_.Id]) -gt .10
     } | ForEach-Object { @{pid=$_.Id;cpu_delta_seconds=$_.CPU-$before[$_.Id]} })
-    $cpus=@(Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors)
+    $cpus=@(Get-CimInstance Win32_Processor |
+        Select-Object Name,NumberOfCores,NumberOfLogicalProcessors)
     @{cpus=$cpus;memory_bytes=(Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory;
       external_active_python=$active;observation_seconds=1.5} | ConvertTo-Json -Depth 5 -Compress
     """.replace("PARENT_PID", str(os.getpid()))
