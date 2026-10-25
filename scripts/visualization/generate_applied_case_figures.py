@@ -181,7 +181,7 @@ E/F usam,quando comparativos,o alvo comum histórico22523 e deixam claro que
 não é o alvo independente do CNBI. G usa as referências sem CNBI. D5 é apenas
 proveniência histórica Fase7/CNBIH20,não contribuição do baseline409. Os tempos
 por H são próprios standalone,n5 emH5/n1 nos demais; EAs têm10 seeds e suas
-curvas de qualidade30 runs. Não existe runtime VRF reproduzível. A divergência
+curvas de qualidade30 runs. Não existe runtime VRF-NBI reproduzível. A divergência
 histórica H20 em1/4557 permanece como limitação já documentada,não é corrigida.
 
 Representantes EA são escolhidos exclusivamente pelos IGDs já registrados,

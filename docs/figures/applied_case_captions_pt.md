@@ -70,11 +70,11 @@ Referência independente de 18.503 pontos, sem CNBI, e os 409 ND do H5 standalon
 
 ## D1b — Coordenadas paralelas das soluções não dominadas
 
-Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF histórico e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD nativo já registrado no alvo comum histórico, com desempate pela seed. Não representa as 30 runs, sua mediana ou uma nova execução.
+Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF-NBI e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD nativo já registrado no alvo comum histórico, com desempate pela seed. Não representa as 30 runs, sua mediana ou uma nova execução.
 
 ## D2 — Projeções bidimensionais da fronteira empírica
 
-Projeções em valores naturais das respostas canônicas, sem rescalagem pela nota da Tabela 3. Cinza: referência independente; laranja: H5 standalone; azul: VRF histórico; verde/vermelho: runs EA selecionadas somente pelo IGD congelado. Uma projeção bidimensional não certifica dominância em oito respostas. ROI/OEE permanecem como razões, sem conversão silenciosa para porcentagem.
+Projeções em valores naturais das respostas canônicas, sem rescalagem pela nota da Tabela 3. Cinza: referência independente; laranja: H5 standalone; azul: VRF-NBI; verde/vermelho: runs EA selecionadas somente pelo IGD congelado. Uma projeção bidimensional não certifica dominância em oito respostas. ROI/OEE permanecem como razões, sem conversão silenciosa para porcentagem.
 
 ## D3 — Comparação por método e projeção
 
@@ -90,7 +90,7 @@ Proveniência histórica da Fase 7 no envelope comum de 22.523 pontos. A barra C
 
 ## E1 — IGD em função da cardinalidade da aproximação
 
-IGD congelado contra o mesmo alvo comum histórico completo de 22.523 pontos. Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF: frente histórica única até K=66. Reduções FPS são aninhadas e preservam extremos, sem duplicar pontos. Linha vertical em K=66. O alvo histórico contém famílias avaliadas; não é a referência independente do CNBI ou uma frente verdadeira.
+IGD congelado contra o mesmo alvo comum histórico completo de 22.523 pontos. Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF-NBI: frente única até K=66. Reduções FPS são aninhadas e preservam extremos, sem duplicar pontos. Linha vertical em K=66. O alvo histórico contém famílias avaliadas; não é a referência independente do CNBI ou uma frente verdadeira.
 
 ## E2 — Hipervolume em função da cardinalidade da aproximação
 
@@ -102,11 +102,11 @@ Spacing e Sparsity congelados em função de K. Spacing é o desvio padrão amos
 
 ## F1 — Qualidade da aproximação em função do tempo computacional
 
-Qualidade e tempo da mesma configuração científica: cada H é standalone, H5 destacado por estrela, cinco repetições H5 idênticas e uma observação nos demais H. EAs: medianas/IQR de dez seeds da campanha controlada, checkpoints 50/100/200/300/400. IGD usa o alvo comum histórico; HV usa o ponto/estimador comum. Campanhas têm datas próprias, mesma máquina/ambiente; não são p-valores ou equivalência por NFE. VRF não tem tempo reproduzível.
+Qualidade e tempo da mesma configuração científica: cada H é standalone, H5 destacado por estrela, cinco repetições H5 idênticas e uma observação nos demais H. EAs: medianas/IQR de dez seeds da campanha controlada, checkpoints 50/100/200/300/400. IGD usa o alvo comum histórico; HV usa o ponto/estimador comum. Campanhas têm datas próprias, mesma máquina/ambiente; não são p-valores ou equivalência por NFE. VRF-NBI não tem tempo reproduzível.
 
 ## F2 — Tempo total de processamento
 
-Tempos end-to-end congelados, sem equivalência artificial por NFE. Pontos: medições; traço: mediana; barra: IQR quando há repetições. H5 n=5, outros H n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF não é incluído por ausência de timing reproduzível.
+Tempos end-to-end congelados, sem equivalência artificial por NFE. Pontos: medições; traço: mediana; barra: IQR quando há repetições. H5 n=5, outros H n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF-NBI não é incluído por ausência de timing reproduzível.
 
 ## F3 — Ganho marginal de qualidade por custo computacional
 
@@ -134,7 +134,7 @@ Referências N, M, NM e NMV já armazenadas, sempre sem CNBI. Painéis: IGD/GD d
 
 ## H1 — Distribuição das distâncias ao vizinho mais próximo
 
-Distâncias ao vizinho mais próximo no espaço global MIN, calculadas apenas para diagnóstico visual. CNBI e VRF são frentes únicas; EAs agregam distâncias calculadas dentro de cada uma das 30 runs genuínas. Violinos resumem pontos, não 30 observações independentes de qualidade; barras internas mostram mediana/IQR. Cardinalidades nativas diferem.
+Distâncias ao vizinho mais próximo no espaço global MIN, calculadas apenas para diagnóstico visual. CNBI e VRF-NBI são frentes únicas; EAs agregam distâncias calculadas dentro de cada uma das 30 runs genuínas. Violinos resumem pontos, não 30 observações independentes de qualidade; barras internas mostram mediana/IQR. Cardinalidades nativas diferem.
 
 ## H2 — Densidade local na projeção PCA da referência
 

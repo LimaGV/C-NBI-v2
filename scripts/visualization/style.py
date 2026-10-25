@@ -23,7 +23,7 @@ PALETTE = {
 METHODS = {
     "Reference": ("Referência empírica independente", "Independent empirical reference"),
     "CNBI5": ("C-NBI H5 standalone", "C-NBI H5 standalone"),
-    "VRF": ("VRF-NBI histórico", "Historical VRF-NBI"),
+    "VRF": ("VRF-NBI", "VRF-NBI"),
     "NSGA3": ("NSGA-III", "NSGA-III"),
     "MOEAD": ("MOEA/D", "MOEA/D"),
 }

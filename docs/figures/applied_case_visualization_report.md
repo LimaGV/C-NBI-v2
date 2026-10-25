@@ -45,7 +45,7 @@ E/F usam,quando comparativos,o alvo comum histórico22523 e deixam claro que
 não é o alvo independente do CNBI. G usa as referências sem CNBI. D5 é apenas
 proveniência histórica Fase7/CNBIH20,não contribuição do baseline409. Os tempos
 por H são próprios standalone,n5 emH5/n1 nos demais; EAs têm10 seeds e suas
-curvas de qualidade30 runs. Não existe runtime VRF reproduzível. A divergência
+curvas de qualidade30 runs. Não existe runtime VRF-NBI reproduzível. A divergência
 histórica H20 em1/4557 permanece como limitação já documentada,não é corrigida.
 
 Representantes EA são escolhidos exclusivamente pelos IGDs já registrados,
@@ -228,7 +228,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Quais perfis de resposta do H5 aparecem dentro do envelope empírico independente?
 - Tabelas de desenho: ["data/plot_data_fronts.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
-- Observação principal: Cardinalidades das nuvens exibidas:{'CNBI5': 409, 'Reference': 18503}. Representantes EA auditados separadamente.
+- Observação principal: Cardinalidades das nuvens exibidas:{'C-NBI H5 standalone': 409, 'Referência empírica independente': 18503}. Representantes EA auditados separadamente.
 - Transformação,observação e limites: Referência independente de 18.503 pontos, sem CNBI, e os 409 ND do H5 standalone. Transformação visual comum pᵢ=(hiᵢ−zᵢ)/(hiᵢ−loᵢ), com limites dos candidatos canônicos completos mais o H5 atual; zero é pior e um é melhor no conjunto desses limites. Essa transformação não substitui a normalização oficial das métricas. Transparências não codificam probabilidades.
 - Uso recomendado: artigo,dissertação,apresentação.
 
@@ -237,8 +237,8 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Como diferem os perfis visuais dos representantes arquivados dos métodos?
 - Tabelas de desenho: ["data/plot_data_fronts.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
-- Observação principal: Cardinalidades das nuvens exibidas:{'CNBI5': 409, 'MOEAD': 330, 'NSGA3': 330, 'VRF': 66}. Representantes EA auditados separadamente.
-- Transformação,observação e limites: Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF histórico e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD nativo já registrado no alvo comum histórico, com desempate pela seed. Não representa as 30 runs, sua mediana ou uma nova execução.
+- Observação principal: Cardinalidades das nuvens exibidas:{'C-NBI H5 standalone': 409, 'MOEA/D': 330, 'NSGA-III': 330, 'VRF-NBI': 66}. Representantes EA auditados separadamente.
+- Transformação,observação e limites: Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF-NBI e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD nativo já registrado no alvo comum histórico, com desempate pela seed. Não representa as 30 runs, sua mediana ou uma nova execução.
 - Uso recomendado: artigo,dissertação,apresentação.
 
 ### D2 — Projeções bidimensionais da fronteira empírica
@@ -246,8 +246,8 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Quais regiões das respostas naturais aparecem nas projeções de cada método?
 - Tabelas de desenho: ["data/plot_data_fronts.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
-- Observação principal: Cardinalidades das nuvens exibidas:{'CNBI5': 409, 'MOEAD': 330, 'NSGA3': 330, 'Reference': 18503, 'VRF': 66}. Representantes EA auditados separadamente.
-- Transformação,observação e limites: Projeções em valores naturais das respostas canônicas, sem rescalagem pela nota da Tabela 3. Cinza: referência independente; laranja: H5 standalone; azul: VRF histórico; verde/vermelho: runs EA selecionadas somente pelo IGD congelado. Uma projeção bidimensional não certifica dominância em oito respostas. ROI/OEE permanecem como razões, sem conversão silenciosa para porcentagem.
+- Observação principal: Cardinalidades das nuvens exibidas:{'C-NBI H5 standalone': 409, 'MOEA/D': 330, 'NSGA-III': 330, 'Referência empírica independente': 18503, 'VRF-NBI': 66}. Representantes EA auditados separadamente.
+- Transformação,observação e limites: Projeções em valores naturais das respostas canônicas, sem rescalagem pela nota da Tabela 3. Cinza: referência independente; laranja: H5 standalone; azul: VRF-NBI; verde/vermelho: runs EA selecionadas somente pelo IGD congelado. Uma projeção bidimensional não certifica dominância em oito respostas. ROI/OEE permanecem como razões, sem conversão silenciosa para porcentagem.
 - Uso recomendado: artigo,dissertação,apresentação.
 
 ### D3 — Comparação por método e projeção
@@ -255,7 +255,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Como separar a sobreposição dos métodos preservando os mesmos eixos e dados?
 - Tabelas de desenho: ["data/plot_data_fronts.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
-- Observação principal: Cardinalidades das nuvens exibidas:{'CNBI5': 409, 'MOEAD': 330, 'NSGA3': 330, 'Reference': 18503, 'VRF': 66}. Representantes EA auditados separadamente.
+- Observação principal: Cardinalidades das nuvens exibidas:{'C-NBI H5 standalone': 409, 'MOEA/D': 330, 'NSGA-III': 330, 'Referência empírica independente': 18503, 'VRF-NBI': 66}. Representantes EA auditados separadamente.
 - Transformação,observação e limites: As mesmas soluções representativas e pares de D2, separadas por método sobre a referência independente cinza. Evita sobreposição entre métodos. As cardinalidades nativas diferem; esta figura ilustra regiões, não é comparação com cardinalidade controlada.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 
@@ -273,7 +273,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Qual foi a contribuição exclusiva das famílias ao envelope histórico da Fase7?
 - Tabelas de desenho: ["data/plot_data_contributions.csv"]
 - Fontes congeladas: ["results/phase_07_reference_front/turning_multifamily_loo_20261024/reference_contributions.csv"]
-- Observação principal: Contagens exclusivas históricas:NSGA=8449,MOEA=9743,CNBI-H20=4267,VRF=64; não são contribuições do H5 atual.
+- Observação principal: Contagens exclusivas históricas:NSGA=8449,MOEA=9743,CNBI-H20=4267,VRF-NBI=64; não são contribuições do H5 atual.
 - Transformação,observação e limites: Proveniência histórica da Fase 7 no envelope comum de 22.523 pontos. A barra CNBI corresponde à família H20 histórica, não aos 409 pontos do baseline atual. Contagens e percentuais exclusivos são copiados dos artefatos congelados; contribuição não é qualidade absoluta ou atribuição causal.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 
@@ -283,7 +283,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Tabelas de desenho: ["data/plot_data_cardinality.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_standalone_correction_20261025/cardinality_curve_metrics.csv"]
 - Observação principal: No K66 do H5:IGD=0.152271779,HV=0.673161931,Spacing=0.056733601,Sparsity=0.223549913; valores congelados.
-- Transformação,observação e limites: IGD congelado contra o mesmo alvo comum histórico completo de 22.523 pontos. Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF: frente histórica única até K=66. Reduções FPS são aninhadas e preservam extremos, sem duplicar pontos. Linha vertical em K=66. O alvo histórico contém famílias avaliadas; não é a referência independente do CNBI ou uma frente verdadeira.
+- Transformação,observação e limites: IGD congelado contra o mesmo alvo comum histórico completo de 22.523 pontos. Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF-NBI: frente única até K=66. Reduções FPS são aninhadas e preservam extremos, sem duplicar pontos. Linha vertical em K=66. O alvo histórico contém famílias avaliadas; não é a referência independente do CNBI ou uma frente verdadeira.
 - Uso recomendado: artigo,dissertação,apresentação.
 
 ### E2 — Hipervolume em função da cardinalidade da aproximação
@@ -309,8 +309,8 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Que compromissos de qualidade e tempo são observados nas configurações medidas?
 - Tabelas de desenho: ["data/plot_data_cost_cnbi.csv", "data/plot_data_cost_ea.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_standalone_correction_20261025/cost_quality_cnbi.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/cost_quality_ea_preserved.csv"]
-- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF.
-- Transformação,observação e limites: Qualidade e tempo da mesma configuração científica: cada H é standalone, H5 destacado por estrela, cinco repetições H5 idênticas e uma observação nos demais H. EAs: medianas/IQR de dez seeds da campanha controlada, checkpoints 50/100/200/300/400. IGD usa o alvo comum histórico; HV usa o ponto/estimador comum. Campanhas têm datas próprias, mesma máquina/ambiente; não são p-valores ou equivalência por NFE. VRF não tem tempo reproduzível.
+- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF-NBI.
+- Transformação,observação e limites: Qualidade e tempo da mesma configuração científica: cada H é standalone, H5 destacado por estrela, cinco repetições H5 idênticas e uma observação nos demais H. EAs: medianas/IQR de dez seeds da campanha controlada, checkpoints 50/100/200/300/400. IGD usa o alvo comum histórico; HV usa o ponto/estimador comum. Campanhas têm datas próprias, mesma máquina/ambiente; não são p-valores ou equivalência por NFE. VRF-NBI não tem tempo reproduzível.
 - Uso recomendado: artigo,dissertação,apresentação.
 
 ### F2 — Tempo total de processamento
@@ -318,8 +318,8 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Qual foi o runtime observado e sua dispersão quando existem repetições?
 - Tabelas de desenho: ["data/plot_data_timing_cnbi.csv", "data/plot_data_timing_nsga3.csv", "data/plot_data_timing_moead.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/timing_moead.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/timing_nsga3.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/timing_cnbi.csv"]
-- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF.
-- Transformação,observação e limites: Tempos end-to-end congelados, sem equivalência artificial por NFE. Pontos: medições; traço: mediana; barra: IQR quando há repetições. H5 n=5, outros H n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF não é incluído por ausência de timing reproduzível.
+- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF-NBI.
+- Transformação,observação e limites: Tempos end-to-end congelados, sem equivalência artificial por NFE. Pontos: medições; traço: mediana; barra: IQR quando há repetições. H5 n=5, outros H n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF-NBI não é incluído por ausência de timing reproduzível.
 - Uso recomendado: artigo,dissertação,apresentação.
 
 ### F3 — Ganho marginal de qualidade por custo computacional
@@ -327,7 +327,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Qual ganho incremental de qualidade acompanha o custo entre resoluções medidas?
 - Tabelas de desenho: ["data/plot_data_marginal_gain.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_standalone_correction_20261025/cost_quality_cnbi.csv"]
-- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF.
+- Observação principal: H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm dez seeds de timing,sem runtime VRF-NBI.
 - Transformação,observação e limites: Diagnóstico visual suplementar entre H consecutivos: (IGD_Ha−IGD_Hb)/(t_Hb−t_Ha) e (HV_Hb−HV_Ha)/(t_Hb−t_Ha). IGD usa a referência independente sem CNBI; tempos são os já medidos, com mediana em H5 e observação única nos demais. Não são novas métricas principais ou estimativas causais de eficiência.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 
@@ -382,7 +382,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Tabelas de desenho: ["data/plot_data_nearest_neighbor.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
 - Observação principal: Distâncias são calculadas dentro das frentes genuínas,nunca entre runs diferentes; não se introduz métrica primária.
-- Transformação,observação e limites: Distâncias ao vizinho mais próximo no espaço global MIN, calculadas apenas para diagnóstico visual. CNBI e VRF são frentes únicas; EAs agregam distâncias calculadas dentro de cada uma das 30 runs genuínas. Violinos resumem pontos, não 30 observações independentes de qualidade; barras internas mostram mediana/IQR. Cardinalidades nativas diferem.
+- Transformação,observação e limites: Distâncias ao vizinho mais próximo no espaço global MIN, calculadas apenas para diagnóstico visual. CNBI e VRF-NBI são frentes únicas; EAs agregam distâncias calculadas dentro de cada uma das 30 runs genuínas. Violinos resumem pontos, não 30 observações independentes de qualidade; barras internas mostram mediana/IQR. Cardinalidades nativas diferem.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 
 ### H2 — Densidade local na projeção PCA da referência
@@ -399,7 +399,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Pergunta/finalidade: Quais regiões codificadas das decisões são representadas pelas soluções exibidas?
 - Tabelas de desenho: ["data/plot_data_fronts.csv"]
 - Fontes congeladas: ["results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/candidate_farthest_orderings.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/canonical_candidates.npz", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/provenance.csv", "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/reference_final.npz", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/native_metrics.csv", "results/phase_08_final_benchmark/turning_standalone_correction_20261025/official_cnbi5.npz"]
-- Observação principal: Cardinalidades das nuvens exibidas:{'CNBI5': 409, 'MOEAD': 330, 'NSGA3': 330, 'VRF': 66}. Representantes EA auditados separadamente.
+- Observação principal: Cardinalidades das nuvens exibidas:{'C-NBI H5 standalone': 409, 'MOEA/D': 330, 'NSGA-III': 330, 'VRF-NBI': 66}. Representantes EA auditados separadamente.
 - Transformação,observação e limites: Projeções das decisões codificadas das mesmas frentes representativas de D2. Contorno tracejado: esfera projetada. Os nomes dos fatores seguem a ordem auditada, sem inferir coordenadas físicas para novas soluções. Diferentes regiões projetadas não demonstram, isoladamente, melhor qualidade multiobjetivo.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 

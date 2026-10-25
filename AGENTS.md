@@ -75,6 +75,8 @@ refit,otimização,MC,anchors,PA,retuning ou recalcular métricas oficiais. Aval
 coeficientes somente para desenhar a seção central; PCA,elipses e agregações
 descritivas são transformações visuais explícitas,não mudanças do método.
 Todas as figuras PT/EN compartilham dados,paleta,traduções e estilo centralizados.
+Nome de exibição do método: VRF-NBI, sem qualificador histórico; IDs congelados
+de arquivos/tabelas permanecem preservados.
 Não usar grades de eixos; referências científicas como zero/limiar/domínio/K66
 não são grades. Exportar PNG600dpi e PDF vetorial; SVG quando apropriado,com
 omissão explícita do grid denso D3 (PDF vetorial preservado). C1 tem oito

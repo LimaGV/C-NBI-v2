@@ -8,6 +8,7 @@ baseado exclusivamente na correção científica congelada d938695.
 H5 standalone409 ND e referência independente18503/zeroCNBI preservados.
 Sem grades de eixos, novas otimizações, refits, MC ou mudanças das métricas.
 As figuras são apresentação dos resultados, não uma nova fase do método.
+O nome do método em figuras, legendas e captions é **VRF-NBI**.
 
 Fase8 corrigida antes do merge do PR11: **C-NBI(H=5) = standalone H5**,
 492 subproblemas/492 aceitos/411 decisões únicas/**409 ND**. H20 é somente
@@ -15,7 +16,7 @@ sensibilidade de alta resolução; cada H2/4/5/10/20 foi resolvido independentem
 Cinco repetições H5 são bitwise idênticas; tempo total mediano1.313828s.
 Os antigos408 pontos são CNBI_H5_extracted_from_H20_parent_grid, históricos.
 Referência independente18503/zeroCNBI, dados/RSM/MC/anchors/PA/37 subsets,
-runs e timing EAs e VRF histórico preservados. Nenhuma nova execução EA/VRF.
+runs e timing EAs e resultados VRF-NBI preservados. Nenhuma nova execução EA/VRF-NBI.
 [Resultados e interpretação](docs/mathematics/turning_final_benchmark.md),
 [definições](docs/mathematics/reference_sensitivity_and_cardinality_control.md),
 [verificação](docs/phase_8_verification.md), ADR0012 corrigido.
@@ -29,7 +30,7 @@ H5 é o baseline operacional definido pelo responsável (492 subproblemas,
 [Definição](docs/mathematics/pareto_reference_leave_one_out.md),
 [auditoria prévia](docs/mathematics/reference_source_audit.md), ADR0011 ACCEPTED.
 A calibração aplicada V1 foi autorizada para os operadores de NSGA-III/MOEA-D;
-pymoo0.6.2, orçamento comum132000 e30 seeds por família. VRF entra somente por
+pymoo0.6.2, orçamento comum132000 e30 seeds por família. VRF-NBI entra somente por
 decisões históricas reavaliadas. H5 usa referência sem qualquer origem CNBI.
 Sem verdade Pareto, superioridade ou benchmark final. O texto seguinte mantém
 o histórico das fases anteriores.

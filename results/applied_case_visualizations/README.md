@@ -26,4 +26,4 @@ uv run python -m scripts.visualization.generate_applied_case_figures --language 
 Options include --language pt/en/both,--set main/supplementary/all,--only,
 --formats and --dpi. Nonofficial previews may use lower resolution. Scientific
 artifact directories and raw data are never overwritten. No original-NBI or
-new VRF algorithm/timing,adaptive refinement or automatic merge is included.
+new VRF-NBI algorithm/timing,adaptive refinement or automatic merge is included.

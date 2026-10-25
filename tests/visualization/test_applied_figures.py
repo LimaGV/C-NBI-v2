@@ -15,7 +15,15 @@ from scripts.visualization.generate_applied_case_figures import (
     scientific_artist_hash,
 )
 from scripts.visualization.sources import COR, OUTPUT, P2, P3, P4, ROOT, prepare, read_table
-from scripts.visualization.style import DIRECTIONS, FIGURES, PALETTE, RESPONSES, TEXT, tr
+from scripts.visualization.style import (
+    DIRECTIONS,
+    FIGURES,
+    PALETTE,
+    RESPONSES,
+    TEXT,
+    method_label,
+    tr,
+)
 from scripts.visualization.transforms import ellipse_parameters, project
 
 from cnbi_v2.data import sha256_file
@@ -41,6 +49,10 @@ def test_complete_translation_palette_and_orders():
         assert all(definition[:2]) and question(identifier).endswith("?")
         for lang in ("pt", "en"):
             assert caption(identifier, lang)
+            assert method_label("VRF", lang) == "VRF-NBI"
+            assert "VRF histórico" not in caption(identifier, lang)
+            assert "historical VRF" not in caption(identifier, lang)
+            assert "Historical VRF" not in caption(identifier, lang)
     assert len(NOTES) == 38
     assert {
         key: PALETTE[key] for key in ("Reference", "CNBI5", "VRF", "NSGA3", "MOEAD", "Anchor")

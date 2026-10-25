@@ -587,7 +587,7 @@ def prepare(output):
         reference_points=18503,
         reference_CNBI_origins=0,
         official_CNBI_ND=409,
-        missing_runtime="VRF: no reproducible timing; no new execution",
+        missing_runtime="VRF-NBI: no reproducible timing; no new execution",
         historical_contributions=(
             "D5 only: Phase7 historical common envelope,CNBI=H20,not official H5 contribution"
         ),

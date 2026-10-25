@@ -267,14 +267,14 @@ NOTES = {
     ),
     "D1b": (
         (
-            "Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF "
-            "histórico e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD"
+            "Desempenho visual na mesma transformação de D1a, com H5 standalone, VRF-NBI "
+            "e uma run arquivada por EA. A seleção visual dos EAs minimiza o IGD"
             " nativo já registrado no alvo comum histórico, com desempate pela seed. Não "
             "representa as 30 runs, sua mediana ou uma nova execução."
         ),
         (
             "Visual performance using the same transform as D1a, with standalone H5, "
-            "historical VRF, and one archived run per EA. Display representatives minimize"
+            "VRF-NBI, and one archived run per EA. Display representatives minimize"
             " the already recorded native IGD on the historical common target, breaking "
             "ties by seed. They do not represent all 30 runs, their median, or a new "
             "execution."
@@ -284,7 +284,7 @@ NOTES = {
         (
             "Projeções em valores naturais das respostas canônicas, sem rescalagem pela "
             "nota da Tabela 3. Cinza: referência independente; laranja: H5 standalone; "
-            "azul: VRF histórico; verde/vermelho: runs EA selecionadas somente pelo IGD "
+            "azul: VRF-NBI; verde/vermelho: runs EA selecionadas somente pelo IGD "
             "congelado. Uma projeção bidimensional não certifica dominância em oito "
             "respostas. ROI/OEE permanecem como razões, sem conversão silenciosa para "
             "porcentagem."
@@ -292,7 +292,7 @@ NOTES = {
         (
             "Projections in natural values of the canonical responses, without applying "
             "the Table 3 scaling note. Gray: independent reference; orange: standalone H5;"
-            " blue: historical VRF; green/red: EA runs selected only by frozen IGD. A "
+            " blue: VRF-NBI; green/red: EA runs selected only by frozen IGD. A "
             "two-dimensional projection does not certify eight-response dominance. ROI/OEE"
             " remain ratios, with no silent percentage conversion."
         ),
@@ -342,15 +342,15 @@ NOTES = {
     "E1": (
         (
             "IGD congelado contra o mesmo alvo comum histórico completo de 22.523 pontos. "
-            "Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF: frente "
-            "histórica única até K=66. Reduções FPS são aninhadas e preservam extremos, "
+            "Curvas EA: mediana e IQR de 30 runs; CNBI: H5 standalone; VRF-NBI: frente "
+            "única até K=66. Reduções FPS são aninhadas e preservam extremos, "
             "sem duplicar pontos. Linha vertical em K=66. O alvo histórico contém famílias"
             " avaliadas; não é a referência independente do CNBI ou uma frente verdadeira."
         ),
         (
             "Frozen IGD against the same complete historical 22,523-point common target. "
-            "EA curves: median and IQR of 30 runs; CNBI: standalone H5; VRF: one "
-            "historical front up to K=66. Nested FPS reductions preserve extremes without "
+            "EA curves: median and IQR of 30 runs; CNBI: standalone H5; VRF-NBI: one "
+            "front up to K=66. Nested FPS reductions preserve extremes without "
             "duplicate points. Vertical line at K=66. The historical target includes "
             "evaluated families; it is neither the independent CNBI reference nor a true "
             "front."
@@ -391,7 +391,7 @@ NOTES = {
             "demais H. EAs: medianas/IQR de dez seeds da campanha controlada, checkpoints "
             "50/100/200/300/400. IGD usa o alvo comum histórico; HV usa o ponto/estimador "
             "comum. Campanhas têm datas próprias, mesma máquina/ambiente; não são "
-            "p-valores ou equivalência por NFE. VRF não tem tempo reproduzível."
+            "p-valores ou equivalência por NFE. VRF-NBI não tem tempo reproduzível."
         ),
         (
             "Quality and time belong to the same scientific configuration: each H is "
@@ -399,7 +399,7 @@ NOTES = {
             "observation at each other H. EAs: medians/IQR of ten controlled seeds, "
             "checkpoints 50/100/200/300/400. IGD uses the historical common target; HV "
             "uses the shared point/estimator. Campaign dates differ on the same "
-            "machine/environment; these are neither p-values nor NFE equivalences. VRF "
+            "machine/environment; these are neither p-values nor NFE equivalences. VRF-NBI "
             "lacks reproducible timing."
         ),
     ),
@@ -407,13 +407,13 @@ NOTES = {
         (
             "Tempos end-to-end congelados, sem equivalência artificial por NFE. Pontos: "
             "medições; traço: mediana; barra: IQR quando há repetições. H5 n=5, outros H "
-            "n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF não é incluído "
+            "n=1, EAs n=10. Não se inventa variabilidade para n=1, e VRF-NBI não é incluído "
             "por ausência de timing reproduzível."
         ),
         (
             "Frozen end-to-end times, without artificial NFE equivalence. Points: "
             "measurements; tick: median; bar: IQR when repetitions exist. H5 n=5, other H "
-            "n=1, EAs n=10. No variability is invented for n=1, and VRF is omitted because"
+            "n=1, EAs n=10. No variability is invented for n=1, and VRF-NBI is omitted because"
             " reproducible timing is unavailable."
         ),
     ),
@@ -504,14 +504,14 @@ NOTES = {
     "H1": (
         (
             "Distâncias ao vizinho mais próximo no espaço global MIN, calculadas apenas "
-            "para diagnóstico visual. CNBI e VRF são frentes únicas; EAs agregam "
+            "para diagnóstico visual. CNBI e VRF-NBI são frentes únicas; EAs agregam "
             "distâncias calculadas dentro de cada uma das 30 runs genuínas. Violinos "
             "resumem pontos, não 30 observações independentes de qualidade; barras "
             "internas mostram mediana/IQR. Cardinalidades nativas diferem."
         ),
         (
             "Nearest-neighbor distances in the global MIN space, calculated only as a "
-            "visual diagnostic. CNBI and VRF are single fronts; EAs pool distances "
+            "visual diagnostic. CNBI and VRF-NBI are single fronts; EAs pool distances "
             "computed within each of the 30 genuine runs. Violins summarize points rather "
             "than 30 independent quality observations; inner bars show median/IQR. Native "
             "cardinalities differ."
@@ -707,14 +707,19 @@ def observation(identifier, tables, audit):
             data = data[data.method.isin(["Reference", "CNBI5"])]
         if root in ("D1b", "H3"):
             data = data[data.method != "Reference"]
-        counts = data.groupby("method").size().to_dict()
+        from .style import method_label
+
+        counts = {
+            method_label(method, "pt"): count
+            for method, count in data.groupby("method").size().items()
+        }
         return (
             f"Cardinalidades das nuvens exibidas:{counts}. "
             "Representantes EA auditados separadamente."
         )
     if root == "D5":
         return (
-            "Contagens exclusivas históricas:NSGA=8449,MOEA=9743,CNBI-H20=4267,VRF=64; "
+            "Contagens exclusivas históricas:NSGA=8449,MOEA=9743,CNBI-H20=4267,VRF-NBI=64; "
             "não são contribuições do H5 atual."
         )
     if root in ("E1", "E2", "E3"):
@@ -729,7 +734,7 @@ def observation(identifier, tables, audit):
     if root in ("F1", "F2", "F3"):
         return (
             "H5 tem cinco medições com saída idêntica;H2/H4/H10/H20 têm uma;EAs têm"
-            " dez seeds de timing,sem runtime VRF."
+            " dez seeds de timing,sem runtime VRF-NBI."
         )
     if root in ("G1", "G2", "G3", "G4", "G5"):
         return (
