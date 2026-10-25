@@ -1,0 +1,57 @@
+{
+  "protocol_id": "phase8_standalone_operational_resolution_correction",
+  "status": "ACCEPTED_OWNER_REQUEST_20261025",
+  "baseline": "standalone H5 only; never H20 membership",
+  "H_values": [
+    2,
+    4,
+    5,
+    10,
+    20
+  ],
+  "repetitions": {
+    "2": 1,
+    "4": 1,
+    "5": 5,
+    "10": 1,
+    "20": 1
+  },
+  "warmup": "one unreported H2, unchanged solver",
+  "solver_options": {
+    "ftol": 1e-11,
+    "maxiter": 1000,
+    "equality_tolerance": 0.0001,
+    "sphere_tolerance": 1e-09,
+    "retry_neighbours": 3
+  },
+  "x_tolerance": 2.3899713575409422e-14,
+  "z_tolerance": [
+    1.6360051671396774e-14,
+    1.6753471787862783e-14,
+    1.5362984087309392e-14,
+    1.5122000328802497e-14,
+    1.508920916129914e-14,
+    1.6782498580091726e-14,
+    1.4210854715202004e-14,
+    1.4221278351280684e-14
+  ],
+  "numerical_policy_origin": "unchanged Phase6 metadata; copied here to remove runtime dependency on H20 artifacts",
+  "repeat_atol": 1e-12,
+  "repeat_rtol": 0.0,
+  "historical_diagnostic_x_atol": 1e-05,
+  "historical_diagnostic_z_atol": 1e-05,
+  "reference": "frozen independent R_minus_CNBI,18503 points; stored lineage/subsamples reused",
+  "common_reference": "Phase7 pooled H20 reference retained as HISTORICAL_COMMON_H20_TARGET only; never presented as new self-included common target",
+  "timing": "same scientific execution generates each quality set and runtime; H5 five repeats only runtime noise; other H one measured run, no spread estimate",
+  "forbidden": [
+    "refit",
+    "MC",
+    "anchors",
+    "PA",
+    "subset change",
+    "EA execution",
+    "VRF execution",
+    "solver change",
+    "automatic merge"
+  ]
+}

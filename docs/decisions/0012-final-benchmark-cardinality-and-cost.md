@@ -1,6 +1,37 @@
-# ADR0012 — Reference sensitivity, cardinality control and computational cost
+# ADR0012 â€” Reference sensitivity, cardinality control and computational cost
 
-Status: **ACCEPTED within the explicitly revised scope**.
+Status: **ACCEPTED — standalone operational-resolution correction authorized 2026-10-25**.
+
+The official C-NBI H=5 baseline is obtained from a standalone H=5 execution.
+Lower-resolution grids are not inferred from a parent H=20 execution for final
+method evaluation, because continuation/warm-start trajectories can alter local
+SLSQP solutions. H20 is high-resolution sensitivity only. The earlier408-point
+baseline and pending-cost decision below are **SUPERSEDED historical decisions**.
+
+Use the unchanged37 subsets, models, local/global normalization, SLSQP, analytic
+Jacobians, standalone warm-start policy and acceptance(eq<=1e-4,margin>=-1e-9).
+Run H2/H4/H5/H10/H20 independently, five H5 runtime repetitions and one at every
+other H. The first H5 execution defines the baseline regardless of quality;
+repeats quantify runtime noise only and must match at absolute1e-12,relative0.
+Preserve all previous artifacts byte-for-byte, including Phase6 parent analysis.
+The correction has its own archive within Phase8; it is not a new method/phase.
+
+Freeze the independent18503-point reference and saved512 reference lineages,
+subsampling indices and FPS reference ordering. Reevaluate only CNBI-dependent
+sensitivities. Keep the old common target explicitly as a historical H20 pooled
+target for continuity, with no claim that it self-includes the new H5. Official
+independent assessment uses R_minus_CNBI; historical-target comparisons retain
+other methods' values exactly. Do not rebuild the independent target or rerun
+EAs/VRF. Preserve EA timing and pair each new CNBI runtime with its own output.
+
+The historical failure remains evidence of path dependence; it is no longer an
+acceptance gate requiring standalone to reproduce the parent-derived result.
+The protocol is docs/policies/cnbi_standalone_correction.json. Acceptance follows
+the owner's explicit baseline definition; execution validation is recorded in
+the updated Phase8 verification/report.
+
+## Superseded pre-correction decision (audit history)
+
 
 Freeze H5's408 official Phase7 points, the current originally coded nominal RSMs,
 37 subsets, normalization, solver/options/acceptance and all earlier artifacts.
@@ -47,7 +78,7 @@ No solver/start/tolerance/baseline change is authorized by that choice.
 The owner also explicitly forbids VRF execution. Use only the66 historical
 reevaluated Phase7 points; no optimization or timing VRF. Missing comparable
 runtime is explicit. Cost curves/efficiency analysis can characterize the EAs;
-they cannot establish CNBI or VRF quality–cost competitiveness.
+they cannot establish CNBI or VRF qualityâ€“cost competitiveness.
 
 No adaptive refinement, new synthetic scenarios, retuning, pseudo-replication,
 ground-truth claim or automatic merge. Full frozen configuration and visual mapping
