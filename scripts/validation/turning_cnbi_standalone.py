@@ -71,30 +71,54 @@ def execute(h, policy):
             )
             subsets.append(subset_index)
             compositions.append(np.pad(lattice.compositions[j], (0, 3 - len(indices))))
-            records.append(dict(
-                row_id=row_id, subset=name, subset_index=subset_index, H=h,
-                lattice_index=j, processing_rank=ranks[j],
-                composition=json.dumps(lattice.compositions[j].tolist()),
-                beta=json.dumps(lattice.weights[j].tolist()),
-                initial_start_kind=solution.trials[0].start.kind,
-                initial_start_x=json.dumps(solution.trials[0].start.point.tolist()),
-                initial_start_t=solution.trials[0].start.t,
-                used_start_kind=last.start.kind, used_start_x=json.dumps(last.start.point.tolist()),
-                used_start_t=last.start.t, solver_status=last.status,
-                solver_success=last.solver_success, iterations=last.iterations, t=last.t,
-                x1=float(point[0]), x2=float(point[1]), x3=float(point[2]),
-                eq_norm=last.eq_norm, sphere_margin=last.sphere_margin,
-                solve_seconds=float(result.elapsed_seconds[j]), accepted=solution.accepted,
-                trials=len(solution.trials),
-            ))
+            records.append(
+                dict(
+                    row_id=row_id,
+                    subset=name,
+                    subset_index=subset_index,
+                    H=h,
+                    lattice_index=j,
+                    processing_rank=ranks[j],
+                    composition=json.dumps(lattice.compositions[j].tolist()),
+                    beta=json.dumps(lattice.weights[j].tolist()),
+                    initial_start_kind=solution.trials[0].start.kind,
+                    initial_start_x=json.dumps(solution.trials[0].start.point.tolist()),
+                    initial_start_t=solution.trials[0].start.t,
+                    used_start_kind=last.start.kind,
+                    used_start_x=json.dumps(last.start.point.tolist()),
+                    used_start_t=last.start.t,
+                    solver_status=last.status,
+                    solver_success=last.solver_success,
+                    iterations=last.iterations,
+                    t=last.t,
+                    x1=float(point[0]),
+                    x2=float(point[1]),
+                    x3=float(point[2]),
+                    eq_norm=last.eq_norm,
+                    sphere_margin=last.sphere_margin,
+                    solve_seconds=float(result.elapsed_seconds[j]),
+                    accepted=solution.accepted,
+                    trials=len(solution.trials),
+                )
+            )
             for attempt, trial in enumerate(solution.trials):
-                trial_records.append(dict(
-                    row_id=row_id, attempt=attempt, start_kind=trial.start.kind,
-                    start_x=json.dumps(trial.start.point.tolist()), start_t=trial.start.t,
-                    point=json.dumps(trial.point.tolist()), t=trial.t, status=trial.status,
-                    message=trial.message, iterations=trial.iterations, accepted=trial.accepted,
-                    eq_norm=trial.eq_norm, sphere_margin=trial.sphere_margin,
-                ))
+                trial_records.append(
+                    dict(
+                        row_id=row_id,
+                        attempt=attempt,
+                        start_kind=trial.start.kind,
+                        start_x=json.dumps(trial.start.point.tolist()),
+                        start_t=trial.start.t,
+                        point=json.dumps(trial.point.tolist()),
+                        t=trial.t,
+                        status=trial.status,
+                        message=trial.message,
+                        iterations=trial.iterations,
+                        accepted=trial.accepted,
+                        eq_norm=trial.eq_norm,
+                        sphere_margin=trial.sphere_margin,
+                    )
+                )
     x, f = np.array(points), np.array(responses)
     z = (f * signs - u) / amps
     accepted = np.array([r["accepted"] for r in records])
@@ -104,14 +128,29 @@ def execute(h, policy):
     nd = nondominated_mask(z[unique_ids], equality_tolerance=policy["z_tolerance"])
     nd_ids = unique_ids[nd]
     elapsed = perf_counter() - started
-    arrays = dict(x=x, natural_f=f, z=z, accepted=accepted, unique_ids=unique_ids, nd_ids=nd_ids,
-                  subsets=np.array(subsets), compositions=np.array(compositions),
-                  t=np.array([r["t"] for r in records]))
-    stats = dict(H=h, subproblems=len(x), accepted=int(accepted.sum()),
-                 failures=int((~accepted).sum()), unique=len(unique_ids), ND=len(nd_ids),
-                 T_solver=solver_seconds, T_total=elapsed,
-                 max_eq_norm=max(r["eq_norm"] for r in records),
-                 min_sphere_margin=min(r["sphere_margin"] for r in records))
+    arrays = dict(
+        x=x,
+        natural_f=f,
+        z=z,
+        accepted=accepted,
+        unique_ids=unique_ids,
+        nd_ids=nd_ids,
+        subsets=np.array(subsets),
+        compositions=np.array(compositions),
+        t=np.array([r["t"] for r in records]),
+    )
+    stats = dict(
+        H=h,
+        subproblems=len(x),
+        accepted=int(accepted.sum()),
+        failures=int((~accepted).sum()),
+        unique=len(unique_ids),
+        ND=len(nd_ids),
+        T_solver=solver_seconds,
+        T_total=elapsed,
+        max_eq_norm=max(r["eq_norm"] for r in records),
+        min_sphere_margin=min(r["sphere_margin"] for r in records),
+    )
     return arrays, stats, records, trial_records
 
 
@@ -121,23 +160,35 @@ def campaign(output):
     dirty = subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True)
     if dirty.strip():
         raise ValueError("commit protocol and source before the controlled campaign")
-    if any(os.environ.get(k) != "1" for k in
-           ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")):
+    if any(
+        os.environ.get(k) != "1"
+        for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")
+    ):
         raise ValueError("launch with one numerical thread")
     policy = json.loads(POLICY.read_text())
     if asdict(NBIOptions(**policy["solver_options"])) != asdict(NBIOptions()):
         raise ValueError("Phase6 options changed")
     hardware = hardware_and_isolation()
-    paths = [*frozen.INPUT_HASHES, POLICY, Path(__file__), ROOT / "uv.lock",
-             *sorted((ROOT / "src/cnbi_v2/nbi").glob("*.py")),
-             *sorted((ROOT / "src/cnbi_v2/simplex").glob("*.py"))]
+    paths = [
+        *frozen.INPUT_HASHES,
+        POLICY,
+        Path(__file__),
+        ROOT / "uv.lock",
+        *sorted((ROOT / "src/cnbi_v2/nbi").glob("*.py")),
+        *sorted((ROOT / "src/cnbi_v2/simplex").glob("*.py")),
+    ]
     launch = dict(
         executed_at_utc=datetime.now(UTC).isoformat(),
-        git_commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT,
-                                           text=True).strip(),
-        working_tree_dirty_at_launch=False, hardware=hardware,
+        git_commit=subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+        ).strip(),
+        working_tree_dirty_at_launch=False,
+        hardware=hardware,
         input_sha256={p.relative_to(ROOT).as_posix(): sha256_file(p) for p in paths},
-        policy=policy, methods_sequential=True, EA_executions=0, VRF_executions=0,
+        policy=policy,
+        methods_sequential=True,
+        EA_executions=0,
+        VRF_executions=0,
         independence="Phase6 and Phase7 result directories temporarily unavailable for all solves",
     )
     output.mkdir(parents=True)
@@ -169,12 +220,15 @@ def campaign(output):
                 if h == 5:
                     if reference is None:
                         reference = arrays
-                    deltas = {k: float(np.max(np.abs(arrays[k] - reference[k])))
-                              for k in ("x", "z", "t")}
+                    deltas = {
+                        k: float(np.max(np.abs(arrays[k] - reference[k]))) for k in ("x", "z", "t")
+                    }
                     same = all(np.array_equal(arrays[k], reference[k]) for k in arrays)
-                    if (not np.array_equal(arrays["accepted"], reference["accepted"])
-                            or not np.array_equal(arrays["nd_ids"], reference["nd_ids"])
-                            or max(deltas.values()) > policy["repeat_atol"]):
+                    if (
+                        not np.array_equal(arrays["accepted"], reference["accepted"])
+                        or not np.array_equal(arrays["nd_ids"], reference["nd_ids"])
+                        or max(deltas.values()) > policy["repeat_atol"]
+                    ):
                         raise ValueError("H5 scientific results differ across timing repetitions")
                     repeats.append(dict(repetition=repetition, bitwise_same=same, **deltas))
                 print(json.dumps(stats), flush=True)
@@ -183,14 +237,21 @@ def campaign(output):
             target.rename(original)
     table(output / "timing_cnbi.csv", timings)
     table(output / "h5_repeat_equivalence.csv", repeats)
-    write_json(output / "completion.json", dict(
-        completed_at_utc=datetime.now(UTC).isoformat(), measured_runs=len(timings),
-        H5_repetitions=5, H5_same_scientific_baseline=True,
-        parent_artifacts_unavailable_during_every_solve=True,
-        parent_artifacts_restored=all(a.exists() and not b.exists() for a, b in hidden),
-        timing_interval=("input verification through mesh/NBI/8-response/dedup/ND; "
-                         "excludes artifact serialization; includes start/trial observation"),
-    ))
+    write_json(
+        output / "completion.json",
+        dict(
+            completed_at_utc=datetime.now(UTC).isoformat(),
+            measured_runs=len(timings),
+            H5_repetitions=5,
+            H5_same_scientific_baseline=True,
+            parent_artifacts_unavailable_during_every_solve=True,
+            parent_artifacts_restored=all(a.exists() and not b.exists() for a, b in hidden),
+            timing_interval=(
+                "input verification through mesh/NBI/8-response/dedup/ND; "
+                "excludes artifact serialization; includes start/trial observation"
+            ),
+        ),
+    )
 
 
 if __name__ == "__main__":
