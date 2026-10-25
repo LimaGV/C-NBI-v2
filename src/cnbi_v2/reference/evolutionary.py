@@ -96,7 +96,9 @@ class RSMAdapter(Problem):  # type: ignore[misc]
         self.evaluations += len(x)
 
 
-def run_evolutionary(problem: CanonicalProblem, config: EAConfig, seed: int) -> dict[str, Any]:
+def run_evolutionary(
+    problem: CanonicalProblem, config: EAConfig, seed: int, *, callback: Any | None = None
+) -> dict[str, Any]:
     positive_integer(seed, "seed", 0)
     start = perf_counter()
     directions = get_reference_directions("das-dennis", 8, n_partitions=config.n_partitions)
@@ -115,7 +117,8 @@ def run_evolutionary(problem: CanonicalProblem, config: EAConfig, seed: int) -> 
                           decomposition=PBI(theta=5.), **shared)
     adapter = RSMAdapter(problem, config.nfe_max)
     result = minimize(adapter, algorithm, termination=("n_gen", config.generations), seed=seed,
-                       verbose=False, save_history=False, copy_algorithm=False)
+                       verbose=False, save_history=False, copy_algorithm=False,
+                       **({"callback": callback} if callback is not None else {}))
     x = np.asarray(result.pop.get("X"), dtype=np.float64)
     optimizer_f = np.asarray(result.pop.get("F"), dtype=np.float64)
     natural_f = np.asarray(result.pop.get("natural_F"), dtype=np.float64)
