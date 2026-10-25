@@ -441,6 +441,19 @@ def plot(identifier, tables, audit, language):
         )
         ax.set(xlim=(-0.5, 8.5), ylim=(7.5, -0.5), aspect="auto")
         ax.set(xticks=range(9), xticklabels=TERMS[1:], yticks=range(8), yticklabels=RESPONSES)
+        for i in range(8):
+            for j in range(9):
+                rgba = image.cmap(image.norm(matrix[i, j]))
+                luminance = np.dot(rgba[:3], [0.2126, 0.7152, 0.0722])
+                ax.text(
+                    j,
+                    i,
+                    f"{matrix[i, j]:+.1f}",
+                    ha="center",
+                    va="center",
+                    fontsize=6.5,
+                    color="white" if luminance < 0.48 else "#111111",
+                )
         fig.colorbar(image, ax=ax, label="β / SE")
         return fig, ["coefficients"]
     if identifier == "C3":

@@ -171,6 +171,12 @@ def test_every_figure_same_scientific_geometry_in_both_languages(identifier, pre
             assert [label.split()[-1] for label in labels] == [
                 "↑" if d == "MAX" else "↓" for d in DIRECTIONS
             ]
+        if identifier == "C2":
+            data = tables["coefficients"].query("term_index>0")
+            values = data.pivot(index="response", columns="term_index", values="beta_over_SE")
+            assert [text.get_text() for text in fig.axes[0].texts] == [
+                f"{value:+.1f}" for value in values.reindex(RESPONSES).to_numpy().flat
+            ]
         plt.close(fig)
     assert signatures[0] == signatures[1]
 

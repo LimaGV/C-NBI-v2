@@ -42,7 +42,7 @@ Frozen estimates with normal 95% Wald intervals: β̂ ± Φ⁻¹(0.975)SE. Stand
 
 ## C2 — RSM coefficients divided by standard error
 
-Dimensionless visual quantity β̂/SE, retaining the sign. These are not coefficients standardized to a shared physical scale, and significance is not inferred from color magnitude. The covariance is the same as in the Wald panel. The intercept is omitted from this heatmap to reveal the nine factor-term effects; it remains in forest plots and tables.
+Dimensionless visual quantity β̂/SE, retaining the sign. These are not coefficients standardized to a shared physical scale, and significance is not inferred from color magnitude. The covariance is the same as in the Wald panel. The intercept is omitted from this heatmap to reveal the nine factor-term effects; it remains in forest plots and tables. Signed cell values are β/SE rounded to one decimal place; full values remain in the plot-data table.
 
 ## C3 — Propagation of anchor uncertainty in the decision space
 

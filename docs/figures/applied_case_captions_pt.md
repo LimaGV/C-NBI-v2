@@ -42,7 +42,7 @@ Estimativas congeladas com intervalos Wald normais de 95%: β̂ ± Φ⁻¹(0,975
 
 ## C2 — Coeficientes RSM divididos pelo erro padrão
 
-Quantidade visual adimensional β̂/SE, preservando o sinal. Não são coeficientes padronizados por uma escala física comum e não se infere significância por magnitude da cor. A covariância é a mesma usada no painel Wald. O intercepto foi omitido deste heatmap para tornar visíveis os efeitos dos nove termos de fatores; permanece nos forest plots e tabelas.
+Quantidade visual adimensional β̂/SE, preservando o sinal. Não são coeficientes padronizados por uma escala física comum e não se infere significância por magnitude da cor. A covariância é a mesma usada no painel Wald. O intercepto foi omitido deste heatmap para tornar visíveis os efeitos dos nove termos de fatores; permanece nos forest plots e tabelas. Valores com sinal nas células são β/SE arredondados a uma casa decimal; os valores completos permanecem na tabela de desenho.
 
 ## C3 — Propagação da incerteza das âncoras no espaço de decisão
 

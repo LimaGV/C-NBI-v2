@@ -175,7 +175,7 @@ Os checksums incluem fontes de plotting,tabelas,figuras,metadata e captions.
 - Tabelas de desenho: ["data/plot_data_coefficients.csv"]
 - Fontes congeladas: ["results/phase_02_anchors/turning_original_codes_20261024/coded_models.csv", "results/phase_03_coefficient_mc/turning_original_codes_mc_777_20261024/theoretical_covariance.npy"]
 - Observação principal: São exibidos os nove termos de fatores por resposta; o intercepto continua nas demais fontes.
-- Transformação,observação e limites: Quantidade visual adimensional β̂/SE, preservando o sinal. Não são coeficientes padronizados por uma escala física comum e não se infere significância por magnitude da cor. A covariância é a mesma usada no painel Wald. O intercepto foi omitido deste heatmap para tornar visíveis os efeitos dos nove termos de fatores; permanece nos forest plots e tabelas.
+- Transformação,observação e limites: Quantidade visual adimensional β̂/SE, preservando o sinal. Não são coeficientes padronizados por uma escala física comum e não se infere significância por magnitude da cor. A covariância é a mesma usada no painel Wald. O intercepto foi omitido deste heatmap para tornar visíveis os efeitos dos nove termos de fatores; permanece nos forest plots e tabelas. Valores com sinal nas células são β/SE arredondados a uma casa decimal; os valores completos permanecem na tabela de desenho.
 - Uso recomendado: material suplementar,dissertação,apresentação.
 
 ### C3 — Propagação da incerteza das âncoras no espaço de decisão

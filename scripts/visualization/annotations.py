@@ -585,10 +585,14 @@ def caption(identifier, language):
     if key == "C2":
         text += (
             " O intercepto foi omitido deste heatmap para tornar visíveis os efeitos "
-            "dos nove termos de fatores; permanece nos forest plots e tabelas."
+            "dos nove termos de fatores; permanece nos forest plots e tabelas. "
+            "Valores com sinal nas células são β/SE arredondados a uma casa decimal; "
+            "os valores completos permanecem na tabela de desenho."
             if language == "pt"
             else " The intercept is omitted from this heatmap to reveal the nine "
-            "factor-term effects; it remains in forest plots and tables."
+            "factor-term effects; it remains in forest plots and tables. "
+            "Signed cell values are β/SE rounded to one decimal place; full values "
+            "remain in the plot-data table."
         )
     if key == "C7":
         text += (
