@@ -33,6 +33,9 @@ def number(value):
 
 
 def run(output=data.OUTPUT):
+    report_dirty = bool(
+        subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True).strip()
+    )
     meta = json.loads((output / "metadata.json").read_text())
     inputs = data.load_inputs()
     z = inputs["z"]
@@ -119,6 +122,7 @@ def run(output=data.OUTPUT):
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
         source_sha256=sha256_file(Path(__file__)),
+        working_tree_dirty_at_start=report_dirty,
         archived_resolution_diagnostics=True,
         new_NBI_optimizations=0,
         CNBI_time_assigned=False,
@@ -149,8 +153,8 @@ def run(output=data.OUTPUT):
                     method,
                     shown("N_unique_ND"),
                     *[shown(m) for m in PRIMARY],
-                    shown("T_total_controlled"),
                 ]
+                + ([shown("T_total_controlled")] if variant == "native" else [])
             )
         parts.append(
             mdtable(
@@ -162,8 +166,8 @@ def run(output=data.OUTPUT):
                     "HV estimate",
                     "Spacing",
                     "Sparsity",
-                    "T_total/s",
-                ],
+                ]
+                + (["T_total/s"] if variant == "native" else []),
                 table_rows,
             )
         )

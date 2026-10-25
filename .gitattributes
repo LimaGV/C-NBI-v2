@@ -16,3 +16,7 @@
 *.npz binary
 # Byte-identical historical calibration evidence, including original line endings.
 references/metadata/phase_07_v1/applied_ea_calibration.json -text
+# Generated figure payloads are checksummed byte-for-byte; retain renderer line endings.
+results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/figures/*.svg binary
+results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/figures/*_caption.md -text
+results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/figures/visual_mapping.json -text

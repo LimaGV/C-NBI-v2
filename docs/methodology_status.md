@@ -1,5 +1,38 @@
 # Estado metodológico
 
+## Fase 8 — sensibilidade e benchmark, escopo revisado
+
+Concluídas8A e qualidade8B, preservando H5 oficial408. PR10 integrado com quatro
+checks verdes/sem conflitos, squash f904e8d. Fonte8A3ac57ec; timing70883d7;
+qualidade a0b3881, com commits/hashes completos nos metadados e relatório.
+506 referências de runs +6 composições,100 subamostras pareadas em cada r<30,
+PCG64(20261024), sensibilidade K_R e R30 idêntico ao18503 ND independente da Fase7.
+GD/IGD variam com o alvo; nenhuma falsa sensibilidade de HV/Spacing/Sparsity fixos.
+
+Cinco métricas principais preservadas: GD/IGD p1 Euclidianos; HV estimado por
+quatro redes Sobol compartilhadas (SE e precisão14/15/16 registrados), regra do
+reference point aplicada corrigida V1; Spacing sampleSD(ddof1) e Sparsity média
+de nearest-neighbor, com divergência histórica ddof0 e oracle verificado.
+Comparações nativas, K66 e curvas20..303 usam FPS determinístico aninhado,
+extremos preservados e referência completa. Common self-included e family LOO
+distintos. Sem ranking ingênuo por alvos LOO diferentes ou replicações fictícias.
+
+Timing isolado:10 seeds por EA +warm-up, mesma máquina/commit/ambiente/thread1,
+sequencial;20 resultados finais bitwise iguais à Fase7. Custo principal T_total,
+core/CPU/overhead separados, checkpoints50/100/200/300/400. CNBI e VRF não entram
+no plano temporal: gateH5 direto divergiu24/492, maxΔx3.11812/maxΔz.594267, e o
+responsável preservou408 com custo pendente; execução/timing VRF explicitamente
+proibidos. Nenhuma dessas ausências é substituída por tempo H20 ou wall paralelo.
+
+Referência é empírica/finita:25→30 ainda melhoraGD~5%; IGD depende da densidade
+e composição. Em K66 a ordem H5/MOEAD por HV muda. A limitação geométrica H5 é
+principalmente cobertura, mas branches locais impedem atribuí-la só à resolução
+ou comprovar custo de exploração coarse-to-fine. ADR0012 ACCEPTED no escopo
+revisado, C-BENCH-01..06 com limites explícitos. Nenhum modelo/raw/normalização/
+37 IDs/MC/anchors/PA/solver/aceitação anterior alterado, sem retuning ou adaptação.
+Ver [caso aplicado](mathematics/turning_final_benchmark.md) e
+[gate de software/escopo](phase_8_verification.md). Estados abaixo históricos.
+
 ## Fase 7 — referência empírica multi-família e family LOO
 
 Fase7 concluída no escopo solicitado, após squash do PR9 em main b94be85.

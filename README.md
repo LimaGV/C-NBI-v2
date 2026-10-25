@@ -1,5 +1,14 @@
 # C-NBI v2
 
+Fase8: sensibilidade de referência e benchmark de qualidade nativo/K66/curvas K,
+com cinco métricas e timing controlado dos EAs. R30 preservado:18503 ND, nenhuma
+origem CNBI. K máximo comum303;408 pontos H5 mantidos por decisão do responsável.
+Gate H5 direto falhou em24/492 pesos: custo CNBI permanece pendente. VRF somente
+histórico, sem otimização/timing. [Resultados e interpretação](docs/mathematics/turning_final_benchmark.md),
+[definições](docs/mathematics/reference_sensitivity_and_cardinality_control.md),
+[verificação](docs/phase_8_verification.md), ADR0012 no escopo revisado.
+O histórico das fases anteriores continua abaixo.
+
 Fase7: construção de referência Pareto **empírica** multi-família e
 leave-one-family-out, com RSMs atuais, esfera e normalização global congelados.
 H5 é o baseline operacional definido pelo responsável (492 subproblemas,
