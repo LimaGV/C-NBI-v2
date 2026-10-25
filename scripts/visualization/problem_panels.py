@@ -24,7 +24,36 @@ def figure(rows=1, cols=1, *, height=None, width=7.2):
     )
 
 
-def label_anchors(ax, xx, yy, labels=RESPONSES):
+def label_anchors(ax, xx, yy, labels=RESPONSES, *, perimeter=False):
+    if perimeter:
+        xx, yy = np.asarray(xx), np.asarray(yy)
+        order = np.argsort(xx, kind="stable")
+        cut = len(order) // 2
+        lo, hi = ax.get_ylim()
+        relative = (yy - lo) / max(hi - lo, np.finfo(float).eps)
+        for side, indices in enumerate((order[:cut], order[cut:])):
+            indices = indices[np.argsort(yy[indices], kind="stable")]
+            slots = (
+                np.linspace(0.12, 0.88, len(indices))
+                if len(indices) > 1
+                else np.clip(relative[indices], 0.12, 0.88)
+            )
+            for index, slot in zip(indices, slots, strict=True):
+                near = relative[np.abs(xx - xx[index]) <= 0.15 * max(np.ptp(xx), 1e-12)]
+                if len(near) and np.min(abs(near - slot)) < 0.07:
+                    slot = np.clip(slot + (0.07 if slot > 0.5 else -0.07), 0.06, 0.94)
+                ax.annotate(
+                    str(list(labels)[index]) + "*",
+                    (xx[index], yy[index]),
+                    xytext=(0.015 if side == 0 else 0.985, slot),
+                    textcoords="axes fraction",
+                    ha="left" if side == 0 else "right",
+                    va="center",
+                    fontsize=6.5,
+                    bbox=dict(facecolor="white", edgecolor="none", alpha=0.8, pad=0.3),
+                    arrowprops=dict(arrowstyle="-", lw=0.4, color="#666666"),
+                )
+        return
     for i, (x, y, label) in enumerate(zip(xx, yy, labels, strict=True)):
         ax.annotate(
             label + "*",
@@ -101,7 +130,7 @@ def local_panel(ax, table, subset, audit, language, *, mc=None, regions=None, no
     solutions = local[local.kind == "solution"]
     ax.scatter(solutions.u, solutions.v, s=15, c=PALETTE["CNBI5"], marker="o", zorder=4)
     ax.scatter(anchors.u, anchors.v, c=PALETTE["Anchor"], marker="*", s=55, zorder=7)
-    label_anchors(ax, anchors.u, anchors.v, anchors.response)
+    label_anchors(ax, anchors.u, anchors.v, anchors.response, perimeter=True)
     if mc is not None:
         points = mc[mc.subset == subset]
         ax.scatter(points.u, points.v, s=1, c=PALETTE["Anchor"], alpha=0.05, linewidths=0, zorder=1)
@@ -212,7 +241,7 @@ def plot(identifier, tables, audit, language):
             ax.scatter(
                 data[f"x{i + 1}"], data[f"x{j + 1}"], marker="*", s=40, color=PALETTE["Anchor"]
             )
-            label_anchors(ax, data[f"x{i + 1}"], data[f"x{j + 1}"])
+            label_anchors(ax, data[f"x{i + 1}"], data[f"x{j + 1}"], perimeter=True)
             ax.set(
                 xlabel=FACTORS[i],
                 ylabel=FACTORS[j],
@@ -471,7 +500,7 @@ def plot(identifier, tables, audit, language):
             pp = nominal.pivot(index="anchor", columns="response", values="natural").reindex(
                 RESPONSES
             )
-            label_anchors(ax, pp[r1], pp[r2])
+            label_anchors(ax, pp[r1], pp[r2], perimeter=True)
             ax.set(xlabel=response_axis(r1), ylabel=response_axis(r2))
             ax.margins(0.12)
         handles = [
