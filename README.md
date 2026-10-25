@@ -1,5 +1,14 @@
 # C-NBI v2
 
+Pacote oficial de visualizações do caso aplicado, em português e inglês,
+baseado exclusivamente na correção científica congelada d938695.
+[Galeria local](results/applied_case_visualizations/turning_visuals_20261025/index.html),
+[catálogo](results/applied_case_visualizations/turning_visuals_20261025/figure_catalog.csv) e
+[relatório de visualizações](docs/figures/applied_case_visualization_report.md).
+H5 standalone409 ND e referência independente18503/zeroCNBI preservados.
+Sem grades de eixos, novas otimizações, refits, MC ou mudanças das métricas.
+As figuras são apresentação dos resultados, não uma nova fase do método.
+
 Fase8 corrigida antes do merge do PR11: **C-NBI(H=5) = standalone H5**,
 492 subproblemas/492 aceitos/411 decisões únicas/**409 ND**. H20 é somente
 sensibilidade de alta resolução; cada H2/4/5/10/20 foi resolvido independentemente.

@@ -66,6 +66,23 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Pacote de visualizações aplicado explicitamente autorizado em2026-10-25:
+feature/09-applied-case-visualizations,base científica d938695 (correção Fase8).
+PR11 permanece aberto; usar sua branch corrigida como base do PR visual,sem
+merge automático. Somente fontes congeladas verificadas por hash/Git; baseline
+H5 standalone409 ND,referência independente18503/zeroCNBI. Sem executar ciência,
+refit,otimização,MC,anchors,PA,retuning ou recalcular métricas oficiais. Avaliar
+coeficientes somente para desenhar a seção central; PCA,elipses e agregações
+descritivas são transformações visuais explícitas,não mudanças do método.
+Todas as figuras PT/EN compartilham dados,paleta,traduções e estilo centralizados.
+Não usar grades de eixos; referências científicas como zero/limiar/domínio/K66
+não são grades. Exportar PNG600dpi e PDF vetorial; SVG quando apropriado,com
+omissão explícita do grid denso D3 (PDF vetorial preservado). C1 tem oito
+exports individuais solicitados,alternativos ao painel. Não usar408 como baseline,
+reconstruir referência,executar VRF ou publicar fora do repositório privado.
+Fontes antigas permanecem imutáveis; resultados visuais em pasta própria com
+catálogo,tabelas,legendas,auditorias e checksums. Escopos seguintes históricos.
+
 Correção da Fase8 explicitamente autorizada em2026-10-25, no PR11 e mesma
 branch feature/08-reference-sensitivity-final-benchmark: baseline oficial é H5
 standalone (492 subproblemas), nunca membership H20. Preservar37 subsets,

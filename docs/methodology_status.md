@@ -1,5 +1,16 @@
 # Estado metodológico
 
+## Visualizações científicas do caso aplicado
+
+Pacote bilíngue de apresentação dos resultados congelados no commit d938695,
+na branch feature/09-applied-case-visualizations. O baseline continua H5
+standalone409 ND; referência independente18503/zeroCNBI. Nenhum pipeline
+científico é reexecutado. PCA, elipses MC, avaliação de malha de desenho e
+agregações de exibição são transformações visuais explícitas, sem alterar
+modelos, covariâncias, PA, subsets, frentes, métricas ou resultados anteriores.
+Os eixos não usam grades; referências científicas são descritas nas captions.
+Ver docs/figures/applied_case_visualization_report.md e a verificação do pacote.
+
 ## Fase 8 — correção standalone concluída no PR11
 
 Baseline oficial: standalone H5,492 aceitos/zero falhas/411 únicos/409 ND.
