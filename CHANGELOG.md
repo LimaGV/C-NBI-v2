@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — applied-case scientific visualization package
+
+- Figuras PT/EN com dados compartilhados, paleta central e ausência de grades.
+- Contornos, payoff, subsets, PA/CHIM, incerteza MC e frentes congeladas.
+- Curvas de cardinalidade, custo e sensibilidade sem recalcular métricas oficiais.
+- PNG600dpi/PDF vetorial/SVG quando apropriado, catálogo, tabelas, captions e galeria offline.
+- Baseline H5 standalone409 e referência independente18503/zeroCNBI preservados.
+- Sem alteração metodológica, refit, reotimização, novos draws ou merge automático.
+
 ## Unreleased — Fase 8 standalone baseline correction
 - C-NBI(H5) corrigido para execução standalone:492 aceitos,411 únicos,409 ND.
 - H2/H4/H5/H10/H20 independentes,qualidade e runtime da mesma configuração.
