@@ -1,0 +1,101 @@
+{
+  "executed_at_utc": "2026-10-25T14:20:02.995274+00:00",
+  "git_commit": "3e23701d45193a758bd62cbd9e6c62e43dd84218",
+  "working_tree_dirty_at_launch": false,
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.15",
+    "logical_processors": 12,
+    "process_id": 25752,
+    "cpus": [
+      {
+        "Name": "12th Gen Intel(R) Core(TM) i5-12400F",
+        "NumberOfCores": 6,
+        "NumberOfLogicalProcessors": 12
+      }
+    ],
+    "external_active_python": [],
+    "observation_seconds": 1.5,
+    "memory_bytes": 16970276864
+  },
+  "input_sha256": {
+    "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/selected_subsets_B2000.csv": "198d03f7756ba9f0633d87a6142e5ac6da014a135f78df405994cc10b6b77e46",
+    "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/metadata.json": "61f84b930aa8b0adb9a9bc48f2129dbcc675f73bc582d7053f500188d5f87992",
+    "results/phase_02_anchors/turning_original_codes_20261024/coded_models.csv": "9d5590b5f2ba43592fa13753cd86afaa583fadbbd4f0d180acb1b5eef0b3e3e9",
+    "results/phase_02_anchors/turning_original_codes_20261024/anchors_sphere.csv": "462b6b18002c2ae784758a26ebe500bf95de3a8ff1c504aab6986924d9d5bafd",
+    "results/phase_02_anchors/turning_original_codes_20261024/payoff_sphere.csv": "2e410a2d3e222047442d75d526166c6af5e5d6787c2c93dcbe2b184003e124c2",
+    "results/phase_02_anchors/turning_original_codes_20261024/metadata.json": "880971d1bbf449e10f4abe6ca949998ecb59eac39f28b382e2d7902604be61af",
+    "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/nominal_normalization.csv": "bc19f7ef44d5ee86b10b4fb789fe55742b0dc6dc2119277d5811e7464bb76dc0",
+    "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "docs/policies/cnbi_standalone_correction.json": "6b90d6a5130844ca09cc48478aac7bb75136595dbad71f1ed14a0fe904e0d767",
+    "scripts/validation/turning_cnbi_standalone.py": "73b5d46324cd820e503c6e439f1fe8f61fb2904c71238ccf27e3bfc451cc004f",
+    "uv.lock": "b4f3b4bae5340256e3afda7c0ca869eb92d3678a9281d07ac730ef711302389a",
+    "src/cnbi_v2/nbi/__init__.py": "179ceb293e0ca35461c4e4964abaebe09dd602e905cbfe83458b2eccf29f1fb7",
+    "src/cnbi_v2/nbi/geometry.py": "970e06b03492b3145db1d7cd35a080134d78f78e1c387658ca73adf1b40760f5",
+    "src/cnbi_v2/nbi/sensitivity.py": "7db519835e372747236fffdd5781f9b81791433410ed41c6b835c4caa8cf1a45",
+    "src/cnbi_v2/nbi/solver.py": "649e54790e920d9d434a1f59d33f35535260bd4fdee659c7b85da5af83ea14fb",
+    "src/cnbi_v2/simplex/__init__.py": "851a7f33a85bfa1d363cb5ee7d87cbd225d85a7ffef2ab1107bb4d2a7fcadec3",
+    "src/cnbi_v2/simplex/lattice.py": "ced9d96b2ecc737775ec13dcdf3645599549686df3bc88911f6c5d131d952ff4"
+  },
+  "policy": {
+    "protocol_id": "phase8_standalone_operational_resolution_correction",
+    "status": "ACCEPTED_OWNER_REQUEST_20261025",
+    "baseline": "standalone H5 only; never H20 membership",
+    "H_values": [
+      2,
+      4,
+      5,
+      10,
+      20
+    ],
+    "repetitions": {
+      "2": 1,
+      "4": 1,
+      "5": 5,
+      "10": 1,
+      "20": 1
+    },
+    "warmup": "one unreported H2, unchanged solver",
+    "solver_options": {
+      "ftol": 1e-11,
+      "maxiter": 1000,
+      "equality_tolerance": 0.0001,
+      "sphere_tolerance": 1e-09,
+      "retry_neighbours": 3
+    },
+    "x_tolerance": 2.3899713575409422e-14,
+    "z_tolerance": [
+      1.6360051671396774e-14,
+      1.6753471787862783e-14,
+      1.5362984087309392e-14,
+      1.5122000328802497e-14,
+      1.508920916129914e-14,
+      1.6782498580091726e-14,
+      1.4210854715202004e-14,
+      1.4221278351280684e-14
+    ],
+    "numerical_policy_origin": "unchanged Phase6 metadata; copied here to remove runtime dependency on H20 artifacts",
+    "repeat_atol": 1e-12,
+    "repeat_rtol": 0.0,
+    "historical_diagnostic_x_atol": 1e-05,
+    "historical_diagnostic_z_atol": 1e-05,
+    "reference": "frozen independent R_minus_CNBI,18503 points; stored lineage/subsamples reused",
+    "common_reference": "Phase7 pooled H20 reference retained as HISTORICAL_COMMON_H20_TARGET only; never presented as new self-included common target",
+    "timing": "same scientific execution generates each quality set and runtime; H5 five repeats only runtime noise; other H one measured run, no spread estimate",
+    "forbidden": [
+      "refit",
+      "MC",
+      "anchors",
+      "PA",
+      "subset change",
+      "EA execution",
+      "VRF execution",
+      "solver change",
+      "automatic merge"
+    ]
+  },
+  "methods_sequential": true,
+  "EA_executions": 0,
+  "VRF_executions": 0,
+  "independence": "Phase6 and Phase7 result directories temporarily unavailable for all solves"
+}

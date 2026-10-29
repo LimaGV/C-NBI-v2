@@ -1,5 +1,30 @@
 # Estado metodológico
 
+## Fase 8 — correção standalone concluída no PR11
+
+Baseline oficial: standalone H5,492 aceitos/zero falhas/411 únicos/409 ND.
+H2/H4/H5/H10/H20 são execuções independentes,sem malha-mãe para avaliação final.
+Cinco repetições H5 bitwise idênticas; T_total mediana1.313828s,IQR.0130341s;
+T_solver mediana1.237155s. Outros H têm uma observação de runtime cada.
+Os antigos408 pontos e arquivos Fase6/7/8 parent-grid são históricos imutáveis,
+nomeados CNBI_H5_extracted_from_H20_parent_grid / historical_parent_grid_analysis.
+A decisão preserve408/custo pendente foi SUPERSEDED pelo pedido explícito.
+
+37 subsets,modelos,normalizações,SLSQP/Jacobianos/starts/aceitação mantidos.
+Pipeline H5 funcionou com todos os resultados Fase6/7 fisicamente indisponíveis.
+Reavaliadas cinco métricas,nativo/K66/curvasK e GD/IGD contra512 referências já
+salvas. Alvo independente18503/zeroCNBI,subamostras/FPS da referência e resultados
+EA/VRF/timing EA permanecem idênticos. Alvo comum antigo é somente histórico,
+sem alegar auto-inclusão do novo H5. Nenhum refit,MC,PA,anchor,subset novo ou VRF/EA.
+
+GD/IGD independentes H5=.0394917342/.1411437315,HV=.7390285251.
+Resolução/tempo standalone agora podem ser analisados; qualidade e custo são
+pareados por execução. Sem vencedor universal,saturação certificada ou frente
+verdadeira. ADR0012 ACCEPTED conforme definição explícita do responsável;
+C-BENCH-06/07 documentam baseline direto e independência dos demais H.
+Ver [relatório](mathematics/turning_final_benchmark.md) e
+[verificação](phase_8_verification.md). Sem merge/refinamento automático.
+
 ## Fase 7 — referência empírica multi-família e family LOO
 
 Fase7 concluída no escopo solicitado, após squash do PR9 em main b94be85.

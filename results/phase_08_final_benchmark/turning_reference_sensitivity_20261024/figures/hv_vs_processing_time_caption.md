@@ -1,0 +1,1 @@
+Sequential controlled10-seed EA campaign, checkpoints50/100/200/300/400. Median/IQR quality and horizontal processing-time IQR. Only EAs have comparable timing: CNBI remains pending the failed H5 equivalence gate; VRF execution was forbidden. LOO targets differ; it is not a cross-family ranking.

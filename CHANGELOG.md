@@ -1,5 +1,25 @@
 # Changelog
 
+## Unreleased — Fase 8 standalone baseline correction
+- C-NBI(H5) corrigido para execução standalone:492 aceitos,411 únicos,409 ND.
+- H2/H4/H5/H10/H20 independentes,qualidade e runtime da mesma configuração.
+- Cinco repetições H5 idênticas e independência de arquivos H20 demonstrada.
+- Métricas/K66/curvas e GD/IGD das referências salvas atualizados somente no ramo CNBI.
+- Artefatos408/H20 anteriores preservados como históricos; referência independente,
+  dados/modelos/subsets e todos os resultados/timings EAs/VRF preservados.
+- ADR0012 e claims corrigidos; sem novo método,solver,retuning,MC ou fase.
+
+## Histórico Unreleased — Fase 8 sensitivity / cardinality / controlled EA cost
+- Auditoria das definições V1, divergência de Spacing e oracle numérico arquivado.
+- Sensibilidade de runs/composição/cardinalidade e R30 preservado sem CNBI.
+- Benchmark nativo/K66/curvas K aninhadas, cinco métricas e estatísticas das30 runs.
+- Integração HV comum com precisão/SE, FPS determinístico e cache regenerável fora do Git.
+- Callback observacional opcional;20 resultados controlados idênticos à Fase7.
+- 14 figuras de publicação e tabelas, proveniência/checksums, ADR0012 e claims.
+- Escopo revisado pelo responsável:408 H5 preservados, custo CNBI pendente após gate
+  de equivalência falhar; VRF exclusivamente histórico, sem execução/timing.
+- Sem retuning, alterações do solver/modelos/dados anteriores ou refinamento adaptativo.
+
 ## Unreleased — Fase 7 empirical reference / family LOO
 - Reutilização autorizada da calibração aplicada V1, com fontes/hashes e diferenças explícitas.
 - NSGA-III/MOEA-D consolidados em pymoo0.6.2, esfera explícita e orçamento comum congelado.

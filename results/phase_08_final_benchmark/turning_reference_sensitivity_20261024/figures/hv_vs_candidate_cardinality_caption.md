@@ -1,0 +1,1 @@
+One nested farthest-point ordering per native front; extremes preserved. EA lines show medians/IQR of30 runs; CNBI/VRF are fixed fronts. K66 is marked. Complete common/LOO targets remain fixed; LOO targets differ. HV uses one shared point/grid; Spacing/Sparsity use corrected V1 definitions and depend on density.

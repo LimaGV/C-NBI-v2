@@ -1,0 +1,1 @@
+Fixed408-point H5; paired100 distinct seed subsets for each r<30, one full reference at30. Shading is the q05–q95 subset distribution, not a confidence interval. All references exclude CNBI. HV is common-node Sobol quadrature.

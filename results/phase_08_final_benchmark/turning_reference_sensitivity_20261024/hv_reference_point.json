@@ -1,0 +1,26 @@
+{
+  "lower": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "reference": [
+    1.2151165727409794,
+    1.245397817582205,
+    1.1351275918976673,
+    1.1732146141226798,
+    1.158240985762408,
+    1.2400115167067083,
+    1.1,
+    1.1
+  ],
+  "rule": "lower=min(0,all_candidate_min); ref=max(1.1,all_candidate_max+.05*max(all_candidate_max-lower,1)), elementwise; preserved corrected V1 rule",
+  "source": "complete canonical Phase7 candidates, including CNBI for common HV bounds",
+  "strictly_dominates_all_candidates": true,
+  "sha256": "5170df63be007610e3d0fecb03152eaa959ccde19a6dbf33c9e283a3265e59d5"
+}

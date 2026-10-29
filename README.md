@@ -1,5 +1,18 @@
 # C-NBI v2
 
+Fase8 corrigida antes do merge do PR11: **C-NBI(H=5) = standalone H5**,
+492 subproblemas/492 aceitos/411 decisões únicas/**409 ND**. H20 é somente
+sensibilidade de alta resolução; cada H2/4/5/10/20 foi resolvido independentemente.
+Cinco repetições H5 são bitwise idênticas; tempo total mediano1.313828s.
+Os antigos408 pontos são CNBI_H5_extracted_from_H20_parent_grid, históricos.
+Referência independente18503/zeroCNBI, dados/RSM/MC/anchors/PA/37 subsets,
+runs e timing EAs e VRF histórico preservados. Nenhuma nova execução EA/VRF.
+[Resultados e interpretação](docs/mathematics/turning_final_benchmark.md),
+[definições](docs/mathematics/reference_sensitivity_and_cardinality_control.md),
+[verificação](docs/phase_8_verification.md), ADR0012 corrigido.
+O histórico das fases anteriores continua abaixo; suas definições de baseline
+parent-derived foram superseded pela correção standalone da Fase8.
+
 Fase7: construção de referência Pareto **empírica** multi-família e
 leave-one-family-out, com RSMs atuais, esfera e normalização global congelados.
 H5 é o baseline operacional definido pelo responsável (492 subproblemas,

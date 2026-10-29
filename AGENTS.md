@@ -66,6 +66,23 @@ O PR #1 da Fase 0 foi integrado por autorização explícita na tarefa da Fase 0
 main nasce com um commit vazio para permitir o primeiro PR.
 
 ## Referências e dados
+Correção da Fase8 explicitamente autorizada em2026-10-25, no PR11 e mesma
+branch feature/08-reference-sensitivity-final-benchmark: baseline oficial é H5
+standalone (492 subproblemas), nunca membership H20. Preservar37 subsets,
+RSMs/anchors/normalizações, SLSQP/Jacobianos/starts/aceitação. Executar cada H
+2/4/5/10/20 independentemente; H5 cinco repetições para ruído de runtime,
+outros H uma medição cada. Congelar protocolo/source antes das execuções.
+Reavaliar8 respostas, dedup/ND, cinco métricas, K66/curvas e dependências CNBI
+na sensibilidade usando a linhagem/subamostras já salvas. Referência independente
+18503/zeroCNBI, dados/runs/timing EAs e VRF histórico permanecem preservados.
+Arquivo anterior da Fase8 é histórico (H5 extraído da malha-mãe H20); manter
+byte-identical e publicar correção separada na mesma fase, com documentação
+principal corrigida. Referência comum antiga é apenas target histórico,
+explicitamente sem alegar auto-inclusão do novo H5. Sem VRF/EA novos, refit,
+MC/anchors/PA, novos subsets, mudança de solver/tolerância, adaptação ou merge.
+A decisão anterior de preservar408/custo pendente é SUPERSEDED por este pedido.
+Escopos abaixo são históricos.
+
 Fase7 autorizada após squash do PR #9 com CI verde, branch
 feature/07-pareto-reference-loo. H_base5 é decisão operacional do responsável;
 H20 continua auxiliar da mesma família CNBI. Construir referência empírica pooled
