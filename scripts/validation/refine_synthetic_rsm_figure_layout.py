@@ -50,6 +50,7 @@ def archive_figure_inputs(directory):
                     scenario=cells[sid],
                     replica_id=int(row["replica_id"]),
                     fit=fit,
+                    noise=data[key + "__noise"],
                     sigma_squared=np.array(
                         [float(n["noise_variance"]) for n in noise if n["instance_id"] == key]
                     ),

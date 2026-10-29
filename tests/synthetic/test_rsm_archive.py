@@ -216,6 +216,7 @@ def test_all_six_english_figures_600_dpi_and_vector_pdf():
 def test_read_only_verifier_and_layout_reader_do_not_fit(monkeypatch):
     monkeypatch.syspath_prepend(str(ROOT / "scripts/validation"))
     from refine_synthetic_rsm_figure_layout import archive_figure_inputs
+    from synthetic_rsm_diagnostics import figures
     from verify_synthetic_rsm import verify
 
     def forbidden(*args, **kwargs):
@@ -227,3 +228,4 @@ def test_read_only_verifier_and_layout_reader_do_not_fit(monkeypatch):
     items, anchors, samples, diagnostics, external = archive_figure_inputs(OUTPUT)
     assert len(items) == 135 and len(anchors) == len(samples) == 27
     assert len(diagnostics) == len(external) == 990
+    assert len(figures(items, anchors, samples, diagnostics, external)) == 6
