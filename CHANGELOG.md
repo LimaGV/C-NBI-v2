@@ -7,6 +7,9 @@
 - Fixed synthetic metric frame,HV precision study and offline raw-decision evaluation.
 - Coverage/integrity diagnostics and six scientific figure types;no optimizer campaign.
 - Frozen Phases0–10B,original data and excluded-material licenses remain unchanged.
+- 27/27 references,135000 primary solutions,full reverse-order replay and finite coverage audits.
+- Four65536-point common HV scrambles validated;32 analytic box oracles and honest tiny-volume flags.
+- 854 tests,98.92% coverage,51 verified checksums;no comparative campaign or equalization.
 
 ## Unreleased — Phase10B synthetic CCD, noise and RSM generation
 

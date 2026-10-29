@@ -11,6 +11,12 @@ NPZs primários têm27 IDs/5000 linhas;2500 é prefixo,10000 usa extensão arqui
 load_reference e load_evaluation_context ficam em synthetic.pareto.serialization;
 esta API é externa à busca. Seeds,probes,witnesses,origens,fonte,ambiente e hashes
 garantem rastreabilidade sem recalibração/refit. Arquivos novos em LF canônico.
+Fonte numérica congelada:d982c01f7753152e5961093d0e6de809362c595c.
+Após gerar,refine_synthetic_pareto_layout.py reproduz a apresentação final sem
+alterar qualquer CSV/NPZ. Seu SHA/commit e hashes anteriores estão no manifesto.
+Todos27 casos reproduzidos em ordem inversa no ambiente registrado;51 checksums.
+HV validado nas referências com4×65536;flags de precisão individuais continuam
+obrigatórias para futuros conjuntos. Nenhuma execução10D ou equalização.
 
 ## Fase10B — geração e verificação independentes
 
