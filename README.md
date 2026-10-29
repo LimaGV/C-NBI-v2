@@ -152,5 +152,10 @@ A Fase 5 usa feature/05-chim-svd-local-pa; novo PR sem merge automático.
 - [Inventário MCP](docs/integrations/mcp_inventory.md)
 - [Referências](references/README.md)
 
-Licença pendente: LICENSE_DECISION_PENDING.md. CITATION.cff descreve software
-em desenvolvimento, sem DOI ou publicação inventados.
+## Licença e divulgação
+
+O código original usa [MIT](LICENSE), com [escopo e exclusões](LICENSE_SCOPE.md).
+Dados, fixtures, resultados, figuras e documentos científicos não recebem MIT
+ou CC BY por essa decisão. A [autorização de divulgação pública](docs/data_publication_permissions.md)
+foi confirmada pelo responsável em2026-10-29, separadamente da licença.
+CITATION.cff descreve software em desenvolvimento, sem DOI ou release inventados.

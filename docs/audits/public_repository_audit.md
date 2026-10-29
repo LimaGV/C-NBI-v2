@@ -5,7 +5,19 @@ Repositório: [LimaGV/C-NBI-v2](https://github.com/LimaGV/C-NBI-v2).
 Snapshot local auditado: `c6e97db8cf18b1927821b386231fb64a8342b431`.
 Branch local deste relatório: `docs/public-repository-audit-20261029`.
 
-**GATE 0: BLOQUEADO por autorização de divulgação pública não comprovada.**
+**GATE 0: LIBERADO por declaração e autorização explícitas do responsável em 2026-10-29.**
+
+Atualização após a auditoria inicial: o responsável confirmou os direitos e
+autorizou a divulgação pública de todos os itens/metadados identificados;
+aprovou também MIT exclusivamente para o código original. O registro completo
+está em [permissões](../data_publication_permissions.md) e LICENSE_SCOPE.md.
+As classificações PUBLIC_PENDING_AUTHORIZATION abaixo descrevem o diagnóstico
+anterior a essa resposta. Para os itens identificados, a classificação atual
+é PUBLIC_APPROVED para divulgação; isso não aplica uma licença aberta a dados,
+figuras ou documentos. Riscos técnicos/recomendações continuam registrados.
+Nenhuma configuração de segurança ou visibilidade foi alterada.
+
+## Diagnóstico inicial preservado para rastreabilidade
 O repositório não está declarado regularizado. Nenhum merge, alteração de
 visibilidade, aplicação de licença ou reescrita de histórico foi executado.
 A consolidação e a Fase 10A ainda não começaram.
@@ -258,3 +270,14 @@ antes de abrir feature/10-synthetic-scenario-generation.
 As fontes oficiais de software foram consultadas via Context7 (/github/docs)
 e páginas oficiais GitHub/OSI. Elas fundamentam o funcionamento do serviço e
 os termos citados; não foram tratadas como prova de autorização dos titulares.
+
+## Verificação posterior à autorização
+
+uv sync --locked, Ruff e mypy foram aprovados. Todos os1.111 arquivos
+preexistentes tinham os mesmos hashes ao encerrar a coleta inicial; apenas
+documentação/licença recebem alterações posteriores autorizadas. As planilhas,
+código científico e resultados congelados permanecem intactos.
+
+As etapas de integração e Fase10A podem prosseguir sequencialmente. O estado
+de integração será registrado no documento de consolidação, sem apresentar
+o diagnóstico inicial acima como o estado final do projeto.
