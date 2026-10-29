@@ -1,5 +1,26 @@
 # Contrato permanente dos agentes — C-NBI v2
 
+## Escopo atual — Fase10B, autorizado em2026-10-29
+
+PR14 integrado por merge d68aef7,árvore idêntica a489aa0e; CI40906784465 verde
+Ubuntu/Windows. Desenvolver somente feature/10b-synthetic-rsm-generation.
+Consumir27 configurações10A exatas; nunca recalibrar anchors ou editar ciência0–10A.
+CCDs completos13/19/47,cinco centros independentes; manter8 fatoriais nx3 fora
+da bola,sem projeção. Cinco réplicas por célula,135 RSMs/3555 corridas/990 respostas.
+Um ruído Gaussiano iid:var(f no CCD completo,ddof1)/19,95% sinal em expectativa.
+Seeds PCG64 por cenário/réplica/master,protocolo congelado antes da campanha.
+OLS/diagnóstico somente pelas APIs existentes; sem nova OLS,seleção de termos,
+clipping,reescala,convexidade imposta ou regularização. Preservar Sigma_e bruta,
+inclusive singular.27 certificados sem ruído;4096 Sobol externos por cenário,
+separados e compartilhados pelas cinco réplicas,sem seleção por qualidade.
+Oráculo analítico só geração/validação;interface futura somente RSM ruidoso salvo.
+Todos135 preservados;seis figuras EN,PNG600/PDF vetorial,sem grades. Não executar
+C-NBI,VRF-NBI,EAs,Pareto/referência/métricas ou benchmark. Novo PR permanece aberto.
+MDR0014 e docs/policies/synthetic_generation_10b.json definem este escopo;
+licenças/dados originais permanecem inalterados. Seções seguintes são históricas.
+Implementação10B no subpacote cnbi_v2.synthetic.rsm;top-level10A e teste AST
+histórico permanecem intactos. Reorganização estrutural não altera o protocolo.
+
 ## Escopo atual — consolidação e Fase10A, autorizado em2026-10-29
 
 O responsável confirmou direitos e divulgação pública dos itens/metadados
