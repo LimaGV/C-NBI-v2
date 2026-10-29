@@ -1,5 +1,19 @@
 # C-NBI v2
 
+## Fase10C — referência Pareto analítica e avaliação sintética
+
+Fase10B integrada por merge no PR15,main47a0e4d,CI Ubuntu/Windows verde.
+Pipeline em synthetic/pareto para27 referências independentes de5000 pontos,
+com prefixos2500/5000/10000,prova P_X=conv(anchors),ideal/nadir analíticos e
+protocolo comum das cinco métricas.27/27 referências concluídas,135000 pontos,
+reprodução em ordem inversa,zero fallback e cobertura finita no orçamento prévio.
+HV validado no regime das referências:4 scrambles ×65536,com flags por conjunto.
+[Definição](docs/mathematics/synthetic_pareto_reference.md),
+[métricas](docs/mathematics/synthetic_benchmark_metrics.md),
+[verificação](docs/phase_10c_verification.md),MDR0015. Nenhuma execução10D.
+[Artefatos congelados](results/phase_10_synthetic_pareto/analytical_20261029/README.md).
+Os escopos abaixo registram o estado e as entregas de cada fase anterior.
+
 **Estado atual: Fases0–9 concluídas e integradas em main.** RSM, incerteza,
 âncoras, CHIM/PA, Simplex-Lattice/NBI e benchmark aplicado estão implementados.
 Baseline: **H5 standalone,492 aceitos,411 decisões únicas,409 ND**. Referência

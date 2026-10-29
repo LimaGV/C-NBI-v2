@@ -1,0 +1,110 @@
+{
+  "phase": "10C",
+  "schema_version": 1,
+  "run_id": "analytical_20261029",
+  "phase10a_commit": "489aa0e2b4703c0e39b0bff2623209e5a177a94b",
+  "phase10b_commit": "6d07d250e28730e69d481aa58dbc0d9ad0d76c73",
+  "scientific_base_commit": "47a0e4dc55a22a7d0ad436540c1a305e4078e2ad",
+  "master_seed": 20261029,
+  "seed_protocol": "first128 bits, big endian, SHA256(UTF8('C-NBI-v2/phase10c/v1/{master}/{key}/{role}')); PCG64; no global RNG or processing-order counters",
+  "true_objectives": "f_j(x)=sum_k(x_k-a_jk)^2, all MIN; exact Phase10A anchors only",
+  "pareto_set": "conv(frozen anchors), contained in original ball",
+  "primary_cardinality": 5000,
+  "sensitivity_cardinalities": [2500, 5000, 10000],
+  "replica_references": "one common reference per structural cell, shared by all five replicas",
+  "geometry": {
+    "qhull_options": "Qc Qx; implicit Qt; never QJ",
+    "uniform_volume_method": "volume-weighted centroid cones to triangulated hull facets; uniform sorted-spacings simplex barycentric weights",
+    "cone_volume_relative_audit": 1e-8,
+    "fallback": "redundant-anchor Dirichlet plus all nx-anchor subsimplex strata; explicitly nonuniform, requires review; no anchor perturbation"
+  },
+  "candidates": {
+    "anchors": "all m, original order",
+    "interior_power": 13,
+    "boundary_power": 12,
+    "anchor_neighborhood_power": 11,
+    "anchor_neighborhood_mix": 0.02,
+    "anchor_pair_internal_points": 17,
+    "anchor_pair_denominator": 18,
+    "identity": "L-infinity <=1e-12*alpha, first stable source ID; no transitive clustering"
+  },
+  "selection": {
+    "algorithm": "partial farthest-point sampling",
+    "space": "Euclidean normalized true objectives; objective-coverage oriented, not uniform volume",
+    "forced_extremes": "all anchors in original order",
+    "tie": "first original candidate source ID for exact numeric ties",
+    "nested_prefix_count": 10000
+  },
+  "probe": {
+    "volume_power": 12,
+    "boundary_power": 10,
+    "roles": ["independent_probe", "independent_boundary_probe"],
+    "used_for_selection": false
+  },
+  "coverage_review": {
+    "status": "PROPOSED_OPERATIONAL_AUDIT_BUDGET_FROZEN_BEFORE_GENERATION",
+    "coordinate_rms_budget": 0.05,
+    "applies_to": ["independent volume probe maximum", "independent boundary probe maximum", "R5000 versus R10000 discrete Hausdorff"],
+    "rationale": "1/20 of true Pareto response range in coordinate RMS; finite audit convention, not asymptotic convergence or uniform approximation theorem",
+    "failure": "REVIEW_REQUIRED before10D; never change official5000 or tune sampling"
+  },
+  "normalization": {
+    "ideal": "zero per objective",
+    "nadir": "max_k ||a_k-a_j||^2",
+    "clipping": false,
+    "optimizer_access": false
+  },
+  "dominance": {
+    "reference": "analytic convex-combination certificate; retain apparent tolerance-dominated points and diagnose",
+    "normalized_coordinate_tolerance": 1e-12,
+    "membership_weight_sum_tolerance": 1e-12,
+    "membership_reconstruction_tolerance": "1e-12*alpha",
+    "strict_sphere_feasibility": true,
+    "evaluation_roundoff_bound": "64*eps*max(1,max(F))"
+  },
+  "metrics": {
+    "GD_IGD": "p1 arithmetic mean of Euclidean nearest-neighbor distances",
+    "Spacing": "sample SD ddof1 of Euclidean nearest-other distances",
+    "Sparsity": "mean Euclidean nearest-other distances",
+    "less_than_two_distinct": "Spacing/Sparsity undefined",
+    "empty_feasible_ND": "all metrics undefined"
+  },
+  "hypervolume_study": {
+    "lower": 0,
+    "reference": 1.1,
+    "study_powers": [13, 14, 15, 16],
+    "maximum_power_tiers": [16, 18, 20],
+    "tier_selection": "start16;if any primary reference fails precision,study all at18,then20;one global final level;unresolved at20 stays pending",
+    "scrambles": 4,
+    "seeds": "key=hv_m{m},role=scramble_{0..3}; same quadrature for every method/replica",
+    "indicator": "validated HVGrid quadrature; exact orthant-union tree acceleration",
+    "small_set_exact_limit": 8,
+    "exact_roundoff_relative_budget": 1e-10,
+    "qmc_relative_se_budget": 0.02,
+    "qmc_relative_doubling_change_budget": 0.02,
+    "qmc_quantum_relative_budget": 0.01,
+    "minimum_hits_each_scramble": 128,
+    "oracles": ["single broad box", "two overlapping boxes", "tiny single box", "tiny two-box union"],
+    "oracle_dimensions": [4, 5, 6, 7, 8, 9, 10, 11],
+    "final_resolution": "freeze after reference/oracle study; unresolved regimes remain explicit, never fabricated"
+  },
+  "evaluation": {
+    "methods": ["C-NBI", "VRF-NBI", "NSGA-III", "MOEA/D"],
+    "raw_decisions": "preserved unchanged, with original row IDs",
+    "primary_cardinality": "native feasible unique full-space ND",
+    "secondary": "plan only, minimum eligible size per paired cell/replica; candidate-only geometry, no reference distances or interpolation",
+    "oracle_feedback_to_search": false
+  },
+  "figures": {
+    "language": "English",
+    "png_dpi": 600,
+    "pdf_vector": true,
+    "grid": false,
+    "representatives": "geometry:nx2/3,delta3,rho060;HV:nx2/3/5,delta3,rho060;no nx5 geometry projection",
+    "geometry_3d_display_stride": 4,
+    "nearest_neighbor_whiskers": [1, 99],
+    "nearest_neighbor_outliers": "not drawn; full minima/maxima retained in tables",
+    "coverage_display": "coordinate-RMS-normalized Euclidean distances; metric GD/IGD remain unscaled"
+  },
+  "scope_exclusions": ["C-NBI runs", "VRF-NBI runs", "NSGA-III runs", "MOEA/D runs", "new anchors", "new CCD", "new noise", "RSM fitting", "replica selection", "hyperparameter optimization", "comparative benchmark", "algorithm significance", "algorithm cardinality equalization"]
+}

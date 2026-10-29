@@ -1,0 +1,32 @@
+{
+  "phase": "10C",
+  "status": "FROZEN",
+  "GD": "mean Euclidean A to R,p1",
+  "IGD": "mean Euclidean R to A,p1",
+  "Spacing": "sample nearest-other SD,ddof1",
+  "Sparsity": "mean Euclidean nearest-other distance",
+  "HV": {
+    "status": "VALIDATED_REFERENCE_REGIME",
+    "master_seed": 20261029,
+    "final_power": 16,
+    "samples_per_scramble": 65536,
+    "scrambles": 4,
+    "reference_point": 1.1,
+    "lower_bound": 0,
+    "small_set_exact_limit": 8,
+    "small_set_method": "inclusion-exclusion with explicit cancellation bound",
+    "large_set_method": "common Sobol estimate; per-set precision status required",
+    "normalization": "analytic ideal/nadir, never candidate-derived",
+    "reference_cases_passed": 27,
+    "reference_cases_total": 27,
+    "raw_qmc_tiny_oracle_failures_preserved": true,
+    "resolution_frozen_after_validation": true,
+    "algorithms_observed": false
+  },
+  "undefined": "empty ND:all;singleton:Spacing/Sparsity;HV unresolved:precision flag",
+  "primary_reference_count": 5000,
+  "normalization": "fixed true ideal/nadir per scenario",
+  "primary_cardinality": "native",
+  "secondary_equalization": "plan only,not executed",
+  "oracle_feedback_to_search": false
+}
