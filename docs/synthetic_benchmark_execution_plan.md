@@ -11,7 +11,10 @@ The scheduler queries Windows core topology and selects only one logical thread
 per physical core (affinity masks1,4,16,64,256,1024). It can run six independent
 processes concurrently, each pinned before importing the frozen worker. Sibling
 hardware threads are not allocated as separate workers. Task shards and seeds
-are deterministic, and processes share no mutable random-number generator.
+use a deterministic FIFO task list, and processes share no mutable random-number
+generator. The next free core takes the next queued task; core assignment can
+depend on completion times, while task identity, seed and numerical outputs
+cannot. This avoids reserving the slowest algorithm for a fixed subset of cores.
 
 Before the official campaign, the four methods on the first pilot cell are
 replayed concurrently with their original pilot seeds, complete budgets and

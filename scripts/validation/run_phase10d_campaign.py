@@ -14,6 +14,8 @@ import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from queue import Empty, Queue
+from threading import Event
 
 from execute_synthetic_benchmark import OUTPUT, ROOT, report_runs, run_id, verify_protocol
 
@@ -87,11 +89,19 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
              if task["stage"] == ("pilot" if replay or pilot else "official")]
     if replay:
         tasks = [task for task in tasks if task["scenario_id"] == "nx2_delta1_rho025"]
+    queue = Queue()
+    for task in tasks:
+        queue.put(task)
+    abort = Event()
 
     def shard(index: int) -> int:
         completed = 0
-        for task in tasks[index::len(masks)]:
-            if (directory/"STOP_REQUESTED.json").exists():
+        while True:
+            if (directory/"STOP_REQUESTED.json").exists() or abort.is_set():
+                break
+            try:
+                task = queue.get_nowait()
+            except Empty:
                 break
             name = run_id(task)
             if replay:
@@ -119,6 +129,7 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
                                      cpu_mask=masks[index], exit_code=result.returncode,
                                      shard=index, scientific_code_commit=manifest["code_commit"]))
             if result.returncode:
+                abort.set()
                 raise RuntimeError("worker failed; inspect preserved log: "+name)
             completed += 1
             if not replay:
