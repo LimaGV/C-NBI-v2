@@ -29,7 +29,7 @@ def factor_count(cumulative: FloatArray) -> int:
     return max(2, int(np.searchsorted(cumulative, .9)+1))
 
 
-def varimax(loadings: FloatArray) -> tuple[FloatArray, FloatArray, int]:
+def varimax(loadings: FloatArray) -> tuple[FloatArray, FloatArray, int, bool]:
     """Kaiser-normalized orthogonal SVD iteration; 500 iterations, tolerance 1e-5.
 
     Same mathematical iteration as factor-analyzer 0.5.1 Rotator defaults.
@@ -50,8 +50,11 @@ def varimax(loadings: FloatArray) -> tuple[FloatArray, FloatArray, int]:
         rotation = u@vt
         criterion = float(singular.sum())
         if criterion < previous*(1+1e-5):
-            return (normalized@rotation)*norms[:, None], rotation, iteration
-    raise ValueError("Varimax did not converge within the legacy iteration limit")
+            return (normalized@rotation)*norms[:, None], rotation, iteration, True
+    # factor-analyzer/v1 returns the final iterate at its fixed iteration cap.
+    # Preserve that behavior and disclose nonconvergence rather than inventing
+    # a new failure policy, increasing the cap or relaxing its tolerance.
+    return (normalized@rotation)*norms[:, None], rotation, 500, False
 
 
 def factor_analysis(y: FloatArray, k: int) -> dict[str, Any]:
@@ -63,7 +66,7 @@ def factor_analysis(y: FloatArray, k: int) -> dict[str, Any]:
     order = np.argsort(eigenvalues)[::-1]
     eigenvalues = np.maximum(eigenvalues[order], 0.)
     initial = eigenvectors[:, order[:k]]*np.sqrt(eigenvalues[:k])
-    loadings, rotation, iterations = varimax(initial)
+    loadings, rotation, iterations, converged = varimax(initial)
     signs = np.where(loadings[np.argmax(np.abs(loadings), axis=0), np.arange(k)] >= 0, 1., -1.)
     loadings *= signs
     gram = loadings.T@loadings
@@ -72,7 +75,7 @@ def factor_analysis(y: FloatArray, k: int) -> dict[str, Any]:
                 weights=weights, scores=z@weights, eigenvalues=eigenvalues,
                 cumulative=np.cumsum(eigenvalues)/eigenvalues.sum(),
                 rank=int(np.linalg.matrix_rank(gram)), condition=float(np.linalg.cond(gram)),
-                varimax_iterations=iterations, pinv_rcond=1e-15)
+                varimax_iterations=iterations, varimax_converged=converged, pinv_rcond=1e-15)
 
 
 def vrf_values(models: tuple[QuadraticResponse, ...], targets: FloatArray,

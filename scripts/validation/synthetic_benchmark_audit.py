@@ -12,7 +12,7 @@ from cnbi_v2.synthetic.benchmark.contracts import METHODS, PILOT_SCENARIOS, stre
 from cnbi_v2.synthetic.benchmark.inputs import load_search_inputs
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v1"
+OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v2"
 MUTABLE = {".gitignore", "AGENTS.md", "CHANGELOG.md", "README.md", "ROADMAP.md",
            "docs/methodology_status.md", "docs/reproducibility.md"}
 V1_FILES = (
@@ -75,6 +75,7 @@ def prepare(legacy: Path) -> None:
                    subsets="all_2_to_min_m_nxplus1", NBI="unchanged_v2_defaults"),
         VRF_NBI=dict(factor_rule="max(2,k90)", factor_admissibility="2<=k<=nx+1",
                      varimax=dict(normalize=True, iterations=500, tolerance=1e-5),
+                     varimax_at_iteration_cap="return_final_iterate_and_flag_as_v1",
                      pinv_rcond=1e-15, variance="sum_squared_loadings",
                      extreme_ftol=1e-12, extreme_maxiter=100,
                      nbi_ftol=1e-10, nbi_maxiter=100, nbi_eq_inf_tolerance=1e-5,
@@ -85,6 +86,7 @@ def prepare(legacy: Path) -> None:
         evaluation="offline_Phase10C_unchanged_native_cardinality",
         cpu_threads=1, workers_per_run=1, max_concurrent_single_core_runs=6,
         scheduling="separate_physical_cores; pilot_revalidated_under_official_scheduling",
+        method_order=list(METHODS), barrier_between_methods=True,
     )
     write_json(OUTPUT/"algorithm_configurations.json", configurations)
     write_json(OUTPUT/"budget_policy.json", dict(

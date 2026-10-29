@@ -20,6 +20,7 @@ from threading import Event
 from execute_synthetic_benchmark import OUTPUT, ROOT, report_runs, run_id, verify_protocol
 
 from cnbi_v2.synthetic.benchmark.archive import file_hash, read_json, write_json
+from cnbi_v2.synthetic.benchmark.contracts import METHODS
 
 PIN_AND_RUN = (
     "import ctypes,os,runpy,sys;"
@@ -79,6 +80,7 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
         semantics="independent_processes; no_change_to_frozen_algorithm_or_seed",
         timing="per_run_wall_time_under_archived_concurrency; not_isolated_idle_host_time",
         resource_decision="use_available_physical_cores; no_quality_or_parameter_tuning",
+        method_order=list(METHODS), barrier_between_methods=True,
     )
     plan["plan_sha256"] = hashlib.sha256(json.dumps(plan, sort_keys=True).encode()).hexdigest()
     plan_path = directory/"execution_plan.json"
@@ -90,8 +92,6 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
     if replay:
         tasks = [task for task in tasks if task["scenario_id"] == "nx2_delta1_rho025"]
     queue = Queue()
-    for task in tasks:
-        queue.put(task)
     abort = Event()
 
     def shard(index: int) -> int:
@@ -113,9 +113,14 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
                            "worker", "--directory", str(directory), "--task", json.dumps(task)]
                 receipt = directory/f"scheduler_receipts/{name}.json"
                 checkpoint = directory/f"campaign_checkpoints/{name}.json"
-                if checkpoint.exists() and read_json(checkpoint)["state"] == "COMPLETED":
+                if (checkpoint.exists()
+                        and read_json(checkpoint)["state"] in {
+                            "COMPLETED", "FAILED", "INCOMPLETE",
+                        }):
                     from cnbi_v2.synthetic.benchmark.archive import verify_payload
-                    verify_payload(directory, read_json(checkpoint)["payload_checksums"])
+                    retained = read_json(checkpoint)
+                    if "payload_checksums" in retained:
+                        verify_payload(directory, retained["payload_checksums"])
                     completed += 1
                     continue
             env = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1",
@@ -140,9 +145,27 @@ def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
                 )), flush=True)
         return completed
 
-    with ThreadPoolExecutor(max_workers=len(masks)) as pool:
-        total = sum(future.result() for future in as_completed(
-            [pool.submit(shard, index) for index in range(len(masks))]))
+    total = 0
+    barriers = []
+    for method in METHODS:
+        stage_tasks = [task for task in tasks if task["method"] == method]
+        queue = Queue()
+        for task in stage_tasks:
+            queue.put(task)
+        with ThreadPoolExecutor(max_workers=len(masks)) as pool:
+            processed = sum(future.result() for future in as_completed(
+                [pool.submit(shard, index) for index in range(len(masks))]))
+        total += processed
+        barrier = dict(method=method, planned=len(stage_tasks), processed=processed,
+                       all_tasks_finished=processed == len(stage_tasks))
+        barriers.append(barrier)
+        write_json(directory/"method_execution_barriers.json", dict(
+            order=list(METHODS), barriers=barriers,
+            next_method_allowed=barrier["all_tasks_finished"],
+        ))
+        print(json.dumps(dict(method_barrier=barrier)), flush=True)
+        if processed != len(stage_tasks):
+            break
     if not replay and pilot:
         rows = report_runs(directory, "pilot")
         write_json(directory/"pilot_verification.json", dict(

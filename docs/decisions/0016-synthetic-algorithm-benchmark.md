@@ -73,6 +73,22 @@ A structural/scientific failure blocks the main campaign; status stays INCOMPLET
 No parameter, threshold, tolerance, H, B or retention rule is tuned to an outcome.
 Implementation corrections require recorded evidence and pilot revalidation.
 
+Correction and execution-order revision,2026-10-29: the first partial official
+campaign reached77 attempts (75 completed,2 failed). Both failures exposed a
+migration bug: v2 raised at Varimax's500-iteration cap, whereas factor-analyzer
+0.5.1 used by v1 returns its last iterate. Restore that exact endpoint policy,
+keep max_iter500 and tol1e-5 unchanged, and archive varimax_converged=False.
+Two regression oracles use the actual frozen CCD instances reaching that cap.
+All prior payloads and failures remain in campaign_v1/; its status is INCOMPLETE.
+A separate campaign_v2/ contains a freshly frozen, revalidated full campaign;
+no unfavorable result is selectively replaced. Its seeds and135 RSMs remain
+identical. The responsible owner additionally requires strict method blocks:
+all135 C-NBI, then all135 VRF-NBI, then all135 NSGA-III, finally all135 MOEA/D.
+Hard barriers apply between methods; independent runs within a block may use
+the six separately assigned physical cores. This ordering changes no objective,
+parameter, reference or metric. Revalidate the twelve-task pilot before this
+new campaign, retaining the original and revised protocols independently.
+
 Raw outputs are preserved; internal ND is assessed in all original noisy RSM
 objectives, and external ND/normalization/metrics use the frozen Phase10C API.
 GD/IGD p1, HV r=1.1 with four 2^16 Sobol scrambles plus the exact small-box branch,

@@ -3,7 +3,7 @@
 This supplements MDR0016 without changing any algorithm, scientific setting,
 seed, noise realization, fitted model, reference or evaluation rule. The frozen
 search worker uses one CPU worker and one BLAS/OpenMP thread per run. Its code
-commit and algorithm protocol hash remain unchanged.
+commit and algorithm protocol hash are frozen separately for each revision.
 
 The pilot first runs sequentially to measure complete-pipeline costs. The audited
 workstation is an Intel Core i5-12400F, six physical cores, twelve logical threads.
@@ -11,10 +11,14 @@ The scheduler queries Windows core topology and selects only one logical thread
 per physical core (affinity masks1,4,16,64,256,1024). It can run six independent
 processes concurrently, each pinned before importing the frozen worker. Sibling
 hardware threads are not allocated as separate workers. Task shards and seeds
-use a deterministic FIFO task list, and processes share no mutable random-number
+use a deterministic FIFO task list within each method, and processes share no mutable random-number
 generator. The next free core takes the next queued task; core assignment can
 depend on completion times, while task identity, seed and numerical outputs
-cannot. This avoids reserving the slowest algorithm for a fixed subset of cores.
+cannot. A hard barrier enforces the owner's requested order: all135 C-NBI,
+then all135 VRF-NBI, then all135 NSGA-III, then all135 MOEA/D. Each method may
+use the six physical cores concurrently. No task of the next method starts
+until every task of the current method has finished or has a retained terminal
+failure. Completed and failed outcomes are preserved during resumption.
 
 Before the official campaign, the four methods on the first pilot cell are
 replayed concurrently with their original pilot seeds, complete budgets and
@@ -25,7 +29,14 @@ algorithm tuning is involved in this resource decision.
 
 The finalized protocol repeats all twelve pilot tasks under the actual six-core
 scheduler. The initial sequential pilot is preserved in the parent directory;
-the final pilot and official campaign live in campaign_v1/. Additional counter
+the first scheduled pilot and incomplete initial campaign live in campaign_v1/.
+The corrected final pilot and540-run campaign live separately in campaign_v2/.
+The initial campaign was stopped at77 attempts:75 completed and2 Varimax-cap
+failures caused by a migration bug. The correction restores v1's return-last
+behavior at the unchanged500-iteration cap; its explicit nonconvergence flag
+remains available. All original payloads and failures are retained. The whole
+final campaign restarts under one corrected version, without selectively
+replacing unfavorable cases. Additional counter
 schema2 records all quadratic-response vector events, original full-vector
 recomposition/validation and auxiliary factor-model calls separately. Runner
 end-to-end timers include validation and full-objective ND postprocessing. These

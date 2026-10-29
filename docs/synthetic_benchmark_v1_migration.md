@@ -60,3 +60,15 @@ Registered adaptations before pilot:
 
 No adaptations are selected using new benchmark quality. The exact technical
 comparison outcomes and relevant legacy test log accompany the migration audit.
+
+Implementation correction: reaching the500-iteration Varimax cap must return
+the final rotation, as in the pinned v1 dependency. The initial adapter raised
+instead; two actual frozen instances exposed that divergence. Regressions compare
+both instances with factor-analyzer0.5.1 at the identical cap/tolerance. The
+corrected adapter returns the final iterate and records varimax_converged=False.
+The75 completed and2 failed initial official attempts remain in campaign_v1/;
+campaign_v2/ contains a separately frozen full campaign after pilot revalidation.
+See the [primary Rotator source](https://factor-analyzer.readthedocs.io/en/latest/_modules/factor_analyzer/rotator.html),
+whose constructor uses500; its prose parameter description inconsistently says1000.
+The installed0.5.1 constructor and source were inspected directly. Context7 did
+not index this library, so the unrelated factor-attribution result was rejected.
