@@ -113,3 +113,12 @@ Dados/algoritmos anteriores e arquivos históricos preservados.
 PR12 integrado embb5d6f2.46 entradas,21 principais/25 suplementares,PT/EN,
 PNG600dpi/PDF vetorial/SVG disponível,galeria,captions,auditoria/checksums.
 Nenhuma mudança científica. Próxima etapa autorizada: apenas Fase10A estrutural.
+
+## Fase10A — geração estrutural implementada e validada nesta branch
+
+27 células,uma configuração de âncoras por célula,funções isotrópicas verdadeiras,
+calibração e validação Sobol independentes.27/27 aprovadas dentro de0.05,sem
+seleção por sinal ou holdout. Matrizes completas/diagnósticos/hashes preservados.
+Ver docs/phase_10a_verification.md. Entrega em PR próprio; não integrado automaticamente.
+Ruído,CCD,RSM,CHIM/PA sintética,algoritmos,referência e métricas de benchmark
+não pertencem à Fase10A e ainda não foram executados.

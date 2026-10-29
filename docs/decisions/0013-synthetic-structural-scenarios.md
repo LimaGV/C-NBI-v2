@@ -5,7 +5,7 @@
 - Responsible: project owner; implementation by Codex.
 - Date:2026-10-29.
 - Branch:feature/10-synthetic-scenario-generation.
-- Validation gate:IN_PROGRESS; numerical outcome must be recorded after execution.
+- Validation gate:PASSED for27/27 cells; see docs/phase_10a_verification.md. Remote CI is recorded in the PR before delivery.
 
 Use exclusively squared Euclidean distance objectives, nx2/3/5,delta1/3/5,
 m=nx+1+delta,radius2**(nx/4),absolute-correlation targets.25/.60/.85.

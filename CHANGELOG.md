@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — Phase10A structural synthetic scenarios
+
+- 27 factorial cells from nx,objective excess and mean absolute-correlation targets.
+- True isotropic squared-distance objectives,known feasible zero minima.
+- Direct deterministic anchor calibration and independent uniform-volume Sobol validation.
+- Signed correlation observed only; singular PSD matrices preserved without regularization.
+- Full float64 matrices,coordinates,solver diagnostics,seeds,checksums and four English figures.
+- 27/27 cells validated;all earlier scientific code/data/results preserved;no benchmark execution.
+
 ## Unreleased — consolidation and publication permissions
 
 - Integrated Phase8/9 (PR11/12) by merge commits, preserving scientific SHAs.

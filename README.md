@@ -6,7 +6,18 @@ Baseline: **H5 standalone,492 aceitos,411 decisões únicas,409 ND**. Referênci
 empírica18503/zeroCNBI; métricas GD,IGD,HV,Spacing,Sparsity. Não é frente verdadeira.
 Ver [consolidação](docs/consolidation_20261029.md) e
 [reprodutibilidade](docs/reproducibility.md). Fase10A autorizada após o gate
-documental; o benchmark sintético completo ainda não começou.
+documental, já satisfeito; o benchmark sintético completo ainda não começou.
+
+## Fase10A — cenários estruturais nesta branch
+
+27/27 cenários gerados e validados,uma configuração por célula,com funções
+verdadeiras f_j(x)=||x-a_j||². nx2/3/5,delta1/3/5 e alvos de correlação absoluta
+.25/.60/.85; média assinada é apenas observada. Erros máximos:calibração0.00004520,
+validação independente0.00012444,tolerância0.05. Sem ruído,CCD,RSM ou benchmark.
+[Matemática](docs/mathematics/synthetic_scenario_generation.md),
+[tabela/validação](docs/phase_10a_verification.md) e
+[artefatos](results/phase_10_synthetic_generation/structural_20261029/README.md).
+Quatro diagnósticos em inglês,PNG600dpi/PDF,sem grades. PR separado,sem merge automático.
 
 Pacote oficial de visualizações do caso aplicado, em português e inglês,
 baseado exclusivamente na correção científica congelada d938695.

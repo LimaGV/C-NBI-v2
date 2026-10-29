@@ -51,11 +51,23 @@ entre processos não equivalem a mudança científica; ver auditoria do run.
 
 Os18.503 pontos sem CNBI são referência Pareto **empírica** finita, sem certificado
 de frente verdadeira. Alvos comuns,exclusões por família e sensibilidades têm
-escopos distintos. A futura Fase10A gera somente27 configurações para funções
+escopos distintos. A Fase10A desta branch gera somente27 configurações para funções
 verdadeiras isotrópicas f_j=||x-a_j||² em bolas2**(nx/4). Seus mínimos analíticos
 não são a referência empírica do torneamento. Não se constrói agora referência
 Pareto sintética,135 instâncias RSM ou540 runs de benchmark.
 MIT cobre apenas código próprio; ver LICENSE_SCOPE.md e data_publication_permissions.md.
+
+Geração estrutural reproduzível em saída nova,com protocolo já congelado:
+
+```powershell
+uv run python -m scripts.validation.generate_synthetic_scenarios --output experiments/runs/synthetic_reproduction
+uv run pytest tests/synthetic -q
+```
+
+Artefatos oficiais:results/phase_10_synthetic_generation/structural_20261029/.
+O teste/recibo de reprodutibilidade confirma todos os27 cenários em ordem inversa,
+sem alterar âncoras/matrizes. Não confundir calibração numérica de coordenadas
+com ajuste RSM ou execução de algoritmos multiobjetivo.
 
 ## Manifesto de execução científica
 Registrar: identificador, data UTC, branch, SHA, versão, dirty, lock SHA256,

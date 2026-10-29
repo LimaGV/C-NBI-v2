@@ -1,0 +1,193 @@
+{
+  "run_id": "structural_20261029",
+  "status": "COMPLETE",
+  "generated_at_utc": "2026-10-29T14:43:25.633696+00:00",
+  "scientific_base_commit": "4432e333b75fe9427c7e5340bf952a05858ad19e",
+  "code_commit": "06323416c5934836c3879f3603c17e8d0775e8cf",
+  "working_tree_dirty_at_start": false,
+  "official_run": true,
+  "scenarios": 27,
+  "validated": 27,
+  "configurations_per_cell": 1,
+  "maximum_calibration_error": 4.5196132855196414e-05,
+  "maximum_validation_error": 0.00012444084694640534,
+  "maximum_entry_error_calibration": 0.0008656766921085329,
+  "maximum_entry_error_validation": 0.00022145125512451624,
+  "signed_correlation_min": -0.1999100994498769,
+  "signed_correlation_max": 0.5257948961685558,
+  "calibration_seconds": 4.512260700110346,
+  "total_generation_seconds": 10.486788199981675,
+  "starts_total": 216,
+  "solver_failures": 0,
+  "failed_scenarios": {},
+  "frozen_inputs_verified": 1110,
+  "frozen_inputs_unchanged": true,
+  "lock_sha256": "b4f3b4bae5340256e3afda7c0ca869eb92d3678a9281d07ac730ef711302389a",
+  "source_sha256": {
+    "src/cnbi_v2/synthetic/__init__.py": "aec87ee9fb06c64716dca123d0fe69601a616b5af8480d7a93b064206279d400",
+    "src/cnbi_v2/synthetic/anchors.py": "904a67ad2aa7e9b1071e893caf93cc2cfc4fa477599a002544dc5e2c3eebbf2b",
+    "src/cnbi_v2/synthetic/calibration.py": "58ba55968b855daae6ed9c05f73d85d9ed65f4ad80514285745371956b4a3ed3",
+    "src/cnbi_v2/synthetic/correlation.py": "77d0c4ceff1d8027cf490b6ba3db4cf4045e4590ccd69074e127a90e9b8209e4",
+    "src/cnbi_v2/synthetic/design.py": "97a3ddd0caf522f31bfeabb8e654ed3460fe992f3fafbcc00be904923cd5aa34",
+    "src/cnbi_v2/synthetic/domain.py": "a2cfcadfde259dd1e355fcabba9fa5489169807066eb15f9f4e209e664e4233b",
+    "src/cnbi_v2/synthetic/model.py": "86247ed5c92006fa2ec78edf9459e5c97110d6a02b672362955a453cfa2a9c4a",
+    "src/cnbi_v2/synthetic/serialization.py": "f4ff6b5d7f55a705c5d8ada1e4e589a25e032039cfef21f894e56341f35272e9",
+    "src/cnbi_v2/synthetic/validation.py": "aa044dfb28ec9886ccf0cf1ec6c6c73311baff7250fd43e632528b6952bb345f",
+    "scripts/validation/generate_synthetic_scenarios.py": "d84c58eee553d94f9f92d46c93386de2f6def9d0b380402591418ad62d6bbcc7",
+    "scripts/validation/synthetic_diagnostics.py": "668910b8acfb5f495ee642141eb84202d85737a4528d56d1db057e31d6553216",
+    "docs/policies/synthetic_generation_10a.json": "8f655b0ba0384a63e4c4c8c6d73b8c60b5d1867fffcaf62c379036ffb27eaed6"
+  },
+  "python": "3.12.15",
+  "platform": "Windows",
+  "libraries": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "selected_seeds": {
+    "nx2_delta1_rho025": {
+      "initialization": 20261030,
+      "calibration": 20261031,
+      "validation": 20261032
+    },
+    "nx2_delta1_rho060": {
+      "initialization": 20761040,
+      "calibration": 20261041,
+      "validation": 20261042
+    },
+    "nx2_delta1_rho085": {
+      "initialization": 20661050,
+      "calibration": 20261051,
+      "validation": 20261052
+    },
+    "nx2_delta3_rho025": {
+      "initialization": 20261060,
+      "calibration": 20261061,
+      "validation": 20261062
+    },
+    "nx2_delta3_rho060": {
+      "initialization": 20661070,
+      "calibration": 20261071,
+      "validation": 20261072
+    },
+    "nx2_delta3_rho085": {
+      "initialization": 20361080,
+      "calibration": 20261081,
+      "validation": 20261082
+    },
+    "nx2_delta5_rho025": {
+      "initialization": 20361090,
+      "calibration": 20261091,
+      "validation": 20261092
+    },
+    "nx2_delta5_rho060": {
+      "initialization": 20861100,
+      "calibration": 20261101,
+      "validation": 20261102
+    },
+    "nx2_delta5_rho085": {
+      "initialization": 20861110,
+      "calibration": 20261111,
+      "validation": 20261112
+    },
+    "nx3_delta1_rho025": {
+      "initialization": 20661120,
+      "calibration": 20261121,
+      "validation": 20261122
+    },
+    "nx3_delta1_rho060": {
+      "initialization": 20561130,
+      "calibration": 20261131,
+      "validation": 20261132
+    },
+    "nx3_delta1_rho085": {
+      "initialization": 20461140,
+      "calibration": 20261141,
+      "validation": 20261142
+    },
+    "nx3_delta3_rho025": {
+      "initialization": 20961150,
+      "calibration": 20261151,
+      "validation": 20261152
+    },
+    "nx3_delta3_rho060": {
+      "initialization": 20661160,
+      "calibration": 20261161,
+      "validation": 20261162
+    },
+    "nx3_delta3_rho085": {
+      "initialization": 20761170,
+      "calibration": 20261171,
+      "validation": 20261172
+    },
+    "nx3_delta5_rho025": {
+      "initialization": 20261180,
+      "calibration": 20261181,
+      "validation": 20261182
+    },
+    "nx3_delta5_rho060": {
+      "initialization": 20961190,
+      "calibration": 20261191,
+      "validation": 20261192
+    },
+    "nx3_delta5_rho085": {
+      "initialization": 20961200,
+      "calibration": 20261201,
+      "validation": 20261202
+    },
+    "nx5_delta1_rho025": {
+      "initialization": 20361210,
+      "calibration": 20261211,
+      "validation": 20261212
+    },
+    "nx5_delta1_rho060": {
+      "initialization": 20561220,
+      "calibration": 20261221,
+      "validation": 20261222
+    },
+    "nx5_delta1_rho085": {
+      "initialization": 20961230,
+      "calibration": 20261231,
+      "validation": 20261232
+    },
+    "nx5_delta3_rho025": {
+      "initialization": 20361240,
+      "calibration": 20261241,
+      "validation": 20261242
+    },
+    "nx5_delta3_rho060": {
+      "initialization": 20861250,
+      "calibration": 20261251,
+      "validation": 20261252
+    },
+    "nx5_delta3_rho085": {
+      "initialization": 20761260,
+      "calibration": 20261261,
+      "validation": 20261262
+    },
+    "nx5_delta5_rho025": {
+      "initialization": 20961270,
+      "calibration": 20261271,
+      "validation": 20261272
+    },
+    "nx5_delta5_rho060": {
+      "initialization": 20261280,
+      "calibration": 20261281,
+      "validation": 20261282
+    },
+    "nx5_delta5_rho085": {
+      "initialization": 20261290,
+      "calibration": 20261291,
+      "validation": 20261292
+    }
+  },
+  "figure_language": "English",
+  "diagnostic_figure_types": 4,
+  "png_dpi": 600,
+  "pdf_vector": true,
+  "coordinate_gridlines": false,
+  "multiobjective_methods_executed": false,
+  "noise_CCD_RSM_generated": false,
+  "Pareto_reference_or_metrics_generated": false,
+  "data_publication": "Explicitly requested generated structural results; no open data/figure license applied"
+}

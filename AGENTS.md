@@ -16,6 +16,11 @@ Falhas explícitas. Sem ruído,CCD,RSM,C-NBI,VRF-NBI,EAs,referência,métricas o
 estatística do benchmark,135 instâncias/540 runs. Novo PR10A sem merge automático.
 Sem grades decorativas. Os escopos abaixo são registros históricos.
 
+Prompt específico10A recebido após a consolidação:quatro tipos diagnósticos em
+inglês,PNG alta resolução/PDF vetorial. CSV de correlações é o resumo por cenário;
+matrizes completas em synthetic_correlation_matrices.npz. Preservar os1110
+arquivos no frozen_inputs_manifest.json. Holdout nunca escolhe/reinicia âncoras.
+
 ## Clean implementation
 C-NBI v2 is a clean reimplementation.
 Legacy code is historical reference only.
