@@ -8,7 +8,18 @@ zeroCNBI. NBI/Simplex-Lattice implementados. Nenhum resultado mudou nesta
 consolidação. MIT cobre código original; divulgação dos itens auditados foi
 autorizada sem licença CC implícita. Seções anteriores abaixo são históricas,
 incluindo gates/408 pontos substituídos, não restrições atuais.
-Fase10A aguarda o fechamento do gate documental antes de qualquer geração.
+O gate documental foi concluído pelo PR13,main4432e33,CI Ubuntu/Windows verde.
+
+## Fase10A — cenários estruturais nesta branch
+
+27/27 células geradas/calibradas e validadas,uma configuração por célula.
+Funções verdadeiras exclusivamente distâncias quadráticas isotrópicas,MIN,
+bola alpha=2**(nx/4),nx2/3/5,delta1/3/5,m=nx+1+delta,alvos abs.25/.60/.85.
+16.384 pontos de calibração e65.536 de validação independente,8 starts por célula;
+erro máximo0.00004520/0.00012444,sem relaxar0.05. Correlação assinada observada,
+não controlada. Singularidade é esperada; PSD sem regularização. Nenhum módulo
+ou resultado das Fases0–9 foi alterado. Ver MDR0013 e phase_10a_verification.md.
+Sem novo benchmark,ruído,CCD,ajuste RSM,MC,PA,C-NBI,VRF-NBI,EAs,referência ou métricas.
 
 ## Visualizações científicas do caso aplicado
 
