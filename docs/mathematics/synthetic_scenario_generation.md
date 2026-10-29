@@ -110,6 +110,11 @@ Context7 /scipy/scipy e /numpy/numpy fundamentam somente APIs; fontes primárias
 [Sobol](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.qmc.Sobol.html),
 [SLSQP](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html).
 
+Nos heatmaps, números com sinal são arredondados a uma casa decimal apenas na
+exibição; valores completos ficam no NPZ. O gráfico de erros usa o intervalo
+observado para tornar barras pequenas legíveis e informa a tolerância0.05 em
+texto quando ela fica fora desse intervalo. Não se alteram valores ou critérios.
+
 Não há ruído,CCD,ajuste RSM,Monte Carlo de coeficientes,CHIM/PA,C-NBI,VRF-NBI,
 EAs,referência Pareto,métricas ou estatística de benchmark. Quatro diagnósticos
 em inglês,PNG600dpi/PDF vetorial,sem grades. Dados/figuras das Fases0–9 permanecem

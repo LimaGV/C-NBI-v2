@@ -50,11 +50,17 @@ def figures(results: tuple[CalibratedScenario, ...]) -> dict[str, Figure]:
     ax.barh(
         y + 0.15, abs(val - targets), height=0.28, color="#E69F00", label="Independent validation"
     )
-    ax.axvline(0.05, color="#CC3311", ls="--", lw=1, label="Acceptance tolerance 0.05")
-    ax.set(yticks=y, yticklabels=ids, xlabel="Absolute error from target", xlim=(0, 0.055))
+    upper = max(float(np.max(np.abs(cal - targets))), float(np.max(np.abs(val - targets)))) * 1.15
+    ax.set(
+        yticks=y, yticklabels=ids, xlabel="Absolute error from target", xlim=(0, max(upper, 1e-8))
+    )
+    if upper < 0.05:
+        ax.set_title("Acceptance tolerance: 0.05 (outside displayed range)", fontsize=9)
+    else:
+        ax.axvline(0.05, color="#CC3311", ls="--", lw=1, label="Acceptance tolerance 0.05")
     ax.invert_yaxis()
     ax.tick_params(axis="y", labelsize=7)
-    ax.legend(loc="lower right", frameon=False, fontsize=8)
+    fig.legend(loc="outside lower center", ncol=2, frameon=False, fontsize=8)
     plots["calibration_errors"] = fig
 
     fig = Figure(figsize=(6.8, 4.4), layout="constrained")
