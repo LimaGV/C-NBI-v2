@@ -118,17 +118,21 @@ def test_all_noisy_observations_centers_raw_covariances_and_coefficients():
             assert_array_equal(x, full_ccd(c.nx).points)
             y, true, noise = (data[key + suffix] for suffix in ("__observed", "__truth", "__noise"))
             assert_array_equal(y, true + noise)
-            assert_array_equal(noise, experimental_noise(true, int(row["seed"])))
+            # Stored bytes are certified by hashes; libm/BLAS recomputations
+            # across operating systems use float64 numerical equivalence.
+            assert_allclose(
+                noise, experimental_noise(true, int(row["seed"])), atol=2e-14, rtol=2e-14
+            )
             assert len(np.unique(noise[-5:, 0])) == 5
             # Analytic coefficients are validation-only, not a source for noisy observations.
             assert_allclose(
                 quadratic_design(x) @ true_coefficients(a), true, atol=1e-14, rtol=2e-15
             )
             residuals = data[key + "__residuals"]
-            assert_array_equal(y - models[key].predict(x), residuals)
+            assert_allclose(y - models[key].predict(x), residuals, atol=2e-12, rtol=2e-12)
             assert_allclose(quadratic_design(x).T @ residuals, 0, atol=5e-12, rtol=0)
             raw = residuals.T @ residuals / int(row["residual_df"])
-            assert_array_equal(covariance[key + "__covariance"], raw)
+            assert_allclose(covariance[key + "__covariance"], raw, atol=2e-12, rtol=2e-12)
             if int(row["residual_covariance_rank"]) < c.m:
                 singular += 1
                 assert row["residual_covariance_condition"] == ""

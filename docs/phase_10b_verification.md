@@ -191,6 +191,10 @@ pipeline timings,not algorithm runtime comparisons. Python3.12.15,NumPy2.5.4,
 SciPy1.18.1,Matplotlib3.11.2,Windows11;BLAS/CPU/lock metadata recorded. No new
 dependency or change to uv.lock. Bitwise experimental reproducibility is certified
 in this locked environment;cross-platform BLAS equivalence uses tolerances.
+Archive byte identity is always exact by SHA256. Cross-platform libm/BLAS
+recomputations use small float64 tolerances;local reverse-order experiments and
+raw covariance API tests still require exact identity. No solver/model tolerance
+or scientific result was changed by these platform-portability checks.
 
 ## Stage E — quality gate and delivery
 
