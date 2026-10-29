@@ -1,6 +1,11 @@
-# Decisão de licença pendente
+# Registro da decisão de licença
 
-Nenhuma licença foi selecionada. Não presumir permissões com base na licença da v1.
-A escolha exige decisão explícita do responsável e avaliação das obrigações das
-dependências e materiais de terceiros. Antes de publicação/release: documentar
-decisão, adicionar LICENSE, atualizar metadados e revisar permissões de dados.
+Em 2026-10-29 o responsável confirmou a titularidade/autorização necessária e
+aprovou MIT exclusivamente para o código original. A decisão foi implementada
+em LICENSE; LICENSE_SCOPE.md delimita as exclusões. Não se herdou a licença da V1.
+
+O nome deste arquivo permanece como registro histórico da pendência anterior.
+Dados, figuras, documentos científicos e terceiros não receberam MIT ou CC BY.
+Sua autorização de divulgação pública é registrada separadamente em
+docs/data_publication_permissions.md; suas licenças de reutilização permanecem
+sob decisão separada. Avisos de dependências/fontes continuam aplicáveis.

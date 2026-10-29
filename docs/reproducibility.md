@@ -3,16 +3,67 @@
 ## Ambiente
 Checkout limpo, Python de .python-version, uv 0.12.23 e uv sync --locked.
 Executar checks do README. Não copiar .venv nem alterar lock silenciosamente.
-O lock atende Windows/Ubuntu; equivalência numérica futura ainda exigirá
-validação de bibliotecas nativas e hardware. Os testes atuais são de infraestrutura.
+O lock atende Windows/Ubuntu. Registrar também bibliotecas nativas/BLAS e hardware;
+seed fixa não garante identidade bitwise entre plataformas. Os testes abrangem
+infraestrutura, matemática, otimização e integridade dos resultados congelados.
 
-## Manifesto de execução científica futura
+```powershell
+uv sync --locked
+uv run pytest --cov=cnbi_v2 --cov-report=term-missing
+uv run ruff check .
+uv run mypy src
+```
+
+## Pipeline e resultados aplicados
+
+CCD literal/códigos originais → oito RSMs → covariância residual/coeficientes →
+ensemble2000 → reotimização âncoras/payoff → normalização fixa/CHIM/PA →37 subsets
+→ Simplex-Lattice/NBI local → oito objetivos/ND → benchmark empírico → figuras.
+Os scripts/protocolos estão em scripts/validation/ e docs/mathematics/policies.
+Não reexecutar campanhas para verificar hashes ou produzir figuras.
+
+data/raw/turning_application/ contém os dois workbooks imutáveis. Results das
+Fases2–7 permanecem preservados. A Fase8 mantém tanto o arquivo histórico
+turning_reference_sensitivity_20261024 quanto a correção oficial independente
+turning_standalone_correction_20261025 (H5 standalone409 ND).
+Figuras em results/applied_case_visualizations/turning_visuals_20261025/:
+index.html,catálogo,captions,33 tabelas e331 hashes. Não alterar documentos
+hashados para atualizar a narrativa atual; eles registram o lançamento.
+
+Base científica:d938695b7fdaf9c871d331a42ff277e0c3fbd2d1.
+Plotting:d4db09332b81bd6a11aa0750125670dd8d53541f.
+Entrega das figuras:c6e97db8cf18b1927821b386231fb64a8342b431.
+Integrações:PR11=39069f3f9abb51af94f9044c1d3c668264590638;
+PR12=bb5d6f215c6465777dd395bb8448329327f49c3b. Merge commits preservam a
+ancestralidade desses SHAs. Ver consolidation_20261029.md.
+
+Reproduzir gráficos em uma saída nova, sem nova execução científica:
+
+```powershell
+uv run python -m scripts.visualization.generate_applied_case_figures --language both --set all --output experiments/runs/visual_reproduction --dpi 600
+```
+
+Sem grades de eixos; contornos/domínio/limiares são referências explícitas.
+Transformações PCA/elipses são documentadas. Diferenças mínimas de antialiasing
+entre processos não equivalem a mudança científica; ver auditoria do run.
+
+## Referência empírica e cenários sintéticos
+
+Os18.503 pontos sem CNBI são referência Pareto **empírica** finita, sem certificado
+de frente verdadeira. Alvos comuns,exclusões por família e sensibilidades têm
+escopos distintos. A futura Fase10A gera somente27 configurações para funções
+verdadeiras isotrópicas f_j=||x-a_j||² em bolas2**(nx/4). Seus mínimos analíticos
+não são a referência empírica do torneamento. Não se constrói agora referência
+Pareto sintética,135 instâncias RSM ou540 runs de benchmark.
+MIT cobre apenas código próprio; ver LICENSE_SCOPE.md e data_publication_permissions.md.
+
+## Manifesto de execução científica
 Registrar: identificador, data UTC, branch, SHA, versão, dirty, lock SHA256,
 Python, uv, SO/arquitetura, bibliotecas/BLAS relevantes; entradas/hashes;
 protocolo/MDR; configuração completa; seed/gerador; solver/versão; thresholds,
 tolerâncias, normalização, H, número de Monte Carlos e covariância quando
 aplicáveis; comandos, logs, saídas/hashes, status, testes e resultados afetados.
 
-Nenhum valor científico é definido nesta fase. Seed fixa não basta como prova
+Os valores científicos das Fases0–9 estão congelados. Seed fixa não basta como prova
 de reprodutibilidade numérica. Reexecução compara ambiente, hashes e critérios
 previamente documentados. Árvore dirty deve ser identificada, não tratada como release.

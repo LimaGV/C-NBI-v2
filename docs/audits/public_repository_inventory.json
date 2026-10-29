@@ -1,0 +1,866 @@
+{
+  "audit_date": "2026-10-29",
+  "timezone": "America/Sao_Paulo",
+  "audit_base_commit": "c6e97db8cf18b1927821b386231fb64a8342b431",
+  "gate_0_status": "CLEARED_BY_EXPLICIT_RESPONSIBLE_USER_AUTHORIZATION_2026_10_29",
+  "repository": {
+    "full_name": "LimaGV/C-NBI-v2",
+    "visibility": "public",
+    "private": false,
+    "default_branch": "main",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "disabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "disabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true
+  },
+  "reference_state": {
+    "origin/main": {
+      "sha": "f904e8de0810324b4456cf2ad7de59ca2c6b5ab4",
+      "tracked_files": 494,
+      "local_remote_divergence": "0\t0"
+    },
+    "origin/feature/08-reference-sensitivity-final-benchmark": {
+      "sha": "d938695b7fdaf9c871d331a42ff277e0c3fbd2d1",
+      "tracked_files": 774,
+      "local_remote_divergence": "0\t0"
+    },
+    "origin/feature/09-applied-case-visualizations": {
+      "sha": "c6e97db8cf18b1927821b386231fb64a8342b431",
+      "tracked_files": 1111,
+      "local_remote_divergence": "0\t0"
+    }
+  },
+  "pull_requests": [
+    {
+      "baseRefName": "main",
+      "headRefName": "feature/08-reference-sensitivity-final-benchmark",
+      "headRefOid": "d938695b7fdaf9c871d331a42ff277e0c3fbd2d1",
+      "mergeable": "MERGEABLE",
+      "number": 11,
+      "state": "OPEN",
+      "url": "https://github.com/LimaGV/C-NBI-v2/pull/11",
+      "checks": [
+        {
+          "name": "Tests (ubuntu-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40203806547/job/121200358147"
+        },
+        {
+          "name": "Tests (ubuntu-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40203802291/job/121200345051"
+        },
+        {
+          "name": "Tests (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40203806547/job/121200358057"
+        },
+        {
+          "name": "Tests (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40203802291/job/121200344910"
+        }
+      ]
+    },
+    {
+      "baseRefName": "feature/08-reference-sensitivity-final-benchmark",
+      "headRefName": "feature/09-applied-case-visualizations",
+      "headRefOid": "c6e97db8cf18b1927821b386231fb64a8342b431",
+      "mergeable": "MERGEABLE",
+      "number": 12,
+      "state": "OPEN",
+      "url": "https://github.com/LimaGV/C-NBI-v2/pull/12",
+      "checks": [
+        {
+          "name": "Tests (ubuntu-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40220670761/job/121251357465"
+        },
+        {
+          "name": "Tests (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/LimaGV/C-NBI-v2/actions/runs/40220670761/job/121251357748"
+        }
+      ]
+    }
+  ],
+  "workbooks": [
+    {
+      "path": "data/raw/turning_application/CCD_original.xlsx",
+      "bytes": 15427,
+      "sha256": "fd9c463efdcd62ff3d7eaa7eec18d9e112543675c30b1f36838beeb38deebf4a",
+      "sheets": [
+        {
+          "member": "xl/worksheets/sheet1.xml",
+          "range": "A1:L20"
+        }
+      ],
+      "formulas": 152,
+      "external_formulas": 152,
+      "external_relationships": [
+        {
+          "member": "xl/externalLinks/_rels/externalLink1.xml.rels",
+          "kind": "externalLinkPath",
+          "is_file_uri": true,
+          "contains_user_home": true,
+          "target_redacted": true
+        },
+        {
+          "member": "xl/externalLinks/_rels/externalLink1.xml.rels",
+          "kind": "externalLinkPath",
+          "is_file_uri": false,
+          "contains_user_home": false,
+          "target_redacted": true
+        }
+      ],
+      "personal_fields": [
+        {
+          "member": "docProps/core.xml",
+          "field": "creator",
+          "value_redacted": true
+        },
+        {
+          "member": "docProps/core.xml",
+          "field": "lastModifiedBy",
+          "value_redacted": true
+        }
+      ],
+      "macro_payload_present": false,
+      "read_only": true,
+      "recalculated": false,
+      "saved": false
+    },
+    {
+      "path": "data/raw/turning_application/CCD_values_20261023.xlsx",
+      "bytes": 11283,
+      "sha256": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+      "sheets": [
+        {
+          "member": "xl/worksheets/sheet1.xml",
+          "range": "A1:L20"
+        }
+      ],
+      "formulas": 0,
+      "external_formulas": 0,
+      "external_relationships": [],
+      "personal_fields": [
+        {
+          "member": "docProps/core.xml",
+          "field": "creator",
+          "value_redacted": true
+        },
+        {
+          "member": "docProps/core.xml",
+          "field": "lastModifiedBy",
+          "value_redacted": true
+        }
+      ],
+      "macro_payload_present": false,
+      "read_only": true,
+      "recalculated": false,
+      "saved": false
+    }
+  ],
+  "inventory_counts": {
+    "tracked_files": 1111,
+    "files_by_top_level": {
+      ".gitattributes": 1,
+      ".github": 2,
+      ".gitignore": 1,
+      ".python-version": 1,
+      "AGENTS.md": 1,
+      "CHANGELOG.md": 1,
+      "CITATION.cff": 1,
+      "LICENSE_DECISION_PENDING.md": 1,
+      "README.md": 1,
+      "ROADMAP.md": 1,
+      "data": 31,
+      "docs": 70,
+      "experiments": 1,
+      "notebooks": 1,
+      "pyproject.toml": 1,
+      "references": 23,
+      "results": 849,
+      "scripts": 33,
+      "src": 44,
+      "tests": 46,
+      "uv.lock": 1
+    }
+  },
+  "history_scan": {
+    "objects_reachable_from_all_local_refs": 1904,
+    "text_blobs": 1020,
+    "text_bytes": 127764411,
+    "binary_blobs_not_content_scanned": 357,
+    "secret_pattern_categories": [
+      "github_pat",
+      "aws_access_key",
+      "google_api_key",
+      "slack_token",
+      "openai_key",
+      "private_key",
+      "literal_secret_assignment"
+    ],
+    "secret_candidates": [],
+    "privacy_occurrences_over_unique_blob_versions": {
+      "absolute_user_home": 11,
+      "email_address": 2
+    },
+    "credential_named_paths": [],
+    "limitations": [
+      "Heuristic scan, not a complete secret detector",
+      "Binary payloads, GitHub Actions logs/artifacts, unreachable or deleted remote objects, forks and caches not exhaustively scanned"
+    ]
+  },
+  "privacy_paths": [
+    {
+      "path": "docs/environment_verification.md",
+      "kinds": [
+        "absolute_user_home"
+      ]
+    },
+    {
+      "path": "docs/legacy_reference.md",
+      "kinds": [
+        "absolute_user_home"
+      ]
+    },
+    {
+      "path": "docs/mathematics/coefficient_monte_carlo.md",
+      "kinds": [
+        "absolute_user_home"
+      ]
+    },
+    {
+      "path": "docs/phase_0_5_verification.md",
+      "kinds": [
+        "absolute_user_home"
+      ]
+    },
+    {
+      "path": "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/timing_launch.json",
+      "kinds": [
+        "absolute_user_home"
+      ]
+    },
+    {
+      "path": "src/cnbi_v2/reference/problem.py",
+      "kinds": [
+        "email_address"
+      ]
+    },
+    {
+      "path": "tests/chim/test_geometry_pa.py",
+      "kinds": [
+        "email_address"
+      ]
+    }
+  ],
+  "email_pattern_hits_review": "Two Python matrix-multiplication expressions, not email addresses",
+  "actions_log_scan": [
+    {
+      "run_id": 40220670761,
+      "sha": "c6e97db8cf18b1927821b386231fb64a8342b431",
+      "conclusion": "success",
+      "http_access_ok": true,
+      "log_members": 4,
+      "bytes_scanned": 90339,
+      "secret_candidates": [],
+      "paths_to_review": [
+        {
+          "member": "0_Tests (windows-latest).txt",
+          "occurrences": 2,
+          "values_redacted": true
+        },
+        {
+          "member": "1_Tests (ubuntu-latest).txt",
+          "occurrences": 68,
+          "values_redacted": true
+        }
+      ]
+    },
+    {
+      "run_id": 40203806547,
+      "sha": "d938695b7fdaf9c871d331a42ff277e0c3fbd2d1",
+      "conclusion": "success",
+      "http_access_ok": true,
+      "log_members": 4,
+      "bytes_scanned": 88374,
+      "secret_candidates": [],
+      "paths_to_review": [
+        {
+          "member": "0_Tests (ubuntu-latest).txt",
+          "occurrences": 68,
+          "values_redacted": true
+        },
+        {
+          "member": "1_Tests (windows-latest).txt",
+          "occurrences": 2,
+          "values_redacted": true
+        }
+      ]
+    },
+    {
+      "run_id": 40203802291,
+      "sha": "d938695b7fdaf9c871d331a42ff277e0c3fbd2d1",
+      "conclusion": "success",
+      "http_access_ok": true,
+      "log_members": 4,
+      "bytes_scanned": 87055,
+      "secret_candidates": [],
+      "paths_to_review": [
+        {
+          "member": "0_Tests (ubuntu-latest).txt",
+          "occurrences": 68,
+          "values_redacted": true
+        },
+        {
+          "member": "1_Tests (windows-latest).txt",
+          "occurrences": 2,
+          "values_redacted": true
+        }
+      ]
+    },
+    {
+      "run_id": 40140306356,
+      "sha": "f904e8de0810324b4456cf2ad7de59ca2c6b5ab4",
+      "conclusion": "success",
+      "http_access_ok": true,
+      "log_members": 4,
+      "bytes_scanned": 84490,
+      "secret_candidates": [],
+      "paths_to_review": [
+        {
+          "member": "0_Tests (ubuntu-latest).txt",
+          "occurrences": 68,
+          "values_redacted": true
+        },
+        {
+          "member": "1_Tests (windows-latest).txt",
+          "occurrences": 2,
+          "values_redacted": true
+        }
+      ]
+    }
+  ],
+  "license_status": "MIT_APPROVED_FOR_ORIGINAL_CODE_ONLY",
+  "dependencies": [
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 20,
+      "license_files_sha256": [
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59"
+        },
+        {
+          "name": "numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763"
+        },
+        {
+          "name": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "name": "numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "name": "numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        }
+      ]
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_license_first_line": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.",
+      "license_files_count": 5,
+      "license_files_sha256": [
+        {
+          "name": "scipy-1.18.1.dist-info/LICENSE.txt",
+          "sha256": "f0f5c56b298ec9795df1199edc328a987242716d14a1bde6813112e22dc15f99"
+        },
+        {
+          "name": "scipy/_lib/_uarray/LICENSE",
+          "sha256": "e4c4acc31e8287066d7c995d26e3ef902ca1977ee187b260b11c278366503811"
+        },
+        {
+          "name": "scipy/fft/_duccfft/LICENSE.md",
+          "sha256": "c04661685cff9d8035fe1c4c3ab357e7f7633cafc06a73e9d90c3c5fede8a86a"
+        },
+        {
+          "name": "scipy/integrate/LICENSE_DOP",
+          "sha256": "6cc2ed6e35b8f376ff3d8f86aeef4e0c34c2309bd6f4a0565936d577839ba023"
+        },
+        {
+          "name": "scipy/spatial/qhull_src/COPYING_QHULL.txt",
+          "sha256": "2a6ebb495e26dd5f88cbc40c593733da6edb27b64936f70409cd5a1acafb1c32"
+        }
+      ]
+    },
+    {
+      "name": "pandas",
+      "version": "3.1.0",
+      "license_expression": "BSD-3-Clause",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 19,
+      "license_files_sha256": [
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSE",
+          "sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/BOTTLENECK_LICENCE",
+          "sha256": "053a90e30580f5d9d79817add1567f88b4a3eeb11bcded9ecf74619d17768066"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/DATEUTIL_LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/HAVEN_LICENSE",
+          "sha256": "48216b40b3d1b19452923dd6fd74655bf5c0df9d76b51eb0efade7e0b88bfbcc"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/HAVEN_MIT",
+          "sha256": "87217d0a79195441ab615a3abb3ab6777502e57804ea83f973df975a67ebd720"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/KLIB_LICENSE",
+          "sha256": "7463172c3a23321c1838896eba437f70a6de80ac5a840b2960966c8c5444abf1"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/MUSL_LICENSE",
+          "sha256": "50a343c1ce9e27cd6c58023f13b91d2cd679861fe7fb6bbbbfbec3dcafc3583f"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/NUMPY_LICENSE",
+          "sha256": "81d42da02a56b611c35abc83d2241564b46bec3a5b1960b395d55cebca68fb6f"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/PACKAGING_LICENSE",
+          "sha256": "1871330068a18f1f07c3f147a41c008e59f367f217041ca6eb20b0298639a128"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/PSF_LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/PYPERCLIP_LICENSE",
+          "sha256": "eafcd440e3570c6bc7b77dcec15dec398d13bc9b5e897336b221ff81ff19f345"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/PYUPGRADE_LICENSE",
+          "sha256": "70aedcd6928272bd176e4fdc3384af22ee759d006fb15105d994756e4f2d1b7a"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/SAS7BDAT_LICENSE",
+          "sha256": "458d5fd4175825440ad32d6bf6af45d1a19d4adb316b557d869c6560b6692e00"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/STATSBASE_JL_LICENSE",
+          "sha256": "f371ccf0fb892a4cd9f2e550c4b8cf4362793d17028dc642ad55c1e01a41dfe1"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/ULTRAJSON_LICENSE",
+          "sha256": "2bfbb5bb8ec66d136ec62d836ddc0c0019d44ef4d9389f1f6cab1c1109d774a2"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/LICENSES/XSIMD_LICENSE",
+          "sha256": "501352acba62cc54e8e3d293754d606f919c9b425b962193c211f9fa29cd9940"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE",
+          "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST",
+          "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+        },
+        {
+          "name": "pandas-3.1.0.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT",
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+        }
+      ]
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1",
+      "license_expression": "BSD-3-Clause",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 3,
+      "license_files_sha256": [
+        {
+          "name": "scikit_learn-1.9.1.dist-info/licenses/COPYING",
+          "sha256": "014b1b1ad74cf00997f7081a1635c3c203cd70c08f39c13d9a39347fcd464979"
+        },
+        {
+          "name": "sklearn/externals/array_api_compat/LICENSE",
+          "sha256": "464569596b7e6162762669e4e4d1fe8d2618c03901ca7ba36e2603415fb6865d"
+        },
+        {
+          "name": "sklearn/externals/array_api_extra/LICENSE",
+          "sha256": "8b2e8a4aa8a98ed811f17be2807b1eb90dcb021c1e5a0304d784d0a24f4ee907"
+        }
+      ]
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_license_first_line": "MIT",
+      "license_files_count": 1,
+      "license_files_sha256": [
+        {
+          "name": "openpyxl-3.1.5.dist-info/LICENCE.rst",
+          "sha256": "0c84bb42f5d367e5ebf9fc2dde35b16141df5ee0fdc189250858bc6c5560f69e"
+        }
+      ]
+    },
+    {
+      "name": "pymoo",
+      "version": "0.6.2",
+      "license_expression": "Apache-2.0",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 1,
+      "license_files_sha256": [
+        {
+          "name": "pymoo-0.6.2.dist-info/licenses/LICENSE",
+          "sha256": "737c0b1c449cb08a5c58c66650ac623fa0104673b26d92af660ef52bcc5e7f27"
+        }
+      ]
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "legacy_license_first_line": "License agreement for matplotlib versions 1.3.0 and later",
+      "license_files_count": 3,
+      "license_files_sha256": [
+        {
+          "name": "matplotlib-3.11.2.dist-info/LICENSE",
+          "sha256": "822e8e528147569a41975592aee19c11992ab667ba50451cd929031d5fc74491"
+        },
+        {
+          "name": "matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU",
+          "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e"
+        },
+        {
+          "name": "matplotlib/mpl-data/fonts/ttf/LICENSE_STIX",
+          "sha256": "bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959"
+        }
+      ]
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "license_expression": "MIT",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 1,
+      "license_files_sha256": [
+        {
+          "name": "pytest-9.1.1.dist-info/licenses/LICENSE",
+          "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+        }
+      ]
+    },
+    {
+      "name": "pytest-cov",
+      "version": "7.1.0",
+      "license_expression": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_license_first_line": null,
+      "license_files_count": 2,
+      "license_files_sha256": [
+        {
+          "name": "pytest_cov-7.1.0.dist-info/licenses/AUTHORS.rst",
+          "sha256": "d7390c793c73c36265497ffac90a886a235c8b50948454c9af98f1aef2a00d2a"
+        },
+        {
+          "name": "pytest_cov-7.1.0.dist-info/licenses/LICENSE",
+          "sha256": "835586ae156766a24e3c103fbc55d9af6b1a16df57ca932c97482a2737fd83d5"
+        }
+      ]
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.2",
+      "license_expression": "MIT",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 1,
+      "license_files_sha256": [
+        {
+          "name": "ruff-0.17.2.dist-info/licenses/LICENSE",
+          "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+        }
+      ]
+    },
+    {
+      "name": "mypy",
+      "version": "2.4.0",
+      "license_expression": "MIT",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 3,
+      "license_files_sha256": [
+        {
+          "name": "mypy-2.4.0.dist-info/licenses/LICENSE",
+          "sha256": "1cdee80ea9363fbe69582df40fa64e1853d7647fb4978c2b376f5854d88142be"
+        },
+        {
+          "name": "mypy-2.4.0.dist-info/licenses/mypy/typeshed/LICENSE",
+          "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4"
+        },
+        {
+          "name": "mypy/typeshed/LICENSE",
+          "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4"
+        }
+      ]
+    },
+    {
+      "name": "ipykernel",
+      "version": "7.4.0",
+      "license_expression": "BSD-3-Clause",
+      "license_classifiers": [],
+      "legacy_license_first_line": null,
+      "license_files_count": 1,
+      "license_files_sha256": [
+        {
+          "name": "ipykernel-7.4.0.dist-info/licenses/LICENSE",
+          "sha256": "36ec29c871f7a382cde301cba47698191cf327c3f95ff5c240065e95dde80bfd"
+        }
+      ]
+    },
+    {
+      "name": "jupyterlab",
+      "version": "4.6.4",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_license_first_line": "Copyright (c) 2015-2026 Project Jupyter Contributors",
+      "license_files_count": 3,
+      "license_files_sha256": [
+        {
+          "name": "../../share/jupyter/lab/static/third-party-licenses.json",
+          "sha256": "8e6f949387971310f1fcc411ef4fbd531b92580609ed55feedd75bbdf43c47c9"
+        },
+        {
+          "name": "jupyterlab-4.6.4.dist-info/licenses/LICENSE",
+          "sha256": "56b2e89eae0571033d778a9790872f17ee219c723b826399052522ddb94b2853"
+        },
+        {
+          "name": "jupyterlab/static/third-party-licenses.json",
+          "sha256": "8e6f949387971310f1fcc411ef4fbd531b92580609ed55feedd75bbdf43c47c9"
+        }
+      ]
+    },
+    {
+      "name": "uv_build",
+      "installed": false
+    }
+  ],
+  "protected_fulltext_payloads_in_head": [],
+  "selected_file_sha256": {
+    ".github/workflows/tests.yml": "13e737b6bc4bb85f899c9ea2535131db5252e6399a5fefaa492f8fc8a6882fb4",
+    "CITATION.cff": "6ab95e23053db302e4bee705cc3863d6772dd7621400afe77e7e02b4d810c757",
+    "LICENSE_DECISION_PENDING.md": "8a6eede19403a517e253624f7344b90c11b0dd9c45909717873bf5e7a58351bb",
+    "data/README.md": "74a84e3f7cfa60e747e77eb29fe114330220fbee4e9799fa90c8fd1a2ab5feef",
+    "data/external/README.md": "b67354f9b0ea94a9ca8f2b5fd48d3b864b714da49dee8da72cb8cf35d8d83689",
+    "data/external/turning_reference/README.md": "881759186e88aa7c73ac303b24eb3d31e7c6c9c1bbc6118e1a385bfff4181620",
+    "data/external/turning_reference/vrf_historical_decisions.csv": "f41b338c8927c635d18e60ab363c900116e9a7894177b9d740a433581fd2661a",
+    "data/interim/README.md": "6e28c64359b212d6da8cd8ae1bc7a03d42c12a795ca8f63345662c437d288138",
+    "data/metadata/README.md": "1cd30b3d0f389599fb0a11a7e074217e56528ee942ad8236881f74582ac201cb",
+    "data/metadata/dataset_template.yaml": "a04d054a85e17e9770b8acf1ed6f9d5eae2cdbc3caf5accc9b9c5054afd62b09",
+    "data/metadata/turning_application/README.md": "909a844087961a1bd351b2b95e7c521bfe0c29bb1f621e35062e458520af41b4",
+    "data/metadata/turning_application/checksums.sha256": "07d8d92f20b0d199283fcd89d4297c2ef1b978bf7219b41a370846f007a396b3",
+    "data/metadata/turning_application/dataset.yaml": "2dccbca60043a4765a09f9c30c24d98f29b8a2078285d28393b1b694c53e80c7",
+    "data/metadata/turning_application/phase_02_coding.json": "3f9e9664036006036eaa2311f3835e649cac7ab972f430356c52515d895468f2",
+    "data/metadata/turning_application/provenance.yaml": "01f14060aefb0fd5b52eb9d037053e5d8317817043953ac213e7dc1e2b71233f",
+    "data/metadata/turning_application/values_20261023/README.md": "7fe97865c5a6fdbf451af44e0da58671b5a4440bfc3c376c7115619ac5fcd0ad",
+    "data/metadata/turning_application/values_20261023/checksums.sha256": "a2827a318536a911b7e4cc207479d67d9da94e56860bf3478d835b9a284b908b",
+    "data/metadata/turning_application/values_20261023/coding_and_scaling.json": "396d760d9ff8a6da836ccb4ef5940dcf7b4016396817ce15c5b48bec668ac348",
+    "data/metadata/turning_application/values_20261023/dataset.json": "60e5e21e50cbcf81971622dc7ae1812fe3cfc673d79d02b12bff129c7780e906",
+    "data/metadata/turning_application/values_20261023/provenance.json": "6ecdaa6cd7a2f2068c9715af89598b036b7b1c5942d1aa8e5b22d80be8083843",
+    "data/metadata/turning_application/values_20261023/workbook_inspection.json": "96da838dbdc4a5a8327eaff92ebdee0cb1c3b98271f3ab75f1f4dd2da86295de",
+    "data/metadata/turning_application/variables.yaml": "c4210aed346eb09ca3ab064c55b54f46c77091be672a5051e607702633300567",
+    "data/metadata/turning_application/workbook_inspection.json": "8ee5f8731084fda4b62ae7f7cf7f03954f5a35549a2253f6784c46f9d9b14405",
+    "data/metadata/variable_dictionary_template.yaml": "958533dd71949a144531657aedb5ccfe409d5e2ccfe9130182a9eb1ee1d9efd4",
+    "data/processed/README.md": "f1eff7a1754caf74b3b2a114bf72c9f8d5e4094f0867cae99e08cb0ba32d67bd",
+    "data/processed/turning_application/CCD_values_20261023.csv": "dd204e53d68436e0ff840d260a0903ee30789dd28ee1934b4f1bbce50a5aa02e",
+    "data/processed/turning_application/README.md": "638e4ff70e446484e58d2887649123ec3985eadee6a39bf1d3938ca94441b970",
+    "data/processed/turning_application/original_coded_factors.csv": "96ba3ca12794357c9c598428dd2aa775fae2ae6f6a53c8afd40128e9384030f1",
+    "data/raw/README.md": "ee30dc00266a7ffa89422212ba1ed3074dde299c94d3d8cc9b29e4f818d4f92c",
+    "data/raw/turning_application/CCD_original.xlsx": "fd9c463efdcd62ff3d7eaa7eec18d9e112543675c30b1f36838beeb38deebf4a",
+    "data/raw/turning_application/CCD_values_20261023.xlsx": "7f905b7a2f7bb8b6735ab96900cba7356401df2d26c961dcb12faa2683c6c71e",
+    "data/raw/turning_application/README.md": "7f6cdd13365fc1a32a488524c2b3fac230500be44759039ffbe230304f90769e",
+    "data/snapshots/README.md": "9be711c2a73a4a214305924a57f7348084c779598f03dac8d9e321c1746612f1",
+    "data/snapshots/turning_application/README.md": "04284d4ce4bdfe50ee2be17b0c0199f0136f79e15e07741e8feda3096b3f542b",
+    "pyproject.toml": "9f5f0184cf4ba0b9c548c4803ee90ade1db2c06474fef80495a5ec57ac89a3f9",
+    "references/metadata/phase_07_v1/applied_ea_calibration.json": "0417657aa8847c3bef551eaaa259adf4f149b0e44e9063be5709d0b0eed7ff5b",
+    "references/metadata/phase_07_v1/historical_decision_audit.json": "0b11a97b211cbc3f8453df3dbb1d4be0bb4e49a8ad3ad97015856e0a993ede80",
+    "references/metadata/phase_07_v1/reference_source_audit.csv": "072ba734525268ca92198c4fde8e91f22408624eb094c31abb09ba5dbc242399",
+    "references/metadata/phase_07_v1/source_provenance.json": "1f6f7164ca99c67abe4c73911613f8defebfc28fa4916e45fc36e662557a06cb",
+    "references/metadata/phase_08_legacy_metrics/source_audit.json": "631f1dcad7bd5c3834d170bc8227df86b8722b59fea42913552ef191f4fbb89c",
+    "results/applied_case_visualizations/turning_visuals_20261025/checksums.sha256": "029daa52db9f0feef0399e9b2e17d51b71d3f9df3c21eaa934f9a587c6403bd8",
+    "results/applied_case_visualizations/turning_visuals_20261025/figure_catalog.csv": "0427f34bf336c448f004061aef6721acf1b08ad5b15b6347c12208b9294d2204",
+    "results/applied_case_visualizations/turning_visuals_20261025/metadata.json": "d2b64d364c7db78791929d888441ce09f381d9c5154517fa9521b99e7c2a6787",
+    "results/applied_case_visualizations/turning_visuals_20261025/render_audit.json": "fca4ee039ac3a51dffa9707a38a1b0ce7a1caac9b04ff4aefe1c1357dca21133",
+    "results/phase_02_anchors/turning_original_codes_20261024/checksums.sha256": "07963fe7b31e62a09726928aa7d5ca8510639dafa9ea92a191b5200a171a911f",
+    "results/phase_02_anchors/turning_original_codes_20261024/metadata.json": "880971d1bbf449e10f4abe6ca949998ecb59eac39f28b382e2d7902604be61af",
+    "results/phase_03_coefficient_mc/turning_original_codes_mc_777_20261024/checksums.sha256": "c2aa9e1fd7d32ae7f28b3c2ac116a96ae56e02901407b93b559f3617df131650",
+    "results/phase_03_coefficient_mc/turning_original_codes_mc_777_20261024/metadata.json": "000888b8b35e88e22c4c42a62d8a8033254c78c4896cfa41925858569eaf7bcb",
+    "results/phase_04_anchor_mc/turning_original_codes_anchor_mc_777_20261024/checksums.sha256": "bd9f83155c6eaee95119860525cca57b2286bd9927a144b577bbb9376e69ee5c",
+    "results/phase_04_anchor_mc/turning_original_codes_anchor_mc_777_20261024/metadata.json": "6c5a81c75e2ca759f1daa54235b270f30527ed21fafe0d932c3e9bfc7b13250d",
+    "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/checksums.sha256": "9263cb09302d0314fba6e6f523bb44b2997a10648bf7d7c197d38677e2393903",
+    "results/phase_05_chim_pa/turning_fixed_nominal_chim_pa_777_20261024/metadata.json": "61f84b930aa8b0adb9a9bc48f2129dbcc675f73bc582d7053f500188d5f87992",
+    "results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/checksums.sha256": "0029adf55c46b0aaebf7b15f3dfca7f68b17ac9073ca9bddbadff24136bf1cde",
+    "results/phase_05_chim_pa/turning_spectral_gap_policy_v2_20261024/metadata.json": "bfdcb1451c7e63ac87ef27aaeca8a25f7ca1d1cc7ca8f56c9806a394f9e842ec",
+    "results/phase_06_local_nbi/turning_local_nbi_h20_20261024/checksums.sha256": "fb332fe017dd40a29344892da63907b0bf8f782c29a5695f2c376844c0b83b72",
+    "results/phase_06_local_nbi/turning_local_nbi_h20_20261024/metadata.json": "7ef4f92954deabe3dbf996e3bb046d0987c3e59b201f81742cbabfea688d9683",
+    "results/phase_07_reference_front/turning_multifamily_loo_20261024/checksums.sha256": "271d2ccaed63e1d6951888453dac69e5a945be4e0f8d230e6203d3cdbec4f3c9",
+    "results/phase_07_reference_front/turning_multifamily_loo_20261024/metadata.json": "0f0b308ad7b87949a3edc6cf040d7be6185cb1f58fffa0bb941cfc14fba76b1a",
+    "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/checksums.sha256": "c0e8ab1ccd8d4b8d42ca03dffec22afb86200d4dc371da5993276001bf3b3988",
+    "results/phase_08_final_benchmark/turning_reference_sensitivity_20261024/metadata.json": "d067a23760141269c69f604be9d4e4a4a2f0fab6f9bfe361c265af825f4b0c18",
+    "results/phase_08_final_benchmark/turning_standalone_correction_20261025/checksums.sha256": "b7829a20c6ecffd81a07b7936288af1b6c583cab11400f2b424c92f3d6ae6545",
+    "results/phase_08_final_benchmark/turning_standalone_correction_20261025/metadata.json": "cbf93d1de5e5cb54ead5062c4a2a58a5e5b39390aeeb310707433576df3375d7",
+    "results/turning_8responses_validation/checksums.sha256": "bfa61aa622543255e9f766b3666ab92ea58dd087d32f1054d39a3ce7438a34d3",
+    "results/validation/turning_rsm/checksums.sha256": "d0f67ae4b70939c76f2de1211b2758735d305c7da72442cb331b2a9e8f061478",
+    "tests/reference_cases/legacy_metrics/spacing_oracle.npz": "8f3cd596883b30cfa15165e56c655ba2493cf9fdc6a67af39aabe21ed937c59d",
+    "tests/reference_cases/turning_8responses/README.md": "4147f3cb285860bcb2c6d0200e58ac318d6205e59bd16386f9dadc3072e570cf",
+    "tests/reference_cases/turning_8responses/expected_coefficients.csv": "72d3d04ac63ed33da3f6e3b80c46bc13e2a702e394d28bc2d1c4e2c08a6557a5",
+    "tests/reference_cases/turning_8responses/expected_model_summary.csv": "e9c19da0ae4f62f39e7ac0e69809bdd35597a159d26a5a3a0479ff90563ac298",
+    "tests/reference_cases/turning_8responses/source.yaml": "548dca8ed29abcab524d6dbca1db421988a24878f93424eb7f3062980eae694d",
+    "uv.lock": "b4f3b4bae5340256e3afda7c0ca869eb92d3678a9281d07ac730ef711302389a"
+  },
+  "changes_performed": {
+    "new_local_audit_documents_only": true,
+    "public_push": false,
+    "merge": false,
+    "visibility_change": false,
+    "license_applied": false,
+    "history_rewrite": false,
+    "scientific_result_change": false,
+    "phase_10a_started": false
+  },
+  "authorization_update": {
+    "date": "2026-10-29",
+    "public_disclosure_of_identified_data_and_metadata": true,
+    "user_confirmed_necessary_rights": true,
+    "MIT_original_code_only": true,
+    "data_figures_documents_CC_license_applied": false,
+    "historical_findings_retained": true
+  },
+  "audit_snapshot_scope": "Initial pre-authorization observation at c6e97db; authorization_update and gate/license status record the later user decision. Subsequent integration state is documented separately."
+}

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — consolidation and publication permissions
+
+- Integrated Phase8/9 (PR11/12) by merge commits, preserving scientific SHAs.
+- Public audit and responsible user's authorization for identified data/metadata.
+- MIT for original code only; explicit data/results/figures/document exclusions.
+- Updated citation, current state, roadmap and reproducibility documentation.
+- All frozen scientific results and bilingual figures remain unchanged.
+
 ## Unreleased — applied-case scientific visualization package
 
 - Figuras PT/EN com dados compartilhados, paleta central e ausência de grades.
