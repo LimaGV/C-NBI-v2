@@ -85,8 +85,11 @@ def peak_memory_bytes() -> int:
     memory.cb = ctypes.sizeof(memory)
     kernel = ctypes.WinDLL("kernel32", use_last_error=True)
     kernel.GetCurrentProcess.restype = wintypes.HANDLE
-    ctypes.WinDLL("psapi").GetProcessMemoryInfo(
-        kernel.GetCurrentProcess(), ctypes.byref(memory), memory.cb)
+    query = ctypes.WinDLL("psapi", use_last_error=True).GetProcessMemoryInfo
+    query.argtypes = [wintypes.HANDLE, ctypes.POINTER(Memory), wintypes.DWORD]
+    query.restype = wintypes.BOOL
+    if not query(kernel.GetCurrentProcess(), ctypes.byref(memory), memory.cb):
+        raise ctypes.WinError(ctypes.get_last_error())
     return int(memory.PeakWorkingSetSize)
 
 
