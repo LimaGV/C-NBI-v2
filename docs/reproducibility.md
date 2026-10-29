@@ -1,5 +1,17 @@
 # Reprodutibilidade
 
+## Fase10B — geração e verificação independentes
+
+Protocolo docs/policies/synthetic_generation_10b.json,matemática e MDR0014.
+Após checkout limpo do commit de implementação:
+`uv run python scripts/validation/generate_synthetic_rsm.py --output <nova_pasta_vazia>`.
+Nunca sobrescrever uma campanha. A campanha oficial será preservada em
+results/phase_10_synthetic_rsm/rsm_20261029/. Verificação read-only:
+`uv run python scripts/validation/verify_synthetic_rsm.py`.
+Modelos:cnbi_v2.synthetic.rsm_serialization.load_models(campaign_directory),sem OLS
+ou acesso ao oráculo analítico. Todos135 compartilhados por métodos futuros.
+Seeds,arrays float64,dependências/BLAS,fonte e todas entradas0–10A são hashed.
+
 ## Ambiente
 Checkout limpo, Python de .python-version, uv 0.12.23 e uv sync --locked.
 Executar checks do README. Não copiar .venv nem alterar lock silenciosamente.

@@ -5,10 +5,20 @@
 Baseline: **H5 standalone,492 aceitos,411 decisões únicas,409 ND**. Referência
 empírica18503/zeroCNBI; métricas GD,IGD,HV,Spacing,Sparsity. Não é frente verdadeira.
 Ver [consolidação](docs/consolidation_20261029.md) e
-[reprodutibilidade](docs/reproducibility.md). Fase10A autorizada após o gate
-documental, já satisfeito; o benchmark sintético completo ainda não começou.
+[reprodutibilidade](docs/reproducibility.md). Fase10A integrada no PR14 (d68aef7),
+com CI verde Ubuntu/Windows. O benchmark sintético multiobjetivo ainda não começou.
 
-## Fase10A — cenários estruturais nesta branch
+## Fase10B — CCD, ruído e RSM sintéticos nesta branch
+
+Pipeline separado para27 células congeladas ×5 réplicas:135 RSMs multirresposta,
+3555 corridas e990 respostas. CCDs completos13/19/47,ruído iid com95% de sinal
+em expectativa,OLS/diagnóstico pela API validada e holdout Sobol4096 por célula.
+Sem retuning,clipping,regularização ou seleção de réplicas. Oráculo analítico
+separado da interface de previsão dos modelos salvos. Geração oficial após o
+commit do protocolo; evidência em [verificação](docs/phase_10b_verification.md),
+[matemática](docs/mathematics/synthetic_rsm_generation.md) e MDR0014.
+
+## Fase10A — cenários estruturais concluídos, PR14
 
 27/27 cenários gerados e validados,uma configuração por célula,com funções
 verdadeiras f_j(x)=||x-a_j||². nx2/3/5,delta1/3/5 e alvos de correlação absoluta

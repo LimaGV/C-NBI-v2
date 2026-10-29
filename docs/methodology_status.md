@@ -1,5 +1,14 @@
 # Estado metodológico
 
+## Fase10B — escopo atual nesta branch
+
+PR14 integrado por merge d68aef7,CI40906784465 aprovada Ubuntu/Windows.
+Pipeline CCD/ruído/RSM separado implementado,protocolo próprio MDR0014.
+27 entradas congeladas,cinco réplicas,135 instâncias/3555 corridas/990 respostas;
+geração oficial condicionada ao commit prévio do protocolo. Evidência em
+phase_10b_verification.md. Nenhuma ciência0–10A,licença ou dado original alterado.
+Sem otimização multiobjetivo ou benchmark sintético. Escopos abaixo históricos.
+
 ## Estado atual consolidado —2026-10-29
 
 Fases0–9 concluídas e integradas: PR11 em39069f3, PR12 embb5d6f2.

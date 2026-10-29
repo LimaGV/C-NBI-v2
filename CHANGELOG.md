@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Phase10B synthetic CCD, noise and RSM generation
+
+- Conventional full rotatable CCDs, independent five-replica PCG64 experiments.
+- One frozen 95% expected signal protocol; existing OLS/diagnostic APIs reused.
+- Independent analytic certificates and 4096-point external validation per cell.
+- Lossless noisy model archives, raw covariance, integrity manifests and six diagnostics.
+- No anchor recalibration, multiobjective execution or changes to earlier science/licenses.
+
 ## Unreleased — Phase10A structural synthetic scenarios
 
 - 27 factorial cells from nx,objective excess and mean absolute-correlation targets.

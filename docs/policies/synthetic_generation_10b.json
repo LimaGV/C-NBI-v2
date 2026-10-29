@@ -1,0 +1,63 @@
+{
+  "phase": "10B",
+  "schema_version": 1,
+  "run_id": "rsm_20261029",
+  "phase10a_commit": "489aa0e2b4703c0e39b0bff2623209e5a177a94b",
+  "scientific_base_commit": "d68aef72532ed0e39bd256b3e9dcb75f30c6a76b",
+  "input": "results/phase_10_synthetic_generation/structural_20261029/",
+  "structural_scenarios": 27,
+  "replicas": [1, 2, 3, 4, 5],
+  "master_seed": 20261029,
+  "seed_protocol": "int.from_bytes(SHA256(ASCII('C-NBI-v2/phase10b/v1/{master}/{scenario_id}/{replica_id}'))[:16], 'big'); PCG64(seed); replica0 is exclusively external Sobol",
+  "generator": "numpy.random.Generator(numpy.random.PCG64(seed))",
+  "ccd": {
+    "dimensions": [2, 3, 5],
+    "factorial_levels": [-1, 1],
+    "alpha": "2**(nx/4)",
+    "center_rows": 5,
+    "ordering": "lexicographic factorials (-1,+1); axes ascending (-alpha,+alpha); five centers",
+    "project_or_repair": false,
+    "nx3_outside_factorial_points": 8
+  },
+  "noise": {
+    "distribution": "Gaussian additive iid across rows, responses and replicas",
+    "mean": 0,
+    "signal_fraction_in_expectation": 0.95,
+    "signal_variance": "sample variance of analytic values on complete CCD including five centers; ddof=1",
+    "noise_variance": "signal_variance/19",
+    "posthoc_adjustments": false,
+    "preserve_negative_measurements": true,
+    "previous_protocol_search": "No validated conflicting 95% signal protocol found in docs/src/scripts/tests at d68aef7"
+  },
+  "rsm": {
+    "fit_api": "cnbi_v2.model.fit_multivariate_rsm",
+    "diagnostic_api": "cnbi_v2.model.diagnose_rsm",
+    "terms": "intercept; linears; pure squares; lexicographic pairwise interactions",
+    "all_terms_retained": true,
+    "response_directions": "MIN",
+    "noiseless_tolerance": "100*float64_eps*condition(X)*max(1,max(abs(B_true)))",
+    "relative_coefficient_denominator": "abs(beta_true)>1e-12*L2(B_true_response); otherwise explicitly undefined",
+    "hessian_classification": "STRICTLY_CONVEX iff minimum eigenvalue > 0; no tolerance correction",
+    "covariance": "raw E.T@E/(n-p); no shrinkage, jitter or positive-definiteness enforcement"
+  },
+  "external_validation": {
+    "n": 4096,
+    "sampler": "unchanged Phase10A sample_ball(nx,12,seed), uniform volume Sobol",
+    "stream": "replica0, separate from noise and Phase10A calibration/validation",
+    "generation_order": "after all 135 noisy fits",
+    "shared_between_five_replicas": true,
+    "used_for_selection_or_training": false
+  },
+  "figures": {
+    "language": "English",
+    "png_dpi": 600,
+    "pdf_vector": true,
+    "grid": false,
+    "representatives": "nx2/3/5,delta3,rho060,replica1,response1; external indices 0:4096:16",
+    "residual_scatter_stride": 17,
+    "quality_based_selection": false
+  },
+  "summary": "equal weight per response model; linear quantiles; group by nx,delta,rho_target,scenario_id and all",
+  "retain_all_replicas": true,
+  "forbidden": ["anchor recalibration", "new structural configurations", "noise retuning", "multiobjective optimization", "C-NBI", "VRF-NBI", "NSGA-III", "MOEA/D", "Pareto reference", "GD", "IGD", "HV", "Spacing", "Sparsity", "algorithm runtime comparison"]
+}

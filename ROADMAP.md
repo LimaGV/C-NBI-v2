@@ -1,5 +1,12 @@
 # Roadmap
 
+## Fase10B — escopo atual autorizado
+
+Fase10A integrada por merge d68aef7,CI40906784465 verde em Ubuntu/Windows.
+Implementar e congelar135 instâncias RSM sintéticas,com CCD/ruído e validação
+independente,sem iniciar otimização multiobjetivo. MDR0014;novo PR sem merge.
+As seções anteriores abaixo registram o escopo vigente em cada etapa histórica.
+
 ## Estado consolidado em2026-10-29
 
 Fases0–9 concluídas e integradas. PR11:39069f3; PR12:bb5d6f2.
