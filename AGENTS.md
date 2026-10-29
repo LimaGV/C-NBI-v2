@@ -1,5 +1,21 @@
 # Contrato permanente dos agentes — C-NBI v2
 
+## Escopo atual — consolidação e Fase10A, autorizado em2026-10-29
+
+O responsável confirmou direitos e divulgação pública dos itens/metadados
+auditados; aprovou MIT apenas para código original. Ver LICENSE_SCOPE.md e
+docs/data_publication_permissions.md. Sem MIT/CC implícita para outros materiais.
+PR11/12 integrados por merge commit, preservando SHAs/ancestralidade e resultados0–9.
+Concluir documentação/CI antes de feature/10-synthetic-scenario-generation.
+Somente27 configurações estruturais: f_j=||x-a_j||², MIN, nx2/3/5,
+alpha=2**(nx/4), delta1/3/5, m=nx+1+delta, mean(abs(Pearson)) .25/.60/.85,
+erro<=.05. Sinal apenas observado. Calibração direta reproduzível, QMC uniforme
+na bola, seeds distintas de calibração/validação, anchors distintos/viáveis e
+posto geométrico completo. Correlação pode ser singular; sem regularização.
+Falhas explícitas. Sem ruído,CCD,RSM,C-NBI,VRF-NBI,EAs,referência,métricas ou
+estatística do benchmark,135 instâncias/540 runs. Novo PR10A sem merge automático.
+Sem grades decorativas. Os escopos abaixo são registros históricos.
+
 ## Clean implementation
 C-NBI v2 is a clean reimplementation.
 Legacy code is historical reference only.

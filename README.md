@@ -1,5 +1,13 @@
 # C-NBI v2
 
+**Estado atual: Fases0–9 concluídas e integradas em main.** RSM, incerteza,
+âncoras, CHIM/PA, Simplex-Lattice/NBI e benchmark aplicado estão implementados.
+Baseline: **H5 standalone,492 aceitos,411 decisões únicas,409 ND**. Referência
+empírica18503/zeroCNBI; métricas GD,IGD,HV,Spacing,Sparsity. Não é frente verdadeira.
+Ver [consolidação](docs/consolidation_20261029.md) e
+[reprodutibilidade](docs/reproducibility.md). Fase10A autorizada após o gate
+documental; o benchmark sintético completo ainda não começou.
+
 Pacote oficial de visualizações do caso aplicado, em português e inglês,
 baseado exclusivamente na correção científica congelada d938695.
 [Galeria local](results/applied_case_visualizations/turning_visuals_20261025/index.html),
@@ -10,7 +18,7 @@ Sem grades de eixos, novas otimizações, refits, MC ou mudanças das métricas.
 As figuras são apresentação dos resultados, não uma nova fase do método.
 O nome do método em figuras, legendas e captions é **VRF-NBI**.
 
-Fase8 corrigida antes do merge do PR11: **C-NBI(H=5) = standalone H5**,
+Fase8 concluída e integrada pelo PR11: **C-NBI(H=5) = standalone H5**,
 492 subproblemas/492 aceitos/411 decisões únicas/**409 ND**. H20 é somente
 sensibilidade de alta resolução; cada H2/4/5/10/20 foi resolvido independentemente.
 Cinco repetições H5 são bitwise idênticas; tempo total mediano1.313828s.
@@ -23,7 +31,7 @@ runs e timing EAs e resultados VRF-NBI preservados. Nenhuma nova execução EA/V
 O histórico das fases anteriores continua abaixo; suas definições de baseline
 parent-derived foram superseded pela correção standalone da Fase8.
 
-Fase7: construção de referência Pareto **empírica** multi-família e
+Histórico da Fase7: construção de referência Pareto **empírica** multi-família e
 leave-one-family-out, com RSMs atuais, esfera e normalização global congelados.
 H5 é o baseline operacional definido pelo responsável (492 subproblemas,
 411 decisões únicas,408 ND); H20 é auxiliar da mesma família CNBI.
@@ -59,10 +67,12 @@ política de early stop original preservada e v2 de gaps espectrais
 PROPOSED_REVISED, post hoc. Revisão no mesmo PR #8: stop retrospectivo em1300,
 mesma dimensão2 e37 IDs até2000; B=2000 continua referência. ADR 0009 PROPOSED.
 A planilha original define um caso codificado distinto do modelo físico;
-nenhuma resposta experimental foi alterada. NBI/C-NBI ainda não implementados.
+nenhuma resposta experimental foi alterada. NBI/C-NBI foram implementados na
+Fase6; a restrição anterior da Fase5 foi superada pela autorização posterior.
 
 Reimplementação limpa e independente do Combinatorial Normal Boundary
-Intersection. Versão **0.1.0.dev0**. Estado: centered CHIM / local PA da Fase 5.
+Intersection. Versão **0.1.0.dev0**. O resumo abaixo registra as fases iniciais;
+o estado atual consolidado é Fases0–9, descrito no início desta página.
 Fase 0 integrada em main; Fase 0.5 adiciona infraestrutura de dados/referências.
 Fase 0.5 integrada pelo PR #2; Fase 0.6 preserva o dataset real de torneamento e
 os expected outputs publicados, com lacunas explícitas e sem ajuste de modelos.
@@ -106,7 +116,8 @@ Inspeção não recalcula fórmulas, resolve links ou certifica caches.
 Ver [opções e limites](scripts/data/README.md). Não incorpora dataset ou snapshot.
 Zotero/local documents → verificação → notas/BibTeX → claims → ADR/MDR.
 Documentos locais protegidos ficam fora do Git por padrão.
-O raw de torneamento foi autorizado especificamente no repositório privado.
+O raw foi autorizado inicialmente no privado; a divulgação pública dos itens
+identificados foi confirmada em2026-10-29 no registro de permissões.
 Ver [metadata e lacunas](data/metadata/turning_application/README.md) e
 [golden reference publicada](tests/reference_cases/turning_8responses/README.md).
 
@@ -131,7 +142,8 @@ Há otimização individual nominal de quadráticas e ablação de região de re
 `cnbi_v2.uncertainty` fornece amostragem conjunta dos coeficientes, diagnósticos
 de prefixos e reotimização por réplica com payoff natural e certificados.
 `cnbi_v2.chim` acrescenta normalização fixa, SVD e seleção PA local, com todos
-os prefixos até B=2000. Shrinkage, H da malha e NBI/C-NBI não implementados.
+os prefixos até B=2000. `cnbi_v2.simplex` e `cnbi_v2.nbi` implementam a malha
+e NBI local; a Fase8 usa cada H standalone. Shrinkage não é parte do método atual.
 
 ## Governança
 Usar feature/*, experiment/*, fix/*, docs/* ou release/*.

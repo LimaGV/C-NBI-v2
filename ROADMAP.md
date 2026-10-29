@@ -1,5 +1,14 @@
 # Roadmap
 
+## Estado consolidado em2026-10-29
+
+Fases0–9 concluídas e integradas. PR11:39069f3; PR12:bb5d6f2.
+H5 standalone409 ND; referência empírica18503/zeroCNBI. NBI implementado desde
+a Fase6;408 pontos são análise histórica. Fase10A autorizada para27 configurações
+estruturais em PR separado após o gate documental. Ruído,CCD,RSM e benchmark
+sintético completo são posteriores. Seções antigas registram a evolução,
+não anulam autorizações posteriores ou representam o estado atual.
+
 ## Fase 0 — infraestrutura concluída
 PR #1 integrado por squash após árvore limpa, ausência de conflitos e CI verde.
 Commit em main: 777a8fd07d6edf901acb46fcec6f97f2a0d1e7a4.
@@ -82,7 +91,25 @@ accepted, no external front/benchmark, new PA/MC/anchors or automatic next phase
 Resultado real:4557/4557 subproblemas aceitos, sem falhas finais. H20 produz4417
 pontos ND full-space e permanece referência interna, sem H final aceito.
 
-## Posteriormente — nova tarefa necessária
+## Gate histórico ao término da Fase6 — posteriormente superado
 
 Escolha definitiva de H e validação/comparações externas exigem autorização,
-critérios e evidência próprios. Nenhuma próxima fase ou benchmark foi iniciado.
+critérios e evidência próprios. Era pendente naquela etapa; Fases7–9 foram
+autorizadas e concluídas posteriormente.
+
+## Fase7 — referência empírica aplicada, concluída
+
+PR10 integrado em f904e8d.30 runs por EA,VRF-NBI e análise por família.
+O baseline408 então disponível foi substituído pelo standalone409 da Fase8.
+
+## Fase8 — benchmark final aplicado, concluída e integrada
+
+PR11 integrado em39069f3. H5 standalone, análise de H2/4/5/10/20, referência
+independente, métricas nativas, cardinalidade, custo e sensibilidade da referência.
+Dados/algoritmos anteriores e arquivos históricos preservados.
+
+## Fase9 — visualizações científicas, concluída e integrada
+
+PR12 integrado embb5d6f2.46 entradas,21 principais/25 suplementares,PT/EN,
+PNG600dpi/PDF vetorial/SVG disponível,galeria,captions,auditoria/checksums.
+Nenhuma mudança científica. Próxima etapa autorizada: apenas Fase10A estrutural.

@@ -1,5 +1,15 @@
 # Estado metodológico
 
+## Estado atual consolidado —2026-10-29
+
+Fases0–9 concluídas e integradas: PR11 em39069f3, PR12 embb5d6f2.
+H5 standalone409 ND é o único baseline oficial; referência empírica18503,
+zeroCNBI. NBI/Simplex-Lattice implementados. Nenhum resultado mudou nesta
+consolidação. MIT cobre código original; divulgação dos itens auditados foi
+autorizada sem licença CC implícita. Seções anteriores abaixo são históricas,
+incluindo gates/408 pontos substituídos, não restrições atuais.
+Fase10A aguarda o fechamento do gate documental antes de qualquer geração.
+
 ## Visualizações científicas do caso aplicado
 
 Pacote bilíngue de apresentação dos resultados congelados no commit d938695,
@@ -11,7 +21,7 @@ modelos, covariâncias, PA, subsets, frentes, métricas ou resultados anteriores
 Os eixos não usam grades; referências científicas são descritas nas captions.
 Ver docs/figures/applied_case_visualization_report.md e a verificação do pacote.
 
-## Fase 8 — correção standalone concluída no PR11
+## Fase 8 — correção standalone concluída e integrada pelo PR11
 
 Baseline oficial: standalone H5,492 aceitos/zero falhas/411 únicos/409 ND.
 H2/H4/H5/H10/H20 são execuções independentes,sem malha-mãe para avaliação final.
@@ -36,7 +46,7 @@ C-BENCH-06/07 documentam baseline direto e independência dos demais H.
 Ver [relatório](mathematics/turning_final_benchmark.md) e
 [verificação](phase_8_verification.md). Sem merge/refinamento automático.
 
-## Fase 7 — referência empírica multi-família e family LOO
+## Histórico da Fase 7 — referência empírica multi-família e family LOO
 
 Fase7 concluída no escopo solicitado, após squash do PR9 em main b94be85.
 Baseline operacional definido pelo responsável: H5 (492 subproblemas,411 decisões

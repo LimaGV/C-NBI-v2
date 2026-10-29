@@ -1,5 +1,9 @@
 # Applied-case figure documentation
 
+Current state (2026-10-29): PR11/12 are integrated in main; see
+../consolidation_20261029.md. Hashed reports/captions inside the archived run
+describe their original launch state and remain byte-identical.
+
 The generator writes applied_case_captions_pt.md,applied_case_captions_en.md and
 applied_case_visualization_report.md directly from the shared scientific catalog.
 Each entry identifies question,source tables,transformation,observation,limits

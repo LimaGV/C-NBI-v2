@@ -1,5 +1,11 @@
 # Gestão dos dados
 
+Atualização2026-10-29: o responsável autorizou a divulgação pública dos CCD,
+extrações, legado, derivados e metadados identificados na auditoria. Ver
+[permissões](data_publication_permissions.md). A divulgação não concede licença
+aberta de reutilização. MIT cobre apenas código próprio (LICENSE_SCOPE.md).
+Registros de autorização privada permanecem como evidência histórica.
+
 Excel (.xlsx) pode ser registro primário. Não exigir coleta em CSV.
 raw preserva bytes recebidos; snapshots preservam valores quando necessários;
 interim é regenerável; processed deriva de raw/snapshot + script;
