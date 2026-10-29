@@ -6,7 +6,8 @@
 - Date:2026-10-29.
 - Branch:feature/10b-synthetic-rsm-generation.
 - Input:27 frozen Phase10A cells at489aa0e,integrated by merge d68aef7.
-- Validation gate:unit/analytic/integrity tests and full campaign; final evidence
+- Validation gate:PASSED,814 tests/99.25% coverage,135/135 fits and27 noiseless
+  certificates;all1150 historical files intact. Final evidence
   in docs/phase_10b_verification.md and the PR's Ubuntu/Windows CI.
 
 Use conventional full rotatable CCDs (13,19,47 rows),five separate centers and

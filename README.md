@@ -14,9 +14,12 @@ Pipeline separado para27 células congeladas ×5 réplicas:135 RSMs multirrespos
 3555 corridas e990 respostas. CCDs completos13/19/47,ruído iid com95% de sinal
 em expectativa,OLS/diagnóstico pela API validada e holdout Sobol4096 por célula.
 Sem retuning,clipping,regularização ou seleção de réplicas. Oráculo analítico
-separado da interface de previsão dos modelos salvos. Geração oficial após o
-commit do protocolo; evidência em [verificação](docs/phase_10b_verification.md),
+separado da interface de previsão dos modelos salvos.135/135 ajustes concluídos,
+zero falhas,27 certificados sem ruído;R² externo médio0.973287. Evidência em
+[verificação](docs/phase_10b_verification.md),
 [matemática](docs/mathematics/synthetic_rsm_generation.md) e MDR0014.
+[Artefatos congelados](results/phase_10_synthetic_rsm/rsm_20261029/README.md).
+Subpacote cnbi_v2.synthetic.rsm;nenhuma ciência0–10A alterada. PR sem merge.
 
 ## Fase10A — cenários estruturais concluídos, PR14
 

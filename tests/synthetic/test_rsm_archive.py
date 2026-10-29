@@ -1,5 +1,6 @@
 """Frozen Phase10B scientific outputs and their independent validation evidence."""
 
+import ast
 import csv
 import hashlib
 import json
@@ -229,3 +230,35 @@ def test_read_only_verifier_and_layout_reader_do_not_fit(monkeypatch):
     assert len(items) == 135 and len(anchors) == len(samples) == 27
     assert len(diagnostics) == len(external) == 990
     assert len(figures(items, anchors, samples, diagnostics, external)) == 6
+
+
+def test_package_separation_preserves_all_initial_numerical_outputs_byte_for_byte():
+    receipt = json.loads(
+        (ROOT / "docs/phase_10b_initial_generation_receipt.json").read_text(encoding="utf-8")
+    )
+    assert len(receipt["numerical_sha256"]) == 16
+    for name, digest in receipt["numerical_sha256"].items():
+        assert hashlib.sha256((OUTPUT / name).read_bytes()).hexdigest() == digest, name
+
+
+def test_phase10b_has_no_new_ols_or_multiobjective_pipeline():
+    forbidden = {
+        "lstsq",
+        "solve_nbi_lattice",
+        "run_evolutionary",
+        "gd_igd",
+        "spacing_sparsity",
+        "sample_coefficient_ensemble",
+        "solve_quadratic_ball",
+    }
+    paths = list((ROOT / "src/cnbi_v2/synthetic/rsm").glob("*.py"))
+    paths.append(ROOT / "scripts/validation/generate_synthetic_rsm.py")
+    for path in paths:
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if isinstance(node, ast.Call):
+                name = (
+                    node.func.id
+                    if isinstance(node.func, ast.Name)
+                    else getattr(node.func, "attr", "")
+                )
+                assert name not in forbidden, (path, name)

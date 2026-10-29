@@ -17,8 +17,9 @@ Ruff and strict mypy passed;1150 preexisting main files verified byte-for-byte.
 
 ## Stages B–D — frozen official campaign
 
-Source/protocol commit:09d469e5a40e9567e85ea3b972315d7273c9a5de,clean working
-tree at launch. Run:rsm_20261029,2026-10-29T16:10:54 UTC. Exactly27 noise-free
+Initial protocol/source freeze:09d469e5a40e9567e85ea3b972315d7273c9a5de.
+Final execution source:800076f4c5cac3f651cdb875cf01135f1eddb561,clean working
+tree at launch. Run:rsm_20261029,2026-10-29T16:21:50 UTC. Exactly27 noise-free
 certificates passed;maximum coefficient error5.329070518200751e-15,below the
 predefined condition-aware float64 bounds. These are not experimental replicas.
 
@@ -152,24 +153,40 @@ grids. Predetermined true/predicted examples:nx2/3/5,delta3,rho060,replica1,y1,
 fixed Sobol stride16. Residuals are pooled/known-sigma scaled,not studentized.
 Identity,zero and0.95 reference lines are scientifically identified.
 
-The RMSE panel titles were shortened using a separate archive-only renderer at
-24725fdfbf91e3ff4c0d3974e15fff201110ac52. It loads existing NPZ/CSV values and
-does no OLS,oracle generation or noise draws. All16 numerical CSV/NPZ files were
-hashed before/after and remained byte-identical. Original generation source hashes
-remain09d469e;the display script's own SHA and prior figure hashes are explicitly
-recorded in generation_manifest.figure_layout_refinement. No scientific source
-or frozen policy was changed after observing results.
+The initial RMSE titles were shortened with a separate archive-only renderer,
+without OLS or oracle evaluation. Its receipt is preserved with the initial full
+manifest in docs/phase_10b_initial_generation_receipt.json.
+
+The first full suite exposed a directory-scope conflict:the frozen Phase10A AST
+test prohibits RSM fitting in every top-level synthetic Python file,including
+new files. Rather than change that historical test,the new Phase10B modules were
+isolated in cnbi_v2.synthetic.rsm. Its scientific functions and validated Phase1
+APIs were unchanged;only import paths and figure labels changed. The initial
+noise policy remains byte-identical. Source checkout bytes were normalized to
+canonical Git LF before the final clean execution so hashes also match Ubuntu.
+
+Final re-execution at800076f produced **all16 numerical CSV/NPZ files byte-identical
+to the initial09d469e generation**,including observations,coefficients,covariances,
+diagnostics,holdout and summaries. An automated test protects this equivalence.
+Earlier local archives were preserved in explicitly named sibling directories;
+only the final official campaign is versioned. No threshold,seed,model,scientific
+formula,hyperparameter or frozen historical test changed. The source SHA/byte
+hashes in the final manifest refer directly to the final committed package.
 
 34 artifacts,approximately24.03 MB,including16 mandatory outputs,lossless model
 index,experimental/external NPZs,noiseless certificates,replica variability and
 12 figure files.44 checksum entries include payloads and their code/protocol
 sources;all verified. Every numerical array has dtype,shape and byte SHA256 in
 the generation manifest. All1150 earlier tracked scientific files remain intact.
+New phase-local Git attributes preserve checksummed generated JSON/README bytes
+including renderer line endings across platforms;root attributes are unchanged.
 The model loader exposes only noisy polynomials and never refits. Raw data and
 excluded-material licenses are unchanged;no implicit MIT/CC data license.
 
-Official generation/fit/export/figures:7.834726200s. Display-only refinement:
-1.420478600s;total9.255204800s excluding testing,CI and human review. These are
+Final official generation/fit/export/figures:8.580396000s. The initial and package
+equivalence executions took7.834726200s and7.615803700s;initial display-only
+refinement1.420478600s. Total recorded pipeline work25.451404500s excluding
+testing,CI and human review. These are
 pipeline timings,not algorithm runtime comparisons. Python3.12.15,NumPy2.5.4,
 SciPy1.18.1,Matplotlib3.11.2,Windows11;BLAS/CPU/lock metadata recorded. No new
 dependency or change to uv.lock. Bitwise experimental reproducibility is certified
@@ -177,9 +194,12 @@ in this locked environment;cross-platform BLAS equivalence uses tolerances.
 
 ## Stage E — quality gate and delivery
 
-62 new tests cover the required25 categories and invalid variance/nonfinite,
+64 new tests cover the required25 categories and invalid variance/nonfinite,
 incomplete/corrupt archives,duplicate/missing identity/seeds and deficient designs.
-Final full-suite coverage,Ruff,mypy and remote Ubuntu/Windows CI are recorded
-below after their completion. Phase10B PR remains open;no auto-merge or later
+Final local checks:uv sync --locked PASSED;**814 tests passed in105.98s**,
+**99.25% coverage** (3062 statements,23 missed;gate96.15%). Ruff PASSED;
+strict mypy PASSED for60 source files.44 checksums also matched the actual staged
+Git blobs,not only the working-copy files. Remote Ubuntu/Windows CI is verified
+on the final PR head before delivery. Phase10B PR remains open;no auto-merge or later
 scientific phase. No multiobjective solver,Pareto reference or benchmark metric
 was executed. No original data were modified or reconstructed.

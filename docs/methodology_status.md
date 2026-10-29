@@ -3,9 +3,10 @@
 ## Fase10B — escopo atual nesta branch
 
 PR14 integrado por merge d68aef7,CI40906784465 aprovada Ubuntu/Windows.
-Pipeline CCD/ruído/RSM separado implementado,protocolo próprio MDR0014.
+Pipeline CCD/ruído/RSM concluído nesta branch,protocolo próprio MDR0014.
 27 entradas congeladas,cinco réplicas,135 instâncias/3555 corridas/990 respostas;
-geração oficial condicionada ao commit prévio do protocolo. Evidência em
+135/135 ajustes sem falha,27 certificados sem ruído,holdout4096/célula e44 hashes.
+Fontes/protocolo congelados antes da execução,source final800076f. Evidência em
 phase_10b_verification.md. Nenhuma ciência0–10A,licença ou dado original alterado.
 Sem otimização multiobjetivo ou benchmark sintético. Escopos abaixo históricos.
 

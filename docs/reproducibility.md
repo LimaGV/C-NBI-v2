@@ -5,12 +5,16 @@
 Protocolo docs/policies/synthetic_generation_10b.json,matemática e MDR0014.
 Após checkout limpo do commit de implementação:
 `uv run python scripts/validation/generate_synthetic_rsm.py --output <nova_pasta_vazia>`.
-Nunca sobrescrever uma campanha. A campanha oficial será preservada em
+Nunca sobrescrever uma campanha. A campanha oficial está preservada em
 results/phase_10_synthetic_rsm/rsm_20261029/. Verificação read-only:
 `uv run python scripts/validation/verify_synthetic_rsm.py`.
 Modelos:cnbi_v2.synthetic.rsm.rsm_serialization.load_models(campaign_directory),sem OLS
 ou acesso ao oráculo analítico. Todos135 compartilhados por métodos futuros.
 Seeds,arrays float64,dependências/BLAS,fonte e todas entradas0–10A são hashed.
+Source final800076f4c5cac3f651cdb875cf01135f1eddb561,checkout limpo/LF canônico.
+Todos16 CSV/NPZ numéricos são byte-identical à geração inicial09d469e;receipt
+em docs/phase_10b_initial_generation_receipt.json. O subpacote10B preserva o teste
+de escopo histórico10A sem alterações. Não recalibrar/retunar para reproduzir.
 
 ## Ambiente
 Checkout limpo, Python de .python-version, uv 0.12.23 e uv sync --locked.

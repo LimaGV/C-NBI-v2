@@ -3,7 +3,7 @@
 ## Fase10B — escopo atual autorizado
 
 Fase10A integrada por merge d68aef7,CI40906784465 verde em Ubuntu/Windows.
-Implementar e congelar135 instâncias RSM sintéticas,com CCD/ruído e validação
+Concluídas nesta branch135 instâncias RSM sintéticas,com CCD/ruído e validação
 independente,sem iniciar otimização multiobjetivo. MDR0014;novo PR sem merge.
 As seções anteriores abaixo registram o escopo vigente em cada etapa histórica.
 
