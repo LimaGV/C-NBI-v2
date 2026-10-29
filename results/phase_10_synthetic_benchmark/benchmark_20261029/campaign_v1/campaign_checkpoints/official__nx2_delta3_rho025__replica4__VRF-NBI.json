@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta3_rho025__replica4",
+    "scenario_id": "nx2_delta3_rho025",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "93852055309295059566680055045787037035"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta3_rho025__replica4__VRF-NBI.npz": "7b4fc2ae0f70d6d28a45e5e15e27409340b1e7e426d6769896cbb7dcb7c10717",
+    "raw_rsm_responses/official__nx2_delta3_rho025__replica4__VRF-NBI.npz": "0b68867377051db9be096dac265f307ae484d894e2348d865e3ddad21e6d5c26",
+    "algorithm_diagnostics/official__nx2_delta3_rho025__replica4__VRF-NBI.npz": "fd762327db4ed2e8398dbeaaaaeb4d64dcab16410ed64ef147ca36ba2b0622c1",
+    "algorithm_diagnostics/official__nx2_delta3_rho025__replica4__VRF-NBI.json": "debbc2a4106ad93bac202c4d801a093397345d6f5bc87f4df0b5f442823800f0"
+  },
+  "payload_run_id": "official__nx2_delta3_rho025__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.6917816000059247,
+    "solver": 0.050601999973878264,
+    "postprocessing": 0.0007480001077055931,
+    "total": 2.7431316000875086
+  },
+  "counters": {
+    "vrf_vector_evaluations": 22211,
+    "vrf_jacobian_calls": 3058,
+    "extreme_solves": 96,
+    "extreme_iterations": 3208,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 100,
+    "factor_model_vector_evaluations": 25409,
+    "factor_model_jacobian_calls": 3176,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 25451
+  },
+  "nx": 2,
+  "m": 6,
+  "peak_process_memory_bytes": 128520192
+}

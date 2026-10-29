@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho085__replica2",
+    "scenario_id": "nx2_delta1_rho085",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "303596201549052662964442023047210899039"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho085__replica2__VRF-NBI.npz": "14143ffd1b87c07b1df4ec33c05853a1c8c98ca132ad3027ea6263595f4d78be",
+    "raw_rsm_responses/official__nx2_delta1_rho085__replica2__VRF-NBI.npz": "8caec2654a1d770f0ca0ff256a0d37b1575d276253e25ae93a6103ea23fc2c37",
+    "algorithm_diagnostics/official__nx2_delta1_rho085__replica2__VRF-NBI.npz": "33c8c3ec81d0350258c70d0e2f7e71dc2049940d35becb893c9467d53b23cc8c",
+    "algorithm_diagnostics/official__nx2_delta1_rho085__replica2__VRF-NBI.json": "4d9ce2b51cd9394ef702fa6a3026bc39123a8f4dfe9748bac4270f94ff81f9d5"
+  },
+  "payload_run_id": "official__nx2_delta1_rho085__replica2__VRF-NBI",
+  "output_count": 6,
+  "timings": {
+    "preparation": 1.3087699001189321,
+    "solver": 0.013449900085106492,
+    "postprocessing": 0.0006379999686032534,
+    "total": 1.3228578001726419
+  },
+  "counters": {
+    "vrf_vector_evaluations": 11259,
+    "vrf_jacobian_calls": 1754,
+    "extreme_solves": 60,
+    "extreme_iterations": 1871,
+    "nbi_subproblems": 6,
+    "nbi_attempts": 4,
+    "nbi_iterations": 37,
+    "factor_model_vector_evaluations": 13112,
+    "factor_model_jacobian_calls": 1838,
+    "original_rsm_point_evaluations": 6,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 64,
+    "original_full_vector_points_computed": 12,
+    "model_vector_point_events": 13124
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128778240
+}

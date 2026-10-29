@@ -1,0 +1,26 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho085__replica5",
+    "scenario_id": "nx2_delta1_rho085",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "71401241595931271281030341196905745140"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "FAILED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "FAILED"
+    }
+  ],
+  "error": "ValueError: Varimax did not converge within the legacy iteration limit",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\gabri\\Documents\\C-NBI-v2\\scripts\\validation\\execute_synthetic_benchmark.py\", line 116, in worker\n    output = run_method(item, task[\"method\"], int(task[\"seed\"]), cfg)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gabri\\Documents\\C-NBI-v2\\src\\cnbi_v2\\synthetic\\benchmark\\runner.py\", line 26, in run_method\n    output = run_vrf(data, seed)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gabri\\Documents\\C-NBI-v2\\src\\cnbi_v2\\synthetic\\benchmark\\vrf_runner.py\", line 116, in run_vrf\n    analysis = factor_analysis(data.observed, k)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gabri\\Documents\\C-NBI-v2\\src\\cnbi_v2\\synthetic\\benchmark\\vrf_runner.py\", line 66, in factor_analysis\n    loadings, rotation, iterations = varimax(initial)\n                                     ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gabri\\Documents\\C-NBI-v2\\src\\cnbi_v2\\synthetic\\benchmark\\vrf_runner.py\", line 54, in varimax\n    raise ValueError(\"Varimax did not converge within the legacy iteration limit\")\nValueError: Varimax did not converge within the legacy iteration limit\n",
+  "elapsed": 0.0918664000928402
+}
