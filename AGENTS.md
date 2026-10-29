@@ -1,3 +1,22 @@
+# Escopo atual — Fase10D, autorizado em2026-10-29
+
+PR16 integrado por merge c0646768, árvore idêntica a df95a954; CI40941198792
+verde Ubuntu/Windows. Branch feature/10d-synthetic-algorithm-benchmark.
+A autorização desta tarefa permite adaptar v1 7bd4915 para VRF-NBI e os EAs,
+superando a antiga restrição de somente consultar; preservar v1 e atribuições,
+sem imports diretos de v1 em produção nem reutilização de seu ambiente.
+C-NBI canônico v2 completo, B2000, PSD sem jitter, todos subsets elegíveis,
+PA estrita q95, H5 k2–4/H2 k5–6, tolerâncias v2 intactas. VRF completo,
+max(2,k90) sem clamp; CCD congelado só para ajuste auxiliar de fatores.
+18 calibrações EA transferidas, pymoo0.6.2, teto por m, sem retuning.
+Preservar ciência0–10C,135 modelos,27 referências e métricas. Busca sem verdade;
+avaliação externa somente após terminar. Piloto12 antes da campanha540;
+gates falhos bloqueiam campanha e permanecem INCOMPLETE. Sem Fase10E,
+significância, equalização ou ajuste da referência. Novo PR permanece aberto.
+MDR0016 e documento de migração registram o gauge constante VRF de compatibilidade,
+com variância publicada corrigida explicitamente; não mudar licença dos excluídos.
+As seções abaixo são históricas e não revogam esta autorização.
+
 # Contrato permanente dos agentes — C-NBI v2
 
 ## Escopo atual — Fase10C, autorizado em2026-10-29
