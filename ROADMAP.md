@@ -1,5 +1,12 @@
 # Roadmap
 
+## Fase10C — escopo atual autorizado
+
+PR15 integrado em47a0e4d,CI main40919991675 verde Ubuntu/Windows.
+Construir27 referências analíticas independentes ×5000 pontos,normalização fixa,
+sensibilidade2500/5000/10000 e protocolo científico das cinco métricas.
+MDR0015,sem executar métodos ou iniciar10D;PR próprio sem merge automático.
+
 ## Fase10B — escopo atual autorizado
 
 Fase10A integrada por merge d68aef7,CI40906784465 verde em Ubuntu/Windows.

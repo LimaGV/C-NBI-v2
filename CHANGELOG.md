@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Phase10C analytical Pareto reference and evaluation
+
+- Two-inclusion Pareto-set proof for the frozen isotropic-distance objectives.
+- Independent stratified hull sampling,nested references and analytic ideal/nadir.
+- Fixed synthetic metric frame,HV precision study and offline raw-decision evaluation.
+- Coverage/integrity diagnostics and six scientific figure types;no optimizer campaign.
+- Frozen Phases0–10B,original data and excluded-material licenses remain unchanged.
+
 ## Unreleased — Phase10B synthetic CCD, noise and RSM generation
 
 - Conventional full rotatable CCDs, independent five-replica PCG64 experiments.

@@ -1,5 +1,14 @@
 # Estado metodológico
 
+## Fase10C — escopo atual nesta branch
+
+PR15 integrado por merge47a0e4d,CI40919991675 aprovada Ubuntu/Windows.
+Referência independente baseada somente em anchors10A e protocolo congelado.
+P_X=conv(anchors),frente contínua distinta da referência discreta5000/célula.
+MDR0015;34 testes iniciais aprovados e1204 arquivos anteriores íntegros.
+Geração oficial após commit prévio de fontes/protocolo. Sem novos RSMs ou métodos.
+Escopos abaixo são registros históricos;ver phase_10c_verification.md.
+
 ## Fase10B — escopo atual nesta branch
 
 PR14 integrado por merge d68aef7,CI40906784465 aprovada Ubuntu/Windows.

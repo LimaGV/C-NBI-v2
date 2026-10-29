@@ -1,5 +1,26 @@
 # Contrato permanente dos agentes — C-NBI v2
 
+## Escopo atual — Fase10C, autorizado em2026-10-29
+
+PR15 integrado por merge47a0e4d,árvore idêntica a6d07d25,44 hashes/135 modelos
+verificados e CI main40919991675 verde Ubuntu/Windows. Branch exclusiva:
+feature/10c-synthetic-pareto-reference. Preservar ciência0–10B/135 RSMs/27 anchors.
+Somente referência analítica independente P_X=conv(anchors),prova das2 inclusões,
+5000 pontos/célula (135000),prefixos2500/5000/10000,estratos eFPS determinísticos.
+Sem Dirichlet redundante como falsa amostragem uniforme;sem QJ/perturbar anchors.
+Ideal0/nadir maxdistância² entre anchors,frame externo fixo,sem clipping ou
+feedback ao solver. Reusar GD/IGDp1,Spacingddof1/SparsityNN. HV ref1.1 fixo,
+4 scrambles,Sobol níveis13–16;escalada global predefinida18/20 apenas se falhar
+precisão nas referências;exato<=8 caixas. Congelar resolução após estudo independente.
+Zeros artificiais/precisão insuficiente permanecem pendentes,sem fabricar confiança.
+Oráculo somente referência/avaliação externa;busca futura usa RSMs ruidosos10B.
+API preserva decisões brutas,viabilidade,identidade,ND emtodosm ecasos indefinidos.
+Equalização somente plano,não executar. Subpacote synthetic/pareto separado de
+RSM e do top-level10A,testes históricos intactos. Seis figuras EN,PNG600/PDF,
+sem grades nem projeções decorativas nx5. MDR0015/policy10C antes da geração.
+Não executar C-NBI,VRF-NBI,EAs,novascalibrações,CCD,ruído,RSM,seleção réplicas,
+benchmark,significância ou10D. Novo PR fica aberto,sem merge. Escopos abaixo históricos.
+
 ## Escopo atual — Fase10B, autorizado em2026-10-29
 
 PR14 integrado por merge d68aef7,árvore idêntica a489aa0e; CI40906784465 verde

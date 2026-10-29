@@ -1,5 +1,17 @@
 # Reprodutibilidade
 
+## Fase10C — referência analítica independente
+
+Base47a0e4d integra10B e preserva todos os SHAs anteriores por merge commit.
+Após checkout limpo da fonte congelada:
+`uv run python scripts/validation/generate_synthetic_pareto.py --output <pasta_vazia>`.
+Nunca sobrescrever uma campanha. Oficial:results/phase_10_synthetic_pareto/analytical_20261029/.
+Verificação read-only:`uv run python scripts/validation/verify_synthetic_pareto.py`.
+NPZs primários têm27 IDs/5000 linhas;2500 é prefixo,10000 usa extensão arquivada.
+load_reference e load_evaluation_context ficam em synthetic.pareto.serialization;
+esta API é externa à busca. Seeds,probes,witnesses,origens,fonte,ambiente e hashes
+garantem rastreabilidade sem recalibração/refit. Arquivos novos em LF canônico.
+
 ## Fase10B — geração e verificação independentes
 
 Protocolo docs/policies/synthetic_generation_10b.json,matemática e MDR0014.
