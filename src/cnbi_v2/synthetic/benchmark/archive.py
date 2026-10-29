@@ -98,6 +98,8 @@ def recover_attempt(path: Path, reason: str) -> None:
     checkpoint = read_json(path)
     if checkpoint["state"] not in {"FAILED", "INCOMPLETE", "RUNNING"}:
         raise ValueError("completed or pending tasks cannot be replaced")
+    if "payload_checksums" in checkpoint:
+        raise ValueError("a retained scientific outcome cannot be replaced by an operational retry")
     archive = path.parent/"attempt_history"/f"{path.stem}.attempt{checkpoint['attempt']}.json"
     if archive.exists():
         raise FileExistsError("previous attempt archive already exists")

@@ -20,6 +20,22 @@ bitwise/exactly. Failure blocks the campaign. The other eight pilot runs still
 have to pass numerical, structural and integrity gates. No reference-based
 algorithm tuning is involved in this resource decision.
 
+The finalized protocol repeats all twelve pilot tasks under the actual six-core
+scheduler. The initial sequential pilot is preserved in the parent directory;
+the final pilot and official campaign live in campaign_v1/. Additional counter
+schema2 records all quadratic-response vector events, original full-vector
+recomposition/validation and auxiliary factor-model calls separately. Runner
+end-to-end timers include validation and full-objective ND postprocessing. These
+observability corrections do not change objectives, solver settings or decisions.
+Operational recovery now refuses to replace any retained scientific outcome,
+even if its state is FAILED. Only interrupted/failed operational attempts without
+a scientific payload can be retried with a recorded reason. An exclusive
+scheduler lock prevents accidental concurrent launch of the same campaign.
+Every final pilot is compared with its sequential counterpart; common counters
+and numerical outputs must agree, while the added counters remain separately
+audited. No source code or scientific configuration is modified after this
+revalidation for the official campaign.
+
 The hardware execution plan and scheduler source hash are stored separately
 in execution_plan.json; receipts identify each task's physical CPU mask and
 the common plan hash. Benchmark time is per-run wall time under the disclosed

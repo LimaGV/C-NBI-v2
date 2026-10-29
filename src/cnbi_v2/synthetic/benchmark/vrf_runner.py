@@ -117,7 +117,8 @@ def run_vrf(data: SearchInput, seed: int) -> RunOutput:
     fit = fit_multivariate_rsm(data.ccd, analysis["scores"])
     summary = diagnose_rsm(fit, data.ccd)
     counters = dict(vrf_vector_evaluations=0, vrf_jacobian_calls=0, extreme_solves=0,
-                    extreme_iterations=0, nbi_subproblems=0, nbi_attempts=0, nbi_iterations=0)
+                    extreme_iterations=0, nbi_subproblems=0, nbi_attempts=0, nbi_iterations=0,
+                    factor_model_vector_evaluations=0, factor_model_jacobian_calls=0)
     radius, nx = data.alpha, data.nx
     rng = np.random.Generator(np.random.PCG64(910003+seed))
     starts = [np.zeros(nx), *list(.99*radius*np.eye(nx)), *list(-.99*radius*np.eye(nx))]
@@ -151,9 +152,11 @@ def run_vrf(data: SearchInput, seed: int) -> RunOutput:
         return min(results, key=lambda result: sign*float(fun(result.x)))
 
     def factor_value(point: FloatArray) -> FloatArray:
+        counters["factor_model_vector_evaluations"] += 1
         return fit.predict(point)
 
     def factor_jac(point: FloatArray) -> FloatArray:
+        counters["factor_model_jacobian_calls"] += 1
         return np.asarray((factor_design_jacobian(point).T@fit.coefficients).T, dtype=np.float64)
 
     targets = np.array([extreme(lambda x, j=j: factor_value(x)[j],

@@ -28,7 +28,7 @@ from cnbi_v2.synthetic.benchmark.contracts import METHODS, array_hash
 from cnbi_v2.synthetic.benchmark.inputs import load_search_inputs
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029"
+OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v1"
 RSM = ROOT/"results/phase_10_synthetic_rsm/rsm_20261029"
 
 

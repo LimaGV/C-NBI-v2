@@ -12,7 +12,7 @@ from cnbi_v2.synthetic.benchmark.contracts import METHODS, PILOT_SCENARIOS, stre
 from cnbi_v2.synthetic.benchmark.inputs import load_search_inputs
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029"
+OUTPUT = ROOT/"results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v1"
 MUTABLE = {".gitignore", "AGENTS.md", "CHANGELOG.md", "README.md", "ROADMAP.md",
            "docs/methodology_status.md", "docs/reproducibility.md"}
 V1_FILES = (
@@ -83,7 +83,8 @@ def prepare(legacy: Path) -> None:
         evolutionary=rows, evolutionary_version="pymoo==0.6.2",
         initialization="uniform_ball; no_true_anchors", radial_repair="one_ulp_inward",
         evaluation="offline_Phase10C_unchanged_native_cardinality",
-        cpu_threads=1, workers=1,
+        cpu_threads=1, workers_per_run=1, max_concurrent_single_core_runs=6,
+        scheduling="separate_physical_cores; pilot_revalidated_under_official_scheduling",
     )
     write_json(OUTPUT/"algorithm_configurations.json", configurations)
     write_json(OUTPUT/"budget_policy.json", dict(
@@ -112,6 +113,9 @@ def prepare(legacy: Path) -> None:
     ))
     source_files = list((ROOT/"src/cnbi_v2/synthetic/benchmark").glob("*.py"))
     source_files += list((ROOT/"scripts/validation").glob("*synthetic_benchmark*.py"))
+    source_files += [ROOT/"scripts/validation/run_phase10d_campaign.py",
+                     ROOT/"scripts/validation/compare_phase10d_pilots.py",
+                     ROOT/"docs/synthetic_benchmark_execution_plan.md"]
     source_files += [ROOT/"docs/decisions/0016-synthetic-algorithm-benchmark.md",
                      ROOT/"docs/mathematics/synthetic_algorithm_benchmark.md"]
     source = {p.relative_to(ROOT).as_posix(): file_hash(p) for p in source_files}

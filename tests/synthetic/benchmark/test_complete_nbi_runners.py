@@ -31,6 +31,11 @@ def test_complete_cnbi_uses_joint_2000_and_all_candidates():
     assert d["original_objective_count"] == 4
     assert output.counters["nbi_subproblems"] == len(d["subproblems"])
     assert output.counters["scalar_quadratic_values"] > len(output.decisions)
+    assert output.counters["quadratic_response_vector_calls"] > 2000*data.m
+    assert output.counters["model_vector_point_events"] > 2000*data.m
+    assert output.counters["original_full_vector_points_computed"] == 2*len(output.decisions)
+    assert abs(output.timings["total"]-sum(output.timings[k] for k in
+                                          ("preparation", "solver", "postprocessing"))) < 1e-12
 
 
 def test_vrf_complete_and_deterministic_without_original_refit():

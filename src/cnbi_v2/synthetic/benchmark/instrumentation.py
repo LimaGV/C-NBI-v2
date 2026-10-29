@@ -20,12 +20,14 @@ class KernelCounter:
             return
         name = frame.f_code.co_name
         if name not in {"value", "gradient", "solve_quadratic_ball", "equality_jacobian",
-                        "sphere_margin", "sphere_jacobian", "_minimize_slsqp"}:
+                        "sphere_margin", "sphere_jacobian", "_minimize_slsqp",
+                        "evaluate_responses"}:
             return
         filename = frame.f_code.co_filename.replace("\\", "/")
         mapping = {
             ("optimization/quadratic.py", "value"): "scalar_quadratic_values",
             ("optimization/quadratic.py", "gradient"): "scalar_quadratic_gradients",
+            ("optimization/anchors.py", "evaluate_responses"): "quadratic_response_vector_calls",
             ("optimization/trust_region.py", "solve_quadratic_ball"): "quadratic_ball_solves",
             ("nbi/solver.py", "equality_jacobian"): "nbi_equality_jacobians",
             ("nbi/solver.py", "sphere_margin"): "sphere_constraint_calls",

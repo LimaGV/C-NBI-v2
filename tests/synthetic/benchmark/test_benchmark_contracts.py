@@ -178,6 +178,11 @@ def test_archive_integrity_checkpoint_and_no_rerun(inputs, tmp_path):
     with pytest.raises(ValueError):
         recover_attempt(checkpoint, "cannot replace a completed result")
     record["state"] = "FAILED"
+    record["payload_checksums"] = hashes
+    write_json(checkpoint, record)
+    with pytest.raises(ValueError, match="scientific outcome"):
+        recover_attempt(checkpoint, "cannot replace unfavorable scientific outputs")
+    del record["payload_checksums"]
     write_json(checkpoint, record)
     recover_attempt(checkpoint, "documented process interruption; preserve attempt1")
     assert read_json(checkpoint)["state"] == "PENDING"

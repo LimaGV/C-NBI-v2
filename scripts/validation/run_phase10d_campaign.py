@@ -62,9 +62,10 @@ def physical_masks() -> list[int]:
     return sorted(result)
 
 
-def execute(directory: Path, replay: bool) -> None:
+def execute(directory: Path, replay: bool, pilot: bool = False) -> None:
     manifest = verify_protocol(directory)
-    if not replay and read_json(directory/"pilot_verification.json")["status"] != "PASS":
+    if (not replay and not pilot
+            and read_json(directory/"pilot_verification.json")["status"] != "PASS"):
         raise ValueError("official campaign blocked by pilot gate")
     masks = physical_masks()[:6]
     source_hash = file_hash(Path(__file__))
@@ -83,13 +84,15 @@ def execute(directory: Path, replay: bool) -> None:
         raise ValueError("refuse to mix execution hardware plans")
     write_json(plan_path, plan)
     tasks = [task for task in read_json(directory/"seed_manifest.json")["tasks"]
-             if task["stage"] == ("pilot" if replay else "official")]
+             if task["stage"] == ("pilot" if replay or pilot else "official")]
     if replay:
         tasks = [task for task in tasks if task["scenario_id"] == "nx2_delta1_rho025"]
 
     def shard(index: int) -> int:
         completed = 0
         for task in tasks[index::len(masks)]:
+            if (directory/"STOP_REQUESTED.json").exists():
+                break
             name = run_id(task)
             if replay:
                 command = [str(ROOT/"scripts/validation/verify_synthetic_benchmark_pilot.py"),
@@ -129,7 +132,14 @@ def execute(directory: Path, replay: bool) -> None:
     with ThreadPoolExecutor(max_workers=len(masks)) as pool:
         total = sum(future.result() for future in as_completed(
             [pool.submit(shard, index) for index in range(len(masks))]))
-    if not replay:
+    if not replay and pilot:
+        rows = report_runs(directory, "pilot")
+        write_json(directory/"pilot_verification.json", dict(
+            status="NUMERICAL_RUNS_COMPLETE_AUDIT_PENDING", planned=12,
+            completed=sum(r["state"] == "COMPLETED" for r in rows),
+            official_campaign_authorized=False,
+        ))
+    elif not replay:
         rows = report_runs(directory, "official")
         campaign = read_json(directory/"campaign_manifest.json")
         campaign.update(
@@ -145,5 +155,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--directory", type=Path, default=OUTPUT)
     parser.add_argument("--pilot-replay", action="store_true")
+    parser.add_argument("--pilot", action="store_true")
     args = parser.parse_args()
-    execute(args.directory, args.pilot_replay)
+    lock = args.directory/"scheduler.lock"
+    with lock.open("x", encoding="utf-8") as stream:
+        json.dump(dict(pid=os.getpid(), pilot=args.pilot, replay=args.pilot_replay), stream)
+    try:
+        execute(args.directory, args.pilot_replay, args.pilot)
+    finally:
+        lock.unlink()
