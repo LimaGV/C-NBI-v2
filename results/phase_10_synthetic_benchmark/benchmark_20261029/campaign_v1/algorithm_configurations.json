@@ -1,0 +1,495 @@
+{
+  "C_NBI": {
+    "B": 2000,
+    "MC": "joint_matrix_normal_plugin",
+    "covariance": "validated_PSD_no_jitter",
+    "screening": "all_local_components_strictly_above_q95_linear_quantile",
+    "subsets": "all_2_to_min_m_nxplus1",
+    "NBI": "unchanged_v2_defaults"
+  },
+  "VRF_NBI": {
+    "factor_rule": "max(2,k90)",
+    "factor_admissibility": "2<=k<=nx+1",
+    "varimax": {
+      "normalize": true,
+      "iterations": 500,
+      "tolerance": 1e-05
+    },
+    "pinv_rcond": 1e-15,
+    "variance": "sum_squared_loadings",
+    "extreme_ftol": 1e-12,
+    "extreme_maxiter": 100,
+    "nbi_ftol": 1e-10,
+    "nbi_maxiter": 100,
+    "nbi_eq_inf_tolerance": 1e-05,
+    "nbi_sphere_norm_tolerance": 1e-08,
+    "max_rescues": 2
+  },
+  "lattice_H": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 2,
+    "6": 2
+  },
+  "evolutionary": {
+    "NSGA-III_nx2_m4": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m4_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 1.0,
+      "sbx_eta": 30.0,
+      "pm_eta": 30.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx2_m4": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m4_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 30.0,
+      "pm_eta": 20.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 1.0
+    },
+    "NSGA-III_nx2_m6": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m6_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50400,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx2_m6": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m6_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50400,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 3,
+      "sbx_probability": 1.0,
+      "sbx_eta": 10.0,
+      "pm_eta": 30.0,
+      "neighbor_fraction": 0.1,
+      "prob_neighbor_mating": 1.0
+    },
+    "NSGA-III_nx2_m8": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m8_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 132000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx2_m8": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx2_m8_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 132000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 30.0,
+      "pm_eta": 20.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 1.0
+    },
+    "NSGA-III_nx3_m5": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m5_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx3_m5": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m5_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 50000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.3,
+      "prob_neighbor_mating": 0.7
+    },
+    "NSGA-III_nx3_m7": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m7_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 84000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 1.0,
+      "sbx_eta": 10.0,
+      "pm_eta": 30.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx3_m7": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m7_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 84000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 3,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 1.0
+    },
+    "NSGA-III_nx3_m9": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m9_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 198000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 3,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx3_m9": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx3_m9_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 198000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 20.0,
+      "pm_eta": 30.0,
+      "neighbor_fraction": 0.1,
+      "prob_neighbor_mating": 0.9
+    },
+    "NSGA-III_nx5_m7": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m7_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 84000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 1.0,
+      "sbx_eta": 20.0,
+      "pm_eta": 20.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx5_m7": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m7_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 84000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 3,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "NSGA-III_nx5_m9": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m9_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 198000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 30.0,
+      "pm_eta": 20.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx5_m9": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m9_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 198000,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "NSGA-III_nx5_m11": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m11_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 400400,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 30.0,
+      "pm_eta": 20.0,
+      "neighbor_fraction": 0.2,
+      "prob_neighbor_mating": 0.9
+    },
+    "MOEA/D_nx5_m11": {
+      "status": "COMPLETED",
+      "scenario_id": "doe_nx5_m11_medium",
+      "calibration_seeds": [
+        1,
+        2,
+        3
+      ],
+      "screening_budget": 50000,
+      "final_budget": 400400,
+      "source_prior": "legacy_full_m4_m6_m12_nearest",
+      "selection_order": [
+        "IGD_median",
+        "HV_median_desc",
+        "infeasibility_median",
+        "IGD_iqr",
+        "seconds_median"
+      ],
+      "n_partitions": 4,
+      "sbx_probability": 0.9,
+      "sbx_eta": 10.0,
+      "pm_eta": 15.0,
+      "neighbor_fraction": 0.1,
+      "prob_neighbor_mating": 1.0
+    }
+  },
+  "evolutionary_version": "pymoo==0.6.2",
+  "initialization": "uniform_ball; no_true_anchors",
+  "radial_repair": "one_ulp_inward",
+  "evaluation": "offline_Phase10C_unchanged_native_cardinality",
+  "cpu_threads": 1,
+  "workers_per_run": 1,
+  "max_concurrent_single_core_runs": 6,
+  "scheduling": "separate_physical_cores; pilot_revalidated_under_official_scheduling"
+}

@@ -86,7 +86,9 @@ def tables(directory: Path) -> pd.DataFrame:
     keys = ["scenario_id", "replica_id", "method", "nx", "delta", "rho", "m", "state"]
     frame = pd.DataFrame(metrics).merge(pd.DataFrame(counts), on=keys)
     frame = frame.merge(pd.DataFrame(runtimes), on=keys)
-    quantities = ["GD", "IGD", "HV", "Spacing", "Sparsity", "N_ND", "end_to_end_seconds"]
+    quantities = ["GD", "IGD", "HV", "Spacing", "Sparsity", "N_ND", "end_to_end_seconds",
+                  "model_vector_point_events", "original_rsm_point_evaluations",
+                  "scalar_quadratic_values", "nbi_subproblems"]
     summaries = []
     for group, data in frame.groupby(["scenario_id", "method", "nx", "m", "delta", "rho"]):
         for metric in quantities:
@@ -102,6 +104,20 @@ def tables(directory: Path) -> pd.DataFrame:
                 maximum=float(np.max(values)) if len(values) else None,
             ))
     export(directory/"benchmark_summary.csv", summaries)
+    cell_table = pd.DataFrame(summaries)
+    grouped_rows = []
+    for factor in ("nx", "m", "delta", "rho"):
+        for key, group in cell_table.groupby(["method", factor, "metric"]):
+            values = group["median"].dropna().to_numpy(dtype=float)
+            grouped_rows.append(dict(
+                method=key[0], factor=factor, factor_level=key[1], metric=key[2],
+                aggregation_unit="structural_cell", within_cell_statistic="median_of_five_replicas",
+                defined_cells=len(values), planned_cells=len(group),
+                median=float(np.median(values)) if len(values) else None,
+                q25=float(np.quantile(values, .25)) if len(values) else None,
+                q75=float(np.quantile(values, .75)) if len(values) else None,
+            ))
+    export(directory/"benchmark_grouped_summary.csv", grouped_rows)
     write_json(directory/"descriptive_report.json", dict(
         planned_runs=540, recorded_runs=len(frame),
         statuses={str(k): int(v) for k, v in frame.groupby(["method", "state"]).size().items()},
@@ -151,8 +167,14 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
         ("end_to_end_runtime", "end_to_end_seconds", "End-to-end runtime (s)", True),
         ("native_nd_cardinality", "N_ND", "Native ND cardinality", True),
     ):
-        fig, ax = plt.subplots(figsize=(5.4, 3.3), layout="constrained")
+        structural = quantity in {"GD", "HV"}
+        fig, axes = plt.subplots(1, 2 if structural else 1,
+                                 figsize=(7.2, 3.1) if structural else (5.4, 3.3),
+                                 layout="constrained", squeeze=False)
+        ax = axes[0, 0]
         scatter(ax, "m", quantity, label, log)
+        if structural:
+            scatter(axes[0, 1], "nx", quantity, label, log)
         if quantity == "HV":
             ax.set_title("Estimates shown; per-run precision flags archived", fontsize=8)
         ax.legend(frameon=False, ncol=2, fontsize=7)

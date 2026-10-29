@@ -1,0 +1,21 @@
+{
+  "scheduler_source": "scripts/validation/run_phase10d_campaign.py",
+  "scheduler_sha256": "ee57536b1d9a4934b8c66a7099767832c84e072f4a9b96333463ba8a2aa041e6",
+  "algorithm_protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "max_concurrent_runs": 6,
+  "workers_per_run": 1,
+  "BLAS_OpenMP_threads_per_run": 1,
+  "physical_core_affinity_masks": [
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024
+  ],
+  "sibling_threads_used": false,
+  "semantics": "independent_processes; no_change_to_frozen_algorithm_or_seed",
+  "timing": "per_run_wall_time_under_archived_concurrency; not_isolated_idle_host_time",
+  "resource_decision": "use_available_physical_cores; no_quality_or_parameter_tuning",
+  "plan_sha256": "c0e06606dd7ffa8322d0236ea672f8a63429f981515735f9a0b174c391c5f269"
+}
