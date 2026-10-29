@@ -13,12 +13,12 @@ from numpy.testing import assert_allclose, assert_array_equal
 from PIL import Image
 
 from cnbi_v2.model import quadratic_design
-from cnbi_v2.synthetic.ccd import full_ccd
-from cnbi_v2.synthetic.noise import experimental_noise, stream_seed
-from cnbi_v2.synthetic.rsm_generation import true_coefficients
-from cnbi_v2.synthetic.rsm_inputs import array_sha256, load_structural_cases, verify_checksums
-from cnbi_v2.synthetic.rsm_serialization import load_models
-from cnbi_v2.synthetic.rsm_validation import external_metrics
+from cnbi_v2.synthetic.rsm.ccd import full_ccd
+from cnbi_v2.synthetic.rsm.noise import experimental_noise, stream_seed
+from cnbi_v2.synthetic.rsm.rsm_generation import true_coefficients
+from cnbi_v2.synthetic.rsm.rsm_inputs import array_sha256, load_structural_cases, verify_checksums
+from cnbi_v2.synthetic.rsm.rsm_serialization import load_models
+from cnbi_v2.synthetic.rsm.rsm_validation import external_metrics
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "results/phase_10_synthetic_rsm/rsm_20261029"
@@ -223,7 +223,7 @@ def test_read_only_verifier_and_layout_reader_do_not_fit(monkeypatch):
         raise AssertionError("archive readers must not fit")
 
     monkeypatch.setattr("cnbi_v2.model.fit_multivariate_rsm", forbidden)
-    monkeypatch.setattr("cnbi_v2.synthetic.rsm_generation.fit_multivariate_rsm", forbidden)
+    monkeypatch.setattr("cnbi_v2.synthetic.rsm.rsm_generation.fit_multivariate_rsm", forbidden)
     assert verify(OUTPUT)["models"] == 135
     items, anchors, samples, diagnostics, external = archive_figure_inputs(OUTPUT)
     assert len(items) == 135 and len(anchors) == len(samples) == 27

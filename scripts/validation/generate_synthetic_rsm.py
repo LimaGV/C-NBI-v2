@@ -13,15 +13,20 @@ from pathlib import Path
 import numpy as np
 from synthetic_rsm_diagnostics import save_figures
 
-from cnbi_v2.synthetic.noise import experimental_noise
-from cnbi_v2.synthetic.rsm_generation import (
+from cnbi_v2.synthetic.rsm.noise import experimental_noise
+from cnbi_v2.synthetic.rsm.rsm_generation import (
     certify_noiseless,
     generate_instance,
     validate_instances,
 )
-from cnbi_v2.synthetic.rsm_inputs import array_sha256, load_structural_cases, sha256_file
-from cnbi_v2.synthetic.rsm_serialization import export_tables, load_models, write_csv, write_json
-from cnbi_v2.synthetic.rsm_validation import external_sample, replica_prediction_spread
+from cnbi_v2.synthetic.rsm.rsm_inputs import array_sha256, load_structural_cases, sha256_file
+from cnbi_v2.synthetic.rsm.rsm_serialization import (
+    export_tables,
+    load_models,
+    write_csv,
+    write_json,
+)
+from cnbi_v2.synthetic.rsm.rsm_validation import external_sample, replica_prediction_spread
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "d68aef72532ed0e39bd256b3e9dcb75f30c6a76b"
@@ -192,11 +197,9 @@ def main():
         source_names = sorted(
             [
                 str(p.relative_to(ROOT)).replace("\\", "/")
-                for p in (ROOT / "src/cnbi_v2/synthetic").glob("rsm_*.py")
+                for p in (ROOT / "src/cnbi_v2/synthetic/rsm").glob("*.py")
             ]
             + [
-                "src/cnbi_v2/synthetic/ccd.py",
-                "src/cnbi_v2/synthetic/noise.py",
                 "scripts/validation/generate_synthetic_rsm.py",
                 "scripts/validation/verify_synthetic_rsm.py",
                 "scripts/validation/synthetic_rsm_diagnostics.py",

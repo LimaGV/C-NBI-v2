@@ -14,9 +14,9 @@ from cnbi_v2.model import (
     quadratic_term_names,
 )
 
+from ..design import Scenario
+from ..model import FloatArray, evaluate, frozen, real_array
 from .ccd import CCD, full_ccd
-from .design import Scenario
-from .model import FloatArray, evaluate, frozen, real_array
 from .noise import experimental_noise, noise_variance, stream_seed
 
 

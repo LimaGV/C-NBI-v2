@@ -8,7 +8,7 @@ Após checkout limpo do commit de implementação:
 Nunca sobrescrever uma campanha. A campanha oficial será preservada em
 results/phase_10_synthetic_rsm/rsm_20261029/. Verificação read-only:
 `uv run python scripts/validation/verify_synthetic_rsm.py`.
-Modelos:cnbi_v2.synthetic.rsm_serialization.load_models(campaign_directory),sem OLS
+Modelos:cnbi_v2.synthetic.rsm.rsm_serialization.load_models(campaign_directory),sem OLS
 ou acesso ao oráculo analítico. Todos135 compartilhados por métodos futuros.
 Seeds,arrays float64,dependências/BLAS,fonte e todas entradas0–10A são hashed.
 

@@ -6,8 +6,8 @@ from numbers import Integral
 import numpy as np
 from numpy.typing import ArrayLike
 
-from .design import factorial_design
-from .model import FloatArray, real_array
+from ..design import factorial_design
+from ..model import FloatArray, real_array
 
 
 def stream_seed(master: int, scenario_id: str, replica_id: int) -> int:

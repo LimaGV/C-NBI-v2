@@ -6,9 +6,9 @@ from itertools import combinations
 import numpy as np
 from numpy.typing import ArrayLike
 
-from .design import Scenario
-from .domain import sample_ball
-from .model import FloatArray, evaluate, frozen, real_array
+from ..design import Scenario
+from ..domain import sample_ball
+from ..model import FloatArray, evaluate, frozen, real_array
 from .noise import stream_seed
 from .rsm_generation import RSMInstance
 

@@ -12,9 +12,9 @@ import numpy as np
 from matplotlib import rc_context
 from synthetic_rsm_diagnostics import figures
 
-from cnbi_v2.synthetic.rsm_inputs import load_structural_cases, sha256_file, verify_checksums
-from cnbi_v2.synthetic.rsm_serialization import load_models, write_json
-from cnbi_v2.synthetic.rsm_validation import ExternalSample
+from cnbi_v2.synthetic.rsm.rsm_inputs import load_structural_cases, sha256_file, verify_checksums
+from cnbi_v2.synthetic.rsm.rsm_serialization import load_models, write_json
+from cnbi_v2.synthetic.rsm.rsm_validation import ExternalSample
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "results/phase_10_synthetic_rsm/rsm_20261029"

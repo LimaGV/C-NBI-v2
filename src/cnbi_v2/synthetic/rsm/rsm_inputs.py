@@ -7,9 +7,9 @@ from pathlib import Path
 
 import numpy as np
 
-from .design import Scenario, factorial_design
-from .domain import radius
-from .model import FloatArray, frozen
+from ..design import Scenario, factorial_design
+from ..domain import radius
+from ..model import FloatArray, frozen
 
 
 def sha256_file(path: Path) -> str:

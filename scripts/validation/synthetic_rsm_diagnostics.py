@@ -8,7 +8,7 @@ from matplotlib import rc_context
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
 
-from cnbi_v2.synthetic.rsm_generation import true_coefficients
+from cnbi_v2.synthetic.rsm.rsm_generation import true_coefficients
 
 COLORS = ("#0072B2", "#009E73", "#CC3311")
 
@@ -50,8 +50,10 @@ def figures(instances, anchors, samples, diagnostics, external):
         ax.set(
             xlabel="Structural absolute-correlation target",
             ylabel="External RMSE",
-            title=f"{nx} factors; all excess levels and replicas",
+            title=f"{nx} factors",
         )
+        ax.xaxis.label.set_fontsize(8)
+    fig.suptitle("All excess levels and replicas", fontsize=9)
     plots["external_rmse"] = fig
 
     fig = new_figure(6.4, 4.8)

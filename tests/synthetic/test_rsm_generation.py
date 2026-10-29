@@ -11,19 +11,24 @@ import pytest
 from numpy.testing import assert_allclose, assert_array_equal
 
 from cnbi_v2.model import diagnose_rsm, fit_multivariate_rsm, quadratic_design, quadratic_term_names
-from cnbi_v2.synthetic.ccd import full_ccd
 from cnbi_v2.synthetic.design import factorial_design
 from cnbi_v2.synthetic.model import evaluate
-from cnbi_v2.synthetic.noise import experimental_noise, noise_variance, stream_seed
-from cnbi_v2.synthetic.rsm_generation import (
+from cnbi_v2.synthetic.rsm.ccd import full_ccd
+from cnbi_v2.synthetic.rsm.noise import experimental_noise, noise_variance, stream_seed
+from cnbi_v2.synthetic.rsm.rsm_generation import (
     certify_noiseless,
     generate_instance,
     true_coefficients,
     validate_instances,
 )
-from cnbi_v2.synthetic.rsm_inputs import load_structural_cases, verify_checksums
-from cnbi_v2.synthetic.rsm_serialization import export_tables, load_models, write_csv, write_models
-from cnbi_v2.synthetic.rsm_validation import (
+from cnbi_v2.synthetic.rsm.rsm_inputs import load_structural_cases, verify_checksums
+from cnbi_v2.synthetic.rsm.rsm_serialization import (
+    export_tables,
+    load_models,
+    write_csv,
+    write_models,
+)
+from cnbi_v2.synthetic.rsm.rsm_validation import (
     covariance_diagnostics,
     external_metrics,
     external_sample,
@@ -186,8 +191,8 @@ def test_export_and_oracle_free_reload_preserve_float64_without_ols(cases, tmp_p
         raise AssertionError("reload must not fit or call an oracle")
 
     monkeypatch.setattr("cnbi_v2.model.fit_multivariate_rsm", forbidden)
-    monkeypatch.setattr("cnbi_v2.synthetic.rsm_generation.fit_multivariate_rsm", forbidden)
-    monkeypatch.setattr("cnbi_v2.synthetic.rsm_generation.evaluate", forbidden)
+    monkeypatch.setattr("cnbi_v2.synthetic.rsm.rsm_generation.fit_multivariate_rsm", forbidden)
+    monkeypatch.setattr("cnbi_v2.synthetic.rsm.rsm_generation.evaluate", forbidden)
     models = load_models(tmp_path)
     for item in instances:
         loaded = models[item.instance_id]

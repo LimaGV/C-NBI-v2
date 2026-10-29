@@ -10,8 +10,8 @@ from numpy.typing import ArrayLike
 
 from cnbi_v2.model import quadratic_design, quadratic_term_names
 
-from .correlation import summaries
-from .model import FloatArray, frozen, real_array
+from ..correlation import summaries
+from ..model import FloatArray, frozen, real_array
 from .rsm_generation import RSMInstance, true_coefficients, validate_instances
 from .rsm_inputs import array_sha256, sha256_file
 from .rsm_validation import (

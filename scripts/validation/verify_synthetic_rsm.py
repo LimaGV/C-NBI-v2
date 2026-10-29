@@ -7,8 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
-from cnbi_v2.synthetic.rsm_inputs import array_sha256, sha256_file, verify_checksums
-from cnbi_v2.synthetic.rsm_serialization import load_models
+from cnbi_v2.synthetic.rsm.rsm_inputs import array_sha256, sha256_file, verify_checksums
+from cnbi_v2.synthetic.rsm.rsm_serialization import load_models
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "results/phase_10_synthetic_rsm/rsm_20261029"

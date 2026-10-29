@@ -13,6 +13,13 @@ and Windows. No anchor calibration or signed-correlation selection is performed.
 
 The source/protocol/tests are committed before official noise generation.
 `docs/policies/synthetic_generation_10b.json` is the machine-readable protocol.
+Phase10B lives in the explicit `cnbi_v2.synthetic.rsm` subpackage. The frozen
+Phase10A top-level package and its no-fitting AST scope test remain unchanged.
+The first complete source freeze at09d469e exposed this directory-scope conflict
+in the full suite (811 passed,one scope failure). Only package/import boundaries
+and RMSE figure labels were reorganized;no scientific formula,seed,observation,
+fit API or diagnostic changed. A committed initial-generation receipt preserves
+its full manifest and numerical hashes for exact equivalence verification.
 The frozen-input manifest protects every tracked main file except the seven
 explicit current-state documentation/ignore files. Previous source, tests,
 datasets, results, figures, licenses and Phase10A inputs remain unchanged.

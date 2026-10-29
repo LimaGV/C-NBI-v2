@@ -5,8 +5,8 @@ from itertools import product
 
 import numpy as np
 
-from .domain import radius
-from .model import FloatArray, frozen
+from ..domain import radius
+from ..model import FloatArray, frozen
 
 
 @dataclass(frozen=True, slots=True)

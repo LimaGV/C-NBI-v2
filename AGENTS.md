@@ -18,6 +18,8 @@ Todos135 preservados;seis figuras EN,PNG600/PDF vetorial,sem grades. Não execut
 C-NBI,VRF-NBI,EAs,Pareto/referência/métricas ou benchmark. Novo PR permanece aberto.
 MDR0014 e docs/policies/synthetic_generation_10b.json definem este escopo;
 licenças/dados originais permanecem inalterados. Seções seguintes são históricas.
+Implementação10B no subpacote cnbi_v2.synthetic.rsm;top-level10A e teste AST
+histórico permanecem intactos. Reorganização estrutural não altera o protocolo.
 
 ## Escopo atual — consolidação e Fase10A, autorizado em2026-10-29
 
