@@ -1,0 +1,36 @@
+{
+  "previous_manifest": {
+    "scientific_source": {
+      "src/cnbi_v2/synthetic/benchmark/archive.py": "6ced4681d7421ad64b545ce788585c3099ca731892fa3898247d6a8ae3ec6407",
+      "src/cnbi_v2/synthetic/benchmark/cnbi_runner.py": "db6ef031d73310ab7a4c41d21eea5486417e1d2cd9aee5737f9d611bd519f70d",
+      "src/cnbi_v2/synthetic/benchmark/configuration.py": "004bd7c4a9f3430e2618a20d3c91d0ff824af0cf8c4e95d17622b34d5ed08ceb",
+      "src/cnbi_v2/synthetic/benchmark/contracts.py": "6c6938664b7eab336fd44acc7ddb86da9c49a3fcb7f4d78c4fa9fe709cca7bd4",
+      "src/cnbi_v2/synthetic/benchmark/ea_runner.py": "fd3c89c0d627e4dceb3d1addc2a1a8abc90fd009ca04b640713ead2b67e11629",
+      "src/cnbi_v2/synthetic/benchmark/inputs.py": "52e7e3d1e531ff4a30e475be5199e1e97e77a192e571695730efff09e8903666",
+      "src/cnbi_v2/synthetic/benchmark/instrumentation.py": "925e1e2f676b0f09e17c316597ce7347490d7f39f7fc626ab0d48188f3711762",
+      "src/cnbi_v2/synthetic/benchmark/runner.py": "9117af8c3bd75fe83861670874bcd5e9da34675e1bd4b32aa416a555684d5cfc",
+      "src/cnbi_v2/synthetic/benchmark/vrf_runner.py": "281cc77fc4b1db7463c25491305849793c5bfb3c53040056e28c8475d0b25332",
+      "src/cnbi_v2/synthetic/benchmark/__init__.py": "e3f69aea6c2f74989ffe1ce77cd7b7070cc147c630b67c6495a33ac2fcc2243e",
+      "scripts/validation/execute_synthetic_benchmark.py": "5896f57e7a291001187c6cff678b368d65f7bb1dfa25bd10269c4aab702aed80",
+      "scripts/validation/synthetic_benchmark_audit.py": "28e6cbbd5b1b68edf8b37f876568c81bbaf65641453791ad7a240d7128796d1b",
+      "scripts/validation/validate_synthetic_benchmark_migration.py": "ff8c04b0a6435c71297e138e955b37ed0d51f26a4645df56a2614da26e99355e",
+      "scripts/validation/verify_synthetic_benchmark_pilot.py": "60c79f3dc128775de8c4874c4755af15f16a5577a62f2f884f198a699967844a",
+      "docs/decisions/0016-synthetic-algorithm-benchmark.md": "da2993e2a1484e0d4873632372abf18b6e30aafdd9b1353f4705065efaa578c2",
+      "docs/mathematics/synthetic_algorithm_benchmark.md": "b46b5732ab0333991f2369ff9ab288ab75d95fdf0cc10ec1923d42ec909e6205"
+    },
+    "configuration": {
+      "algorithm_configurations.json": "1d587fc527b8693280fe6339e258514b514eead689a18d1886fcb5473debb7fc",
+      "algorithm_provenance.json": "0258ab6a6d3c6c8e0b28782b599c329beea83c709b055057eb74f6b69edde703",
+      "budget_policy.json": "722d9b1ab62c8ca57949584500c41eac7a55b335f8acb77f70fc7af69a605c42",
+      "frozen_inputs_manifest.json": "ee72884bb1f2bac3ded178222f63a17b2d8e4d8365fd5718301abfefac32a4fc",
+      "seed_manifest.json": "bb92bad42cad4d3ac13f616456163b7217f7b6942df917fada1f22c387d2d8c0",
+      "v1_ea_calibration.json": "0c56d98c3b81618f1939507183277b06685f477809fef86051e7357ff8262774"
+    },
+    "protocol_hash": "aa24a0142915ee873e3335acda5f0b2c71e10af5866302128509504fdaf48056",
+    "code_commit": "b4dcd994099583c3f4fc94afcfe9acbe772152a4",
+    "campaign_status": "INCOMPLETE",
+    "planned_pilot_runs": 12,
+    "planned_official_runs": 540
+  },
+  "reason": "Actual Windows smoke test exposed missing ctypes HANDLE argument declarations; fixed before any pilot or official run."
+}

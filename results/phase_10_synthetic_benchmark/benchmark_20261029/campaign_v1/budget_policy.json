@@ -1,0 +1,18 @@
+{
+  "cnbi_vrf": "finish_full_method_no_NFE_ceiling",
+  "ea_rule": "max(50000,400*comb(m+3,4))",
+  "ceilings": {
+    "4": 50000,
+    "5": 50000,
+    "6": 50400,
+    "7": 84000,
+    "8": 132000,
+    "9": 198000,
+    "10": 286000,
+    "11": 400400
+  },
+  "last_generation": "floor(budget/population)_complete_generations_as_v1",
+  "unspent_remainder": "reported; no_overshoot; no_silent_partial_population",
+  "costs": "end_to_end_preparation_solver_postprocessing; external_evaluation_separate",
+  "nfe": "original_full_vector_points; scalar_kernel_evaluations_and_gradients_separate"
+}

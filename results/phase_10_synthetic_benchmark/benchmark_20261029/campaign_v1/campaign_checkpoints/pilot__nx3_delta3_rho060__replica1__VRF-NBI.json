@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "pilot",
+    "instance_id": "nx3_delta3_rho060__replica1",
+    "scenario_id": "nx3_delta3_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "40129754343545653177316263178378222156"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/pilot__nx3_delta3_rho060__replica1__VRF-NBI.npz": "df9e6fb76f8db11ebe12795f21ac846ef0361791f04002323998e35b88dd87a5",
+    "raw_rsm_responses/pilot__nx3_delta3_rho060__replica1__VRF-NBI.npz": "50a9417cc8a0c375bc56f9e3c3adfeac883fe25d9068649850f1b7f9259de411",
+    "algorithm_diagnostics/pilot__nx3_delta3_rho060__replica1__VRF-NBI.npz": "d27802873a362c9111a12ee9a4786c6b006b9c3fc948ca1507d4e18213e16be3",
+    "algorithm_diagnostics/pilot__nx3_delta3_rho060__replica1__VRF-NBI.json": "9070da7bf8b0435b9081734b7fbb2d1204a36607c022a40c9e09d306e8d56fcf"
+  },
+  "payload_run_id": "pilot__nx3_delta3_rho060__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 4.033802299993113,
+    "solver": 0.06261440017260611,
+    "postprocessing": 0.0006812997162342072,
+    "total": 4.097097999881953
+  },
+  "counters": {
+    "vrf_vector_evaluations": 39548,
+    "vrf_jacobian_calls": 5378,
+    "extreme_solves": 120,
+    "extreme_iterations": 5532,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 181,
+    "factor_model_vector_evaluations": 45172,
+    "factor_model_jacobian_calls": 5588,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 45214
+  },
+  "nx": 3,
+  "m": 7,
+  "peak_process_memory_bytes": 128655360
+}

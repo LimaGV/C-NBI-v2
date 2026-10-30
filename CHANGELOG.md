@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased — Phase10D frozen synthetic algorithm benchmark
+
+- Oracle-free adapters for complete C-NBI, full VRF-NBI, NSGA-III and MOEA/D.
+- Traceable v1 migration and18 frozen EA calibration records, with MIT notices.
+- Twelve-run corrected pilot passed with bitwise X/Y replay;540 official tasks
+  execute in strict method blocks with immutable payloads and checkpoints.
+- Preserve the initial24 pilot executions and77 official attempts, including
+  two Varimax adapter failures; the corrected whole campaign has separate provenance.
+- Native-cardinality offline evaluation uses the unchanged Phase10C API.
+- Descriptive summaries, scientific figures and explicit computational cost
+  accounting; no inference, equalization, calibration or changes to earlier science.
+- 540/540 searches and evaluations completed without execution failures; all135
+  pairing blocks and1262 previous files passed the read-only scientific audit.
+- Nine PNG600/vector-PDF figure pairs, verified method chronology and540 original
+  lifecycle timing windows; retain three Varimax-cap flags and two pending HV estimates.
+
 ## Unreleased — Phase10C analytical Pareto reference and evaluation
 
 - Two-inclusion Pareto-set proof for the frozen isotropic-distance objectives.

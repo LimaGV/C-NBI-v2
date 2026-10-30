@@ -1,5 +1,43 @@
 # Reprodutibilidade
 
+## Fase10D — campanha ordenada e avaliação externa
+
+Fonte numérica congelada:8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee.
+Protocolo:19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf.
+Diretório:results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v2/.
+Seu README fornece a sequência piloto → gate → campanha → avaliação → auditoria.
+O agendador usa barreiras completas C-NBI, VRF-NBI, NSGA-III e MOEA/D;
+máximo6 processos em núcleos físicos distintos, um thread numérico por processo.
+Seeds pertencem à identidade cenário/réplica/método, nunca à ordem ou ao núcleo.
+O piloto corrigido12/12 reproduziu X/Y bitwise contra o piloto sequencial.
+
+Para uma nova execução numérica independente, usar um checkout/worktree vazio
+e separado no commit8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee: nesse commit,
+campaign_v2/ ainda não existe. Após uv sync --locked, preparar com
+`uv run python scripts/validation/synthetic_benchmark_audit.py --legacy <repo_v1>`
+e validar a migração com
+`uv run python scripts/validation/validate_synthetic_benchmark_migration.py --legacy <repo_v1>`.
+Usar a v1 fixada em7bd4915; as rotinas leem blobs desse commit. Seguir então
+a sequência piloto/gate/campanha/avaliação do README do caso. A preparação
+recusa sobrescrever diretório existente. As ferramentas finais de relatório
+e auditoria, versionadas depois da fonte numérica, podem ser usadas separadamente;
+os hashes do protocolo verificam os mesmos arquivos numéricos. O pacote
+arquivado permite recarga e verificação sem executar uma segunda campanha.
+
+Checkpoint concluído somente recarrega após validar hashes. Não sobrescrever
+payload nem repetir execução para melhorar métricas. Recuperação operacional
+exige motivo e histórico; resultado científico retido não pode ser substituído.
+As24 execuções piloto anteriores e77 tentativas oficiais iniciais permanecem
+separadas, incluindo duas falhas do adaptador Varimax corrigidas na nova versão.
+500 iterações/1e-5 continuam iguais à v1; não convergência é explicitamente registrada.
+
+Avaliação independente usa somente a API10C congelada após terminar as buscas.
+Referência5000/célula comum às cinco réplicas, ideal/nadir analíticos, sem clipping,
+reparo externo ou feedback. Preservar decisões brutas, flags de precisão HV e
+métricas indefinidas. Auditor read-only:audit_phase10d_outputs.py. Somente
+descrição por célula estrutural; sem tratar réplicas como cenários independentes.
+Relatório:phase_10d_verification.md. Ciência0–10C e licenças excluídas preservadas.
+
 ## Fase10C — referência analítica independente
 
 Base47a0e4d integra10B e preserva todos os SHAs anteriores por merge commit.

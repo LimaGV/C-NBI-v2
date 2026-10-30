@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho060__replica4",
+    "scenario_id": "nx3_delta1_rho060",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "240420766347454174161335805851176861476"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho060__replica4__VRF-NBI.npz": "1db3fe831fa4a275a5ab913c6e006fc2469f9b7a92c68b9023df30cf9078b92a",
+    "raw_rsm_responses/official__nx3_delta1_rho060__replica4__VRF-NBI.npz": "03d583dea1c865aed09a18ce19a6c473f7410beb0716711c7d535b1e46578ac8",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica4__VRF-NBI.npz": "65852b59e7f3a8fa7782fc2517b07b21e1c22a9728a0308537ddc005e08a7d58",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica4__VRF-NBI.json": "85709211f8b3146b29b24934a97f2f4891fb956c2b46579bd68a007a7a70bf47"
+  },
+  "payload_run_id": "official__nx3_delta1_rho060__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 4.547044599894434,
+    "solver": 0.07869879994541407,
+    "postprocessing": 0.0007783002220094204,
+    "total": 4.626521700061858
+  },
+  "counters": {
+    "vrf_vector_evaluations": 42150,
+    "vrf_jacobian_calls": 5501,
+    "extreme_solves": 120,
+    "extreme_iterations": 5644,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 171,
+    "factor_model_vector_evaluations": 47882,
+    "factor_model_jacobian_calls": 5701,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 47924
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128442368
+}

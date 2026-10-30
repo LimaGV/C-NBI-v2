@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta1_rho060__replica5",
+    "scenario_id": "nx5_delta1_rho060",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "160379676698518005065124832157248772903"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta1_rho060__replica5__VRF-NBI.npz": "10570d3e7ef209a76a0a2233d9acfe2c3815077b5a0203bf26deb0d1b8bbb9b2",
+    "raw_rsm_responses/official__nx5_delta1_rho060__replica5__VRF-NBI.npz": "1156d190cd5a19f13ef99d02e8758a87430f37e4751984d96d063e48a651ebbb",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica5__VRF-NBI.npz": "ff3e278d7a92fca28ff8c12487228654210b1424e98278d329b89b65d9ee6446",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica5__VRF-NBI.json": "b00d5dc1f4d8b8c4a32c14acd9517ea0c455e6c81750e5ec97c0d5f0f83cfee5"
+  },
+  "payload_run_id": "official__nx5_delta1_rho060__replica5__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 6.514309599995613,
+    "solver": 0.11825269996188581,
+    "postprocessing": 0.0008859999943524599,
+    "total": 6.633448299951851
+  },
+  "counters": {
+    "vrf_vector_evaluations": 46958,
+    "vrf_jacobian_calls": 7348,
+    "extreme_solves": 168,
+    "extreme_iterations": 7655,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 285,
+    "factor_model_vector_evaluations": 54741,
+    "factor_model_jacobian_calls": 7734,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 186,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 54783
+  },
+  "nx": 5,
+  "m": 7,
+  "peak_process_memory_bytes": 128802816
+}

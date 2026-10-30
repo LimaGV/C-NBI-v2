@@ -1,0 +1,5506 @@
+{
+  "task": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho085__replica5",
+    "scenario_id": "nx3_delta1_rho085",
+    "replica_id": 5,
+    "method": "C-NBI",
+    "seed": "281605916948576094344750285849344703130"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "code_commit": "8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee",
+  "environment": {
+    "python": "3.12.15 (main, Oct  3 2026, 01:05:37) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pymoo": "0.6.2"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "workers": 1,
+    "numpy_configuration": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\n  lapack:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\nCompilers:\n  c:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  c++:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.3.0\nMachine Information:\n  build:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\n  host:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\nPython Information:\n  path: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\build-env-1rr8oud1\\Scripts\\python.exe\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - X86_V2\n  found:\n  - X86_V3\n\n"
+  },
+  "coefficients_sha256": "83efdae77d849580144b168ae2dc7a27e04f860dcaa3431203b2c72b255e53ea",
+  "peak_process_memory_bytes": 128598016,
+  "input_load_plus_search_seconds": 5.792822499992326,
+  "algorithm_status": "COMPLETED",
+  "diagnostics": {
+    "method": "C-NBI",
+    "B": 2000,
+    "seed": "281605916948576094344750285849344703130",
+    "covariance_method": "CHOLESKY_SPD",
+    "covariance_psd_tolerance": 2.2732576259854366e-15,
+    "covariance_zeroed_negative_eigenvalues": 0,
+    "coefficient_samples_sha256": "c104184f834a7519cc4a1075021feb50741b0784b72f6e357c9d6c20857a44dc",
+    "mc_payoffs_sha256": "388af8417d89d973ffa9d51587d502b444f7e9a07d1bfa96bed13d0ce4c8a3b2",
+    "all_mc_payoffs_valid": true,
+    "nominal_anchors": [
+      [
+        -1.552342075253224,
+        -0.21610422230243478,
+        -0.6098853754991699
+      ],
+      [
+        -0.7244365624082064,
+        0.3760796106231677,
+        -0.6970623379193062
+      ],
+      [
+        -1.2773489906368134,
+        0.3549496212234227,
+        -0.609980027751992
+      ],
+      [
+        0.7873926595230261,
+        -0.29252300300416645,
+        1.3753132490203466
+      ],
+      [
+        1.232075331041524,
+        -0.6490787741138644,
+        0.9429285489261372
+      ]
+    ],
+    "nominal_payoff": [
+      [
+        -1.256747575601818,
+        0.5388444346845391,
+        -0.4304558207212945,
+        9.905804390314032,
+        10.800559098543376
+      ],
+      [
+        1.9225366952136391,
+        0.5350020498067534,
+        0.9586458255191834,
+        10.409426301905945,
+        10.927253117220769
+      ],
+      [
+        0.4987723328814546,
+        0.44896707321084994,
+        0.1920792631080963,
+        11.25424782512462,
+        11.696748670334607
+      ],
+      [
+        9.04317774109368,
+        7.349779084460861,
+        8.799688629875224,
+        0.26910149637770386,
+        0.6566271016568681
+      ],
+      [
+        10.139911787436533,
+        6.73032138805439,
+        8.921506190189946,
+        -0.14425680914749606,
+        -0.8636557487365724
+      ]
+    ],
+    "normalization_utopia": [
+      -1.256747575601818,
+      0.5350020498067534,
+      0.1920792631080963,
+      0.26910149637770386,
+      -0.8636557487365724
+    ],
+    "normalization_amplitudes": [
+      12.057306674145194,
+      10.392251067414016,
+      11.50466940722651,
+      8.774076244715976,
+      11.003567536173106
+    ],
+    "global_dimension": 1,
+    "global_pattern": "MONOTONE_PA_PATTERN",
+    "candidate_subsets": 25,
+    "selected_subsets": 10,
+    "subsets": [
+      {
+        "subset_id": "GLOBAL",
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "scope": "GLOBAL",
+        "observed": [
+          2.215797989827167,
+          0.2514270313676137,
+          0.07405890898718161,
+          0.01732871783352691
+        ],
+        "q95": [
+          0.48351556704743914,
+          0.26169210417219496,
+          0.1240365128969399,
+          0.05895844431284897
+        ],
+        "margins": [
+          1.732282422779728,
+          -0.010265072804581277,
+          -0.04997760390975829,
+          -0.04162972647932206
+        ],
+        "component_passes": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2",
+        "indices": [
+          0,
+          1
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.1414287879359464
+        ],
+        "q95": [
+          0.06758346948301541
+        ],
+        "margins": [
+          0.07384531845293099
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3",
+        "indices": [
+          0,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05199552251141461
+        ],
+        "q95": [
+          0.12556367270121013
+        ],
+        "margins": [
+          -0.07356815018979553
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4",
+        "indices": [
+          0,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9636103702617936
+        ],
+        "q95": [
+          0.22726900291900382
+        ],
+        "margins": [
+          0.7363413673427899
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_5",
+        "indices": [
+          0,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.0
+        ],
+        "q95": [
+          0.09700883970895376
+        ],
+        "margins": [
+          0.9029911602910462
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3",
+        "indices": [
+          1,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.032866383808851915
+        ],
+        "q95": [
+          0.10119821605933567
+        ],
+        "margins": [
+          -0.06833183225048375
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4",
+        "indices": [
+          1,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.8814973500442371
+        ],
+        "q95": [
+          0.26342556473501316
+        ],
+        "margins": [
+          0.6180717853092239
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_5",
+        "indices": [
+          1,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.8591536790093756
+        ],
+        "q95": [
+          0.12232705511194471
+        ],
+        "margins": [
+          0.7368266238974308
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4",
+        "indices": [
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9669079909905407
+        ],
+        "q95": [
+          0.30309516475241344
+        ],
+        "margins": [
+          0.6638128262381273
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_5",
+        "indices": [
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9462569086691606
+        ],
+        "q95": [
+          0.14842053915649236
+        ],
+        "margins": [
+          0.7978363695126682
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_5",
+        "indices": [
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.055790268647088984
+        ],
+        "q95": [
+          0.18283184751864617
+        ],
+        "margins": [
+          -0.1270415788715572
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3",
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.14190489174212345,
+          0.027354961030527647
+        ],
+        "q95": [
+          0.14839735064493212,
+          0.0642141988865199
+        ],
+        "margins": [
+          -0.006492458902808668,
+          -0.03685923785599225
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "indices": [
+          0,
+          1,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.2470132355144,
+          0.17677256874125233
+        ],
+        "q95": [
+          0.34529022741889603,
+          0.11564725877002904
+        ],
+        "margins": [
+          0.9017230080955039,
+          0.061125309971223285
+        ],
+        "component_passes": [
+          true,
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "indices": [
+          0,
+          1,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.282111589962092,
+          0.22804035945882684
+        ],
+        "q95": [
+          0.1613340046649191,
+          0.07237013193600914
+        ],
+        "margins": [
+          1.1207775852971729,
+          0.1556702275228177
+        ],
+        "component_passes": [
+          true,
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4",
+        "indices": [
+          0,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3335376488397097,
+          0.04836272846392855
+        ],
+        "q95": [
+          0.36878537605922845,
+          0.15492595224718758
+        ],
+        "margins": [
+          0.9647522727804813,
+          -0.10656322378325903
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_5",
+        "indices": [
+          0,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3672623935433261,
+          0.07137405491430719
+        ],
+        "q95": [
+          0.19613597404345656,
+          0.10039435920245936
+        ],
+        "margins": [
+          1.1711264194998696,
+          -0.029020304288152166
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_5",
+        "indices": [
+          0,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3714740079378491,
+          0.0661627374744345
+        ],
+        "q95": [
+          0.2711876487979367,
+          0.12852708837223029
+        ],
+        "margins": [
+          1.1002863591399124,
+          -0.06236435089779578
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4",
+        "indices": [
+          1,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3074553275546652,
+          0.10673805151477929
+        ],
+        "q95": [
+          0.40389447207708923,
+          0.17923865467435385
+        ],
+        "margins": [
+          0.903560855477576,
+          -0.07250060315957456
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "indices": [
+          1,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3081354896952244,
+          0.13067189498560866
+        ],
+        "q95": [
+          0.20791132577555918,
+          0.09409868378671012
+        ],
+        "margins": [
+          1.1002241639196653,
+          0.036573211198898545
+        ],
+        "component_passes": [
+          true,
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_5",
+        "indices": [
+          1,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.154799368018831,
+          0.05951465696719707
+        ],
+        "q95": [
+          0.3116777290223301,
+          0.14582386709420017
+        ],
+        "margins": [
+          0.843121638996501,
+          -0.0863092101270031
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_5",
+        "indices": [
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3163661446103672,
+          0.0577559364259675
+        ],
+        "q95": [
+          0.3366424754188231,
+          0.14188955950476018
+        ],
+        "margins": [
+          0.9797236691915441,
+          -0.08413362307879269
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_4",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.5698950851889353,
+          0.1834175972413728,
+          0.03391344972106099
+        ],
+        "q95": [
+          0.46451624720731677,
+          0.21371387849089735,
+          0.06968375288007332
+        ],
+        "margins": [
+          1.1053788379816185,
+          -0.030296281249524548,
+          -0.035770303159012334
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_5",
+        "indices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6135534788125199,
+          0.2386167187175559,
+          0.021443606418326808
+        ],
+        "q95": [
+          0.23760490597872708,
+          0.1297982123246342,
+          0.06071557722699654
+        ],
+        "margins": [
+          1.3759485728337928,
+          0.1088185063929217,
+          -0.03927197080866973
+        ],
+        "component_passes": [
+          true,
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4_5",
+        "indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.7564389963735692,
+          0.2353308937544019,
+          0.06718744041323559
+        ],
+        "q95": [
+          0.37527284118000875,
+          0.18907052249369263,
+          0.07482325660344769
+        ],
+        "margins": [
+          1.3811661551935603,
+          0.046260371260709254,
+          -0.0076358161902121
+        ],
+        "component_passes": [
+          true,
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4_5",
+        "indices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.8882028250516554,
+          0.08441904733228482,
+          0.0519968149393641
+        ],
+        "q95": [
+          0.40082125482147474,
+          0.20928119198355188,
+          0.09252309788003989
+        ],
+        "margins": [
+          1.4873815702301807,
+          -0.12486214465126706,
+          -0.040526282940675784
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4_5",
+        "indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.7863046482428282,
+          0.15037374807050558,
+          0.058720102498205265
+        ],
+        "q95": [
+          0.4294142865612228,
+          0.22909286554888886,
+          0.09429338412018565
+        ],
+        "margins": [
+          1.3568903616816055,
+          -0.07871911747838328,
+          -0.03557328162198038
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      }
+    ],
+    "subproblems": [
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 0,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 1,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 2,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 3,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 4,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 5,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 6,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 7,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 8,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 9,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 10,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 11,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 12,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 13,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 14,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 15,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 16,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 17,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 18,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 19,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 20,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 21,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 22,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 23,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 24,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 25,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 26,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 27,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 28,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 29,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 30,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 31,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 32,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 33,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 34,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 35,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 36,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 37,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 38,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 39,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 40,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 41,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 42,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 1,
+        "beta": [
+          0.0,
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 43,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 2,
+        "beta": [
+          0.0,
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 44,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 3,
+        "beta": [
+          0.0,
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 45,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 4,
+        "beta": [
+          0.0,
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 46,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 5,
+        "beta": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 47,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 6,
+        "beta": [
+          0.2,
+          0.0,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 48,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 7,
+        "beta": [
+          0.2,
+          0.2,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 49,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 8,
+        "beta": [
+          0.2,
+          0.4,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 50,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 9,
+        "beta": [
+          0.2,
+          0.6,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 51,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 10,
+        "beta": [
+          0.2,
+          0.8,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 52,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 11,
+        "beta": [
+          0.4,
+          0.0,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 53,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 12,
+        "beta": [
+          0.4,
+          0.2,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 54,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 13,
+        "beta": [
+          0.4,
+          0.4,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 55,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 14,
+        "beta": [
+          0.4,
+          0.6,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 56,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 15,
+        "beta": [
+          0.6,
+          0.0,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 57,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 16,
+        "beta": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 58,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 17,
+        "beta": [
+          0.6,
+          0.4,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 59,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 18,
+        "beta": [
+          0.8,
+          0.0,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 60,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 19,
+        "beta": [
+          0.8,
+          0.2,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 61,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 20,
+        "beta": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 62,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 63,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 1,
+        "beta": [
+          0.0,
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 64,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 2,
+        "beta": [
+          0.0,
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 65,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 3,
+        "beta": [
+          0.0,
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 66,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 4,
+        "beta": [
+          0.0,
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 67,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 5,
+        "beta": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 68,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 6,
+        "beta": [
+          0.2,
+          0.0,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 69,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 7,
+        "beta": [
+          0.2,
+          0.2,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 70,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 8,
+        "beta": [
+          0.2,
+          0.4,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 71,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 9,
+        "beta": [
+          0.2,
+          0.6,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 72,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 10,
+        "beta": [
+          0.2,
+          0.8,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 73,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 11,
+        "beta": [
+          0.4,
+          0.0,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 74,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 12,
+        "beta": [
+          0.4,
+          0.2,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 75,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 13,
+        "beta": [
+          0.4,
+          0.4,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 76,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 14,
+        "beta": [
+          0.4,
+          0.6,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 77,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 15,
+        "beta": [
+          0.6,
+          0.0,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 78,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 16,
+        "beta": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 79,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 17,
+        "beta": [
+          0.6,
+          0.4,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 80,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 18,
+        "beta": [
+          0.8,
+          0.0,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 81,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 19,
+        "beta": [
+          0.8,
+          0.2,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 82,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 20,
+        "beta": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 83,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 84,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 1,
+        "beta": [
+          0.0,
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 85,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 2,
+        "beta": [
+          0.0,
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 86,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 3,
+        "beta": [
+          0.0,
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 87,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 4,
+        "beta": [
+          0.0,
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 88,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 5,
+        "beta": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 89,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 6,
+        "beta": [
+          0.2,
+          0.0,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 90,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 7,
+        "beta": [
+          0.2,
+          0.2,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 91,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 8,
+        "beta": [
+          0.2,
+          0.4,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 92,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 9,
+        "beta": [
+          0.2,
+          0.6,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 93,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 10,
+        "beta": [
+          0.2,
+          0.8,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 94,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 11,
+        "beta": [
+          0.4,
+          0.0,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 95,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 12,
+        "beta": [
+          0.4,
+          0.2,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 96,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 13,
+        "beta": [
+          0.4,
+          0.4,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 97,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 14,
+        "beta": [
+          0.4,
+          0.6,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 98,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 15,
+        "beta": [
+          0.6,
+          0.0,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 99,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 16,
+        "beta": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 100,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 17,
+        "beta": [
+          0.6,
+          0.4,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 101,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 18,
+        "beta": [
+          0.8,
+          0.0,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 102,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 19,
+        "beta": [
+          0.8,
+          0.2,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 103,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 20,
+        "beta": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 104,
+        "attempts": 1
+      }
+    ],
+    "trials": [
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -0.953064632469876,
+          0.2558834410785889,
+          -0.7293883235126623
+        ],
+        "t": 0.18883848621791258,
+        "sphere_margin": 1.3226112691864182,
+        "eq_norm": 2.900518015996389e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -1.1455750336920103,
+          0.1622024305778094,
+          -0.7534781175780202
+        ],
+        "t": 0.25184578285223047,
+        "sphere_margin": 0.9220460647734734,
+        "eq_norm": 1.874054862386115e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.953064632469876,
+            0.2558834410785889,
+            -0.7293883235126623
+          ],
+          "t": 0.18883848621791258,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -1.315197744747048,
+          0.08363393708117312,
+          -0.7727800889188511
+        ],
+        "t": 0.2380497806769735,
+        "sphere_margin": 0.4944983156973435,
+        "eq_norm": 1.450542510473965e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.1455750336920103,
+            0.1622024305778094,
+            -0.7534781175780202
+          ],
+          "t": 0.25184578285223047,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -1.4686079290765832,
+          0.015003895769464492,
+          -0.7889176736420075
+        ],
+        "t": 0.17115262793620353,
+        "sphere_margin": 0.04900166272660167,
+        "eq_norm": 1.9048942929812763e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.315197744747048,
+            0.08363393708117312,
+            -0.7727800889188511
+          ],
+          "t": 0.2380497806769735,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.552342075253224,
+          -0.21610422230243478,
+          -0.6098853754991699
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.0,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.552342075253224,
+            -0.21610422230243478,
+            -0.6098853754991699
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.7873926595230261,
+          -0.29252300300416645,
+          1.3753132490203466
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.23138368425796862,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.2604171151124628,
+          -0.3014228671426769,
+          0.8820128866537346
+        ],
+        "t": 0.20553344325257664,
+        "sphere_margin": 1.8918075738429267,
+        "eq_norm": 1.3629089450820155e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.254038022856046,
+          -0.30993514300076297,
+          0.4726944032150136
+        ],
+        "t": 0.2834143866534362,
+        "sphere_margin": 2.4443920159918795,
+        "eq_norm": 1.7515500761875864e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 10,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.2604171151124628,
+            -0.3014228671426769,
+            0.8820128866537346
+          ],
+          "t": 0.20553344325257664,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.7538301970683906,
+          -0.3261115130660234,
+          0.12742922575393245
+        ],
+        "t": 0.2638165788490093,
+        "sphere_margin": 2.1375802322035633,
+        "eq_norm": 3.5367399964948255e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.254038022856046,
+            -0.30993514300076297,
+            0.4726944032150136
+          ],
+          "t": 0.2834143866534362,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -1.2386693712797232,
+          -0.35288615551720975,
+          -0.16665144504543047
+        ],
+        "t": 0.16762395842022754,
+        "sphere_margin": 1.1418239705082387,
+        "eq_norm": 3.356589068483857e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7538301970683906,
+            -0.3261115130660234,
+            0.12742922575393245
+          ],
+          "t": 0.2638165788490093,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.552342075253224,
+          -0.21610422230243478,
+          -0.6098853754991699
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.0,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.552342075253224,
+            -0.21610422230243478,
+            -0.6098853754991699
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          1.232075331041524,
+          -0.6490787741138644,
+          0.9429285489261372
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.3322676295501878e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.6597289646238467,
+          -0.43682313862859123,
+          0.5547405917280074
+        ],
+        "t": 0.1908591584078112,
+        "sphere_margin": 1.894633239430464,
+        "eq_norm": 6.169109858403179e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.0872853516857055,
+          -0.2883563974680842,
+          0.1980774909269573
+        ],
+        "t": 0.27090182562095405,
+        "sphere_margin": 2.698424287754602,
+        "eq_norm": 1.0390955045876383e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.6597289646238467,
+            -0.43682313862859123,
+            0.5547405917280074
+          ],
+          "t": 0.1908591584078112,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.48290147481666323,
+          -0.2163518999891214,
+          -0.10984685950212221
+        ],
+        "t": 0.25509133821085467,
+        "sphere_margin": 2.5363588131946995,
+        "eq_norm": 4.908871798157965e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.0872853516857055,
+            -0.2883563974680842,
+            0.1980774909269573
+          ],
+          "t": 0.27090182562095405,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -1.0387863571742457,
+          -0.21277484907942115,
+          -0.36304355337650634
+        ],
+        "t": 0.15973578638157188,
+        "sphere_margin": 1.5722762708458398,
+        "eq_norm": 8.777083671441753e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.48290147481666323,
+            -0.2163518999891214,
+            -0.10984685950212221
+          ],
+          "t": 0.25509133821085467,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.552342075253224,
+          -0.21610422230243478,
+          -0.6098853754991699
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.0,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.552342075253224,
+            -0.21610422230243478,
+            -0.6098853754991699
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.7873926595230261,
+          -0.29252300300416645,
+          1.3753132490203466
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.23138368425796862,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.4834436208239995,
+          -0.2635908663637758,
+          0.929783012377015
+        ],
+        "t": 0.2285992167687894,
+        "sphere_margin": 1.6607327952954885,
+        "eq_norm": 7.850462293418876e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.1688435922350773,
+          -0.18194306178506478,
+          0.49750362006355014
+        ],
+        "t": 0.3447005520435192,
+        "sphere_margin": 2.5193058363992837,
+        "eq_norm": 3.925231146709438e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.4834436208239995,
+            -0.2635908663637758,
+            0.929783012377015
+          ],
+          "t": 0.2285992167687894,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.1447334575639265,
+          -0.046111740188912904,
+          0.0811267997292457
+        ],
+        "t": 0.3446991297806059,
+        "sphere_margin": 2.798771500790222,
+        "eq_norm": 1.6641875325084957e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.1688435922350773,
+            -0.18194306178506478,
+            0.49750362006355014
+          ],
+          "t": 0.3447005520435192,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.445687120474175,
+          0.14176998438879265,
+          -0.3174672882831815
+        ],
+        "t": 0.22859669407375294,
+        "sphere_margin": 2.508905907786153,
+        "eq_norm": 1.4044653940504988e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.1447334575639265,
+            -0.046111740188912904,
+            0.0811267997292457
+          ],
+          "t": 0.3446991297806059,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          1.232075331041524,
+          -0.6490787741138644,
+          0.9429285489261372
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.3322676295501878e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.8698323835266516,
+          -0.45940308415642434,
+          0.6153196315765322
+        ],
+        "t": 0.2047226156728221,
+        "sphere_margin": 1.48214930657862,
+        "eq_norm": 7.413181193328755e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.49274730778964576,
+          -0.2579323396737299,
+          0.2913353440814532
+        ],
+        "t": 0.3144653450204777,
+        "sphere_margin": 2.434221840851623,
+        "eq_norm": 3.5409232249300504e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 7,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.8698323835266516,
+            -0.45940308415642434,
+            0.6153196315765322
+          ],
+          "t": 0.2047226156728221,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          0.10266524649629363,
+          -0.051510054901686524,
+          -0.03602183535745845
+        ],
+        "t": 0.3222929658908125,
+        "sphere_margin": 2.8139361135295506,
+        "eq_norm": 6.206335383118183e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.49274730778964576,
+            -0.2579323396737299,
+            0.2913353440814532
+          ],
+          "t": 0.3144653450204777,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.30225583775007997,
+          0.15991656287647737,
+          -0.3659270506741182
+        ],
+        "t": 0.22039716071749904,
+        "sphere_margin": 2.577592619794902,
+        "eq_norm": 4.359279593519812e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.10266524649629363,
+            -0.051510054901686524,
+            -0.03602183535745845
+          ],
+          "t": 0.3222929658908125,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.7873926595230261,
+          -0.29252300300416645,
+          1.3753132490203466
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.23138368425796862,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.4346946917178018,
+          -0.24479608391941393,
+          0.9031320973427828
+        ],
+        "t": 0.22822619907428282,
+        "sphere_margin": 1.7638949417855008,
+        "eq_norm": 3.925231146709438e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.047510943991198734,
+          -0.16172701375531243,
+          0.4599464653476146
+        ],
+        "t": 0.3439739211245366,
+        "sphere_margin": 2.5884634569832796,
+        "eq_norm": 3.814935382460858e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.4346946917178018,
+            -0.24479608391941393,
+            0.9031320973427828
+          ],
+          "t": 0.22822619907428282,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.37203319802789464,
+          -0.03723158670738377,
+          0.05535286296488052
+        ],
+        "t": 0.34409948222951053,
+        "sphere_margin": 2.685568293824169,
+        "eq_norm": 1.8727769785313193e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 10,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.047510943991198734,
+            -0.16172701375531243,
+            0.4599464653476146
+          ],
+          "t": 0.3439739211245366,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.8174443623442722,
+          0.13375560487815205,
+          -0.3027195336649094
+        ],
+        "t": 0.2283892687492053,
+        "sphere_margin": 2.0506821613191355,
+        "eq_norm": 1.1102230246251565e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 11,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.37203319802789464,
+            -0.03723158670738377,
+            0.05535286296488052
+          ],
+          "t": 0.34409948222951053,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.2773489906368134,
+          0.3549496212234227,
+          -0.609980027751992
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.6987418130023317,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2773489906368134,
+            0.3549496212234227,
+            -0.609980027751992
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          1.232075331041524,
+          -0.6490787741138644,
+          0.9429285489261372
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.3322676295501878e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.8393974126404952,
+          -0.44185200524028895,
+          0.5566697764847018
+        ],
+        "t": 0.20996684783318836,
+        "sphere_margin": 1.6187246738122398,
+        "eq_norm": 6.42592648526928e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.39620538416085044,
+          -0.2222232104177154,
+          0.19715922585183276
+        ],
+        "t": 0.3238981278820895,
+        "sphere_margin": 2.5831935027212927,
+        "eq_norm": 1.6883057536160649e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.8393974126404952,
+            -0.44185200524028895,
+            0.5566697764847018
+          ],
+          "t": 0.20996684783318836,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.09818844389649972,
+          -0.004688332791406368,
+          -0.13425656233964664
+        ],
+        "t": 0.33176691697739236,
+        "sphere_margin": 2.8007393492357515,
+        "eq_norm": 8.272025995294567e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.39620538416085044,
+            -0.2222232104177154,
+            0.19715922585183276
+          ],
+          "t": 0.3238981278820895,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.6549033686199476,
+          0.19702269609014453,
+          -0.41324001101674146
+        ],
+        "t": 0.22494848874388204,
+        "sphere_margin": 2.1899434530366886,
+        "eq_norm": 1.1594424310745359e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.09818844389649972,
+            -0.004688332791406368,
+            -0.13425656233964664
+          ],
+          "t": 0.33176691697739236,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.2773489906368134,
+          0.3549496212234227,
+          -0.609980027751992
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.6987418130023317,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2773489906368134,
+            0.3549496212234227,
+            -0.609980027751992
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.7873926595230261,
+          -0.29252300300416645,
+          1.3753132490203466
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.23138368425796862,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -0.08328610803694873,
+          -0.47052898475065136,
+          1.4501063005202057
+        ],
+        "t": 0.11333579783669358,
+        "sphere_margin": 0.49728474065537176,
+        "eq_norm": 3.0401245446826775e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 11,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.5526799158483261,
+          -0.570842181310221,
+          1.1765395310352582
+        ],
+        "t": 0.17793207526540306,
+        "sphere_margin": 0.8128659713124007,
+        "eq_norm": 4.875807489799383e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.08328610803694873,
+            -0.47052898475065136,
+            1.4501063005202057
+          ],
+          "t": 0.11333579783669358,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.8739943591129569,
+          -0.5945980877464428,
+          0.7579879492898901
+        ],
+        "t": 0.2164568086369534,
+        "sphere_margin": 1.136468367764502,
+        "eq_norm": 4.1845124567524895e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.5526799158483261,
+            -0.570842181310221,
+            1.1765395310352582
+          ],
+          "t": 0.17793207526540306,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -1.0572386561240186,
+          -0.47396521772257444,
+          0.20131412873411642
+        ],
+        "t": 0.21393039011622683,
+        "sphere_margin": 1.4455031427044853,
+        "eq_norm": 2.1187079138944132e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 7,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.8739943591129569,
+            -0.5945980877464428,
+            0.7579879492898901
+          ],
+          "t": 0.2164568086369534,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 6,
+        "attempt": 1,
+        "point": [
+          -0.2845935714965602,
+          -0.5248651871615131,
+          1.527005508546597
+        ],
+        "t": 0.10119580955905143,
+        "sphere_margin": 0.14020433598328053,
+        "eq_norm": 3.245260239297301e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 12,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7873926595230261,
+            -0.29252300300416645,
+            1.3753132490203466
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 7,
+        "attempt": 1,
+        "point": [
+          -0.7091293415282226,
+          -0.6184961560385405,
+          1.2161965830421733
+        ],
+        "t": 0.16149852927459973,
+        "sphere_margin": 0.4638910780920309,
+        "eq_norm": 9.55494364303509e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.08328610803694873,
+            -0.47052898475065136,
+            1.4501063005202057
+          ],
+          "t": 0.11333579783669358,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 8,
+        "attempt": 1,
+        "point": [
+          -1.0098693290909564,
+          -0.6406542917993613,
+          0.7785312437502475
+        ],
+        "t": 0.19840366442367408,
+        "sphere_margin": 0.7920422438113226,
+        "eq_norm": 3.6018278410075222e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.5526799158483261,
+            -0.570842181310221,
+            1.1765395310352582
+          ],
+          "t": 0.17793207526540306,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 9,
+        "attempt": 1,
+        "point": [
+          -1.1856362180690967,
+          -0.5240572848313666,
+          0.21088050837338373
+        ],
+        "t": 0.19610063431854866,
+        "sphere_margin": 1.1035872565523583,
+        "eq_norm": 9.441008334628847e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.8739943591129569,
+            -0.5945980877464428,
+            0.7579879492898901
+          ],
+          "t": 0.2164568086369534,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 10,
+        "attempt": 1,
+        "point": [
+          -1.0675263259096992,
+          0.03204636718580512,
+          -0.573405783204026
+        ],
+        "t": 0.06614875359222558,
+        "sphere_margin": 1.3589935063742986,
+        "eq_norm": 2.4862053241674787e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.0572386561240186,
+            -0.47396521772257444,
+            0.20131412873411642
+          ],
+          "t": 0.21393039011622683,
+          "kind": "NEAREST_WEIGHT:4"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 11,
+        "attempt": 1,
+        "point": [
+          -0.8521677321941117,
+          -0.6611824046894202,
+          1.2446397783467473
+        ],
+        "t": 0.14318749155935365,
+        "sphere_margin": 0.1159469308394101,
+        "eq_norm": 2.882535422067194e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.2845935714965602,
+            -0.5248651871615131,
+            1.527005508546597
+          ],
+          "t": 0.10119580955905143,
+          "kind": "NEAREST_WEIGHT:6"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 12,
+        "attempt": 1,
+        "point": [
+          -1.1358945814957038,
+          -0.6817548184652582,
+          0.7907591110000898
+        ],
+        "t": 0.17873843693763306,
+        "sphere_margin": 0.44808102034464037,
+        "eq_norm": 1.3021018027532958e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7091293415282226,
+            -0.6184961560385405,
+            1.2161965830421733
+          ],
+          "t": 0.16149852927459973,
+          "kind": "NEAREST_WEIGHT:7"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 13,
+        "attempt": 1,
+        "point": [
+          -1.3040543894203183,
+          -0.5667084158823766,
+          0.2123257692192546
+        ],
+        "t": 0.1761346835340604,
+        "sphere_margin": 0.7616286132733299,
+        "eq_norm": 8.747324246026389e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 7,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.0098693290909564,
+            -0.6406542917993613,
+            0.7785312437502475
+          ],
+          "t": 0.19840366442367408,
+          "kind": "NEAREST_WEIGHT:8"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 14,
+        "attempt": 1,
+        "point": [
+          -1.2214536905769278,
+          -0.06164106590756274,
+          -0.5584799037115921
+        ],
+        "t": 0.05992028660871207,
+        "sphere_margin": 1.020778582666263,
+        "eq_norm": 3.195580183204331e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.1856362180690967,
+            -0.5240572848313666,
+            0.21088050837338373
+          ],
+          "t": 0.19610063431854866,
+          "kind": "NEAREST_WEIGHT:9"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 15,
+        "attempt": 1,
+        "point": [
+          -1.2540826445958433,
+          -0.719090816233287,
+          0.7962723747578245
+        ],
+        "t": 0.15782641183514187,
+        "sphere_margin": 0.10456254847616542,
+        "eq_norm": 3.555823046625573e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.8521677321941117,
+            -0.6611824046894202,
+            1.2446397783467473
+          ],
+          "t": 0.14318749155935365,
+          "kind": "NEAREST_WEIGHT:11"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 16,
+        "attempt": 1,
+        "point": [
+          -1.4146658348635102,
+          -0.6037660577850131,
+          0.2072231110989848
+        ],
+        "t": 0.15453388703226617,
+        "sphere_margin": 0.41967283010931933,
+        "eq_norm": 2.609784675619642e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.1358945814957038,
+            -0.6817548184652582,
+            0.7907591110000898
+          ],
+          "t": 0.17873843693763306,
+          "kind": "NEAREST_WEIGHT:12"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 17,
+        "attempt": 1,
+        "point": [
+          -1.3485937857014096,
+          -0.12303892280054249,
+          -0.5607207415726293
+        ],
+        "t": 0.044452083483166566,
+        "sphere_margin": 0.6801755993600529,
+        "eq_norm": 4.040842785210326e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.3040543894203183,
+            -0.5667084158823766,
+            0.2123257692192546
+          ],
+          "t": 0.1761346835340604,
+          "kind": "NEAREST_WEIGHT:13"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 18,
+        "attempt": 1,
+        "point": [
+          -1.518901004386764,
+          -0.6363724530798707,
+          0.19662100928131834
+        ],
+        "t": 0.13161302598667982,
+        "sphere_margin": 0.0777371432893732,
+        "eq_norm": 7.181466021319669e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2540826445958433,
+            -0.719090816233287,
+            0.7962723747578245
+          ],
+          "t": 0.15782641183514187,
+          "kind": "NEAREST_WEIGHT:15"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 19,
+        "attempt": 1,
+        "point": [
+          -1.4606705171081065,
+          -0.16708788849876663,
+          -0.5732784918938664
+        ],
+        "t": 0.023981379632244473,
+        "sphere_margin": 0.338302173446245,
+        "eq_norm": 8.71856065403726e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.4146658348635102,
+            -0.6037660577850131,
+            0.2072231110989848
+          ],
+          "t": 0.15453388703226617,
+          "kind": "NEAREST_WEIGHT:16"
+        }
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 20,
+        "attempt": 1,
+        "point": [
+          -1.552342075253224,
+          -0.21610422230243478,
+          -0.6098853754991699
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.0,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.552342075253224,
+            -0.21610422230243478,
+            -0.6098853754991699
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          1.232075331041524,
+          -0.6490787741138644,
+          0.9429285489261372
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.3322676295501878e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.3771190788055147,
+          -0.8067555733375346,
+          1.2047711448966172
+        ],
+        "t": 0.05725936232256955,
+        "sphere_margin": 0.5838802584603902,
+        "eq_norm": 5.056092548408012e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 13,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.11163088639468957,
+          -0.8250432744740333,
+          1.0405003487494577
+        ],
+        "t": 0.08788595429902718,
+        "sphere_margin": 1.0526282894463477,
+        "eq_norm": 7.933518739790505e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.3771190788055147,
+            -0.8067555733375346,
+            1.2047711448966172
+          ],
+          "t": 0.05725936232256955,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.4966698764518191,
+          -0.7671843075701987,
+          0.73187115092214
+        ],
+        "t": 0.10967951281944446,
+        "sphere_margin": 1.4575390152374617,
+        "eq_norm": 1.2779794383250611e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.11163088639468957,
+            -0.8250432744740333,
+            1.0405003487494577
+          ],
+          "t": 0.08788595429902718,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.7931761019853257,
+          -0.5959608797249822,
+          0.27235304714984454
+        ],
+        "t": 0.11656983981322529,
+        "sphere_margin": 1.7699532435311738,
+        "eq_norm": 6.504463399480361e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.4966698764518191,
+            -0.7671843075701987,
+            0.73187115092214
+          ],
+          "t": 0.10967951281944446,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 6,
+        "attempt": 1,
+        "point": [
+          0.1529142206975819,
+          -0.8875287565812029,
+          1.3197191640229105
+        ],
+        "t": 0.048567224846970417,
+        "sphere_margin": 0.2756784002067354,
+        "eq_norm": 1.0419016795894277e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 15,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 7,
+        "attempt": 1,
+        "point": [
+          -0.29061555842921466,
+          -0.8880308275714128,
+          1.1059000738455937
+        ],
+        "t": 0.07706098296563435,
+        "sphere_margin": 0.7323559978962075,
+        "eq_norm": 8.508637394773116e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 10,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.3771190788055147,
+            -0.8067555733375346,
+            1.2047711448966172
+          ],
+          "t": 0.05725936232256955,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 8,
+        "attempt": 1,
+        "point": [
+          -0.6546529774160563,
+          -0.8221717996894313,
+          0.7713431122910209
+        ],
+        "t": 0.09842403935836073,
+        "sphere_margin": 1.1289199388231252,
+        "eq_norm": 3.2245872314410997e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.11163088639468957,
+            -0.8250432744740333,
+            1.0405003487494577
+          ],
+          "t": 0.08788595429902718,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 9,
+        "attempt": 1,
+        "point": [
+          -0.9413430542571904,
+          -0.6502190707487456,
+          0.2940292196673613
+        ],
+        "t": 0.10584141501023415,
+        "sphere_margin": 1.4330623569643746,
+        "eq_norm": 1.7972161184500275e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.4966698764518191,
+            -0.7671843075701987,
+            0.73187115092214
+          ],
+          "t": 0.10967951281944446,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 10,
+        "attempt": 1,
+        "point": [
+          -1.0470785759774708,
+          -0.07991724611176872,
+          -0.5027735461815234
+        ],
+        "t": 0.05263499712164914,
+        "sphere_margin": 1.4728855755091483,
+        "eq_norm": 6.12516685662704e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7931761019853257,
+            -0.5959608797249822,
+            0.27235304714984454
+          ],
+          "t": 0.11656983981322529,
+          "kind": "NEAREST_WEIGHT:4"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 11,
+        "attempt": 1,
+        "point": [
+          -0.45260869810323295,
+          -0.9404220805174548,
+          1.1536452236751282
+        ],
+        "t": 0.06481067088457851,
+        "sphere_margin": 0.4082814995142714,
+        "eq_norm": 3.7037057157525473e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.1529142206975819,
+            -0.8875287565812029,
+            1.3197191640229105
+          ],
+          "t": 0.048567224846970417,
+          "kind": "NEAREST_WEIGHT:6"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 12,
+        "attempt": 1,
+        "point": [
+          -0.8006553022067026,
+          -0.8681066187271583,
+          0.798006059937262
+        ],
+        "t": 0.08601084558676445,
+        "sphere_margin": 0.7969554386199906,
+        "eq_norm": 2.9007096109269425e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.29061555842921466,
+            -0.8880308275714128,
+            1.1059000738455937
+          ],
+          "t": 0.07706098296563435,
+          "kind": "NEAREST_WEIGHT:7"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 13,
+        "attempt": 1,
+        "point": [
+          -1.0785716135855776,
+          -0.6936651873449323,
+          0.30341831103238914
+        ],
+        "t": 0.09370156247899876,
+        "sphere_margin": 1.0918763355095655,
+        "eq_norm": 2.4513158863632377e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.6546529774160563,
+            -0.8221717996894313,
+            0.7713431122910209
+          ],
+          "t": 0.09842403935836073,
+          "kind": "NEAREST_WEIGHT:8"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 14,
+        "attempt": 1,
+        "point": [
+          -1.196015040432298,
+          -0.153963295812498,
+          -0.4993833281587028
+        ],
+        "t": 0.045457423412643784,
+        "sphere_margin": 1.1248867429056089,
+        "eq_norm": 1.8343111046394863e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.9413430542571904,
+            -0.6502190707487456,
+            0.2940292196673613
+          ],
+          "t": 0.10584141501023415,
+          "kind": "NEAREST_WEIGHT:9"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 15,
+        "attempt": 1,
+        "point": [
+          -0.9376072368059523,
+          -0.9073831286705207,
+          0.814718867700166
+        ],
+        "t": 0.07278509497000715,
+        "sphere_margin": 0.46220881865275354,
+        "eq_norm": 2.781163238787431e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.45260869810323295,
+            -0.9404220805174548,
+            1.1536452236751282
+          ],
+          "t": 0.06481067088457851,
+          "kind": "NEAREST_WEIGHT:11"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 16,
+        "attempt": 1,
+        "point": [
+          -1.2074744203145897,
+          -0.7291394614618026,
+          0.3029540034400373
+        ],
+        "t": 0.08054598080394153,
+        "sphere_margin": 0.7470071665709814,
+        "eq_norm": 2.3106390893146227e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.8006553022067026,
+            -0.8681066187271583,
+            0.798006059937262
+          ],
+          "t": 0.08601084558676445,
+          "kind": "NEAREST_WEIGHT:12"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 17,
+        "attempt": 1,
+        "point": [
+          -1.3264132688943293,
+          -0.1946911576696745,
+          -0.518986735242609
+        ],
+        "t": 0.033345216512500685,
+        "sphere_margin": 0.7618030866147096,
+        "eq_norm": 2.371944950887607e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.0785716135855776,
+            -0.6936651873449323,
+            0.30341831103238914
+          ],
+          "t": 0.09370156247899876,
+          "kind": "NEAREST_WEIGHT:13"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 18,
+        "attempt": 1,
+        "point": [
+          -1.3296994166652372,
+          -0.7583126666860553,
+          0.29413404605299953
+        ],
+        "t": 0.06660738460592956,
+        "sphere_margin": 0.39877364856229347,
+        "eq_norm": 4.4506116886825006e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.9376072368059523,
+            -0.9073831286705207,
+            0.814718867700166
+          ],
+          "t": 0.07278509497000715,
+          "kind": "NEAREST_WEIGHT:15"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 19,
+        "attempt": 1,
+        "point": [
+          -1.4446601469148315,
+          -0.2137863990152036,
+          -0.5557419424596638
+        ],
+        "t": 0.018038337135493642,
+        "sphere_margin": 0.3868304536494791,
+        "eq_norm": 3.562312840583912e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2074744203145897,
+            -0.7291394614618026,
+            0.3029540034400373
+          ],
+          "t": 0.08054598080394153,
+          "kind": "NEAREST_WEIGHT:16"
+        }
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 20,
+        "attempt": 1,
+        "point": [
+          -1.552342075253224,
+          -0.21610422230243478,
+          -0.6098853754991699
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.0,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.552342075253224,
+            -0.21610422230243478,
+            -0.6098853754991699
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          1.232075331041524,
+          -0.6490787741138644,
+          0.9429285489261372
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.3322676295501878e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          1.609078567969233,
+          -0.45196865334847913,
+          -0.1871299634976701
+        ],
+        "t": 0.04180661047897058,
+        "sphere_margin": -4.884981308350689e-15,
+        "eq_norm": 8.852343359316784e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 30,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.7692099727954081,
+          -1.3030472346758635,
+          -0.5222659898410876
+        ],
+        "t": 0.049772551789378,
+        "sphere_margin": 0.26604928255717164,
+        "eq_norm": 8.886119947416683e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 29,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.609078567969233,
+            -0.45196865334847913,
+            -0.1871299634976701
+          ],
+          "t": 0.04180661047897058,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.18641947112828763,
+          -1.420884937674464,
+          -0.33980788800323647
+        ],
+        "t": 0.04686439495676131,
+        "sphere_margin": 0.6592914986710534,
+        "eq_norm": 4.1634809001243615e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 23,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7692099727954081,
+            -1.3030472346758635,
+            -0.5222659898410876
+          ],
+          "t": 0.049772551789378,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -1.2935421851439663,
+          -0.31141434323906064,
+          0.41792260516094937
+        ],
+        "t": 0.0471109659645883,
+        "sphere_margin": 0.8835375429196322,
+        "eq_norm": 1.9626566851205073e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 36,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.18641947112828763,
+            -1.420884937674464,
+            -0.33980788800323647
+          ],
+          "t": 0.04686439495676131,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.2773489906368134,
+          0.3549496212234227,
+          -0.609980027751992
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.6987418130023317,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2773489906368134,
+            0.3549496212234227,
+            -0.609980027751992
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 6,
+        "attempt": 1,
+        "point": [
+          1.3986506712721851,
+          -0.8380045992253765,
+          -0.06505089772469864
+        ],
+        "t": 0.04198032978562892,
+        "sphere_margin": 0.16572009687838252,
+        "eq_norm": 9.941256939623913e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 36,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.232075331041524,
+            -0.6490787741138644,
+            0.9429285489261372
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 7,
+        "attempt": 1,
+        "point": [
+          0.8347423597678353,
+          -1.2131789739082706,
+          -0.47529198844138937
+        ],
+        "t": 0.04920778102309551,
+        "sphere_margin": 0.43392662054572195,
+        "eq_norm": 7.72877227840136e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 25,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.609078567969233,
+            -0.45196865334847913,
+            -0.1871299634976701
+          ],
+          "t": 0.04180661047897058,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 8,
+        "attempt": 1,
+        "point": [
+          -0.09500343206251752,
+          -1.3712846510704275,
+          -0.34535238890726755
+        ],
+        "t": 0.04686317934844053,
+        "sphere_margin": 0.8197116058572318,
+        "eq_norm": 9.286790653856839e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 21,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.7692099727954081,
+            -1.3030472346758635,
+            -0.5222659898410876
+          ],
+          "t": 0.049772551789378,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 9,
+        "attempt": 1,
+        "point": [
+          -1.2114791514974226,
+          -0.3629455442861122,
+          0.39756859424082525
+        ],
+        "t": 0.046667405590770906,
+        "sphere_margin": 1.0709551349895068,
+        "eq_norm": 1.2632035930450726e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 35,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.18641947112828763,
+            -1.420884937674464,
+            -0.33980788800323647
+          ],
+          "t": 0.04686439495676131,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 10,
+        "attempt": 1,
+        "point": [
+          -1.2264783064306208,
+          0.32029024475304857,
+          -0.5575006455666837
+        ],
+        "t": 0.004842970241504523,
+        "sphere_margin": 0.9107852779100292,
+        "eq_norm": 1.6528166949275755e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 10,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2935421851439663,
+            -0.31141434323906064,
+            0.41792260516094937
+          ],
+          "t": 0.0471109659645883,
+          "kind": "NEAREST_WEIGHT:4"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 11,
+        "attempt": 1,
+        "point": [
+          0.8943384944336026,
+          -1.1172384728354856,
+          -0.41700134162528546
+        ],
+        "t": 0.048411715071995064,
+        "sphere_margin": 0.6064738580193705,
+        "eq_norm": 3.4038273204001037e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 21,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            1.3986506712721851,
+            -0.8380045992253765,
+            -0.06505089772469864
+          ],
+          "t": 0.04198032978562892,
+          "kind": "NEAREST_WEIGHT:6"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 12,
+        "attempt": 1,
+        "point": [
+          -0.005677240451506266,
+          -1.3147921360797847,
+          -0.3449339498678851
+        ],
+        "t": 0.04680894218541984,
+        "sphere_margin": 0.9807371028183418,
+        "eq_norm": 2.1747095713418623e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 23,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.8347423597678353,
+            -1.2131789739082706,
+            -0.47529198844138937
+          ],
+          "t": 0.04920778102309551,
+          "kind": "NEAREST_WEIGHT:7"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 13,
+        "attempt": 1,
+        "point": [
+          -1.1232456138530684,
+          -0.42113467231758966,
+          0.36605510560724147
+        ],
+        "t": 0.0462008795199771,
+        "sphere_margin": 1.255395663136861,
+        "eq_norm": 2.2641638148403101e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 36,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.09500343206251752,
+            -1.3712846510704275,
+            -0.34535238890726755
+          ],
+          "t": 0.04686317934844053,
+          "kind": "NEAREST_WEIGHT:8"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 14,
+        "attempt": 1,
+        "point": [
+          -1.1618738769585888,
+          0.2954727566442904,
+          -0.523020745697025
+        ],
+        "t": 0.00820289619547236,
+        "sphere_margin": 1.11762136843896,
+        "eq_norm": 2.1679109768555196e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 11,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.2114791514974226,
+            -0.3629455442861122,
+            0.39756859424082525
+          ],
+          "t": 0.046667405590770906,
+          "kind": "NEAREST_WEIGHT:9"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 15,
+        "attempt": 1,
+        "point": [
+          0.08149105520787438,
+          -1.2508922512476552,
+          -0.3380547408362068
+        ],
+        "t": 0.046684329009438585,
+        "sphere_margin": 1.142773900634035,
+        "eq_norm": 1.3816939087127249e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 22,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.8943384944336026,
+            -1.1172384728354856,
+            -0.41700134162528546
+          ],
+          "t": 0.048411715071995064,
+          "kind": "NEAREST_WEIGHT:11"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 16,
+        "attempt": 1,
+        "point": [
+          -1.0270629618260125,
+          -0.48300083738768235,
+          0.3223357003209127
+        ],
+        "t": 0.04572935093328306,
+        "sphere_margin": 1.4363786845727928,
+        "eq_norm": 1.7651476742596712e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 35,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.005677240451506266,
+            -1.3147921360797847,
+            -0.3449339498678851
+          ],
+          "t": 0.04680894218541984,
+          "kind": "NEAREST_WEIGHT:12"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 17,
+        "attempt": 1,
+        "point": [
+          -1.0841543178684794,
+          0.2797535673523812,
+          -0.5050283515808386
+        ],
+        "t": 0.0103479853217327,
+        "sphere_margin": 1.3197208454464795,
+        "eq_norm": 6.512844594350187e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 11,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.1232456138530684,
+            -0.42113467231758966,
+            0.36605510560724147
+          ],
+          "t": 0.0462008795199771,
+          "kind": "NEAREST_WEIGHT:13"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 18,
+        "attempt": 1,
+        "point": [
+          -0.9223303955013715,
+          -0.5401484516323061,
+          0.26889770430467597
+        ],
+        "t": 0.04526593239433201,
+        "sphere_margin": 1.6136674410993708,
+        "eq_norm": 1.2281058129079327e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 35,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.08149105520787438,
+            -1.2508922512476552,
+            -0.3380547408362068
+          ],
+          "t": 0.046684329009438585,
+          "kind": "NEAREST_WEIGHT:15"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 19,
+        "attempt": 1,
+        "point": [
+          -0.989364024610305,
+          0.27544927850177253,
+          -0.5071592598551615
+        ],
+        "t": 0.011171039250968,
+        "sphere_margin": 1.516503131669107,
+        "eq_norm": 4.760670380701064e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 11,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.0270629618260125,
+            -0.48300083738768235,
+            0.3223357003209127
+          ],
+          "t": 0.04572935093328306,
+          "kind": "NEAREST_WEIGHT:16"
+        }
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 20,
+        "attempt": 1,
+        "point": [
+          -0.7244365624082064,
+          0.3760796106231677,
+          -0.6970623379193062
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.6762870153203684,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7244365624082064,
+            0.3760796106231677,
+            -0.6970623379193062
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      }
+    ],
+    "raw_origins": [
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_2",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_4",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_2_4",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_2_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 6
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 7
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 8
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 9
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 10
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 11
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 12
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 13
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 14
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 15
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 16
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 17
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 18
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 19
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "weight_id": 20
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 6
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 7
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 8
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 9
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 10
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 11
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 12
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 13
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 14
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 15
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 16
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 17
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 18
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 19
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "weight_id": 20
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 6
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 7
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 8
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 9
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 10
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 11
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 12
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 13
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 14
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 15
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 16
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 17
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 18
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 19
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "weight_id": 20
+      }
+    ],
+    "mc_anchor_seconds": 5.219910399988294,
+    "frozen_coefficients_sha256": "83efdae77d849580144b168ae2dc7a27e04f860dcaa3431203b2c72b255e53ea",
+    "raw_decisions_preserved": true,
+    "original_objective_nd_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      45,
+      46,
+      47,
+      51,
+      52,
+      55,
+      56,
+      58,
+      59,
+      61,
+      62,
+      63,
+      67,
+      68,
+      73,
+      77,
+      80,
+      82,
+      83,
+      84,
+      89,
+      94,
+      97,
+      98,
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "original_objective_feasible_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "original_objective_count": 5,
+    "counter_policy": "full_original_RSM_points_plus_separate_scalar_kernel_calls",
+    "instrumentation": "Python_call_events; overhead included consistently in optimization time",
+    "counter_schema": 2
+  },
+  "timings": {
+    "preparation": 5.327941699884832,
+    "solver": 0.3258201000280678,
+    "postprocessing": 0.0024126002099364996,
+    "total": 5.656174400122836
+  },
+  "counters": {
+    "original_rsm_point_evaluations": 105,
+    "original_rsm_vectorized_calls": 1,
+    "mc_anchor_solves": 10000,
+    "nominal_anchor_solves": 5,
+    "nbi_subproblems": 105,
+    "nbi_attempts": 105,
+    "nbi_iterations": 1031,
+    "quadratic_ball_solves": 10005,
+    "scalar_quadratic_values": 74572,
+    "quadratic_response_vector_calls": 11637,
+    "slsqp_solves": 105,
+    "sphere_constraint_calls": 1609,
+    "nbi_equality_jacobians": 1031,
+    "scalar_quadratic_gradients": 2835,
+    "sphere_constraint_jacobians": 1031,
+    "original_full_vector_points_computed": 210,
+    "model_vector_point_events": 11847
+  }
+}

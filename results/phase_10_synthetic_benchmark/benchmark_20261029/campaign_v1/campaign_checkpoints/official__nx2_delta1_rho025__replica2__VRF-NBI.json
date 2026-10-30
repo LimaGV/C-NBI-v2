@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho025__replica2",
+    "scenario_id": "nx2_delta1_rho025",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "127996419861357446298039811375250386532"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho025__replica2__VRF-NBI.npz": "f93a28d9a8eb5a1a1688866258db007f01cf09a9ccc99d60098341fc69d6dd75",
+    "raw_rsm_responses/official__nx2_delta1_rho025__replica2__VRF-NBI.npz": "ef574b6c0cb1bf08e717f780648e351ed2784e2f077dac2b21228312f78060a3",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica2__VRF-NBI.npz": "c8759a4f2142ecf576f1e6e8df4090e0aaaf3c1ee1af5e7ba61401f958c6785d",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica2__VRF-NBI.json": "3d5e948fadf2f99c79ff4626c32e7e166d1ab3ae1d89c606167507cd76d2d624"
+  },
+  "payload_run_id": "official__nx2_delta1_rho025__replica2__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.1500649999361485,
+    "solver": 0.04065319988876581,
+    "postprocessing": 0.000762800220400095,
+    "total": 2.1914810000453144
+  },
+  "counters": {
+    "vrf_vector_evaluations": 23917,
+    "vrf_jacobian_calls": 3285,
+    "extreme_solves": 96,
+    "extreme_iterations": 3389,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 103,
+    "factor_model_vector_evaluations": 27346,
+    "factor_model_jacobian_calls": 3405,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 27388
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128929792
+}

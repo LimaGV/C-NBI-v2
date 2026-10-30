@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta1_rho025__replica1",
+    "scenario_id": "nx5_delta1_rho025",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "201596156521619318970760704306208856351"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta1_rho025__replica1__VRF-NBI.npz": "d9595cd941850d7f920131e98379c370036e0c924c478a75ac1de39db89894bc",
+    "raw_rsm_responses/official__nx5_delta1_rho025__replica1__VRF-NBI.npz": "ebad0893cd702532339af1655746f32c93653e7473bf2a29e900b860b9121734",
+    "algorithm_diagnostics/official__nx5_delta1_rho025__replica1__VRF-NBI.npz": "a6824d4cf75c9bbad07cd29d21eba52257e59de896bb1bb5c4abbb174a46b5f8",
+    "algorithm_diagnostics/official__nx5_delta1_rho025__replica1__VRF-NBI.json": "ac598db0e7d93168cf38f4fbf89f11e90dd7263c1598d9097558c2b867ad76f1"
+  },
+  "payload_run_id": "official__nx5_delta1_rho025__replica1__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 10.155451899860054,
+    "solver": 0.27384809986688197,
+    "postprocessing": 0.0011857002973556519,
+    "total": 10.430485700024292
+  },
+  "counters": {
+    "vrf_vector_evaluations": 75411,
+    "vrf_jacobian_calls": 11260,
+    "extreme_solves": 228,
+    "extreme_iterations": 11371,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 675,
+    "factor_model_vector_evaluations": 87306,
+    "factor_model_jacobian_calls": 11827,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 280,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 87418
+  },
+  "nx": 5,
+  "m": 7,
+  "peak_process_memory_bytes": 128892928
+}

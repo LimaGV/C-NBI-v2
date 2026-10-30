@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho060__replica1",
+    "scenario_id": "nx3_delta1_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "104775897956920553281522899876360950194"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho060__replica1__VRF-NBI.npz": "ff75d1b6d3229dcff9bd3be3c84961e6a80e56cf4b7712e494834abeeecd1656",
+    "raw_rsm_responses/official__nx3_delta1_rho060__replica1__VRF-NBI.npz": "0d875b323b557340625f6bfea075da1ab149f8b637d1f62a3dfdac6711d44a5b",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica1__VRF-NBI.npz": "8c80c2b63b0799d7bead63be306aaa93674b996d95543372f85bf09fe23212fd",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica1__VRF-NBI.json": "29236b712b65a269d7ca0ad054eadb7e0b78507758879be406f0c02d04879e6b"
+  },
+  "payload_run_id": "official__nx3_delta1_rho060__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 4.05305889993906,
+    "solver": 0.059885900001972914,
+    "postprocessing": 0.0006927000358700752,
+    "total": 4.113637499976903
+  },
+  "counters": {
+    "vrf_vector_evaluations": 41865,
+    "vrf_jacobian_calls": 5480,
+    "extreme_solves": 120,
+    "extreme_iterations": 5608,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 180,
+    "factor_model_vector_evaluations": 47570,
+    "factor_model_jacobian_calls": 5675,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 47612
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128692224
+}

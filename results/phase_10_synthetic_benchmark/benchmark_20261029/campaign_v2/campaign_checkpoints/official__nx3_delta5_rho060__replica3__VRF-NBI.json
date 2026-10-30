@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho060__replica3",
+    "scenario_id": "nx3_delta5_rho060",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "317470909893289940941783610817228860917"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho060__replica3__VRF-NBI.npz": "3ec27933b78e647d0d9d5da8fe04158cb6bd8ceec32551b815580c103964bfd7",
+    "raw_rsm_responses/official__nx3_delta5_rho060__replica3__VRF-NBI.npz": "b0c6fd9814679ff00662d1c562ba1b5c388323a9393204cfc85e821a25a92f41",
+    "algorithm_diagnostics/official__nx3_delta5_rho060__replica3__VRF-NBI.npz": "8a6bb5b0dbaf62827724cd8eb05f5be5e065d6fbf46e1e078c4c35b587abe029",
+    "algorithm_diagnostics/official__nx3_delta5_rho060__replica3__VRF-NBI.json": "f55f0c7e88ec1349a468f0291c0199c3a91086a3e3cc13be4a0bc68b90431251"
+  },
+  "payload_run_id": "official__nx3_delta5_rho060__replica3__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 3.5929348999634385,
+    "solver": 0.0626622000709176,
+    "postprocessing": 0.0008661998435854912,
+    "total": 3.6564632998779416
+  },
+  "counters": {
+    "vrf_vector_evaluations": 31433,
+    "vrf_jacobian_calls": 4340,
+    "extreme_solves": 120,
+    "extreme_iterations": 4517,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 168,
+    "factor_model_vector_evaluations": 35994,
+    "factor_model_jacobian_calls": 4532,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 36036
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128761856
+}

@@ -1,0 +1,20 @@
+{
+  "source": "scripts\\validation\\evaluate_phase10d.py",
+  "source_sha256": "fb2aedc718e1eddacc758c214afb53d3c3e8811201654e70e1cf448b1608f6ad",
+  "stage": "official",
+  "max_processes": 6,
+  "threads_per_process": 1,
+  "physical_core_masks": [
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024
+  ],
+  "evaluator": "cnbi_v2.synthetic.pareto.serialization.load_evaluation_context",
+  "mathematical_protocol": "unchanged_Phase10C",
+  "reference_points": 5000,
+  "search_already_terminated": true,
+  "feedback_to_search": false
+}

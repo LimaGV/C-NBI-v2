@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho025__replica5",
+    "scenario_id": "nx3_delta5_rho025",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "70292688911394160027222348035902591804"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho025__replica5__VRF-NBI.npz": "4d2d630e8b8abd9f70d7fcedfb64b49ea4e04bb66a6b4901a41f9a2bad9efc26",
+    "raw_rsm_responses/official__nx3_delta5_rho025__replica5__VRF-NBI.npz": "3f4a11db10a403ec04cc04bc6a7c58b799eca3d39f1471d18926686b23059d4e",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica5__VRF-NBI.npz": "771be3d139c12a69bdd6018418d503f42e7897e8d3a1e9e18c8b70094e0b7151",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica5__VRF-NBI.json": "2f1446421e80f909d422dcd238ff0dcdeeb3df779cace6a031c284b7b4be4a7f"
+  },
+  "payload_run_id": "official__nx3_delta5_rho025__replica5__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 5.369789900025353,
+    "solver": 0.15490410011261702,
+    "postprocessing": 0.0010192999616265297,
+    "total": 5.525713300099596
+  },
+  "counters": {
+    "vrf_vector_evaluations": 47629,
+    "vrf_jacobian_calls": 6672,
+    "extreme_solves": 168,
+    "extreme_iterations": 6835,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 289,
+    "factor_model_vector_evaluations": 54615,
+    "factor_model_jacobian_calls": 6943,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 54727
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128606208
+}

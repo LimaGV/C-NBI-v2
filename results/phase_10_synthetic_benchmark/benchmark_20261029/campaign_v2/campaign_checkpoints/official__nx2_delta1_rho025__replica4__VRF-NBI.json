@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho025__replica4",
+    "scenario_id": "nx2_delta1_rho025",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "39616697977211942042989557439182956880"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho025__replica4__VRF-NBI.npz": "d50de187ffed629cd66af81f365c7d1b49a5197e244366f4f27012fde77ba6c5",
+    "raw_rsm_responses/official__nx2_delta1_rho025__replica4__VRF-NBI.npz": "667d340232dc9a1d19233825200ba59cf8cd8e737edebb3cbe8ad1eb58af90fc",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica4__VRF-NBI.npz": "c996cd89cbab7a253b8601a16a742938e37d244a8e9b68adca89e614e46a1cbd",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica4__VRF-NBI.json": "e107ba68c3c4553a3a1279c25c003c21e3b059cac3efbde8d63884460038a086"
+  },
+  "payload_run_id": "official__nx2_delta1_rho025__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.2703519000206143,
+    "solver": 0.04543189983814955,
+    "postprocessing": 0.0007545002736151218,
+    "total": 2.316538300132379
+  },
+  "counters": {
+    "vrf_vector_evaluations": 25293,
+    "vrf_jacobian_calls": 3426,
+    "extreme_solves": 96,
+    "extreme_iterations": 3532,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 96,
+    "factor_model_vector_evaluations": 28857,
+    "factor_model_jacobian_calls": 3542,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 28899
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128917504
+}

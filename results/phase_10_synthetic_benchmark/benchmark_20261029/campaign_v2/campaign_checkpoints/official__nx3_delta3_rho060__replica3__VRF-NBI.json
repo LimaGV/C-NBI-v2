@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta3_rho060__replica3",
+    "scenario_id": "nx3_delta3_rho060",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "309814130370353276567324927511980885889"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta3_rho060__replica3__VRF-NBI.npz": "8f2c86da53e571276cfdd4c04c9415846928c288d5473ebe24b3d41abf0f0260",
+    "raw_rsm_responses/official__nx3_delta3_rho060__replica3__VRF-NBI.npz": "b91d6d2fdd901c07f87113e63162693bdceb673d71660ec5494f3333dadb1f50",
+    "algorithm_diagnostics/official__nx3_delta3_rho060__replica3__VRF-NBI.npz": "9fd816f6710ce7e80d7c701d30d4e0531bd99c5d715d383e0a165b22d1d67805",
+    "algorithm_diagnostics/official__nx3_delta3_rho060__replica3__VRF-NBI.json": "9dc12bb7d20d4afac7dbc1070cb82782fc817a4f6aa0b9a667542c0c896ad5e5"
+  },
+  "payload_run_id": "official__nx3_delta3_rho060__replica3__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 3.8404929998796433,
+    "solver": 0.06590469996444881,
+    "postprocessing": 0.0007391001563519239,
+    "total": 3.907136800000444
+  },
+  "counters": {
+    "vrf_vector_evaluations": 34157,
+    "vrf_jacobian_calls": 4749,
+    "extreme_solves": 120,
+    "extreme_iterations": 4909,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 179,
+    "factor_model_vector_evaluations": 39151,
+    "factor_model_jacobian_calls": 4962,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 39193
+  },
+  "nx": 3,
+  "m": 7,
+  "peak_process_memory_bytes": 128335872
+}

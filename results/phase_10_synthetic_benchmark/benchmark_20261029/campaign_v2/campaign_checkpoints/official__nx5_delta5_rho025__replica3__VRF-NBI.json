@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta5_rho025__replica3",
+    "scenario_id": "nx5_delta5_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "246687029045050949602109575636280496759"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta5_rho025__replica3__VRF-NBI.npz": "e3f91f0836317ef49e17c6ff4462270776b5299b74f69161ba1627bad147a54b",
+    "raw_rsm_responses/official__nx5_delta5_rho025__replica3__VRF-NBI.npz": "cf6c40233bc38bbf506149217ad06d4dba5804c314a338f78b369143881e0729",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica3__VRF-NBI.npz": "94c39ee244a86819e3c3ba9f00f7a216b9da5c6819225eb4af6ea97e6aa5d0ad",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica3__VRF-NBI.json": "6c408180a8345747ae3e2c0a2ea59951968ee22c28d8dd97a2a7085a5e1b303c"
+  },
+  "payload_run_id": "official__nx5_delta5_rho025__replica3__VRF-NBI",
+  "output_count": 15,
+  "timings": {
+    "preparation": 16.310008500004187,
+    "solver": 0.05913189984858036,
+    "postprocessing": 0.0012106001377105713,
+    "total": 16.370350999990478
+  },
+  "counters": {
+    "vrf_vector_evaluations": 113322,
+    "vrf_jacobian_calls": 15339,
+    "extreme_solves": 300,
+    "extreme_iterations": 16196,
+    "nbi_subproblems": 15,
+    "nbi_attempts": 10,
+    "nbi_iterations": 124,
+    "factor_model_vector_evaluations": 129483,
+    "factor_model_jacobian_calls": 16066,
+    "original_rsm_point_evaluations": 15,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 310,
+    "original_full_vector_points_computed": 30,
+    "model_vector_point_events": 129513
+  },
+  "nx": 5,
+  "m": 11,
+  "peak_process_memory_bytes": 128847872
+}

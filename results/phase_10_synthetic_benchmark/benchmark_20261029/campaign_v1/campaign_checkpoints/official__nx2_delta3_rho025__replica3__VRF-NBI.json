@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta3_rho025__replica3",
+    "scenario_id": "nx2_delta3_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "157431112285337703055867738628134471918"
+  },
+  "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta3_rho025__replica3__VRF-NBI.npz": "7a46681a9c9294d509aae1d98f0ca12a931fb8e652936f26e75e75d89b99502f",
+    "raw_rsm_responses/official__nx2_delta3_rho025__replica3__VRF-NBI.npz": "4a216a9a30c1c1503e8d2874a91de671dc9a39e84ed9fb41e7124630cd31acce",
+    "algorithm_diagnostics/official__nx2_delta3_rho025__replica3__VRF-NBI.npz": "64a725f6538fbdcb1d37411a12fc195d7a44158e6e1c7e8c6ee45e1bd4d384e5",
+    "algorithm_diagnostics/official__nx2_delta3_rho025__replica3__VRF-NBI.json": "ccd96b7dced104082f5a2ef51bc7c994cbd1538c413a2c30682020a111388ffe"
+  },
+  "payload_run_id": "official__nx2_delta3_rho025__replica3__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.4471076000481844,
+    "solver": 0.03867619996890426,
+    "postprocessing": 0.0006817001849412918,
+    "total": 2.48646550020203
+  },
+  "counters": {
+    "vrf_vector_evaluations": 25239,
+    "vrf_jacobian_calls": 3347,
+    "extreme_solves": 96,
+    "extreme_iterations": 3467,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 102,
+    "factor_model_vector_evaluations": 28730,
+    "factor_model_jacobian_calls": 3469,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 28772
+  },
+  "nx": 2,
+  "m": 6,
+  "peak_process_memory_bytes": 128757760
+}

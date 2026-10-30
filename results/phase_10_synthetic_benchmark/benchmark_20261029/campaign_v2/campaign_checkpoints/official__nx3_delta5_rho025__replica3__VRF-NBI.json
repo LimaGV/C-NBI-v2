@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho025__replica3",
+    "scenario_id": "nx3_delta5_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "220431702480461424309371023531854628407"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho025__replica3__VRF-NBI.npz": "84b845032f89376b51d177ef30e2dfacbbdb72072e125d119fa590ac1cf1146a",
+    "raw_rsm_responses/official__nx3_delta5_rho025__replica3__VRF-NBI.npz": "243d47c954fa1d387e5619382c0af6aeabc5a1f84c85594b098d01d8d271ffa4",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica3__VRF-NBI.npz": "493ccefd9820c8d7a3e03cfc7df6619bc33922c20d36c7524e09004259ddcf7b",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica3__VRF-NBI.json": "fc3811eba31471d526cab6a2cc761034b92f624ab691ce76836b479e40605bbf"
+  },
+  "payload_run_id": "official__nx3_delta5_rho025__replica3__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 5.8846051001455635,
+    "solver": 0.12499090004712343,
+    "postprocessing": 0.0009541998151689768,
+    "total": 6.010550200007856
+  },
+  "counters": {
+    "vrf_vector_evaluations": 52059,
+    "vrf_jacobian_calls": 6978,
+    "extreme_solves": 168,
+    "extreme_iterations": 7131,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 296,
+    "factor_model_vector_evaluations": 59343,
+    "factor_model_jacobian_calls": 7246,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 59455
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128921600
+}

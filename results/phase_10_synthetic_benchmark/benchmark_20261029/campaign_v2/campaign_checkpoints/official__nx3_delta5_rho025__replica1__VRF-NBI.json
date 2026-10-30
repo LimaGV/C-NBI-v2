@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho025__replica1",
+    "scenario_id": "nx3_delta5_rho025",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "158520098282664849874703993536426806905"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho025__replica1__VRF-NBI.npz": "299a93cc9f7c4256892e1541f215e1a2cbd1f570e800549b2fff3ab9b3ae12c6",
+    "raw_rsm_responses/official__nx3_delta5_rho025__replica1__VRF-NBI.npz": "b92069c140acdd0b780f30dca68adda6135c1bf104439265ceffbc1d35098bea",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica1__VRF-NBI.npz": "3f6982ac8357b777c1089d18fb8a955bfd04baf9a9d90eef28fa19d1dbdc3fba",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica1__VRF-NBI.json": "ff66356d173b3efba7ea66f7700a7920bee09de363bca13d8e08b30af50e0c30"
+  },
+  "payload_run_id": "official__nx3_delta5_rho025__replica1__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 6.139558099908754,
+    "solver": 0.1399153999518603,
+    "postprocessing": 0.0010016001760959625,
+    "total": 6.2804751000367105
+  },
+  "counters": {
+    "vrf_vector_evaluations": 51970,
+    "vrf_jacobian_calls": 7012,
+    "extreme_solves": 168,
+    "extreme_iterations": 7181,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 289,
+    "factor_model_vector_evaluations": 59301,
+    "factor_model_jacobian_calls": 7292,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 59413
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128634880
+}

@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho025__replica5",
+    "scenario_id": "nx3_delta1_rho025",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "264406589641164889832256847339844765867"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho025__replica5__VRF-NBI.npz": "cce498543d003c58671169d6be4886d036135d340537911550cc728adadfc8f7",
+    "raw_rsm_responses/official__nx3_delta1_rho025__replica5__VRF-NBI.npz": "ba37cabc206bf1978ba6b48ed0bbe55f9228f9da18f18e8931ab43daf72ab2fb",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica5__VRF-NBI.npz": "86ca57b752fe9b99e09430041f12ae4c2457e5e5488de700d3de915f161d1a34",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica5__VRF-NBI.json": "1b2765ed792d2850014a5e16c2751bfb3b17c0f5a84528967f0f3daed27f33c7"
+  },
+  "payload_run_id": "official__nx3_delta1_rho025__replica5__VRF-NBI",
+  "output_count": 53,
+  "timings": {
+    "preparation": 6.549060699995607,
+    "solver": 2.894786400021985,
+    "postprocessing": 0.0009078001603484154,
+    "total": 9.44475490017794
+  },
+  "counters": {
+    "vrf_vector_evaluations": 93514,
+    "vrf_jacobian_calls": 11233,
+    "extreme_solves": 168,
+    "extreme_iterations": 8708,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 76,
+    "nbi_iterations": 2946,
+    "factor_model_vector_evaluations": 105081,
+    "factor_model_jacobian_calls": 11527,
+    "original_rsm_point_evaluations": 53,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 244,
+    "original_full_vector_points_computed": 106,
+    "model_vector_point_events": 105187
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128749568
+}

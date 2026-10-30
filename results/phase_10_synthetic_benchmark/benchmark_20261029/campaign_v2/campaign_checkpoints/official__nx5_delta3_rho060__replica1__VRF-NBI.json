@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta3_rho060__replica1",
+    "scenario_id": "nx5_delta3_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "301405560469658694625247415347004845427"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta3_rho060__replica1__VRF-NBI.npz": "445953e47c06a701403dba05ab65bbf714c88d2ecd49e34fddad4b9a6d88521b",
+    "raw_rsm_responses/official__nx5_delta3_rho060__replica1__VRF-NBI.npz": "a24025b41cee45ed4cab293cd30b2e804077cb518abd91584419ce8106a2e1fc",
+    "algorithm_diagnostics/official__nx5_delta3_rho060__replica1__VRF-NBI.npz": "0895cd1e66a0d66597418ac1fc4f08ed8aba31edd12e2615458ddb8d1c6f6a89",
+    "algorithm_diagnostics/official__nx5_delta3_rho060__replica1__VRF-NBI.json": "58586e662da7f4019177e92cacf52a0cd1ea98beafea78d68b6a33494454cc82"
+  },
+  "payload_run_id": "official__nx5_delta3_rho060__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 9.484335399931297,
+    "solver": 0.11792140011675656,
+    "postprocessing": 0.0010828999802470207,
+    "total": 9.6033397000283
+  },
+  "counters": {
+    "vrf_vector_evaluations": 69687,
+    "vrf_jacobian_calls": 9681,
+    "extreme_solves": 168,
+    "extreme_iterations": 10036,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 271,
+    "factor_model_vector_evaluations": 79961,
+    "factor_model_jacobian_calls": 10199,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 186,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 80003
+  },
+  "nx": 5,
+  "m": 9,
+  "peak_process_memory_bytes": 128806912
+}

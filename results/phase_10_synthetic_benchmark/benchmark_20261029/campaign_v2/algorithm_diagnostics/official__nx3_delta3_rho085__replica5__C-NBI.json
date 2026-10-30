@@ -1,0 +1,4364 @@
+{
+  "task": {
+    "stage": "official",
+    "instance_id": "nx3_delta3_rho085__replica5",
+    "scenario_id": "nx3_delta3_rho085",
+    "replica_id": 5,
+    "method": "C-NBI",
+    "seed": "110072455771786452511573184064987486253"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "code_commit": "8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee",
+  "environment": {
+    "python": "3.12.15 (main, Oct  3 2026, 01:05:37) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pymoo": "0.6.2"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "workers": 1,
+    "numpy_configuration": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\n  lapack:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\nCompilers:\n  c:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  c++:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.3.0\nMachine Information:\n  build:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\n  host:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\nPython Information:\n  path: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\build-env-1rr8oud1\\Scripts\\python.exe\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - X86_V2\n  found:\n  - X86_V3\n\n"
+  },
+  "coefficients_sha256": "4b1a7f5dd0e775c0de38659de5acaf2ae9b90a38628ff4af8353817ddc5b4038",
+  "peak_process_memory_bytes": 128565248,
+  "input_load_plus_search_seconds": 8.677735100034624,
+  "algorithm_status": "COMPLETED",
+  "diagnostics": {
+    "method": "C-NBI",
+    "B": 2000,
+    "seed": "110072455771786452511573184064987486253",
+    "covariance_method": "CHOLESKY_SPD",
+    "covariance_psd_tolerance": 2.2055877212450765e-15,
+    "covariance_zeroed_negative_eigenvalues": 0,
+    "coefficient_samples_sha256": "e560f2d0c8e826188aa208e2290fd50b0364d63b399485ce9b53d1ba51b648b5",
+    "mc_payoffs_sha256": "1215c0b2981a8916dc33812c9864d71f067b55cb2952fed95a6391e022946d4d",
+    "all_mc_payoffs_valid": true,
+    "nominal_anchors": [
+      [
+        -1.4111876364708995,
+        0.9003178315521587,
+        -0.16249425099702886
+      ],
+      [
+        -1.1816185901685574,
+        1.1784347575276903,
+        -0.20855731673790961
+      ],
+      [
+        0.9996450966092427,
+        -0.09136403439073995,
+        -0.5316805749813126
+      ],
+      [
+        -1.3318087532589085,
+        0.8923213386243244,
+        0.41796074460939237
+      ],
+      [
+        -1.4593797061033131,
+        0.8021333864322986,
+        0.2349894221675718
+      ],
+      [
+        -1.474068445932637,
+        0.8095140960418183,
+        -0.015371068978067318
+      ],
+      [
+        -1.164433421199995,
+        0.7319569161269043,
+        0.4249802141768315
+      ]
+    ],
+    "nominal_payoff": [
+      [
+        -0.3582613080275294,
+        -0.194880052513569,
+        6.853233532648499,
+        -0.042121700738191103,
+        -0.2074263542582424,
+        -0.32399116138330664,
+        0.24702928609909525
+      ],
+      [
+        -0.38364831016939105,
+        -0.5155333278722396,
+        5.312378079979442,
+        0.02492382931487258,
+        -0.0753927521147153,
+        -0.25137273040911534,
+        0.12241097273200596
+      ],
+      [
+        6.6209889955775925,
+        5.914716057717952,
+        -0.14110723478927967,
+        7.12789459278821,
+        7.28546421775896,
+        6.989882893022598,
+        6.195138334291711
+      ],
+      [
+        0.44483290591270785,
+        0.5804351798900349,
+        6.4702821483860635,
+        0.1365953024635309,
+        0.1956487348590783,
+        0.33845116347900017,
+        0.181583677289757
+      ],
+      [
+        -1.4320666394076937,
+        -0.9573011124847367,
+        7.898683945425203,
+        -1.6044796338919496,
+        -1.7576126038778614,
+        -1.643804332887112,
+        -0.9883875255813035
+      ],
+      [
+        -0.5375742309950295,
+        -0.2602656961699048,
+        6.072720354171006,
+        -0.37360761181760216,
+        -0.5164460491760252,
+        -0.5757773038245158,
+        -0.23794667675059644
+      ],
+      [
+        0.22509977619640242,
+        0.49405616695344623,
+        5.997468433006903,
+        -0.2206101016820976,
+        -0.1434445954130701,
+        0.047585610081322116,
+        -0.2753138063858578
+      ]
+    ],
+    "normalization_utopia": [
+      -0.3582613080275294,
+      -0.5155333278722396,
+      -0.14110723478927967,
+      0.1365953024635309,
+      -1.7576126038778614,
+      -0.5757773038245158,
+      -0.2753138063858578
+    ],
+    "normalization_amplitudes": [
+      7.211494840676028,
+      5.827911407851682,
+      7.42657145254824,
+      6.333686845922532,
+      9.656296549303065,
+      6.648497657995522,
+      6.272782239392761
+    ],
+    "global_dimension": 1,
+    "global_pattern": "MONOTONE_PA_PATTERN",
+    "candidate_subsets": 91,
+    "selected_subsets": 6,
+    "subsets": [
+      {
+        "subset_id": "GLOBAL",
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "scope": "GLOBAL",
+        "observed": [
+          2.3476713697971077,
+          0.17872496225621898,
+          0.11582275262281154,
+          0.021247126033406342,
+          0.0015001796280562799,
+          0.0006125651259993973
+        ],
+        "q95": [
+          1.0114539471834938,
+          0.4001235873422003,
+          0.18845544815580745,
+          0.10042368752522339,
+          0.05281706458361427,
+          0.022654048772955168
+        ],
+        "margins": [
+          1.3362174226136139,
+          -0.22139862508598135,
+          -0.07263269553299591,
+          -0.07917656149181705,
+          -0.051316884955557994,
+          -0.02204148364695577
+        ],
+        "component_passes": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2",
+        "indices": [
+          0,
+          1
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.022642786262368278
+        ],
+        "q95": [
+          0.15153009820477523
+        ],
+        "margins": [
+          -0.12888731194240693
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3",
+        "indices": [
+          0,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9563106209674624
+        ],
+        "q95": [
+          0.372185721444451
+        ],
+        "margins": [
+          0.5841248995230115
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4",
+        "indices": [
+          0,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.04631528992218382
+        ],
+        "q95": [
+          0.22082134644674753
+        ],
+        "margins": [
+          -0.17450605652456372
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_5",
+        "indices": [
+          0,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.028054091868451127
+        ],
+        "q95": [
+          0.1452665928654091
+        ],
+        "margins": [
+          -0.11721250099695799
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_6",
+        "indices": [
+          0,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.00527261283404067
+        ],
+        "q95": [
+          0.14357761662792584
+        ],
+        "margins": [
+          -0.13830500379388516
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_7",
+        "indices": [
+          0,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08188116529046661
+        ],
+        "q95": [
+          0.15558455430392762
+        ],
+        "margins": [
+          -0.073703389013461
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3",
+        "indices": [
+          1,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9123925702683555
+        ],
+        "q95": [
+          0.3941529126863695
+        ],
+        "margins": [
+          0.5182396575819861
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4",
+        "indices": [
+          1,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08219069304455591
+        ],
+        "q95": [
+          0.15247751347018823
+        ],
+        "margins": [
+          -0.07028682042563232
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_5",
+        "indices": [
+          1,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.07928668599724278
+        ],
+        "q95": [
+          0.09651198193751045
+        ],
+        "margins": [
+          -0.01722529594026767
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_6",
+        "indices": [
+          1,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.04640365429860821
+        ],
+        "q95": [
+          0.12860358790585383
+        ],
+        "margins": [
+          -0.08219993360724562
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_7",
+        "indices": [
+          1,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.11624505327624714
+        ],
+        "q95": [
+          0.14291111562860567
+        ],
+        "margins": [
+          -0.026666062352358536
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4",
+        "indices": [
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9894483679502999
+        ],
+        "q95": [
+          0.3881309706436193
+        ],
+        "margins": [
+          0.6013173973066805
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_5",
+        "indices": [
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.0
+        ],
+        "q95": [
+          0.24574746283240761
+        ],
+        "margins": [
+          0.7542525371675923
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_6",
+        "indices": [
+          2,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9803017551524051
+        ],
+        "q95": [
+          0.36169147350481773
+        ],
+        "margins": [
+          0.6186102816475874
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_7",
+        "indices": [
+          2,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.9294961188108168
+        ],
+        "q95": [
+          0.3955005169202488
+        ],
+        "margins": [
+          0.533995601890568
+        ],
+        "component_passes": [
+          true
+        ],
+        "selected": true,
+        "reason": "ALL_COMPONENTS_STRICTLY_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_5",
+        "indices": [
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.013008052957934663
+        ],
+        "q95": [
+          0.1031012534597914
+        ],
+        "margins": [
+          -0.09009320050185674
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_6",
+        "indices": [
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.031147840649555145
+        ],
+        "q95": [
+          0.10624859436815355
+        ],
+        "margins": [
+          -0.07510075371859841
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_7",
+        "indices": [
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.007953158942936868
+        ],
+        "q95": [
+          0.08334936628060051
+        ],
+        "margins": [
+          -0.07539620733766364
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_5_6",
+        "indices": [
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.010453365160806163
+        ],
+        "q95": [
+          0.11726677273145064
+        ],
+        "margins": [
+          -0.10681340757064448
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_5_7",
+        "indices": [
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05825690045959619
+        ],
+        "q95": [
+          0.0873682094720775
+        ],
+        "margins": [
+          -0.029111309012481316
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_6_7",
+        "indices": [
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05114574745128795
+        ],
+        "q95": [
+          0.12826106923193925
+        ],
+        "margins": [
+          -0.07711532178065131
+        ],
+        "component_passes": [
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3",
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3420323415065056,
+          0.06151371485176676
+        ],
+        "q95": [
+          0.5717992431124994,
+          0.18853244668752206
+        ],
+        "margins": [
+          0.7702330983940062,
+          -0.1270187318357553
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4",
+        "indices": [
+          0,
+          1,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08799547382616618,
+          0.021745167762178035
+        ],
+        "q95": [
+          0.26789007057891623,
+          0.08378869763411448
+        ],
+        "margins": [
+          -0.17989459675275005,
+          -0.06204352987193644
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_5",
+        "indices": [
+          0,
+          1,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.07937449426427123,
+          0.02228087329545775
+        ],
+        "q95": [
+          0.2090940609677899,
+          0.06649285969868549
+        ],
+        "margins": [
+          -0.12971956670351867,
+          -0.04421198640322774
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_6",
+        "indices": [
+          0,
+          1,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.04999452424325563,
+          0.012445068867152903
+        ],
+        "q95": [
+          0.2003821797902382,
+          0.06068960688562304
+        ],
+        "margins": [
+          -0.15038765554698258,
+          -0.04824453801847014
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_7",
+        "indices": [
+          0,
+          1,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.13143247122649013,
+          0.030388288610236857
+        ],
+        "q95": [
+          0.23079284086911586,
+          0.08905897348834768
+        ],
+        "margins": [
+          -0.09936036964262573,
+          -0.05867068487811082
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4",
+        "indices": [
+          0,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3668020184301792,
+          0.06017419700705099
+        ],
+        "q95": [
+          0.5461753665548456,
+          0.21886456259403445
+        ],
+        "margins": [
+          0.8206266518753337,
+          -0.15869036558698346
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_5",
+        "indices": [
+          0,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3810172249727162,
+          0.055765234715531485
+        ],
+        "q95": [
+          0.4573181593078156,
+          0.1477538062233145
+        ],
+        "margins": [
+          0.9236990656649006,
+          -0.091988571507783
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_6",
+        "indices": [
+          0,
+          2,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3820299369854487,
+          0.029466375803840716
+        ],
+        "q95": [
+          0.543065738441269,
+          0.1913629429839314
+        ],
+        "margins": [
+          0.8389641985441797,
+          -0.16189656718009068
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_7",
+        "indices": [
+          0,
+          2,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3211523068184987,
+          0.0882098614051699
+        ],
+        "q95": [
+          0.5819829187926363,
+          0.17389306847030656
+        ],
+        "margins": [
+          0.7391693880258624,
+          -0.08568320706513666
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_5",
+        "indices": [
+          0,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05021160893206456,
+          0.018539688424336617
+        ],
+        "q95": [
+          0.25435887538175483,
+          0.06660874940814512
+        ],
+        "margins": [
+          -0.20414726644969028,
+          -0.048069060983808504
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_6",
+        "indices": [
+          0,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05289064676140729,
+          0.010197866925960069
+        ],
+        "q95": [
+          0.2606477800490499,
+          0.06330537722614045
+        ],
+        "margins": [
+          -0.20775713328764264,
+          -0.05310751030018038
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_7",
+        "indices": [
+          0,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.0908235938795295,
+          0.022082677143114186
+        ],
+        "q95": [
+          0.2592177180783329,
+          0.07335533976830526
+        ],
+        "margins": [
+          -0.1683941241988034,
+          -0.051272662625191076
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_5_6",
+        "indices": [
+          0,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.028150550799677022,
+          0.008622216711149776
+        ],
+        "q95": [
+          0.2023145354982629,
+          0.055789051071264105
+        ],
+        "margins": [
+          -0.17416398469858588,
+          -0.04716683436011433
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_5_7",
+        "indices": [
+          0,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.09083655135184479,
+          0.04673098132088832
+        ],
+        "q95": [
+          0.21494456369246476,
+          0.06620503377814133
+        ],
+        "margins": [
+          -0.12410801234061997,
+          -0.019474052457253005
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_6_7",
+        "indices": [
+          0,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.09480932840682756,
+          0.016649889533800945
+        ],
+        "q95": [
+          0.22032501598857018,
+          0.07214730067800958
+        ],
+        "margins": [
+          -0.12551568758174264,
+          -0.05549741114420863
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4",
+        "indices": [
+          1,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.329132139570569,
+          0.13069336726202024
+        ],
+        "q95": [
+          0.5940247668221555,
+          0.1905782249582005
+        ],
+        "margins": [
+          0.7351073727484135,
+          -0.059884857696180266
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_5",
+        "indices": [
+          1,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3359911499921624,
+          0.1325531188182858
+        ],
+        "q95": [
+          0.4979384668309224,
+          0.1406802705966866
+        ],
+        "margins": [
+          0.83805268316124,
+          -0.008127151778400815
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_6",
+        "indices": [
+          1,
+          2,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3419567836789583,
+          0.09723869354607309
+        ],
+        "q95": [
+          0.5675371379372539,
+          0.16935345431665663
+        ],
+        "margins": [
+          0.7744196457417044,
+          -0.07211476077058354
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_7",
+        "indices": [
+          1,
+          2,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.2835569827114282,
+          0.11766738515322593
+        ],
+        "q95": [
+          0.5922333279288099,
+          0.2037192008284785
+        ],
+        "margins": [
+          0.6913236547826183,
+          -0.08605181567525257
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_5",
+        "indices": [
+          1,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.10648524894202498,
+          0.01716081717078616
+        ],
+        "q95": [
+          0.1800859376747806,
+          0.061908424930973247
+        ],
+        "margins": [
+          -0.07360068873275562,
+          -0.04474760776018709
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_6",
+        "indices": [
+          1,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08328085098647536,
+          0.03134985049357002
+        ],
+        "q95": [
+          0.19428302989830407,
+          0.06603159396948273
+        ],
+        "margins": [
+          -0.1110021789118287,
+          -0.03468174347591271
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_7",
+        "indices": [
+          1,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.13849913443823053,
+          0.010687673106738365
+        ],
+        "q95": [
+          0.19771844583330628,
+          0.07250371593777384
+        ],
+        "margins": [
+          -0.05921931139507575,
+          -0.06181604283103548
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_5_6",
+        "indices": [
+          1,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08870962752478086,
+          0.017706531348235664
+        ],
+        "q95": [
+          0.1676737879819135,
+          0.06298472112905311
+        ],
+        "margins": [
+          -0.07896416045713266,
+          -0.04527818978081745
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_5_7",
+        "indices": [
+          1,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.12428475751361462,
+          0.06201381512301584
+        ],
+        "q95": [
+          0.17866331031892482,
+          0.06404797437501311
+        ],
+        "margins": [
+          -0.054378552805310204,
+          -0.002034159251997271
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_6_7",
+        "indices": [
+          1,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.11626930983267102,
+          0.041630687380286906
+        ],
+        "q95": [
+          0.19477621982282461,
+          0.07787767389151962
+        ],
+        "margins": [
+          -0.0785069099901536,
+          -0.03624698651123271
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_5",
+        "indices": [
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.4033268438256747,
+          0.016333333839575654
+        ],
+        "q95": [
+          0.48053492719605195,
+          0.1564091805872553
+        ],
+        "margins": [
+          0.9227919166296228,
+          -0.14007584674767964
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_6",
+        "indices": [
+          2,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.385211968764901,
+          0.03282102260233654
+        ],
+        "q95": [
+          0.563585927693288,
+          0.17183219460016408
+        ],
+        "margins": [
+          0.821626041071613,
+          -0.13901117199782753
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_7",
+        "indices": [
+          2,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3727500739213303,
+          0.07526377055682835
+        ],
+        "q95": [
+          0.5873377855867365,
+          0.1981334137822878
+        ],
+        "margins": [
+          0.7854122883345938,
+          -0.12286964322545944
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_5_6",
+        "indices": [
+          2,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.4000921316192754,
+          0.02456595635367725
+        ],
+        "q95": [
+          0.4495855674098508,
+          0.17337833393604146
+        ],
+        "margins": [
+          0.9505065642094246,
+          -0.1488123775823642
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_5_7",
+        "indices": [
+          2,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.3588277467067336,
+          0.0865093069286398
+        ],
+        "q95": [
+          0.49138214554551635,
+          0.13492024902903257
+        ],
+        "margins": [
+          0.8674456011612173,
+          -0.048410942100392776
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_6_7",
+        "indices": [
+          2,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.347511505726958,
+          0.08141281673661584
+        ],
+        "q95": [
+          0.5646427604546238,
+          0.21011734226798845
+        ],
+        "margins": [
+          0.7828687452723342,
+          -0.12870452553137263
+        ],
+        "component_passes": [
+          true,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_5_6",
+        "indices": [
+          3,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.031289609998902915,
+          0.013499709869951571
+        ],
+        "q95": [
+          0.1591862721728433,
+          0.049216484073573624
+        ],
+        "margins": [
+          -0.1278966621739404,
+          -0.035716774203622056
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_5_7",
+        "indices": [
+          3,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.061173369892933434,
+          0.009184858214991874
+        ],
+        "q95": [
+          0.1413546517752478,
+          0.045538138325760924
+        ],
+        "margins": [
+          -0.08018128188231438,
+          -0.03635328011076905
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_6_7",
+        "indices": [
+          3,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.05687987625285062,
+          0.012254135752619216
+        ],
+        "q95": [
+          0.16560500965677896,
+          0.05118995427868646
+        ],
+        "margins": [
+          -0.10872513340392834,
+          -0.03893581852606724
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_5_6_7",
+        "indices": [
+          4,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.07721424886428783,
+          0.023388153561299207
+        ],
+        "q95": [
+          0.17107801527521588,
+          0.05617097736082495
+        ],
+        "margins": [
+          -0.09386376641092804,
+          -0.03278282379952574
+        ],
+        "component_passes": [
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_4",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.647438803840836,
+          0.13780376145888162,
+          0.024883400272632836
+        ],
+        "q95": [
+          0.7271347382105916,
+          0.27211675398524143,
+          0.09372596981953016
+        ],
+        "margins": [
+          0.9203040656302445,
+          -0.1343129925263598,
+          -0.06884256954689733
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_5",
+        "indices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.657354528852891,
+          0.138337937336672,
+          0.006693787568136351
+        ],
+        "q95": [
+          0.6430908203823353,
+          0.22682854611016343,
+          0.06966173423116082
+        ],
+        "margins": [
+          1.0142637084705557,
+          -0.08849060877349144,
+          -0.06296794666302447
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_6",
+        "indices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6676933236298734,
+          0.09968703005861727,
+          0.004929949883885155
+        ],
+        "q95": [
+          0.7178861547656313,
+          0.2512611811508713,
+          0.08203232735552729
+        ],
+        "margins": [
+          0.9498071688642421,
+          -0.15157415109225403,
+          -0.07710237747164214
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_3_7",
+        "indices": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.61025496040302,
+          0.12968323814424906,
+          0.051336645932111964
+        ],
+        "q95": [
+          0.7325866332027561,
+          0.2630090377816045,
+          0.10004028689597241
+        ],
+        "margins": [
+          0.877668327200264,
+          -0.13332579963735544,
+          -0.04870364096386045
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4_5",
+        "indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.11158068384595145,
+          0.0367470331517699,
+          0.0022447300400365933
+        ],
+        "q95": [
+          0.29698010680847947,
+          0.11572628536976225,
+          0.05037130560872578
+        ],
+        "margins": [
+          -0.18539942296252804,
+          -0.07897925221799235,
+          -0.04812657556868919
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4_6",
+        "indices": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08822943466276367,
+          0.04691318666345743,
+          0.0005086370971993121
+        ],
+        "q95": [
+          0.29790805400571463,
+          0.10785322277599622,
+          0.04937325880306924
+        ],
+        "margins": [
+          -0.20967861934295096,
+          -0.060940036112538794,
+          -0.04886462170586993
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_4_7",
+        "indices": [
+          0,
+          1,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.15653044351912507,
+          0.03795063378300074,
+          0.00679500400893828
+        ],
+        "q95": [
+          0.3087575317696411,
+          0.12381275986257909,
+          0.06430879103265653
+        ],
+        "margins": [
+          -0.15222708825051603,
+          -0.08586212607957835,
+          -0.05751378702371825
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_5_6",
+        "indices": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.08906276113657795,
+          0.03168339695339663,
+          0.0011592896646202056
+        ],
+        "q95": [
+          0.24641265658474265,
+          0.09905648536300218,
+          0.050717538846136265
+        ],
+        "margins": [
+          -0.1573498954481647,
+          -0.06737308840960556,
+          -0.04955824918151606
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_5_7",
+        "indices": [
+          0,
+          1,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.1374213684092878,
+          0.08065548287585438,
+          0.007278834114936571
+        ],
+        "q95": [
+          0.2699065252192586,
+          0.11304071732850193,
+          0.056651147615290914
+        ],
+        "margins": [
+          -0.13248515680997083,
+          -0.03238523445264756,
+          -0.04937231350035434
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_2_6_7",
+        "indices": [
+          0,
+          1,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.13236600798157647,
+          0.06117006352588035,
+          0.0011746013099766589
+        ],
+        "q95": [
+          0.2737007139978359,
+          0.11904783322870376,
+          0.05688058173561243
+        ],
+        "margins": [
+          -0.14133470601625944,
+          -0.057877769702823406,
+          -0.05570598042563577
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4_5",
+        "indices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.692010170171234,
+          0.0661477833172118,
+          0.01775006379544224
+        ],
+        "q95": [
+          0.6158946739184211,
+          0.25131616809440943,
+          0.07125497808231952
+        ],
+        "margins": [
+          1.0761154962528128,
+          -0.18516838477719763,
+          -0.053504914286877286
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4_6",
+        "indices": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6868384642189203,
+          0.0677703089709903,
+          0.014924313014506401
+        ],
+        "q95": [
+          0.6936252134438717,
+          0.27277000972986637,
+          0.08419305657004879
+        ],
+        "margins": [
+          0.9932132507750485,
+          -0.20499970075887608,
+          -0.06926874355554238
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_4_7",
+        "indices": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6573664878555385,
+          0.09625556470098152,
+          0.05951460351186164
+        ],
+        "q95": [
+          0.7221274804916926,
+          0.26767285473110464,
+          0.0999784432200742
+        ],
+        "margins": [
+          0.9352390073638459,
+          -0.17141729003012313,
+          -0.04046383970821255
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_5_6",
+        "indices": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.7015699748312145,
+          0.06022105480232989,
+          0.001197086548695776
+        ],
+        "q95": [
+          0.6164020132632365,
+          0.2362286457213155,
+          0.06630433670554028
+        ],
+        "margins": [
+          1.085167961567978,
+          -0.1760075909189856,
+          -0.06510725015684451
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_5_7",
+        "indices": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.654908605779896,
+          0.09568092484491354,
+          0.05778679472086399
+        ],
+        "q95": [
+          0.6465841407250703,
+          0.20941732700374557,
+          0.07607815769036788
+        ],
+        "margins": [
+          1.0083244650548258,
+          -0.11373640215883203,
+          -0.018291362969503892
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_3_6_7",
+        "indices": [
+          0,
+          2,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6542829035245619,
+          0.09928262930463387,
+          0.030169538147867297
+        ],
+        "q95": [
+          0.7138375525981838,
+          0.2641002431881217,
+          0.0872231196785602
+        ],
+        "margins": [
+          0.940445350926378,
+          -0.1648176138834878,
+          -0.0570535815306929
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_5_6",
+        "indices": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.0556505440164676,
+          0.025367812455554174,
+          0.0010010736269141173
+        ],
+        "q95": [
+          0.2894767324370357,
+          0.09586689773016915,
+          0.03969034577310785
+        ],
+        "margins": [
+          -0.2338261884205681,
+          -0.07049908527461499,
+          -0.038689272146193734
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_5_7",
+        "indices": [
+          0,
+          3,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.0953832441291776,
+          0.06047727162137,
+          0.003219763549488701
+        ],
+        "q95": [
+          0.2946785454849821,
+          0.10550550707002929,
+          0.040085807988595915
+        ],
+        "margins": [
+          -0.19929530135580453,
+          -0.04502823544865928,
+          -0.036866044439107216
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_4_6_7",
+        "indices": [
+          0,
+          3,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.10584035402131337,
+          0.026492149267631222,
+          0.007051910824579934
+        ],
+        "q95": [
+          0.3024020609587188,
+          0.10273991098715285,
+          0.048740406785460336
+        ],
+        "margins": [
+          -0.19656170693740543,
+          -0.07624776171952163,
+          -0.0416884959608804
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_1_5_6_7",
+        "indices": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.10597289400462087,
+          0.04740632947894288,
+          0.0033005155898202638
+        ],
+        "q95": [
+          0.26806900926882293,
+          0.09996951338655716,
+          0.04554969195574211
+        ],
+        "margins": [
+          -0.16209611526420206,
+          -0.052563183907614275,
+          -0.04224917636592184
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4_5",
+        "indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6553594065248078,
+          0.15052061497110114,
+          0.01720212107719159
+        ],
+        "q95": [
+          0.6685863791632133,
+          0.22497787315613557,
+          0.06193648377786955
+        ],
+        "margins": [
+          0.9867730273615946,
+          -0.07445725818503443,
+          -0.04473436270067796
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4_6",
+        "indices": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.652584592204744,
+          0.13530532460237188,
+          0.028732586750791076
+        ],
+        "q95": [
+          0.7357039830894779,
+          0.24519606539101782,
+          0.08276633366967182
+        ],
+        "margins": [
+          0.916880609115266,
+          -0.10989074078864594,
+          -0.05403374691888074
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_4_7",
+        "indices": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6254060854207573,
+          0.14334789423643604,
+          0.07386224050799303
+        ],
+        "q95": [
+          0.7429669425245499,
+          0.2672350926604184,
+          0.09477032368081945
+        ],
+        "margins": [
+          0.8824391428962074,
+          -0.12388719842398235,
+          -0.020908083172826414
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_5_6",
+        "indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6632607047245733,
+          0.1373684863300557,
+          0.006017738591461146
+        ],
+        "q95": [
+          0.6387379064402908,
+          0.2267863663695671,
+          0.06335800929968353
+        ],
+        "margins": [
+          1.0245227982842824,
+          -0.0894178800395114,
+          -0.05734027070822239
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_5_7",
+        "indices": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.61753335418905,
+          0.13838522520556834,
+          0.08587279904836602
+        ],
+        "q95": [
+          0.6669069918302983,
+          0.23165314890069882,
+          0.06674921684945438
+        ],
+        "margins": [
+          0.9506263623587516,
+          -0.09326792369513048,
+          0.019123582198911637
+        ],
+        "component_passes": [
+          true,
+          false,
+          true
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_3_6_7",
+        "indices": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6198166198616457,
+          0.11949855050071963,
+          0.07788866999030004
+        ],
+        "q95": [
+          0.7245508762052919,
+          0.2742531394321778,
+          0.09336966675811391
+        ],
+        "margins": [
+          0.8952657436563538,
+          -0.15475458893145816,
+          -0.015480996767813865
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_5_6",
+        "indices": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.10904551119314954,
+          0.039433985117848964,
+          0.0021084406865802888
+        ],
+        "q95": [
+          0.2230584800807666,
+          0.09611007129365101,
+          0.04731159015999742
+        ],
+        "margins": [
+          -0.11401296888761706,
+          -0.05667608617580205,
+          -0.04520314947341713
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_5_7",
+        "indices": [
+          1,
+          3,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.14555149124978808,
+          0.0651911689445698,
+          0.0033176340034631207
+        ],
+        "q95": [
+          0.22028944986791252,
+          0.09652085598516497,
+          0.04492773400894999
+        ],
+        "margins": [
+          -0.07473795861812443,
+          -0.03132968704059516,
+          -0.04161010000548687
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_4_6_7",
+        "indices": [
+          1,
+          3,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.13969648253568853,
+          0.04211174535753309,
+          0.00806189902435779
+        ],
+        "q95": [
+          0.235029624266648,
+          0.1044978319694188,
+          0.05208910303696507
+        ],
+        "margins": [
+          -0.09533314173095947,
+          -0.0623860866118857,
+          -0.04402720401260728
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_2_5_6_7",
+        "indices": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.12484149671710089,
+          0.08501784841865238,
+          0.008819987765541125
+        ],
+        "q95": [
+          0.22607904243617058,
+          0.10278995684012633,
+          0.0509792640695058
+        ],
+        "margins": [
+          -0.10123754571906969,
+          -0.017772108421473948,
+          -0.042159276303964675
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_5_6",
+        "indices": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.7078129661410655,
+          0.033976670761281476,
+          0.015006664004894808
+        ],
+        "q95": [
+          0.6332338309502913,
+          0.23447584899046875,
+          0.06097408805348314
+        ],
+        "margins": [
+          1.074579135190774,
+          -0.20049917822918728,
+          -0.04596742404858833
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_5_7",
+        "indices": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.689512300748756,
+          0.10143084253158374,
+          0.005384657510664751
+        ],
+        "q95": [
+          0.655142727052047,
+          0.22820782035082224,
+          0.062489832849311436
+        ],
+        "margins": [
+          1.0343695736967091,
+          -0.1267769778192385,
+          -0.05710517533864669
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_4_6_7",
+        "indices": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6771757537165934,
+          0.09373892036432405,
+          0.03656129162050189
+        ],
+        "q95": [
+          0.7198929310150107,
+          0.26267323560235506,
+          0.07818485803906935
+        ],
+        "margins": [
+          0.9572828227015827,
+          -0.168934315238031,
+          -0.041623566418567466
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_3_5_6_7",
+        "indices": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          1.6754252159440821,
+          0.09735548537388401,
+          0.026407354664579046
+        ],
+        "q95": [
+          0.6327523862033816,
+          0.24736506073242162,
+          0.06264223536239337
+        ],
+        "margins": [
+          1.0426728297407006,
+          -0.1500095753585376,
+          -0.036234880697814324
+        ],
+        "component_passes": [
+          true,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      },
+      {
+        "subset_id": "C_4_5_6_7",
+        "indices": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "scope": "LOCAL",
+        "observed": [
+          0.07824305677444475,
+          0.03674289238227672,
+          0.005376946020374829
+        ],
+        "q95": [
+          0.2018815141673914,
+          0.0840880449645445,
+          0.03832254532161822
+        ],
+        "margins": [
+          -0.12363845739294664,
+          -0.04734515258226778,
+          -0.03294559930124339
+        ],
+        "component_passes": [
+          false,
+          false,
+          false
+        ],
+        "selected": false,
+        "reason": "AT_LEAST_ONE_COMPONENT_NOT_ABOVE_Q95"
+      }
+    ],
+    "subproblems": [
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 0,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 1,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 2,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 3,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 4,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 5,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 6,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 7,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 8,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 9,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 10,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 11,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 12,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 13,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 14,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 15,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 16,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 17,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 18,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 19,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 20,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 21,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 22,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 23,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 24,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 25,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 26,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 27,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 28,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 29,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "accepted": true,
+        "raw_index": 30,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "accepted": true,
+        "raw_index": 31,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "accepted": true,
+        "raw_index": 32,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "accepted": true,
+        "raw_index": 33,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "accepted": true,
+        "raw_index": 34,
+        "attempts": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "accepted": true,
+        "raw_index": 35,
+        "attempts": 1
+      }
+    ],
+    "trials": [
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.46154418048034884,
+          0.17535549777051881,
+          -0.5176174584959102
+        ],
+        "t": 0.21094134389853061,
+        "sphere_margin": 2.3167267102728015,
+        "eq_norm": 4.5166456145944847e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.04232086744461316,
+          0.4161742304664229,
+          -0.4879660568646203
+        ],
+        "t": 0.2971410187298022,
+        "sphere_margin": 2.4153242061686004,
+        "eq_norm": 4.651477354844572e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 10,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.46154418048034884,
+            0.17535549777051881,
+            -0.5176174584959102
+          ],
+          "t": 0.21094134389853061,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.5167058592848249,
+          0.6366126394567189,
+          -0.44223956544423754
+        ],
+        "t": 0.2811351155483705,
+        "sphere_margin": 1.9605906937665623,
+        "eq_norm": 6.969387454762025e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.04232086744461316,
+            0.4161742304664229,
+            -0.4879660568646203
+          ],
+          "t": 0.2971410187298022,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.9649205832926373,
+          0.8406363327519214,
+          -0.3794695432808485
+        ],
+        "t": 0.17973082378363225,
+        "sphere_margin": 1.0466888144640116,
+        "eq_norm": 1.1775693440128312e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.5167058592848249,
+            0.6366126394567189,
+            -0.44223956544423754
+          ],
+          "t": 0.2811351155483705,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.4111876364708995,
+          0.9003178315521587,
+          -0.16249425099702886
+        ],
+        "t": 0.0,
+        "sphere_margin": -4.440892098500626e-16,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.4111876364708995,
+            0.9003178315521587,
+            -0.16249425099702886
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          0.5547429457427272,
+          0.17663039207991085,
+          -0.43823821340645197
+        ],
+        "t": 0.22205488291246558,
+        "sphere_margin": 2.2974363617988898,
+        "eq_norm": 1.6136471996107275e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          0.11539007448061323,
+          0.44279019609778764,
+          -0.36219780203802254
+        ],
+        "t": 0.3268609758489818,
+        "sphere_margin": 2.4878618498960563,
+        "eq_norm": 8.4633766396197e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.5547429457427272,
+            0.17663039207991085,
+            -0.43823821340645197
+          ],
+          "t": 0.22205488291246558,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.31806189289880565,
+          0.7067401469225162,
+          -0.3035230720295499
+        ],
+        "t": 0.32079396906529944,
+        "sphere_margin": 2.1356558665055037,
+        "eq_norm": 2.5217947050777372e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.11539007448061323,
+            0.44279019609778764,
+            -0.36219780203802254
+          ],
+          "t": 0.3268609758489818,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          -0.7452471866336275,
+          0.9680847937131585,
+          -0.2620366313031688
+        ],
+        "t": 0.21006879381261756,
+        "sphere_margin": 1.2671823915974916,
+        "eq_norm": 2.1974708649468936e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.31806189289880565,
+            0.7067401469225162,
+            -0.3035230720295499
+          ],
+          "t": 0.32079396906529944,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          -1.1816185901685574,
+          1.1784347575276903,
+          -0.20855731673790961
+        ],
+        "t": 0.0,
+        "sphere_margin": -2.6645352591003757e-15,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.1816185901685574,
+            1.1784347575276903,
+            -0.20855731673790961
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          -1.3318087532589085,
+          0.8923213386243244,
+          0.41796074460939237
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.08378401409039782,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.3318087532589085,
+            0.8923213386243244,
+            0.41796074460939237
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -0.8905517274888367,
+          0.6998581550355151,
+          0.16755508040192665
+        ],
+        "t": 0.22720861682258398,
+        "sphere_margin": 1.5174686032746274,
+        "eq_norm": 2.073596001867247e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.3318087532589085,
+            0.8923213386243244,
+            0.41796074460939237
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.4331461253470715,
+          0.5037549671178615,
+          -0.05196965609007281
+        ],
+        "t": 0.3414718090212843,
+        "sphere_margin": 2.384341646792971,
+        "eq_norm": 3.925231146709438e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.8905517274888367,
+            0.6998581550355151,
+            0.16755508040192665
+          ],
+          "t": 0.22720861682258398,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          0.03675333132372896,
+          0.3055747401929721,
+          -0.240701355844699
+        ],
+        "t": 0.34141920825404204,
+        "sphere_margin": 2.675763252833319,
+        "eq_norm": 5.91297997716937e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.4331461253470715,
+            0.5037549671178615,
+            -0.05196965609007281
+          ],
+          "t": 0.3414718090212843,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          0.5154810423135666,
+          0.10678015747154389,
+          -0.3999021757578149
+        ],
+        "t": 0.2271395089554671,
+        "sphere_margin": 2.391382667556027,
+        "eq_norm": 1.17631229816831e-12,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.03675333132372896,
+            0.3055747401929721,
+            -0.240701355844699
+          ],
+          "t": 0.34141920825404204,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          -1.4593797061033131,
+          0.8021333864322986,
+          0.2349894221675718
+        ],
+        "t": 0.0,
+        "sphere_margin": 4.440892098500626e-16,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.4593797061033131,
+            0.8021333864322986,
+            0.2349894221675718
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -1.0462764107924596,
+          0.8922973399171045,
+          0.02795968757895295
+        ],
+        "t": 0.12539477477340916,
+        "sphere_margin": 0.9367565100127848,
+        "eq_norm": 1.5823112613210482e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.4593797061033131,
+            0.8021333864322986,
+            0.2349894221675718
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.6492345206789019,
+          0.666799921924331,
+          -0.07050112540808091
+        ],
+        "t": 0.19957815409443921,
+        "sphere_margin": 1.9573291173429266,
+        "eq_norm": 8.777083671441753e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.0462764107924596,
+            0.8922973399171045,
+            0.02795968757895295
+          ],
+          "t": 0.12539477477340916,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.19866158157801753,
+          0.4267748937379644,
+          -0.18549586613804286
+        ],
+        "t": 0.22543335454501073,
+        "sphere_margin": 2.572415174471757,
+        "eq_norm": 2.7755575615628914e-17,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.6492345206789019,
+            0.666799921924331,
+            -0.07050112540808091
+          ],
+          "t": 0.19957815409443921,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          0.33196522251431193,
+          0.17153990606777014,
+          -0.32869114331562294
+        ],
+        "t": 0.17793974160366527,
+        "sphere_margin": 2.5807624087193424,
+        "eq_norm": 2.6950077933603723e-15,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.19866158157801753,
+            0.4267748937379644,
+            -0.18549586613804286
+          ],
+          "t": 0.22543335454501073,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          -1.474068445932637,
+          0.8095140960418183,
+          -0.015371068978067318
+        ],
+        "t": 0.0,
+        "sphere_margin": -4.440892098500626e-16,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.474068445932637,
+            0.8095140960418183,
+            -0.015371068978067318
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -0.9930830840747608,
+          0.6968793995567993,
+          -0.15425825843965332
+        ],
+        "t": 0.20987693617349865,
+        "sphere_margin": 1.3327766050472716,
+        "eq_norm": 3.732342450926061e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.474068445932637,
+            0.8095140960418183,
+            -0.015371068978067318
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.5039333762828113,
+          0.5360019663922816,
+          -0.2602420941376015
+        ],
+        "t": 0.32088358987995186,
+        "sphere_margin": 2.2194542214768793,
+        "eq_norm": 1.4946834900704541e-16,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 8,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.9930830840747608,
+            0.6968793995567993,
+            -0.15425825843965332
+          ],
+          "t": 0.20987693617349865,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          -0.007210185972557992,
+          0.3543982902497712,
+          -0.3593494502093967
+        ],
+        "t": 0.3271365614934532,
+        "sphere_margin": 2.573644962466674,
+        "eq_norm": 1.3174107289239758e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.5039333762828113,
+            0.5360019663922816,
+            -0.2602420941376015
+          ],
+          "t": 0.32088358987995186,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          0.4950500377760088,
+          0.14721093704091562,
+          -0.45038270073529746
+        ],
+        "t": 0.22224213187745737,
+        "sphere_margin": 2.358836947738077,
+        "eq_norm": 5.564441897409791e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.007210185972557992,
+            0.3543982902497712,
+            -0.3593494502093967
+          ],
+          "t": 0.3271365614934532,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 0,
+        "attempt": 1,
+        "point": [
+          -1.164433421199995,
+          0.7319569161269043,
+          0.4249802141768315
+        ],
+        "t": 0.0,
+        "sphere_margin": 0.7561528228308716,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.164433421199995,
+            0.7319569161269043,
+            0.4249802141768315
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 1,
+        "attempt": 1,
+        "point": [
+          -0.7283267803114483,
+          0.5944400283616528,
+          0.22791933059876882
+        ],
+        "t": 0.2264854586186731,
+        "sphere_margin": 1.8926610572481557,
+        "eq_norm": 3.0276180858937323e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -1.164433421199995,
+            0.7319569161269043,
+            0.4249802141768315
+          ],
+          "t": 0.0,
+          "kind": "NEAREST_WEIGHT:0"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 2,
+        "attempt": 1,
+        "point": [
+          -0.2932312887350604,
+          0.4453265551594621,
+          0.03253242811626838
+        ],
+        "t": 0.339913369459732,
+        "sphere_margin": 2.543068436443632,
+        "eq_norm": 6.766266269427907e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.7283267803114483,
+            0.5944400283616528,
+            0.22791933059876882
+          ],
+          "t": 0.2264854586186731,
+          "kind": "NEAREST_WEIGHT:1"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 3,
+        "attempt": 1,
+        "point": [
+          0.14033483965148996,
+          0.2828146990091579,
+          -0.16011191860786073
+        ],
+        "t": 0.33994262942448317,
+        "sphere_margin": 2.7031132770702495,
+        "eq_norm": 7.043821550927812e-14,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            -0.2932312887350604,
+            0.4453265551594621,
+            0.03253242811626838
+          ],
+          "t": 0.339913369459732,
+          "kind": "NEAREST_WEIGHT:2"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 4,
+        "attempt": 1,
+        "point": [
+          0.5716363766901189,
+          0.10475762505333555,
+          -0.348713146575744
+        ],
+        "t": 0.22652458054645336,
+        "sphere_margin": 2.3690839589892105,
+        "eq_norm": 2.6256778199876187e-13,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 9,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.14033483965148996,
+            0.2828146990091579,
+            -0.16011191860786073
+          ],
+          "t": 0.33994262942448317,
+          "kind": "NEAREST_WEIGHT:3"
+        }
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 5,
+        "attempt": 1,
+        "point": [
+          0.9996450966092427,
+          -0.09136403439073995,
+          -0.5316805749813126
+        ],
+        "t": 0.0,
+        "sphere_margin": 1.5381051849786762,
+        "eq_norm": 0.0,
+        "solver_success": true,
+        "accepted": true,
+        "iterations": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "start": {
+          "point": [
+            0.9996450966092427,
+            -0.09136403439073995,
+            -0.5316805749813126
+          ],
+          "t": 0.0,
+          "kind": "CONVEX_COMBINATION"
+        }
+      }
+    ],
+    "raw_origins": [
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_1_3",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_2_3",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_4",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_5",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_6",
+        "weight_id": 5
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 0
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 1
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 2
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 3
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 4
+      },
+      {
+        "subset_id": "C_3_7",
+        "weight_id": 5
+      }
+    ],
+    "mc_anchor_seconds": 8.132207199931145,
+    "frozen_coefficients_sha256": "4b1a7f5dd0e775c0de38659de5acaf2ae9b90a38628ff4af8353817ddc5b4038",
+    "raw_decisions_preserved": true,
+    "original_objective_nd_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "original_objective_feasible_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "original_objective_count": 7,
+    "counter_policy": "full_original_RSM_points_plus_separate_scalar_kernel_calls",
+    "instrumentation": "Python_call_events; overhead included consistently in optimization time",
+    "counter_schema": 2
+  },
+  "timings": {
+    "preparation": 8.465457200072706,
+    "solver": 0.06723859999328852,
+    "postprocessing": 0.0034235999919474125,
+    "total": 8.536119400057942
+  },
+  "counters": {
+    "original_rsm_point_evaluations": 36,
+    "original_rsm_vectorized_calls": 1,
+    "mc_anchor_solves": 14000,
+    "nominal_anchor_solves": 7,
+    "nbi_subproblems": 36,
+    "nbi_attempts": 36,
+    "nbi_iterations": 227,
+    "quadratic_ball_solves": 14007,
+    "scalar_quadratic_values": 126687,
+    "quadratic_response_vector_calls": 14319,
+    "slsqp_solves": 36,
+    "sphere_constraint_calls": 300,
+    "nbi_equality_jacobians": 227,
+    "scalar_quadratic_gradients": 454,
+    "sphere_constraint_jacobians": 227,
+    "original_full_vector_points_computed": 72,
+    "model_vector_point_events": 14391
+  }
+}
