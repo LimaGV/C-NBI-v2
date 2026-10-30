@@ -199,6 +199,7 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
                            label=method, alpha=.8, edgecolors="none")
         ax.set(xlabel="Number of objectives" if x == "m" else "Decision-space dimension",
                ylabel=ylabel)
+        ax.set_xticks(sorted(cells[x].unique()))
         if logarithmic:
             ax.set_yscale("log")
         ax.grid(False)
@@ -260,6 +261,7 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
                 continue
             with np.load(path, allow_pickle=False) as arrays:
                 z = arrays["normalized_responses"][arrays["nondominated_indices"]]
+            ax.set_xticks(np.arange(1, z.shape[1]+1))
             if len(z):
                 for line in z:
                     ax.plot(np.arange(1, len(line)+1), line, color=COLORS[method],
