@@ -123,7 +123,8 @@ def tables(directory: Path) -> pd.DataFrame:
         statuses={str(k): int(v) for k, v in frame.groupby(["method", "state"]).size().items()},
         inferential_tests=False, equalization=False, retuning=False,
         primary_cardinality="native_true_full_objective_ND",
-        timing="end_to_end_per_run_under_archived_hardware_concurrency",
+        timing="worker_load_search_validation_under_archived_concurrency",
+        timer_excludes="process_startup; protocol_hash_verification; artifact_persistence",
         figures_use="structural_cell_medians; five replicas are nested, not independent cells",
     ))
     return frame
@@ -164,7 +165,7 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
     for name, quantity, label, log in (
         ("gd_by_objectives", "GD", "GD (true normalized objectives)", True),
         ("hypervolume_by_objectives", "HV", "Hypervolume (fixed reference 1.1)", False),
-        ("end_to_end_runtime", "end_to_end_seconds", "End-to-end runtime (s)", True),
+        ("end_to_end_runtime", "end_to_end_seconds", "Per-run worker time (s)", True),
         ("native_nd_cardinality", "N_ND", "Native ND cardinality", True),
     ):
         structural = quantity in {"GD", "HV"}
@@ -200,7 +201,7 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
         if "IGD" in data:
             ax.scatter(data.end_to_end_seconds, data.IGD, label=method,
                        color=COLORS[method], s=17, alpha=.8)
-    ax.set(xscale="log", yscale="log", xlabel="Median end-to-end runtime per cell (s)",
+    ax.set(xscale="log", yscale="log", xlabel="Median worker time per cell (s)",
            ylabel="Median IGD per cell")
     ax.legend(frameon=False, fontsize=7)
     save(fig, "quality_cost")

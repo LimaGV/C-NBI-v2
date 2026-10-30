@@ -42,6 +42,10 @@ def test_recomposition_rejects_data_edits_and_float32(auditor, data):
         auditor.check_recomposition(x.astype(np.float32), y, data)
 
 
+def test_explicit_empty_failure_payload_is_reloadable(auditor, data):
+    auditor.check_recomposition(np.empty((0, data.nx)), np.empty((0, data.m)), data)
+
+
 def test_pa_audit_rejects_subset_omission_and_threshold_edits(auditor, data):
     original = read_json(CASE/f"algorithm_diagnostics/{NAME}.json")["diagnostics"]
     with np.load(CASE/f"algorithm_diagnostics/{NAME}.npz", allow_pickle=False) as arrays:

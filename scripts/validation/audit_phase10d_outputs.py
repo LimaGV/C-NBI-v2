@@ -48,6 +48,8 @@ def check_recomposition(x, y, data):
     require(x.dtype == y.dtype == np.float64, "raw arrays must preserve float64")
     require(x.shape == (len(y), data.nx) and y.shape == (len(x), data.m), "raw shapes")
     require(np.isfinite(x).all() and np.isfinite(y).all(), "nonfinite raw output")
+    if not len(x):
+        return  # Explicit empty failure payload; prediction requires observations.
     expected = data.model.predict(x)
     bound = 8*len(data.model.coefficients)*np.finfo(float).eps*(
         abs(quadratic_design(x))@abs(data.model.coefficients))
