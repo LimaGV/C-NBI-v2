@@ -1,4 +1,18 @@
-# Escopo atual — Fase10E, autorizado em2026-10-30
+# Escopo atual — correção pareada da Fase 10E, autorizada em 2026-10-30
+
+O usuário substituiu a equalização conjunta por três pares independentes, nesta
+ordem: C-NBI/VRF-NBI, C-NBI/NSGA-III, C-NBI/MOEA/D. K é o menor tamanho apenas
+do par em cada cenário/réplica; nenhum terceiro método entra. C-NBI pode ter
+subconjuntos distintos em cada par. Sem Friedman/ranking conjunto equalizado.
+Preservar byte a byte commit784650a, inclusive resultados e código10E anterior;
+nova saída pairwise_20261030 e MDR0018. Política synthetic_analysis_10e_pairwise.json
+congelada antes dos cálculos novos; Holm6 para IGD/HV dos três pares, bootstrap
+por cenário, validade HV por par, nunca pela presença de um terceiro método.
+FPS/normalização/indicadores/IDs originais intactos. Sem buscas/refits novos.
+Atualizar o PR18 existente, empilhado no PR17, ambos sem merge automático.
+Os registros seguintes são históricos, incluindo a conclusão da equalização conjunta.
+
+# Escopo histórico — Fase10E inicial, autorizado em2026-10-30
 
 Conclusão local: 904 testes, cobertura98.29%, Ruff/mypy83 PASS; auditoria540
 subconjuntos/135 blocos e7156 arquivos anteriores íntegros. Inferência nativa
