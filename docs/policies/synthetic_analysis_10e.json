@@ -17,6 +17,7 @@
   "seed_rule": "first 128 big-endian bits of SHA256('C-NBI-v2/phase10e/v1/{master}/{role}'); PCG64; role includes analysis, metric and method pair",
   "hv_valid_statuses": ["PRECISION_CRITERIA_PASSED", "EXACT_UP_TO_FLOAT64", "ZERO_CONTRIBUTION_CERTIFIED"],
   "hv_primary": "retain scenario only if all five replicas of all four methods have valid official HV; preserve excluded IDs and original estimates/statuses",
+  "native_equalized_cohort_check": "also compare HV on the intersection of numerically valid native and equalized cells if their cohorts differ; separate exploratory families, no change to either main table",
   "hv_sensitivity": ["all official estimates including pending, explicitly provisional", "replace only the two pending evaluations with separately validated supplementary estimates, if both pass; otherwise keep unavailable"],
   "hv_supplement": {"powers": [18, 20], "scrambles": 4, "same_original_scramble_seeds": true, "reference": 1.1, "precision": "unchanged Phase10C criteria; never promotes official status"},
   "secondary_family": "each named sensitivity analysis gets a separate Holm family across its available omnibus/pairwise tests; exploratory, not additional confirmatory evidence",

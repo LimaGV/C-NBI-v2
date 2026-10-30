@@ -85,3 +85,8 @@ remains required. The PR is stacked on the still-open Phase10D branch.
 
 2026-10-30: PROPOSED -> EXPERIMENTAL for implementation/validation under the
 explicit Phase10E request. No earlier result is superseded.
+
+Before the completed equalized table was inspected, the protocol explicitly
+added an intersection-cohort HV check when native/equalized valid cells differ.
+This prevents a change of numerical-precision cohort being interpreted as a
+cardinality effect. It does not alter the primary tests or indicator definitions.

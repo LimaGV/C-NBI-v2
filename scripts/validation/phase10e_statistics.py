@@ -90,6 +90,7 @@ def compare(analysis, frame, metrics, strict_hv=True):
                 method_a="all",
                 method_b="all",
                 n_scenarios=len(wide),
+                permutation_seed=str(role_seed(f"{analysis}/{metric}/friedman")),
                 **omnibus,
             )
         )
@@ -122,6 +123,8 @@ def compare(analysis, frame, metrics, strict_hv=True):
                     test="Wilcoxon_exact_conditional",
                     method_a=first,
                     method_b=second,
+                    bootstrap_seed=str(role_seed(f"{analysis}/{metric}/{first}/{second}")),
+                    bootstrap_resamples=50000,
                     **effect,
                 )
             )
@@ -270,6 +273,21 @@ def run():
     ]
     if supplement_valid and len(replacements) == 2:
         plans.append(("hv_supplement_validated", corrected, ["HV"], True))
+    native_hv_cells = set(medians(native, "HV")[1].index)
+    equalized_hv_cells = set(medians(equalized, "HV")[1].index)
+    if native_hv_cells != equalized_hv_cells:
+        common = native_hv_cells & equalized_hv_cells
+        plans.extend(
+            [
+                ("hv_native_common_cohort", native[native.scenario_id.isin(common)], ["HV"], True),
+                (
+                    "hv_equalized_common_cohort",
+                    equalized[equalized.scenario_id.isin(common)],
+                    ["HV"],
+                    True,
+                ),
+            ]
+        )
     for epsilon, frame in feasibility.groupby("epsilon", sort=True):
         plans.append(
             (
@@ -322,6 +340,12 @@ def run():
             "mc_anchor_solves",
             "original_rsm_point_evaluations",
             "factor_model_vector_evaluations",
+                "factor_model_jacobian_calls",
+                "vrf_jacobian_calls",
+                "gradient_calls",
+                "extreme_solves",
+                "nominal_anchor_solves",
+                "quadratic_ball_solves",
         }
     ]
     native[columns].to_csv(OUTPUT / "quality_cost_replica.csv", index=False, lineterminator="\n")
