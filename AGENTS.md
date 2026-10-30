@@ -1,4 +1,22 @@
-# Escopo atual — Fase10D, autorizado em2026-10-29
+# Escopo atual — Fase10E, autorizado em2026-10-30
+
+PR17 permanece aberto no SHA5c3829db, com CI Ubuntu/Windows aprovada; não integrar.
+Branch feature/10e-synthetic-statistical-analysis dependente da branch10D;
+novo PR empilhado, sem merge automático. Somente análise offline da campaign_v2:
+27 células x5 réplicas x4 métodos. Nenhuma nova execução de otimizadores,
+ajuste RSM, alteração de seeds/hiperparâmetros/referências/métricas oficiais.
+Protocolo docs/policies/synthetic_analysis_10e.json e MDR0017 antes dos cálculos.
+Medianas de cinco réplicas por cenário, IGD/HV primários, família Holm conjunta,
+Friedman por permutação e Wilcoxon exato condicional, bootstrap por cenário.
+Equalização FPS somente pontos ND reais, K mínimo por bloco, IDs preservados.
+HV pendente e tolerância de viabilidade somente estudos suplementares separados;
+nunca sobrescrever resultados10D nem projetar decisões. Fatores/interações
+exploratórios, sem causalidade nem pseudorreplicação. Custo principal ciclo
+completo observado; contadores distintos. Figuras EN PNG600/PDF sem grades.
+Preservar ciência e resultados0–10D, raw e licenças dos materiais excluídos.
+As proibições de10E abaixo eram limites históricos e foram superadas por esta tarefa.
+
+# Escopo histórico — Fase10D, autorizado em2026-10-29
 
 Conclusão numérica2026-10-30:540 buscas/avaliações,135 por método,zero falhas;
 ordem C-NBI→VRF-NBI→NSGA-III→MOEA/D verificada por barreiras e horários originais.
