@@ -1,5 +1,26 @@
 # Changelog
 
+## Unreleased — Phase10E independent pairwise cardinality correction
+
+- Replace the current joint-four-method equalization with three independent
+  C-NBI pairs, executed in order VRF-NBI, NSGA-III, MOEA/D; pair-specific K only.
+- Preserve all earlier artifacts/source at784650a; new separate paired archive.
+- Export810 real subsets/405 paired blocks, pair-specific HV validity, six-test
+  quality Holm families, updated factor summaries and six vector figure pairs.
+- C-NBI retains equalized IGD/HV advantages against NSGA-III and MOEA/D under
+  this revised protocol; no significant differences versus VRF-NBI. No new search.
+
+## Unreleased — Phase10E paired synthetic statistical analysis
+
+- Scenario-level Friedman permutations, exact conditional Wilcoxon, joint
+  primary Holm correction, effect sizes and paired scenario-bootstrap intervals.
+- Deterministic minimum-cardinality FPS on real native ND points, preserving IDs.
+- Separate higher-resolution HV and explicit norm-feasibility sensitivity studies.
+- Full fixed-factor association, native/equalized, runtime and internal-cost tables;
+  eleven English PNG600/vector-PDF figure pairs, independent audit and hashes.
+- Report loss of C-NBI's native IGD advantage after equalization and inferior
+  equalized HV versus NSGA-III/MOEA/D. No official optimizer rerun or earlier-result edit.
+
 ## Unreleased — Phase10D frozen synthetic algorithm benchmark
 
 - Oracle-free adapters for complete C-NBI, full VRF-NBI, NSGA-III and MOEA/D.

@@ -1,6 +1,25 @@
 # Roadmap
 
-## Fase10D — escopo atual autorizado
+## Fase 10E — correção pareada autorizada em 2026-10-30
+
+Equalização atual em três pares C-NBI/comparador, K independente por bloco,
+na ordem VRF-NBI, NSGA-III, MOEA/D. Resultados globais anteriores são preservados
+e substituídos somente para a conclusão equalizada vigente. Ver MDR0018,
+docs/phase_10e_pairwise_verification.md e pairwise_20261030. Sem novas buscas,
+ajustes, referências ou merge. PR18 continua dependente do PR17 aberto.
+
+## Histórico da Fase 10E inicial — análise offline autorizada em 2026-10-30
+
+Branch feature/10e-synthetic-statistical-analysis empilhada sobre a branch do PR17,
+que permanece aberto e não é integrado automaticamente. Campanha oficial intacta.
+Concluídas inferência pareada por 27 cenários (HV válido em 26), equalização FPS,
+sensibilidade de viabilidade e estudo suplementar dos dois HV pendentes.
+Vantagem nativa do C-NBI não é invariante à cardinalidade. Resultados completos,
+limitações e qualidade: docs/phase_10e_verification.md e MDR0017 EXPERIMENTAL.
+Nenhuma fase posterior ou nova busca de otimização autorizada por esta entrega.
+As seções abaixo registram o escopo histórico de cada etapa.
+
+## Fase10D — escopo histórico autorizado
 
 PR16 integrado em c0646768, CI Ubuntu/Windows aprovada. Branch
 feature/10d-synthetic-algorithm-benchmark e PR17. Piloto corrigido12/12 PASS;

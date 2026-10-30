@@ -1,5 +1,31 @@
 # C-NBI v2
 
+## Fase 10E — equalização independente por par
+
+Correção solicitada: C-NBI/VRF-NBI, depois C-NBI/NSGA-III, depois C-NBI/MOEA/D.
+K usa apenas o menor ND do respectivo par em cada cenário/réplica. Medianas de
+K: 12, 153 e 84. O C-NBI mantém vantagem IGD/HV após Holm frente a NSGA-III e
+MOEA/D; frente a VRF-NBI, os contrastes não são significativos. São 405 blocos
+e 810 subconjuntos reais, sem novas buscas. Não há ranking conjunto equalizado.
+[Relatório atual](docs/phase_10e_pairwise_verification.md),
+[protocolo](docs/policies/synthetic_analysis_10e_pairwise.json) e
+[artefatos](results/phase_10_synthetic_analysis/pairwise_20261030/README.md).
+PR18 continua empilhado sobre PR17, sem merge automático. Todo o arquivo da
+equalização conjunta anterior permanece preservado como registro substituído.
+
+## Histórico da Fase 10E — equalização conjunta anterior
+
+Análise offline das 540 execuções oficiais, com 27 cenários estruturais e
+cinco réplicas aninhadas. O C-NBI apresenta vantagem nativa agregada em IGD/HV
+após Holm; essa vantagem não permanece na cardinalidade equalizada. O HV
+equalizado é inferior a NSGA-III e MOEA/D. Sensibilidades de precisão e
+viabilidade permanecem separadas dos resultados oficiais, que são imutáveis.
+[Relatório científico](docs/phase_10e_verification.md),
+[protocolo](docs/policies/synthetic_analysis_10e.json) e
+[artefatos](results/phase_10_synthetic_analysis/statistical_20261030/README.md).
+PR dependente da Fase 10D, sem integração automática de nenhum dos dois PRs.
+As seções seguintes preservam o histórico das entregas anteriores.
+
 ## Fase10D — campanha sintética concluída no PR17
 
 Fase10C integrada pelo PR16 em c0646768, com CI verde Ubuntu/Windows.

@@ -1,4 +1,48 @@
-# Escopo atual — Fase10D, autorizado em2026-10-29
+# Escopo atual — correção pareada da Fase 10E, autorizada em 2026-10-30
+
+Validação local:910 testes/98.30%, Ruff e mypy84 PASS; auditoria810 conjuntos/
+405 blocos,7795 arquivos anteriores intactos. K medianos12/153/84 nos três
+pares; vantagem IGD/HV C-NBI persiste contra NSGA-III/MOEA/D, não significativa
+contra VRF-NBI, com Holm6. CI final e estado do PR18 registrados no head atual.
+
+O usuário substituiu a equalização conjunta por três pares independentes, nesta
+ordem: C-NBI/VRF-NBI, C-NBI/NSGA-III, C-NBI/MOEA/D. K é o menor tamanho apenas
+do par em cada cenário/réplica; nenhum terceiro método entra. C-NBI pode ter
+subconjuntos distintos em cada par. Sem Friedman/ranking conjunto equalizado.
+Preservar byte a byte commit784650a, inclusive resultados e código10E anterior;
+nova saída pairwise_20261030 e MDR0018. Política synthetic_analysis_10e_pairwise.json
+congelada antes dos cálculos novos; Holm6 para IGD/HV dos três pares, bootstrap
+por cenário, validade HV por par, nunca pela presença de um terceiro método.
+FPS/normalização/indicadores/IDs originais intactos. Sem buscas/refits novos.
+Atualizar o PR18 existente, empilhado no PR17, ambos sem merge automático.
+Os registros seguintes são históricos, incluindo a conclusão da equalização conjunta.
+
+# Escopo histórico — Fase10E inicial, autorizado em2026-10-30
+
+Conclusão local: 904 testes, cobertura98.29%, Ruff/mypy83 PASS; auditoria540
+subconjuntos/135 blocos e7156 arquivos anteriores íntegros. Inferência nativa
+favorável ao C-NBI; vantagem IGD não permanece equalizada e HV equalizado é
+inferior a NSGA-III/MOEA/D. Dois HV suplementares passam em2^20, sem promover
+status oficial. Onze figuras PNG600/PDF vetorial sem grades. CI final no novo
+PR empilhado; nenhum merge nem nova execução de busca oficial.
+
+PR17 permanece aberto no SHA5c3829db, com CI Ubuntu/Windows aprovada; não integrar.
+Branch feature/10e-synthetic-statistical-analysis dependente da branch10D;
+novo PR empilhado, sem merge automático. Somente análise offline da campaign_v2:
+27 células x5 réplicas x4 métodos. Nenhuma nova execução de otimizadores,
+ajuste RSM, alteração de seeds/hiperparâmetros/referências/métricas oficiais.
+Protocolo docs/policies/synthetic_analysis_10e.json e MDR0017 antes dos cálculos.
+Medianas de cinco réplicas por cenário, IGD/HV primários, família Holm conjunta,
+Friedman por permutação e Wilcoxon exato condicional, bootstrap por cenário.
+Equalização FPS somente pontos ND reais, K mínimo por bloco, IDs preservados.
+HV pendente e tolerância de viabilidade somente estudos suplementares separados;
+nunca sobrescrever resultados10D nem projetar decisões. Fatores/interações
+exploratórios, sem causalidade nem pseudorreplicação. Custo principal ciclo
+completo observado; contadores distintos. Figuras EN PNG600/PDF sem grades.
+Preservar ciência e resultados0–10D, raw e licenças dos materiais excluídos.
+As proibições de10E abaixo eram limites históricos e foram superadas por esta tarefa.
+
+# Escopo histórico — Fase10D, autorizado em2026-10-29
 
 Conclusão numérica2026-10-30:540 buscas/avaliações,135 por método,zero falhas;
 ordem C-NBI→VRF-NBI→NSGA-III→MOEA/D verificada por barreiras e horários originais.

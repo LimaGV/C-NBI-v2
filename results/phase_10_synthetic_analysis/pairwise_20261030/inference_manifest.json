@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETED",
+  "quality_family_size": 6,
+  "density_family_size": 9,
+  "omnibus_equalized_Friedman": false,
+  "joint_ranking": false,
+  "statistical_unit": "structural_scenario",
+  "replicas_per_scenario": 5,
+  "independent_comparators": [
+    "VRF-NBI",
+    "NSGA-III",
+    "MOEA/D"
+  ],
+  "supplementary_values_only_after_point_set_identity": true,
+  "protocol": {
+    "phase": "10E",
+    "revision": "pairwise_v2",
+    "authorization": "User correction: independent C-NBI versus VRF-NBI, then NSGA-III, then MOEA/D; never a joint four-method cardinality",
+    "baseline_commit": "784650a13afc496dab8b1cfab4a2c100a9c5539e",
+    "official_campaign": "results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v2",
+    "previous_joint_analysis": "results/phase_10_synthetic_analysis/statistical_20261030",
+    "previous_joint_status": "PRESERVED_SUPERSEDED_FOR_CURRENT_EQUALIZATION",
+    "pair_order": [
+      "VRF-NBI",
+      "NSGA-III",
+      "MOEA/D"
+    ],
+    "barrier": "all 135 blocks of one pair finish before the next comparator starts",
+    "K": "min(N_ND_C-NBI, N_ND_comparator) independently per scenario-replica; other methods do not enter",
+    "selection": "unchanged analytical normalization, objective-order forced unique minima then Phase10C FPS; first original raw ID breaks exact ties",
+    "small_K": "if forced extrema exceed K, first K objective-order extrema; no artificial increase",
+    "seed_FPS": null,
+    "statistical_unit": "median of all five paired replicas per structural scenario",
+    "main_pair_quality_family": "six two-sided exact conditional Wilcoxon tests: three pairs times IGD/HV, jointly Holm; secondary analysis in observed fixed design",
+    "native_pair_baseline_family": "separate six-hypothesis Holm family using the same two methods and pair-specific numerical validity; original four-method native primary14 unchanged",
+    "secondary_density_family": "nine paired tests, three pairs times GD/Spacing/Sparsity, jointly Holm; exploratory",
+    "bootstrap": {
+      "draws": 50000,
+      "confidence": 0.95,
+      "method": "pointwise percentile stability interval of median paired scenario differences",
+      "seed_rule": "unchanged role_seed with pairwise_v2/analysis/comparator/metric prefix"
+    },
+    "HV_validity": "a cell is valid only when all five replicas of both methods pass original precision statuses; no exclusion caused by a third method",
+    "HV_supplement": "existing higher-resolution estimates may be reused only after exact original normalized-point-set identity is verified, in a separately labelled sensitivity; official statuses unchanged",
+    "metrics": [
+      "GD",
+      "IGD",
+      "HV",
+      "Spacing",
+      "Sparsity"
+    ],
+    "reuse": "reuse verified previous/native metrics only for exactly identical selected raw-point sets; otherwise unchanged Phase10C evaluator",
+    "joint_ranking": false,
+    "equalized_Friedman": false,
+    "optimization_executions": 0,
+    "original_refits": 0,
+    "reference_change": false,
+    "automatic_merge": false,
+    "figures": {
+      "language": "English",
+      "PNG_DPI": 600,
+      "PDF_vector": true,
+      "grid": false
+    }
+  }
+}
