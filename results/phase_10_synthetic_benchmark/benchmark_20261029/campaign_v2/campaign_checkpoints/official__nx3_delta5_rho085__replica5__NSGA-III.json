@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho085__replica5",
+    "scenario_id": "nx3_delta5_rho085",
+    "replica_id": 5,
+    "method": "NSGA-III",
+    "seed": "61125824291324669397850413621431669418"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho085__replica5__NSGA-III.npz": "b46ae7230c2bd100233e4c7aad954a87c6c5035fc3f8f7d9b2a0fb18fca2f27a",
+    "raw_rsm_responses/official__nx3_delta5_rho085__replica5__NSGA-III.npz": "bf989c26057e2061e6de95a24cdbc1100c10004a4719c42dfec2241d9ffaaae2",
+    "algorithm_diagnostics/official__nx3_delta5_rho085__replica5__NSGA-III.npz": "bee714ce60fe5e16e2c243ad8aa3c3701f3cce00a84af5260aa9a26a8418d7dc",
+    "algorithm_diagnostics/official__nx3_delta5_rho085__replica5__NSGA-III.json": "42d04668867e12c931350d94ee5513ffe9d227a0273f44fccb5858a3de11b3ed"
+  },
+  "payload_run_id": "official__nx3_delta5_rho085__replica5__NSGA-III",
+  "output_count": 165,
+  "timings": {
+    "preparation": 0.005813000025227666,
+    "solver": 38.805584399960935,
+    "postprocessing": 0.0035250999499112368,
+    "total": 38.814922499936074
+  },
+  "counters": {
+    "original_rsm_point_evaluations": 198000,
+    "original_rsm_vectorized_calls": 1200,
+    "original_rsm_export_point_evaluations": 165,
+    "gradient_calls": 0,
+    "repair_calls": 11812,
+    "repaired_candidates": 9029,
+    "original_full_vector_points_computed": 198330,
+    "model_vector_point_events": 198330
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128778240
+}

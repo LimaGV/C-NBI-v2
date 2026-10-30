@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta3_rho060__replica5",
+    "scenario_id": "nx2_delta3_rho060",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "334481531912936733700153018794953115719"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta3_rho060__replica5__VRF-NBI.npz": "49407bc02c484fbb7c13da823e9083ff11e1f6557eccbf63d99a737061bf1079",
+    "raw_rsm_responses/official__nx2_delta3_rho060__replica5__VRF-NBI.npz": "7c0e5112307534da5a5f2db0d7519c26bb7a6ff52ab8f61b61255388e8c674e4",
+    "algorithm_diagnostics/official__nx2_delta3_rho060__replica5__VRF-NBI.npz": "23b22f1ae39ea14709dc4a2ad4306eaa7fd9aa8cb29a3f10eb6d4a31f16d6589",
+    "algorithm_diagnostics/official__nx2_delta3_rho060__replica5__VRF-NBI.json": "f39d274b33af2926d82da7911307fb51760d09f6ba3388a46decddb4628b66ec"
+  },
+  "payload_run_id": "official__nx2_delta3_rho060__replica5__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.8969071998726577,
+    "solver": 0.04712850018404424,
+    "postprocessing": 0.0006557998713105917,
+    "total": 2.9446914999280125
+  },
+  "counters": {
+    "vrf_vector_evaluations": 30019,
+    "vrf_jacobian_calls": 3755,
+    "extreme_solves": 96,
+    "extreme_iterations": 3900,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 103,
+    "factor_model_vector_evaluations": 33928,
+    "factor_model_jacobian_calls": 3888,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 33970
+  },
+  "nx": 2,
+  "m": 6,
+  "peak_process_memory_bytes": 128507904
+}

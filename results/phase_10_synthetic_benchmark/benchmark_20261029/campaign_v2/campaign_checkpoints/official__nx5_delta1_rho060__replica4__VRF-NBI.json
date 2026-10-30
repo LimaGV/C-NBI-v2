@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta1_rho060__replica4",
+    "scenario_id": "nx5_delta1_rho060",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "204566200902307064247814142496045336656"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta1_rho060__replica4__VRF-NBI.npz": "0e3ffd21238a0df7a5ce9076fdac6e35b8379bc452ea2bc6d8a26ba487c3cb9b",
+    "raw_rsm_responses/official__nx5_delta1_rho060__replica4__VRF-NBI.npz": "0bb2f5921ab46b664d4403de2b61fca6414565b00dcc20f075ad717baa1bdb32",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica4__VRF-NBI.npz": "017e22300e0659f91b9d8a6af98d43b558010b39e15a53a3ee7b27f1f2e9e9fb",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica4__VRF-NBI.json": "ca021806d4a0529c6b80dae78508550fc8ebbda90bf452eb48c0655d1d885203"
+  },
+  "payload_run_id": "official__nx5_delta1_rho060__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 6.843069000169635,
+    "solver": 0.12357409996911883,
+    "postprocessing": 0.0008534998632967472,
+    "total": 6.96749660000205
+  },
+  "counters": {
+    "vrf_vector_evaluations": 49384,
+    "vrf_jacobian_calls": 7782,
+    "extreme_solves": 165,
+    "extreme_iterations": 8058,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 302,
+    "factor_model_vector_evaluations": 57617,
+    "factor_model_jacobian_calls": 8178,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 183,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 57659
+  },
+  "nx": 5,
+  "m": 7,
+  "peak_process_memory_bytes": 128561152
+}

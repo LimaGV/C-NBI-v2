@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta5_rho060__replica1",
+    "scenario_id": "nx2_delta5_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "216229235078157764895391905927700760525"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta5_rho060__replica1__VRF-NBI.npz": "1d7c7f7468f5880d43d6421b20daf2c9ac58ba6adb03f63b968a298187c78e4f",
+    "raw_rsm_responses/official__nx2_delta5_rho060__replica1__VRF-NBI.npz": "00f443d6e4bb36c9f529289317732fa8c9745004683da977b5619fb2f48fce84",
+    "algorithm_diagnostics/official__nx2_delta5_rho060__replica1__VRF-NBI.npz": "e6416c730bb5b6211799a0c66851bac4e642c68d49deef26930b55108aea3d3c",
+    "algorithm_diagnostics/official__nx2_delta5_rho060__replica1__VRF-NBI.json": "8cbca8ad7e428df1a13b900b1adb2e69d717256d4eeaae1eba8c792685e9a146"
+  },
+  "payload_run_id": "official__nx2_delta5_rho060__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 3.1296274000778794,
+    "solver": 0.03641639999113977,
+    "postprocessing": 0.0006665999535471201,
+    "total": 3.1667104000225663
+  },
+  "counters": {
+    "vrf_vector_evaluations": 32673,
+    "vrf_jacobian_calls": 3920,
+    "extreme_solves": 93,
+    "extreme_iterations": 4039,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 97,
+    "factor_model_vector_evaluations": 36800,
+    "factor_model_jacobian_calls": 4066,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 111,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 36842
+  },
+  "nx": 2,
+  "m": 8,
+  "peak_process_memory_bytes": 128798720
+}

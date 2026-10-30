@@ -1,0 +1,560 @@
+{
+  "status": "DESCRIPTIVE_ONLY",
+  "scenarios": 27,
+  "replicas_per_scenario": 5,
+  "planned_runs": 540,
+  "aggregation": "median of five nested replicas, then descriptive summaries over27 cells",
+  "statistical_superiority_claim": false,
+  "equalized_cardinality": false,
+  "numerical_source": "8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee",
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "source_sha256": "a2b5995d507a891dd829e585c2acb9b7285990454cc36bbceb8696cd5525f738",
+  "methods": {
+    "C-NBI": {
+      "planned": 135,
+      "recorded": 135,
+      "states": {
+        "COMPLETED": 135
+      },
+      "algorithm_statuses": {
+        "COMPLETED": 135
+      },
+      "metrics": {
+        "GD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.02654751352288128,
+          "q25_of_cell_medians": 0.018722793123567748,
+          "q75_of_cell_medians": 0.050120220656492714,
+          "min_cell_median": 0.006217436460945089,
+          "max_cell_median": 0.1367313643471646
+        },
+        "IGD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.052934201519196915,
+          "q25_of_cell_medians": 0.04458007239943276,
+          "q75_of_cell_medians": 0.0745212714676404,
+          "min_cell_median": 0.031596621698802986,
+          "max_cell_median": 0.08931509418773144
+        },
+        "HV": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.8029656458801275,
+          "q25_of_cell_medians": 0.6407136076667237,
+          "q75_of_cell_medians": 0.9202078220439915,
+          "min_cell_median": 0.4284430100162967,
+          "max_cell_median": 1.1811037410430913
+        },
+        "Spacing": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.03380767726053068,
+          "q25_of_cell_medians": 0.02313775868100054,
+          "q75_of_cell_medians": 0.03687713654492441,
+          "min_cell_median": 0.015367788014163756,
+          "max_cell_median": 0.13734871557603975
+        },
+        "Sparsity": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.045069793800302016,
+          "q25_of_cell_medians": 0.0368007735908125,
+          "q75_of_cell_medians": 0.07114328270083924,
+          "min_cell_median": 0.02168200951405481,
+          "max_cell_median": 0.09432131437769072
+        },
+        "N_ND": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 261.0,
+          "q25_of_cell_medians": 74.0,
+          "q75_of_cell_medians": 1056.0,
+          "min_cell_median": 27.0,
+          "max_cell_median": 12283.0
+        },
+        "end_to_end_seconds": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 19.019930499838665,
+          "q25_of_cell_medians": 8.588176249875687,
+          "q75_of_cell_medians": 58.1445568499621,
+          "min_cell_median": 3.23789170011878,
+          "max_cell_median": 774.2530738001224
+        },
+        "model_vector_point_events": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 69216.0,
+          "q25_of_cell_medians": 20258.5,
+          "q75_of_cell_medians": 285684.0,
+          "min_cell_median": 8634.0,
+          "max_cell_median": 3885429.0
+        },
+        "original_rsm_point_evaluations": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 804.0,
+          "q25_of_cell_medians": 157.5,
+          "q75_of_cell_medians": 3073.0,
+          "min_cell_median": 66.0,
+          "max_cell_median": 32401.0
+        }
+      },
+      "hv_statuses": {
+        "PRECISION_CRITERIA_PASSED": 135
+      },
+      "hv_max_relative_se": 0.002301975349823554,
+      "hv_median_relative_se": 0.00048411345555860526,
+      "undefined_per_run_metrics": {
+        "GD": 0,
+        "IGD": 0,
+        "HV": 0,
+        "Spacing": 0,
+        "Sparsity": 0
+      },
+      "counter_totals": {
+        "original_rsm_point_evaluations": 443097,
+        "original_full_vector_points_computed": 886194,
+        "model_vector_point_events": 96843149,
+        "scalar_quadratic_values": 502581993,
+        "scalar_quadratic_gradients": 68980209,
+        "factor_model_vector_evaluations": 0,
+        "mc_anchor_solves": 1980000,
+        "nbi_subproblems": 444331,
+        "nbi_attempts": 459476,
+        "nbi_iterations": 14458055
+      },
+      "summed_worker_wall_seconds": 16066.997240898665,
+      "summed_kernel_wall_seconds": 16048.055626701098,
+      "summed_external_evaluation_seconds": 418.7236714991741,
+      "minimum_per_run_worker_seconds": 3.1872082999907434,
+      "maximum_per_run_worker_seconds": 1752.573826600099,
+      "lifecycle_observation_statuses": {
+        "ORIGINAL_TIMESTAMP_ORDER_VERIFIED": 135
+      },
+      "observed_lifecycle_seconds_median_of_cell_medians": 21.18925404548645,
+      "summed_observed_lifecycle_seconds": 16422.900272846222,
+      "maximum_process_memory_bytes": 950599680,
+      "raw_payload_defined_runs": 135,
+      "total_raw_points": 443097,
+      "total_feasible_points": 427608,
+      "total_unique_points": 373113,
+      "total_native_nd_points": 156789,
+      "runs_with_infeasible_raw": 94,
+      "raw_points_above_normalized_one": 76914
+    },
+    "VRF-NBI": {
+      "planned": 135,
+      "recorded": 135,
+      "states": {
+        "COMPLETED": 135
+      },
+      "algorithm_statuses": {
+        "COMPLETED": 135
+      },
+      "metrics": {
+        "GD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.04007459121622561,
+          "q25_of_cell_medians": 0.005728482138372683,
+          "q75_of_cell_medians": 0.16265240952385474,
+          "min_cell_median": 0.001374925945325846,
+          "max_cell_median": 0.3797543424162916
+        },
+        "IGD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.2577724721025057,
+          "q25_of_cell_medians": 0.2162946513124131,
+          "q75_of_cell_medians": 0.32028516292811604,
+          "min_cell_median": 0.12337096902372231,
+          "max_cell_median": 0.6146953675784526
+        },
+        "HV": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.5323184524879458,
+          "q25_of_cell_medians": 0.2911505365231726,
+          "q75_of_cell_medians": 0.682661780142992,
+          "min_cell_median": 0.018796282010848903,
+          "max_cell_median": 1.0064042522605892
+        },
+        "Spacing": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.10106688743938234,
+          "q25_of_cell_medians": 0.06763302958948551,
+          "q75_of_cell_medians": 0.17897225974010544,
+          "min_cell_median": 0.04723786669526406,
+          "max_cell_median": 0.31345415892615247
+        },
+        "Sparsity": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.21544450101069407,
+          "q25_of_cell_medians": 0.1857183247767349,
+          "q75_of_cell_medians": 0.3815856786754645,
+          "min_cell_median": 0.14784310598005299,
+          "max_cell_median": 0.6859943632597577
+        },
+        "N_ND": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 11.0,
+          "q25_of_cell_medians": 6.0,
+          "q75_of_cell_medians": 19.0,
+          "min_cell_median": 6.0,
+          "max_cell_median": 49.0
+        },
+        "end_to_end_seconds": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 3.6061879999469966,
+          "q25_of_cell_medians": 2.4207219999516383,
+          "q75_of_cell_medians": 6.663037749938667,
+          "min_cell_median": 1.2358751997817308,
+          "max_cell_median": 16.34981429995969
+        },
+        "model_vector_point_events": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 35412.0,
+          "q25_of_cell_medians": 23695.5,
+          "q75_of_cell_medians": 57138.0,
+          "min_cell_median": 12743.0,
+          "max_cell_median": 127492.0
+        },
+        "original_rsm_point_evaluations": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 21.0,
+          "q25_of_cell_medians": 6.0,
+          "q75_of_cell_medians": 21.0,
+          "min_cell_median": 6.0,
+          "max_cell_median": 56.0
+        }
+      },
+      "hv_statuses": {
+        "EXACT_UP_TO_FLOAT64": 68,
+        "PRECISION_CRITERIA_PASSED": 65,
+        "PRECISION_PENDING": 2
+      },
+      "hv_max_relative_se": 0.017276157961010976,
+      "hv_median_relative_se": 0.0006648248749538861,
+      "undefined_per_run_metrics": {
+        "GD": 0,
+        "IGD": 0,
+        "HV": 0,
+        "Spacing": 0,
+        "Sparsity": 0
+      },
+      "counter_totals": {
+        "original_rsm_point_evaluations": 2627,
+        "original_full_vector_points_computed": 5254,
+        "model_vector_point_events": 6061943,
+        "scalar_quadratic_values": 0,
+        "scalar_quadratic_gradients": 0,
+        "factor_model_vector_evaluations": 6056689,
+        "mc_anchor_solves": 0,
+        "nbi_subproblems": 2630,
+        "nbi_attempts": 2279,
+        "nbi_iterations": 23807
+      },
+      "summed_worker_wall_seconds": 675.7142717977986,
+      "summed_kernel_wall_seconds": 658.053789898986,
+      "summed_external_evaluation_seconds": 10.064296198775992,
+      "minimum_per_run_worker_seconds": 1.1479749998543411,
+      "maximum_per_run_worker_seconds": 16.668590300017968,
+      "lifecycle_observation_statuses": {
+        "ORIGINAL_TIMESTAMP_ORDER_VERIFIED": 135
+      },
+      "observed_lifecycle_seconds_median_of_cell_medians": 5.701544523239136,
+      "summed_observed_lifecycle_seconds": 956.5363526344299,
+      "maximum_process_memory_bytes": 129212416,
+      "raw_payload_defined_runs": 135,
+      "total_raw_points": 2627,
+      "total_feasible_points": 2617,
+      "total_unique_points": 2617,
+      "total_native_nd_points": 2011,
+      "runs_with_infeasible_raw": 6,
+      "raw_points_above_normalized_one": 594
+    },
+    "NSGA-III": {
+      "planned": 135,
+      "recorded": 135,
+      "states": {
+        "COMPLETED": 135
+      },
+      "algorithm_statuses": {
+        "COMPLETED": 135
+      },
+      "metrics": {
+        "GD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.030765841771753552,
+          "q25_of_cell_medians": 0.020514603410932357,
+          "q75_of_cell_medians": 0.05560307299419438,
+          "min_cell_median": 0.004589368753353914,
+          "max_cell_median": 0.14988389899817028
+        },
+        "IGD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.13402652946800508,
+          "q25_of_cell_medians": 0.0833685536263607,
+          "q75_of_cell_medians": 0.16008444905254476,
+          "min_cell_median": 0.040359614099244705,
+          "max_cell_median": 0.23412038061665663
+        },
+        "HV": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.6718637523574833,
+          "q25_of_cell_medians": 0.5543979871169477,
+          "q75_of_cell_medians": 0.8630653231032376,
+          "min_cell_median": 0.3401854769654086,
+          "max_cell_median": 1.205875751852418
+        },
+        "Spacing": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.04535821801448253,
+          "q25_of_cell_medians": 0.037024751034893,
+          "q75_of_cell_medians": 0.06456866079522361,
+          "min_cell_median": 0.016956828725239466,
+          "max_cell_median": 0.10279560471757448
+        },
+        "Sparsity": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.03489749646591546,
+          "q25_of_cell_medians": 0.0270360991821891,
+          "q75_of_cell_medians": 0.06557374782963417,
+          "min_cell_median": 0.012566459439919488,
+          "max_cell_median": 0.11137191729923747
+        },
+        "N_ND": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 186.0,
+          "q25_of_cell_medians": 117.0,
+          "q75_of_cell_medians": 310.0,
+          "min_cell_median": 32.0,
+          "max_cell_median": 979.0
+        },
+        "end_to_end_seconds": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 14.882193100173026,
+          "q25_of_cell_medians": 9.59562234999612,
+          "q75_of_cell_medians": 37.60451830003876,
+          "min_cell_median": 8.947076299926266,
+          "max_cell_median": 189.14075789996423
+        },
+        "model_vector_point_events": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 84420.0,
+          "q25_of_cell_medians": 50652.0,
+          "q75_of_cell_medians": 198330.0,
+          "min_cell_median": 50050.0,
+          "max_cell_median": 402402.0
+        },
+        "original_rsm_point_evaluations": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 84000.0,
+          "q25_of_cell_medians": 50400.0,
+          "q75_of_cell_medians": 198000.0,
+          "min_cell_median": 49980.0,
+          "max_cell_median": 400400.0
+        }
+      },
+      "hv_statuses": {
+        "PRECISION_CRITERIA_PASSED": 135
+      },
+      "hv_max_relative_se": 0.00377642224688082,
+      "hv_median_relative_se": 0.00042948731554911634,
+      "undefined_per_run_metrics": {
+        "GD": 0,
+        "IGD": 0,
+        "HV": 0,
+        "Spacing": 0,
+        "Sparsity": 0
+      },
+      "counter_totals": {
+        "original_rsm_point_evaluations": 18701400,
+        "original_full_vector_points_computed": 18780660,
+        "model_vector_point_events": 18780660,
+        "scalar_quadratic_values": 0,
+        "scalar_quadratic_gradients": 0,
+        "factor_model_vector_evaluations": 0,
+        "mc_anchor_solves": 0,
+        "nbi_subproblems": 0,
+        "nbi_attempts": 0,
+        "nbi_iterations": 0
+      },
+      "summed_worker_wall_seconds": 5314.68929869961,
+      "summed_kernel_wall_seconds": 5296.9133948001545,
+      "summed_external_evaluation_seconds": 36.16874120128341,
+      "minimum_per_run_worker_seconds": 8.744638699805364,
+      "maximum_per_run_worker_seconds": 193.31265520001762,
+      "lifecycle_observation_statuses": {
+        "ORIGINAL_TIMESTAMP_ORDER_VERIFIED": 135
+      },
+      "observed_lifecycle_seconds_median_of_cell_medians": 16.971099138259888,
+      "summed_observed_lifecycle_seconds": 5595.497015953064,
+      "maximum_process_memory_bytes": 145600512,
+      "raw_payload_defined_runs": 135,
+      "total_raw_points": 39630,
+      "total_feasible_points": 39630,
+      "total_unique_points": 39630,
+      "total_native_nd_points": 35335,
+      "runs_with_infeasible_raw": 0,
+      "raw_points_above_normalized_one": 1035
+    },
+    "MOEA/D": {
+      "planned": 135,
+      "recorded": 135,
+      "states": {
+        "COMPLETED": 135
+      },
+      "algorithm_statuses": {
+        "COMPLETED": 135
+      },
+      "metrics": {
+        "GD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.008867810739518665,
+          "q25_of_cell_medians": 0.005489978702215006,
+          "q75_of_cell_medians": 0.01847504777030271,
+          "min_cell_median": 0.0014563070385429995,
+          "max_cell_median": 0.06716939563759898
+        },
+        "IGD": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.3239125911846482,
+          "q25_of_cell_medians": 0.23470930376308374,
+          "q75_of_cell_medians": 0.367561126877192,
+          "min_cell_median": 0.16804782751764882,
+          "max_cell_median": 0.45737948958439667
+        },
+        "HV": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.5855354302051547,
+          "q25_of_cell_medians": 0.46055558071136504,
+          "q75_of_cell_medians": 0.8117211475181584,
+          "min_cell_median": 0.2463325134635456,
+          "max_cell_median": 1.0582188619091042
+        },
+        "Spacing": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.026897634856430146,
+          "q25_of_cell_medians": 0.016923228728973977,
+          "q75_of_cell_medians": 0.04087978467075467,
+          "min_cell_median": 0.0023632143708271825,
+          "max_cell_median": 0.08588012867744352
+        },
+        "Sparsity": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 0.015603712822091774,
+          "q25_of_cell_medians": 0.00916069954135945,
+          "q75_of_cell_medians": 0.029449284268989153,
+          "min_cell_median": 0.0028535447833887067,
+          "max_cell_median": 0.08420825764903501
+        },
+        "N_ND": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 84.0,
+          "q25_of_cell_medians": 70.0,
+          "q75_of_cell_medians": 495.0,
+          "min_cell_median": 34.0,
+          "max_cell_median": 1001.0
+        },
+        "end_to_end_seconds": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 106.46039510006085,
+          "q25_of_cell_medians": 54.617290550027974,
+          "q75_of_cell_medians": 257.13685555011034,
+          "min_cell_median": 47.22233320004307,
+          "max_cell_median": 572.6100727999583
+        },
+        "model_vector_point_events": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 84168.0,
+          "q25_of_cell_medians": 50512.0,
+          "q75_of_cell_medians": 198990.0,
+          "min_cell_median": 50050.0,
+          "max_cell_median": 402402.0
+        },
+        "original_rsm_point_evaluations": {
+          "defined_structural_cells": 27,
+          "defined_replicas": 135,
+          "median_of_cell_medians": 84000.0,
+          "q25_of_cell_medians": 50400.0,
+          "q75_of_cell_medians": 198000.0,
+          "min_cell_median": 49980.0,
+          "max_cell_median": 400400.0
+        }
+      },
+      "hv_statuses": {
+        "PRECISION_CRITERIA_PASSED": 135
+      },
+      "hv_max_relative_se": 0.003268723847698705,
+      "hv_median_relative_se": 0.0005044672723934456,
+      "undefined_per_run_metrics": {
+        "GD": 0,
+        "IGD": 0,
+        "HV": 0,
+        "Spacing": 0,
+        "Sparsity": 0
+      },
+      "counter_totals": {
+        "original_rsm_point_evaluations": 18701400,
+        "original_full_vector_points_computed": 18780900,
+        "model_vector_point_events": 18780900,
+        "scalar_quadratic_values": 0,
+        "scalar_quadratic_gradients": 0,
+        "factor_model_vector_evaluations": 0,
+        "mc_anchor_solves": 0,
+        "nbi_subproblems": 0,
+        "nbi_attempts": 0,
+        "nbi_iterations": 0
+      },
+      "summed_worker_wall_seconds": 24591.785771798575,
+      "summed_kernel_wall_seconds": 24572.68591120001,
+      "summed_external_evaluation_seconds": 22.985491500701755,
+      "minimum_per_run_worker_seconds": 46.942114599980414,
+      "maximum_per_run_worker_seconds": 596.7064998999704,
+      "lifecycle_observation_statuses": {
+        "ORIGINAL_TIMESTAMP_ORDER_VERIFIED": 135
+      },
+      "observed_lifecycle_seconds_median_of_cell_medians": 109.39485359191895,
+      "summed_observed_lifecycle_seconds": 24888.574836969376,
+      "maximum_process_memory_bytes": 129777664,
+      "raw_payload_defined_runs": 135,
+      "total_raw_points": 39750,
+      "total_feasible_points": 39750,
+      "total_unique_points": 39700,
+      "total_native_nd_points": 39671,
+      "runs_with_infeasible_raw": 0,
+      "raw_points_above_normalized_one": 0
+    }
+  },
+  "observed_method_order_status": "PASS",
+  "varimax_nonconverged_runs": 3,
+  "cnbi_candidate_subsets": 38100,
+  "cnbi_selected_subsets": 16532
+}

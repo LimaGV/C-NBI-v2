@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta3_rho060__replica4",
+    "scenario_id": "nx5_delta3_rho060",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "126049703754293355590904047263989575262"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta3_rho060__replica4__VRF-NBI.npz": "6b9fc0229df594e5c4a0d4e6c7d7d82cc7243d29fd100c6177d5a25d3a7fa6b6",
+    "raw_rsm_responses/official__nx5_delta3_rho060__replica4__VRF-NBI.npz": "dd9d1bab9fa37f2ac29e054ac4964f0a45be6822c548703639e017e7e84d4497",
+    "algorithm_diagnostics/official__nx5_delta3_rho060__replica4__VRF-NBI.npz": "f3bd8fe361f56a2c1cdbecb6e7d401fd19a8bcb55fba7f97c7c862f10ab548e0",
+    "algorithm_diagnostics/official__nx5_delta3_rho060__replica4__VRF-NBI.json": "69a18f739021483c2edf8ee43b2e92cd83a53e620b8910ce4e91d391690a9c88"
+  },
+  "payload_run_id": "official__nx5_delta3_rho060__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 8.529734899988398,
+    "solver": 0.11101819993928075,
+    "postprocessing": 0.0010095001198351383,
+    "total": 8.641762600047514
+  },
+  "counters": {
+    "vrf_vector_evaluations": 57209,
+    "vrf_jacobian_calls": 8262,
+    "extreme_solves": 168,
+    "extreme_iterations": 8629,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 240,
+    "factor_model_vector_evaluations": 65976,
+    "factor_model_jacobian_calls": 8711,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 186,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 66018
+  },
+  "nx": 5,
+  "m": 9,
+  "peak_process_memory_bytes": 128716800
+}

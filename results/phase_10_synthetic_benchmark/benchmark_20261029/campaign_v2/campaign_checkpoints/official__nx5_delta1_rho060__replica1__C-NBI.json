@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta1_rho060__replica1",
+    "scenario_id": "nx5_delta1_rho060",
+    "replica_id": 1,
+    "method": "C-NBI",
+    "seed": "86259271639999332143130821809125231875"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta1_rho060__replica1__C-NBI.npz": "3a75d46c4222624edf446ff654c15dca3fbc507dcf652c998b42f08c1b8f4469",
+    "raw_rsm_responses/official__nx5_delta1_rho060__replica1__C-NBI.npz": "38a28097c7ac18d5a4bcb2cde7666551d58614bde0f1111b91f29cfd6eb7c130",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica1__C-NBI.npz": "5f1caa5c05240a5b39d4ba119b8689ef55ec3efe413a19cac118933e0d83f911",
+    "algorithm_diagnostics/official__nx5_delta1_rho060__replica1__C-NBI.json": "86a0ef62b4aaf853dbbd761330aab8fa9f3540cad023a4bd8ef931e5120479be"
+  },
+  "payload_run_id": "official__nx5_delta1_rho060__replica1__C-NBI",
+  "output_count": 2451,
+  "timings": {
+    "preparation": 7.697939799865708,
+    "solver": 13.794326900038868,
+    "postprocessing": 0.36639950005337596,
+    "total": 21.858666199957952
+  },
+  "counters": {
+    "original_rsm_point_evaluations": 2451,
+    "original_rsm_vectorized_calls": 1,
+    "mc_anchor_solves": 14000,
+    "nominal_anchor_solves": 7,
+    "nbi_subproblems": 2451,
+    "nbi_attempts": 2453,
+    "nbi_iterations": 38605,
+    "quadratic_ball_solves": 14007,
+    "scalar_quadratic_values": 393799,
+    "quadratic_response_vector_calls": 82658,
+    "slsqp_solves": 2453,
+    "sphere_constraint_calls": 68362,
+    "nbi_equality_jacobians": 38607,
+    "scalar_quadratic_gradients": 147097,
+    "sphere_constraint_jacobians": 38607,
+    "original_full_vector_points_computed": 4902,
+    "model_vector_point_events": 87560
+  },
+  "nx": 5,
+  "m": 7,
+  "peak_process_memory_bytes": 149405696
+}

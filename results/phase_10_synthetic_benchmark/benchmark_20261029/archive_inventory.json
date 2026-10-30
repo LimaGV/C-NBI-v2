@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED",
+  "numerical_source": "8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee",
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "history": {
+    "sequential_pilot": {
+      "source_commit": "4f051d51a39c62172aa1030684a21c607ff8e179",
+      "protocol_hash": "6532fc535c7f41ef5148228973bab6f6bd05501a539f0fe1b0739ec0074df797",
+      "states": {
+        "pilot": {
+          "COMPLETED": 12
+        },
+        "official": {}
+      },
+      "failures": [],
+      "all_payloads_preserved": true,
+      "source_verified_against_own_git_commit": true
+    },
+    "initial_campaign": {
+      "source_commit": "77c8e123fab409636028fb8fd565537d591f1c92",
+      "protocol_hash": "93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df",
+      "states": {
+        "pilot": {
+          "COMPLETED": 12
+        },
+        "official": {
+          "COMPLETED": 75,
+          "FAILED": 2
+        }
+      },
+      "failures": [
+        {
+          "identity": {
+            "stage": "official",
+            "instance_id": "nx2_delta1_rho085__replica4",
+            "scenario_id": "nx2_delta1_rho085",
+            "replica_id": 4,
+            "method": "VRF-NBI",
+            "seed": "115799245043232921888668575663992579140"
+          },
+          "error": "ValueError: Varimax did not converge within the legacy iteration limit"
+        },
+        {
+          "identity": {
+            "stage": "official",
+            "instance_id": "nx2_delta1_rho085__replica5",
+            "scenario_id": "nx2_delta1_rho085",
+            "replica_id": 5,
+            "method": "VRF-NBI",
+            "seed": "71401241595931271281030341196905745140"
+          },
+          "error": "ValueError: Varimax did not converge within the legacy iteration limit"
+        }
+      ],
+      "all_payloads_preserved": true,
+      "source_verified_against_own_git_commit": true
+    }
+  },
+  "file_sizes_exclude_inventory_self_and_checksum_observation": true,
+  "sizes": {
+    "all_versions": {
+      "files": 5848,
+      "bytes": 1155355542,
+      "largest_file_bytes": 41882448,
+      "largest_file": "campaign_v2\\algorithm_diagnostics\\official__nx5_delta5_rho025__replica4__C-NBI.json"
+    },
+    "corrected_campaign": {
+      "files": 5074,
+      "bytes": 1103002068,
+      "largest_file_bytes": 41882448,
+      "largest_file": "campaign_v2\\algorithm_diagnostics\\official__nx5_delta5_rho025__replica4__C-NBI.json"
+    }
+  },
+  "publication_basis": "explicit Phase10D task: preserve raw outputs, version and push PR",
+  "original_data_modified": false,
+  "excluded_material_licenses_changed": false,
+  "lfs_automatically_enabled": false,
+  "source_sha256": "98602d0829749cc0ecd01b5f2327e494f147c2021c420f22d86c9c4f493c2071"
+}

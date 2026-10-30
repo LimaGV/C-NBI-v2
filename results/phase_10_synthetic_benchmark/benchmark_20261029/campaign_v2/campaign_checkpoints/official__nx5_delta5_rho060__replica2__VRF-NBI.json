@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta5_rho060__replica2",
+    "scenario_id": "nx5_delta5_rho060",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "115232774306305437957782102596269748269"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta5_rho060__replica2__VRF-NBI.npz": "5c6f3737e33134c5eaeed57cd027b0ae5159256d5c372e71f7d1501da39fcf79",
+    "raw_rsm_responses/official__nx5_delta5_rho060__replica2__VRF-NBI.npz": "e2165644a7bf3ed6aab1d1252e88081b69ebfa45b920316e59452ea95d55373c",
+    "algorithm_diagnostics/official__nx5_delta5_rho060__replica2__VRF-NBI.npz": "6203aa1ffdf1555da314d0b294f77922d4370c7a53fa8e301502b0a50d4d0d47",
+    "algorithm_diagnostics/official__nx5_delta5_rho060__replica2__VRF-NBI.json": "d5b601db1a50bd0099be6650cf6dfff10916cff54706908ead0f3f684cfe9a2d"
+  },
+  "payload_run_id": "official__nx5_delta5_rho060__replica2__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 6.416330700041726,
+    "solver": 0.09137669997289777,
+    "postprocessing": 0.0008653998374938965,
+    "total": 6.508572799852118
+  },
+  "counters": {
+    "vrf_vector_evaluations": 46802,
+    "vrf_jacobian_calls": 7055,
+    "extreme_solves": 165,
+    "extreme_iterations": 7367,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 232,
+    "factor_model_vector_evaluations": 54284,
+    "factor_model_jacobian_calls": 7436,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 183,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 54326
+  },
+  "nx": 5,
+  "m": 11,
+  "peak_process_memory_bytes": 128655360
+}

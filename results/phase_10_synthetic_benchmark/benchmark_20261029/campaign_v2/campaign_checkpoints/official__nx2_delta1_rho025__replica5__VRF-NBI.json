@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho025__replica5",
+    "scenario_id": "nx2_delta1_rho025",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "140459840689698525834555813754403305389"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho025__replica5__VRF-NBI.npz": "563275da5b2ea67d3c3db73d0cc268493e000ec2442fa623dd8ab593813b4b30",
+    "raw_rsm_responses/official__nx2_delta1_rho025__replica5__VRF-NBI.npz": "42d900b2381342a6a53673e24b8b526cdd02cbd0540c96be5db46ea20cad7214",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica5__VRF-NBI.npz": "798a5f3c58a9682c7ee50816f407e0ef050a9087da74d4d725ad2a19c0abfccd",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica5__VRF-NBI.json": "99421d79881be0bd48398d605b78862efa6e2273d78d92c25ddfdb45bafec732"
+  },
+  "payload_run_id": "official__nx2_delta1_rho025__replica5__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.3284204001538455,
+    "solver": 0.04028220009058714,
+    "postprocessing": 0.0006594997830688953,
+    "total": 2.3693621000275016
+  },
+  "counters": {
+    "vrf_vector_evaluations": 25730,
+    "vrf_jacobian_calls": 3376,
+    "extreme_solves": 96,
+    "extreme_iterations": 3485,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 102,
+    "factor_model_vector_evaluations": 29242,
+    "factor_model_jacobian_calls": 3491,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 29284
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128716800
+}

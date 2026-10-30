@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta3_rho025__replica3",
+    "scenario_id": "nx5_delta3_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "199762541929262293852769605605495758583"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta3_rho025__replica3__VRF-NBI.npz": "41afa16a1f054be053af19f256412743c6e5e810e23ef2d3ab62f8282584b3bb",
+    "raw_rsm_responses/official__nx5_delta3_rho025__replica3__VRF-NBI.npz": "f5c7e0730952bcacf7087ec325fdc46adeb76452a34567278b58ac1aadc48bac",
+    "algorithm_diagnostics/official__nx5_delta3_rho025__replica3__VRF-NBI.npz": "e44a645eb51830d56a5a8f9318c974c8a6985c7fdaed87f7ce86e4cba0598081",
+    "algorithm_diagnostics/official__nx5_delta3_rho025__replica3__VRF-NBI.json": "ec147bb300656745aea4ab8423c180a108ec740b2f3a519a3a06a49d3bc43f06"
+  },
+  "payload_run_id": "official__nx5_delta3_rho025__replica3__VRF-NBI",
+  "output_count": 15,
+  "timings": {
+    "preparation": 14.298369399970397,
+    "solver": 0.1041227001696825,
+    "postprocessing": 0.0009352997876703739,
+    "total": 14.40342739992775
+  },
+  "counters": {
+    "vrf_vector_evaluations": 106367,
+    "vrf_jacobian_calls": 15155,
+    "extreme_solves": 295,
+    "extreme_iterations": 15940,
+    "nbi_subproblems": 15,
+    "nbi_attempts": 11,
+    "nbi_iterations": 248,
+    "factor_model_vector_evaluations": 122726,
+    "factor_model_jacobian_calls": 15915,
+    "original_rsm_point_evaluations": 15,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 306,
+    "original_full_vector_points_computed": 30,
+    "model_vector_point_events": 122756
+  },
+  "nx": 5,
+  "m": 9,
+  "peak_process_memory_bytes": 128761856
+}

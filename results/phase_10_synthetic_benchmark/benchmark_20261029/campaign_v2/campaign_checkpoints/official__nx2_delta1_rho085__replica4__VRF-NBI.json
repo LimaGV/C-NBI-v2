@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho085__replica4",
+    "scenario_id": "nx2_delta1_rho085",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "115799245043232921888668575663992579140"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho085__replica4__VRF-NBI.npz": "f8f9f1b6ad4b148c0676566d6ee5e2e296606f4e374b27822c532d8fed13f2e9",
+    "raw_rsm_responses/official__nx2_delta1_rho085__replica4__VRF-NBI.npz": "3e5a6454e1313d860045633e497e97bf2457f2d2fd53968e10294ef1e0f1ecb2",
+    "algorithm_diagnostics/official__nx2_delta1_rho085__replica4__VRF-NBI.npz": "fd6f90ff1d0db53b583401cf6d6cf8d00664ef48617478b014a5d9bc330856af",
+    "algorithm_diagnostics/official__nx2_delta1_rho085__replica4__VRF-NBI.json": "895cd1563cb92d0c37c8e236bc2d3c83e904ddbedb8c44857ff92b4a1cb28945"
+  },
+  "payload_run_id": "official__nx2_delta1_rho085__replica4__VRF-NBI",
+  "output_count": 6,
+  "timings": {
+    "preparation": 1.0103780999779701,
+    "solver": 0.010994500014930964,
+    "postprocessing": 0.0005435999482870102,
+    "total": 1.021916199941188
+  },
+  "counters": {
+    "vrf_vector_evaluations": 9388,
+    "vrf_jacobian_calls": 1517,
+    "extreme_solves": 60,
+    "extreme_iterations": 1624,
+    "nbi_subproblems": 6,
+    "nbi_attempts": 4,
+    "nbi_iterations": 33,
+    "factor_model_vector_evaluations": 10996,
+    "factor_model_jacobian_calls": 1592,
+    "original_rsm_point_evaluations": 6,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 64,
+    "original_full_vector_points_computed": 12,
+    "model_vector_point_events": 11008
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128466944
+}

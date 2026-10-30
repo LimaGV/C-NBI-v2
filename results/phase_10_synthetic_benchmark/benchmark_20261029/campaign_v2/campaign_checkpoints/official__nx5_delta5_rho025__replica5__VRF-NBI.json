@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta5_rho025__replica5",
+    "scenario_id": "nx5_delta5_rho025",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "207429070816487558385061546046631364491"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta5_rho025__replica5__VRF-NBI.npz": "1a8a127d30dbd417d35af2ce0b61856dce73ec26d8bc7a29658660805b52752d",
+    "raw_rsm_responses/official__nx5_delta5_rho025__replica5__VRF-NBI.npz": "3f5587fd0ec71c3353cdd55bca2d452f4200732c1c4d862922e54438cefb525f",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica5__VRF-NBI.npz": "42ff7a0586ca6434a761966cf834969f5dc9f30a3e0dffaf4c3e8107135ced57",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica5__VRF-NBI.json": "8bbb9cb2d8c6cfa12f0d27770b34ebee0920e58762394cf7a281fe02f5bc06db"
+  },
+  "payload_run_id": "official__nx5_delta5_rho025__replica5__VRF-NBI",
+  "output_count": 15,
+  "timings": {
+    "preparation": 14.24806970008649,
+    "solver": 0.0549751000944525,
+    "postprocessing": 0.000964899780228734,
+    "total": 14.30400969996117
+  },
+  "counters": {
+    "vrf_vector_evaluations": 105799,
+    "vrf_jacobian_calls": 14203,
+    "extreme_solves": 295,
+    "extreme_iterations": 15083,
+    "nbi_subproblems": 15,
+    "nbi_attempts": 10,
+    "nbi_iterations": 130,
+    "factor_model_vector_evaluations": 120831,
+    "factor_model_jacobian_calls": 14945,
+    "original_rsm_point_evaluations": 15,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 305,
+    "original_full_vector_points_computed": 30,
+    "model_vector_point_events": 120861
+  },
+  "nx": 5,
+  "m": 11,
+  "peak_process_memory_bytes": 129073152
+}

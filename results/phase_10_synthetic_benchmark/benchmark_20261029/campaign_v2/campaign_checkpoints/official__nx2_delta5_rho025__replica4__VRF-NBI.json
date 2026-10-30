@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta5_rho025__replica4",
+    "scenario_id": "nx2_delta5_rho025",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "330367394558959044778044731782112546486"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta5_rho025__replica4__VRF-NBI.npz": "0f5244857556a9d9526bb4cf05314c2c67e773aa90d966cdd99efac626b0dba9",
+    "raw_rsm_responses/official__nx2_delta5_rho025__replica4__VRF-NBI.npz": "4f09dcfea34182d71ced4985d7c0880667850775d055d02294d525f949f6db14",
+    "algorithm_diagnostics/official__nx2_delta5_rho025__replica4__VRF-NBI.npz": "5d6e9a7e82829c43d708a6cda3c33c820de4a72938e6fb1047c21643d3c364c1",
+    "algorithm_diagnostics/official__nx2_delta5_rho025__replica4__VRF-NBI.json": "e47e613eb8812ea896d2e057e6a427b2c7383c99dbcfd7633915dc478253209a"
+  },
+  "payload_run_id": "official__nx2_delta5_rho025__replica4__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.406292699975893,
+    "solver": 0.30729279993101954,
+    "postprocessing": 0.0006984001956880093,
+    "total": 2.7142839001026005
+  },
+  "counters": {
+    "vrf_vector_evaluations": 25705,
+    "vrf_jacobian_calls": 3369,
+    "extreme_solves": 96,
+    "extreme_iterations": 3318,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 20,
+    "nbi_iterations": 299,
+    "factor_model_vector_evaluations": 29217,
+    "factor_model_jacobian_calls": 3491,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 116,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 29259
+  },
+  "nx": 2,
+  "m": 8,
+  "peak_process_memory_bytes": 128573440
+}

@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta5_rho025__replica2",
+    "scenario_id": "nx5_delta5_rho025",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "75727651772516245198148194679185449977"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta5_rho025__replica2__VRF-NBI.npz": "bb74639175ea058e2010b5b74d232add50fa3aeeb0aea255dbad67c00e1f9d7c",
+    "raw_rsm_responses/official__nx5_delta5_rho025__replica2__VRF-NBI.npz": "e4627f66b68e5f793830041c9bd41695ffceaa20c577904b72a433d659ce71e2",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica2__VRF-NBI.npz": "585716586a92a77d04a6ec52fd9616ca524872a096aa9fc2ba2826f8aec8bf37",
+    "algorithm_diagnostics/official__nx5_delta5_rho025__replica2__VRF-NBI.json": "75f1e042def893abfecbddf8a0e5ae7837e7efde635e7c5b85e05598cc8bf67d"
+  },
+  "payload_run_id": "official__nx5_delta5_rho025__replica2__VRF-NBI",
+  "output_count": 15,
+  "timings": {
+    "preparation": 14.76316129998304,
+    "solver": 0.055325099965557456,
+    "postprocessing": 0.0009275001939386129,
+    "total": 14.819413900142536
+  },
+  "counters": {
+    "vrf_vector_evaluations": 106085,
+    "vrf_jacobian_calls": 14395,
+    "extreme_solves": 290,
+    "extreme_iterations": 15260,
+    "nbi_subproblems": 15,
+    "nbi_attempts": 10,
+    "nbi_iterations": 129,
+    "factor_model_vector_evaluations": 121413,
+    "factor_model_jacobian_calls": 15149,
+    "original_rsm_point_evaluations": 15,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 300,
+    "original_full_vector_points_computed": 30,
+    "model_vector_point_events": 121443
+  },
+  "nx": 5,
+  "m": 11,
+  "peak_process_memory_bytes": 128917504
+}

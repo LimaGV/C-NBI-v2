@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta3_rho025__replica4",
+    "scenario_id": "nx3_delta3_rho025",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "174464513237415438340879489622274225897"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta3_rho025__replica4__VRF-NBI.npz": "79802ca2f7a8cc7574fe3536bec98370d9c59090e3a362a7a984cce7d6169f99",
+    "raw_rsm_responses/official__nx3_delta3_rho025__replica4__VRF-NBI.npz": "d9c48f3dec0144aa2f39015eec1ccb9c93043f2c96cb6eb4c20a65ef763eb484",
+    "algorithm_diagnostics/official__nx3_delta3_rho025__replica4__VRF-NBI.npz": "20f43645dad162adc04c6e6000f5625b66306e4a025b7804add9221e2eb76540",
+    "algorithm_diagnostics/official__nx3_delta3_rho025__replica4__VRF-NBI.json": "d0916e9b0db0afa1c3193de3434548c63122628e9573fc2eb4d2860ed48de458"
+  },
+  "payload_run_id": "official__nx3_delta3_rho025__replica4__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 6.3294331999495625,
+    "solver": 0.12227940000593662,
+    "postprocessing": 0.0009554000571370125,
+    "total": 6.452668000012636
+  },
+  "counters": {
+    "vrf_vector_evaluations": 57549,
+    "vrf_jacobian_calls": 7274,
+    "extreme_solves": 168,
+    "extreme_iterations": 7449,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 282,
+    "factor_model_vector_evaluations": 65138,
+    "factor_model_jacobian_calls": 7547,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 65250
+  },
+  "nx": 3,
+  "m": 7,
+  "peak_process_memory_bytes": 128720896
+}

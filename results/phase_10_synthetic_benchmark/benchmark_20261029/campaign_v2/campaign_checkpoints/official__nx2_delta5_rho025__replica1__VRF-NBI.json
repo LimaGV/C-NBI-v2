@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta5_rho025__replica1",
+    "scenario_id": "nx2_delta5_rho025",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "226208906424805740406638996013970297991"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta5_rho025__replica1__VRF-NBI.npz": "c99ab709a4e2505c02267a85735cd9305ae0c31e2b34cb8984e63ce9b6f976df",
+    "raw_rsm_responses/official__nx2_delta5_rho025__replica1__VRF-NBI.npz": "31143f8850c358ca028dbe6efee8ee972a1abc56bfeb501c5e1ec3159da3c9c5",
+    "algorithm_diagnostics/official__nx2_delta5_rho025__replica1__VRF-NBI.npz": "6e66c490f5f11d24b5336cf3b3a0e876a19dc9ae54aa6dae894ad038b07b41c1",
+    "algorithm_diagnostics/official__nx2_delta5_rho025__replica1__VRF-NBI.json": "386f9dcc854f9b9d4ffffc9c517161ba44958e92fcbad33414bf22290cb50c68"
+  },
+  "payload_run_id": "official__nx2_delta5_rho025__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.9584559998475015,
+    "solver": 0.035420000087469816,
+    "postprocessing": 0.0006162000354379416,
+    "total": 2.9944921999704093
+  },
+  "counters": {
+    "vrf_vector_evaluations": 31339,
+    "vrf_jacobian_calls": 3886,
+    "extreme_solves": 96,
+    "extreme_iterations": 4005,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 103,
+    "factor_model_vector_evaluations": 35370,
+    "factor_model_jacobian_calls": 4009,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 35412
+  },
+  "nx": 2,
+  "m": 8,
+  "peak_process_memory_bytes": 128417792
+}

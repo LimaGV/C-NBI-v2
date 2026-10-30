@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho025__replica2",
+    "scenario_id": "nx3_delta5_rho025",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "113284862972845884339085131413020168704"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho025__replica2__VRF-NBI.npz": "7a86840b42454bc4af0ec757cb1406ade9de9ad1c6be2c9b821d5a87b5ade34c",
+    "raw_rsm_responses/official__nx3_delta5_rho025__replica2__VRF-NBI.npz": "a9dec48588f8e7784875ac2f175aa892a497298653b80bb578aa98a0abd13c44",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica2__VRF-NBI.npz": "ee07300fa3312344290b9e03e8a2e3c4de4521c5e15413f244bc1e2e9eb2e9a2",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica2__VRF-NBI.json": "81315c9945933c7b36bd071cf6f554726fd639fe15fd013f0e31f8a3df896541"
+  },
+  "payload_run_id": "official__nx3_delta5_rho025__replica2__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 7.105334699852392,
+    "solver": 0.47751909983344376,
+    "postprocessing": 0.001185800414532423,
+    "total": 7.584039600100368
+  },
+  "counters": {
+    "vrf_vector_evaluations": 59516,
+    "vrf_jacobian_calls": 7821,
+    "extreme_solves": 168,
+    "extreme_iterations": 7862,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 54,
+    "nbi_iterations": 488,
+    "factor_model_vector_evaluations": 68332,
+    "factor_model_jacobian_calls": 8151,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 222,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 68444
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 128884736
+}

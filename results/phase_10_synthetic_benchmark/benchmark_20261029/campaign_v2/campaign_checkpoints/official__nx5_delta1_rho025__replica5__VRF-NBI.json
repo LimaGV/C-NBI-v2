@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta1_rho025__replica5",
+    "scenario_id": "nx5_delta1_rho025",
+    "replica_id": 5,
+    "method": "VRF-NBI",
+    "seed": "115767597252547468386111839599635960925"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta1_rho025__replica5__VRF-NBI.npz": "3e1a717d83f1bd1ae0fe072b88cd4329ad9b04d12555cf538615b8d4a0f0f332",
+    "raw_rsm_responses/official__nx5_delta1_rho025__replica5__VRF-NBI.npz": "abbb7e5a56492218f9800871a30511314c3156f6a4897b15bd1b4fa65bb2b2cf",
+    "algorithm_diagnostics/official__nx5_delta1_rho025__replica5__VRF-NBI.npz": "8886f289f2871d5c4491b1d5c3eb97b9b096506c2e64ee50c58838d05239e621",
+    "algorithm_diagnostics/official__nx5_delta1_rho025__replica5__VRF-NBI.json": "0b1ce2362cb2c0424a157f2e2e74de3f551cc9f1ea6d1ed5e8baef03bc7603ee"
+  },
+  "payload_run_id": "official__nx5_delta1_rho025__replica5__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 10.770759399980307,
+    "solver": 0.27768080006353557,
+    "postprocessing": 0.00110809993930161,
+    "total": 11.049548299983144
+  },
+  "counters": {
+    "vrf_vector_evaluations": 77115,
+    "vrf_jacobian_calls": 11168,
+    "extreme_solves": 228,
+    "extreme_iterations": 11347,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 632,
+    "factor_model_vector_evaluations": 88950,
+    "factor_model_jacobian_calls": 11761,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 280,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 89062
+  },
+  "nx": 5,
+  "m": 7,
+  "peak_process_memory_bytes": 128880640
+}

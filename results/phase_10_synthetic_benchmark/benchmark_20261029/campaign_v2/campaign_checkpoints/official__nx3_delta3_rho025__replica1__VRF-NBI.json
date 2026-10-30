@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta3_rho025__replica1",
+    "scenario_id": "nx3_delta3_rho025",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "335288975005225140130930332346558303710"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta3_rho025__replica1__VRF-NBI.npz": "f4ac42735d924fb85a93865370b6783d2edf965c4c1e40f0df7f055efa1aa404",
+    "raw_rsm_responses/official__nx3_delta3_rho025__replica1__VRF-NBI.npz": "5c3ecd196a6ec0f022bdcae204da9487b8d507ea606162d782b042f940da5958",
+    "algorithm_diagnostics/official__nx3_delta3_rho025__replica1__VRF-NBI.npz": "a747d3cfb5ebc8cc187f98a8545d13d30169bd296f5bc9f3ab4b3aad337f9b20",
+    "algorithm_diagnostics/official__nx3_delta3_rho025__replica1__VRF-NBI.json": "7983e4243d00a63cef731ca5fcb57314a45f77fc5ba2546100930ec2d851c86d"
+  },
+  "payload_run_id": "official__nx3_delta3_rho025__replica1__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 5.857970600016415,
+    "solver": 0.12070010020397604,
+    "postprocessing": 0.0009252997115254402,
+    "total": 5.979595999931917
+  },
+  "counters": {
+    "vrf_vector_evaluations": 57088,
+    "vrf_jacobian_calls": 7418,
+    "extreme_solves": 168,
+    "extreme_iterations": 7599,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 287,
+    "factor_model_vector_evaluations": 65000,
+    "factor_model_jacobian_calls": 7715,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 65112
+  },
+  "nx": 3,
+  "m": 7,
+  "peak_process_memory_bytes": 128831488
+}

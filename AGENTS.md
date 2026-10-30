@@ -1,5 +1,13 @@
 # Escopo atual — Fase10D, autorizado em2026-10-29
 
+Conclusão numérica2026-10-30:540 buscas/avaliações,135 por método,zero falhas;
+ordem C-NBI→VRF-NBI→NSGA-III→MOEA/D verificada por barreiras e horários originais.
+Fonte numérica8f9d60f, protocolo19dff294; auditoria540/135 blocos/1262 arquivos PASS.
+Preservar todos os resultados, incluindo24 pilotos anteriores e77 tentativas
+iniciais(75 completas/2 falhas). Três flags Varimax500 e dois HV pendentes
+permanecem explícitos. PR17 aberto; nenhuma reexecução,10E ou merge automático.
+Evidência de qualidade e limites em docs/phase_10d_verification.md.
+
 PR16 integrado por merge c0646768, árvore idêntica a df95a954; CI40941198792
 verde Ubuntu/Windows. Branch feature/10d-synthetic-algorithm-benchmark.
 A autorização desta tarefa permite adaptar v1 7bd4915 para VRF-NBI e os EAs,

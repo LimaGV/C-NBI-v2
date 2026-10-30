@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta5_rho025__replica4",
+    "scenario_id": "nx3_delta5_rho025",
+    "replica_id": 4,
+    "method": "VRF-NBI",
+    "seed": "180742840238638333704924968120033229850"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta5_rho025__replica4__VRF-NBI.npz": "cb7d6e03e4d3342a26b27f5d07b27044a1b56c7d6f236a28cccce82e13df245e",
+    "raw_rsm_responses/official__nx3_delta5_rho025__replica4__VRF-NBI.npz": "f7ab4a64dd351a3495e4418fe926434474d975d470b03dcd14a9da51f7a49058",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica4__VRF-NBI.npz": "b57cc00249060eaddbd0920dabb6ef2bb740df7f086d3bb2abe288def3fdd8e6",
+    "algorithm_diagnostics/official__nx3_delta5_rho025__replica4__VRF-NBI.json": "13670be9f567b0c249660459a2450f73e911193fe99621dade18cd65626e61a5"
+  },
+  "payload_run_id": "official__nx3_delta5_rho025__replica4__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 5.764823800185695,
+    "solver": 0.15376119990833104,
+    "postprocessing": 0.0009365999139845371,
+    "total": 5.919521600008011
+  },
+  "counters": {
+    "vrf_vector_evaluations": 51304,
+    "vrf_jacobian_calls": 6916,
+    "extreme_solves": 168,
+    "extreme_iterations": 7092,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 288,
+    "factor_model_vector_evaluations": 58529,
+    "factor_model_jacobian_calls": 7187,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 58641
+  },
+  "nx": 3,
+  "m": 9,
+  "peak_process_memory_bytes": 129056768
+}

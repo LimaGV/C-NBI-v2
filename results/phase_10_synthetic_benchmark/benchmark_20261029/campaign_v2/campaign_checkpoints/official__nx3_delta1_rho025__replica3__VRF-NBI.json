@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho025__replica3",
+    "scenario_id": "nx3_delta1_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "260274793798118966089656505316583550386"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho025__replica3__VRF-NBI.npz": "5f392a497fc329b976110eba8bd5ff20a44152013bd306cc952f329accb8dbad",
+    "raw_rsm_responses/official__nx3_delta1_rho025__replica3__VRF-NBI.npz": "9a6ab4c1422686a80b1244cba12a1d37d709462d34c8933ac3a352fb39a63aeb",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica3__VRF-NBI.npz": "bc9d12251ff2bb1d3aee82764689c48d8a7fa50d8cf27092e2fcf8a22d40f9d6",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica3__VRF-NBI.json": "44c0ba8250b003b0bbfb16376b1834f8e1e0d0f46ea4b18f55a0b2e2144b8940"
+  },
+  "payload_run_id": "official__nx3_delta1_rho025__replica3__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 6.635705899912864,
+    "solver": 0.12185380002483726,
+    "postprocessing": 0.0008925001602619886,
+    "total": 6.758452200097963
+  },
+  "counters": {
+    "vrf_vector_evaluations": 67573,
+    "vrf_jacobian_calls": 8636,
+    "extreme_solves": 168,
+    "extreme_iterations": 8792,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 52,
+    "nbi_iterations": 283,
+    "factor_model_vector_evaluations": 76542,
+    "factor_model_jacobian_calls": 8928,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 220,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 76654
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128786432
+}

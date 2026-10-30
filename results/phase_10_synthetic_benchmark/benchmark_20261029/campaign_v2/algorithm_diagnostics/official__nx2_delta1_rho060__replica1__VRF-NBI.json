@@ -1,0 +1,1045 @@
+{
+  "task": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho060__replica1",
+    "scenario_id": "nx2_delta1_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "152995605828978888536543416218849766116"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "code_commit": "8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee",
+  "environment": {
+    "python": "3.12.15 (main, Oct  3 2026, 01:05:37) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pymoo": "0.6.2"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "workers": 1,
+    "numpy_configuration": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\n  lapack:\n    detection method: pkgconfig\n    found: true\n    include directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include\n    lib directory: C:/Users/runneradmin/AppData/Local/Temp/cibw-run-j3umgqti/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=24\n    pc file directory: D:/a/numpy-release/numpy-release/.openblas\n    version: 0.3.34.106.0\nCompilers:\n  c:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  c++:\n    commands: cl\n    linker: link\n    name: msvc\n    version: 19.44.35229\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.3.0\nMachine Information:\n  build:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\n  host:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: windows\nPython Information:\n  path: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\build-env-1rr8oud1\\Scripts\\python.exe\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - X86_V2\n  found:\n  - X86_V3\n\n"
+  },
+  "coefficients_sha256": "87a051f30e2ee617988dfc7e3279665b94afb7369dd69d553232ddb0f6b5f775",
+  "peak_process_memory_bytes": 128770048,
+  "input_load_plus_search_seconds": 1.348697999957949,
+  "algorithm_status": "COMPLETED",
+  "diagnostics": {
+    "method": "VRF-NBI",
+    "factor_rule": "max(2,k90)",
+    "n_factors": 2,
+    "retained_variance": 0.9615545155023576,
+    "cumulative": [
+      0.5994864060970849,
+      0.9615545155023576,
+      0.9891604737161195,
+      1.0
+    ],
+    "implementation": "Pereira_2025_Eqs11_17_to28_with_documented_v1_transfer",
+    "mean": [
+      3.004656446767799,
+      2.5721273715600432,
+      2.013850276595058,
+      2.1077270549544753
+    ],
+    "scale": [
+      2.7623690357251096,
+      2.0058054252391235,
+      1.7950237323923672,
+      1.911265613202975
+    ],
+    "loadings": [
+      [
+        0.9506923676054811,
+        -0.24814505467505496
+      ],
+      [
+        -0.43331921202121604,
+        0.867270657102549
+      ],
+      [
+        0.9880025819404611,
+        0.05121629066905622
+      ],
+      [
+        0.11643005481149477,
+        0.9739476453251137
+      ]
+    ],
+    "rotation": [
+      [
+        0.816431245640278,
+        -0.5774426561506029
+      ],
+      [
+        0.5774426561506029,
+        0.8164312456402784
+      ]
+    ],
+    "signs": [
+      -1.0,
+      -1.0
+    ],
+    "weights": [
+      [
+        0.45115553158174815,
+        -0.02615143198315993
+      ],
+      [
+        -0.10840797580517815,
+        0.46389034030688236
+      ],
+      [
+        0.508709760891059,
+        0.15806495253058606
+      ],
+      [
+        0.18472948145275286,
+        0.5986940606763235
+      ]
+    ],
+    "scores": [
+      [
+        1.174901384284763,
+        -0.9639865496890767
+      ],
+      [
+        -0.8028619221507503,
+        0.42974136839689225
+      ],
+      [
+        1.526164119180603,
+        0.5407455016115666
+      ],
+      [
+        -0.21353188361808778,
+        1.8322773505173329
+      ],
+      [
+        0.466587688004246,
+        -0.29871285556971916
+      ],
+      [
+        0.873198354244243,
+        1.5239497531131339
+      ],
+      [
+        1.8456348033180936,
+        -0.7468736448468416
+      ],
+      [
+        -1.1085535932054436,
+        1.5121736039612637
+      ],
+      [
+        -0.6831957181598647,
+        -0.7987636939956397
+      ],
+      [
+        -0.9744394922899325,
+        -0.6605381568647816
+      ],
+      [
+        -0.9266776159532905,
+        -0.9316550330929998
+      ],
+      [
+        -0.6804214602125777,
+        -0.7610911112615825
+      ],
+      [
+        -0.49680466344200114,
+        -0.6772665322795461
+      ]
+    ],
+    "eigenvalues": [
+      2.39794562438834,
+      1.4482724376210911,
+      0.11042383285504757,
+      0.04335810513552165
+    ],
+    "rank": 2,
+    "condition": 1.6557282746657584,
+    "varimax_iterations": 7,
+    "varimax_converged": true,
+    "pinv_rcond": 1e-15,
+    "targets": [
+      -1.228449171230707,
+      -1.1864430478064087
+    ],
+    "variance": [
+      2.081286576914428,
+      1.764931485095004
+    ],
+    "utopia": [
+      2.081286576914839,
+      1.7649314850956368
+    ],
+    "nadir": [
+      10.83004003660372,
+      11.203381333463314
+    ],
+    "optimization_gauge_shift": [
+      0.8620971273430302,
+      0.731058557785639
+    ],
+    "optimization_gauge_utopia": [
+      2.943383704257869,
+      2.495990042881276
+    ],
+    "optimization_gauge_nadir": [
+      11.69213716394675,
+      11.934439891248953
+    ],
+    "optimization_gauge_variance": [
+      2.9433837042574584,
+      2.495990042880643
+    ],
+    "payoff": [
+      [
+        -7.411001457162429e-15,
+        0.2468586028871976
+      ],
+      [
+        0.2378361677865574,
+        7.387018744239854e-15
+      ]
+    ],
+    "payoff_anchors": [
+      [
+        -0.1774208787008728,
+        0.930944460689089
+      ],
+      [
+        -0.51569195915527,
+        -0.6620266465999812
+      ]
+    ],
+    "normal": [
+      -0.6938240223257414,
+      -0.7201445869016369
+    ],
+    "subproblems": [
+      {
+        "weight_id": 0,
+        "beta": [
+          0.0,
+          1.0
+        ],
+        "x": [
+          -0.51569195915527,
+          -0.6620266465999812
+        ],
+        "accepted": true,
+        "eq_inf": 0.0,
+        "attempts": 0
+      },
+      {
+        "weight_id": 1,
+        "beta": [
+          0.2,
+          0.8
+        ],
+        "x": [
+          -0.4668657996304167,
+          -0.4827135602469154
+        ],
+        "accepted": true,
+        "eq_inf": 2.065708715193182e-14,
+        "attempts": 1
+      },
+      {
+        "weight_id": 2,
+        "beta": [
+          0.4,
+          0.6
+        ],
+        "x": [
+          -0.39132869528096403,
+          -0.18684930422122123
+        ],
+        "accepted": true,
+        "eq_inf": 2.7755575615628914e-15,
+        "attempts": 1
+      },
+      {
+        "weight_id": 3,
+        "beta": [
+          0.6,
+          0.4
+        ],
+        "x": [
+          -0.27010401215392343,
+          0.3753461623849347
+        ],
+        "accepted": true,
+        "eq_inf": 1.9262369477246466e-14,
+        "attempts": 1
+      },
+      {
+        "weight_id": 4,
+        "beta": [
+          0.8,
+          0.2
+        ],
+        "x": [
+          -0.2086183274340076,
+          0.7282195406184628
+        ],
+        "accepted": true,
+        "eq_inf": 2.8400892748692286e-13,
+        "attempts": 1
+      },
+      {
+        "weight_id": 5,
+        "beta": [
+          1.0,
+          0.0
+        ],
+        "x": [
+          -0.1774208787008728,
+          0.930944460689089
+        ],
+        "accepted": true,
+        "eq_inf": 0.0,
+        "attempts": 0
+      }
+    ],
+    "trials": [
+      {
+        "weight_id": 1,
+        "x": [
+          -0.4668657996304167,
+          -0.4827135602469154,
+          0.06599525595102564
+        ],
+        "accepted": true,
+        "solver_success": true,
+        "eq_inf": 2.065708715193182e-14,
+        "status": 0,
+        "iterations": 9
+      },
+      {
+        "weight_id": 2,
+        "x": [
+          -0.39132869528096403,
+          -0.18684930422122123,
+          0.12934771386126304
+        ],
+        "accepted": true,
+        "solver_success": true,
+        "eq_inf": 2.7755575615628914e-15,
+        "status": 0,
+        "iterations": 8
+      },
+      {
+        "weight_id": 3,
+        "x": [
+          -0.27010401215392343,
+          0.3753461623849347,
+          0.13732460746307637
+        ],
+        "accepted": true,
+        "solver_success": true,
+        "eq_inf": 1.9262369477246466e-14,
+        "status": 0,
+        "iterations": 9
+      },
+      {
+        "weight_id": 4,
+        "x": [
+          -0.2086183274340076,
+          0.7282195406184628,
+          0.0710719789719839
+        ],
+        "accepted": true,
+        "solver_success": true,
+        "eq_inf": 2.8400892748692286e-13,
+        "status": 0,
+        "iterations": 11
+      }
+    ],
+    "extreme_trials": [
+      {
+        "x": [
+          -0.17830525955572998,
+          0.9306810489642091
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.228449171230707,
+        "iterations": 5,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17830490030986113,
+          0.9306810914257979
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.2284491712306167,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.1783052654323798,
+          0.9306810538749581
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.2284491712307068,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17830526650968528,
+          0.930681047260739
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.228449171230707,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17830520485063042,
+          0.930681041534308
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.228449171230705,
+        "iterations": 7,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17830530074010836,
+          0.9306810032838018
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.2284491712307046,
+        "iterations": 7,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17830525400693442,
+          0.9306810926009703
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.2284491712307057,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167565109868771,
+          -0.6623979832486123
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478064087,
+        "iterations": 7,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167564943664027,
+          -0.6623979851847778
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478064085,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167562816073058,
+          -0.6623976205637517
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478063002,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167565377788851,
+          -0.6623979776025057
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.186443047806408,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167560021780939,
+          -0.6623982006570758
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478062047,
+        "iterations": 6,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167565132653482,
+          -0.6623979853975596
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478064085,
+        "iterations": 5,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5167565155661832,
+          -0.6623980264624308
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -1.1864430478064079,
+        "iterations": 5,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.18041319427697727,
+          0.9398212622734357
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.9433837064361104,
+        "iterations": 2,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.1786320295689192,
+          0.9324199990456156
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.9433837042602145,
+        "iterations": 36,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17750141436970535,
+          0.9284180235719431
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.9433837042669446,
+        "iterations": 31,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17742087870069584,
+          0.9310748041108219
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.943383704257869,
+        "iterations": 37,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17845489251217178,
+          0.9318384974234585
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.943383704257981,
+        "iterations": 38,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.17844461032022935,
+          0.929089810930466
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.9433837042593725,
+        "iterations": 36,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.1807230991552094,
+          0.9304826572414432
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.9433837042739697,
+        "iterations": 22,
+        "maximize": false
+      },
+      {
+        "x": [
+          0.2684332614268437,
+          -1.388504081435134
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.692137163642219,
+        "iterations": 19,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.26843326156495523,
+          -1.3885040814293668
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.69213716394675,
+        "iterations": 15,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.2684332635851099,
+          -1.388504081018917
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.69213716365722,
+        "iterations": 20,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.2684332294846606,
+          -1.388504087609771
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.692137163633467,
+        "iterations": 21,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.26843327429258185,
+          -1.3885040789666439
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.692137163915499,
+        "iterations": 24,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.26843283159878517,
+          -1.3885041645315102
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.692137163637868,
+        "iterations": 13,
+        "maximize": true
+      },
+      {
+        "x": [
+          0.26843326144369295,
+          -1.388504081432514
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.692137163651493,
+        "iterations": 23,
+        "maximize": true
+      },
+      {
+        "x": [
+          -0.51414656435307,
+          -0.6574678178880438
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.495990043205697,
+        "iterations": 17,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5173440459908595,
+          -0.6613591870962263
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.495990042881382,
+        "iterations": 39,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.515691959155034,
+          -0.6625866090381085
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.495990042881276,
+        "iterations": 38,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5232472291841999,
+          -0.6578429950884703
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.495990044570752,
+        "iterations": 16,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5157310836843719,
+          -0.6629990450044284
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.4959900428815165,
+        "iterations": 33,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5155855449637525,
+          -0.6624402759191269
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.495990042881516,
+        "iterations": 35,
+        "maximize": false
+      },
+      {
+        "x": [
+          -0.5157475939335499,
+          -0.6631221213659146
+        ],
+        "success": true,
+        "feasible": true,
+        "value": 2.4959900428816564,
+        "iterations": 39,
+        "maximize": false
+      },
+      {
+        "x": [
+          1.1225522710039983,
+          0.8601606820039756
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.934439889951875,
+        "iterations": 18,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.1225521415102244,
+          0.860160851000593
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.934439889960622,
+        "iterations": 19,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.1225521766752393,
+          0.8601608051067166
+        ],
+        "success": true,
+        "feasible": true,
+        "value": -11.934439889942073,
+        "iterations": 19,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.1225522748307288,
+          0.8601606770441518
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.934439890304976,
+        "iterations": 21,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.1225521808371066,
+          0.8601607997113372
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.934439890313872,
+        "iterations": 17,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.12255225282241,
+          0.8601607058576586
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.934439891248953,
+        "iterations": 17,
+        "maximize": true
+      },
+      {
+        "x": [
+          1.1225522738449079,
+          0.86016067833733
+        ],
+        "success": false,
+        "feasible": true,
+        "value": -11.934439890373355,
+        "iterations": 17,
+        "maximize": true
+      }
+    ],
+    "factor_diagnostics": {
+      "responses": [
+        {
+          "response_name": "response_0",
+          "sse": 0.21739991993708674,
+          "sst": 13.000000000000009,
+          "ssr": 12.782600080062922,
+          "mse": 0.03105713141958381,
+          "s": 0.17623033626360649,
+          "r_squared": 0.9832769292356087,
+          "adjusted_r_squared": 0.971331878689615,
+          "press": 0.6860684122995846,
+          "predicted_r_squared": 0.9472255067461859,
+          "model_df": 5,
+          "error_df": 7,
+          "model_ms": 2.5565200160125845,
+          "error_ms": 0.03105713141958381,
+          "model_f": 82.31668216468023,
+          "model_p_value": 4.602349307822234e-06,
+          "pure_error_ss": 0.15497329993045889,
+          "pure_error_df": 4,
+          "lack_of_fit_ss": 0.06242662000662783,
+          "lack_of_fit_df": 3,
+          "lack_of_fit_ms": 0.02080887333554261,
+          "pure_error_ms": 0.03874332498261472,
+          "lack_of_fit_f": 0.5370957021597957,
+          "lack_of_fit_p_value": 0.6815923189870079,
+          "r_squared_status": "OK",
+          "press_status": "OK",
+          "model_status": "OK",
+          "lack_of_fit_status": "OK"
+        },
+        {
+          "response_name": "response_1",
+          "sse": 0.09644680176429445,
+          "sst": 13.0,
+          "ssr": 12.903553198235706,
+          "mse": 0.013778114537756353,
+          "s": 0.11738021357007472,
+          "r_squared": 0.9925810152489004,
+          "adjusted_r_squared": 0.9872817404266865,
+          "press": 0.4220913520087671,
+          "predicted_r_squared": 0.9675314344608641,
+          "model_df": 5,
+          "error_df": 7,
+          "model_ms": 2.5807106396471413,
+          "error_ms": 0.013778114537756353,
+          "model_f": 187.30506504175048,
+          "model_p_value": 2.7060563598188854e-07,
+          "pure_error_ss": 0.04753488149859203,
+          "pure_error_df": 4,
+          "lack_of_fit_ss": 0.048911920265702416,
+          "lack_of_fit_df": 3,
+          "lack_of_fit_ms": 0.016303973421900805,
+          "pure_error_ms": 0.011883720374648007,
+          "lack_of_fit_f": 1.3719586886849586,
+          "lack_of_fit_p_value": 0.37185088213275047,
+          "r_squared_status": "OK",
+          "press_status": "OK",
+          "model_status": "OK",
+          "lack_of_fit_status": "OK"
+        }
+      ],
+      "hat_diagonal": [
+        0.6250000000000004,
+        0.6249999999999998,
+        0.6249999999999998,
+        0.625,
+        0.625,
+        0.6249999999999999,
+        0.6249999999999999,
+        0.6250000000000001,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "press_residuals": [
+        [
+          -0.4060493320751809,
+          0.009374150633914457
+        ],
+        [
+          -0.09912000745211452,
+          -0.3303028429089649
+        ],
+        [
+          -0.16234369565762494,
+          0.22913005236155576
+        ],
+        [
+          0.14458562896544835,
+          -0.11054694118131891
+        ],
+        [
+          0.30305775967911047,
+          0.2059772835910937
+        ],
+        [
+          -0.04159405656936835,
+          -0.10480449304367367
+        ],
+        [
+          0.3477636583408566,
+          -0.18960151027351552
+        ],
+        [
+          -0.08629995523111059,
+          0.290774300820937
+        ],
+        [
+          0.08639008981458599,
+          -0.0411259856209123
+        ],
+        [
+          -0.27766462784799884,
+          0.1316559357926604
+        ],
+        [
+          -0.21796228242719623,
+          -0.20724015949261237
+        ],
+        [
+          0.08985791224869477,
+          0.005964742796659289
+        ],
+        [
+          0.3193789082119154,
+          0.1107454665242047
+        ]
+      ],
+      "factor_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "press_undefined_rows": [],
+      "leverage_tolerance": 2.886579864025407e-15
+    },
+    "frozen_coefficients_sha256": "87a051f30e2ee617988dfc7e3279665b94afb7369dd69d553232ddb0f6b5f775",
+    "raw_decisions_preserved": true,
+    "original_objective_nd_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "original_objective_feasible_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "original_objective_count": 4,
+    "counter_policy": "full_original_RSM_points_plus_separate_scalar_kernel_calls",
+    "instrumentation": "Python_call_events; overhead included consistently in optimization time",
+    "counter_schema": 2
+  },
+  "timings": {
+    "preparation": 1.209804599871859,
+    "solver": 0.012492700014263391,
+    "postprocessing": 0.0005447000730782747,
+    "total": 1.2228419999592006
+  },
+  "counters": {
+    "vrf_vector_evaluations": 13628,
+    "vrf_jacobian_calls": 1861,
+    "extreme_solves": 60,
+    "extreme_iterations": 1954,
+    "nbi_subproblems": 6,
+    "nbi_attempts": 4,
+    "nbi_iterations": 37,
+    "factor_model_vector_evaluations": 15588,
+    "factor_model_jacobian_calls": 1945,
+    "original_rsm_point_evaluations": 6,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 64,
+    "original_full_vector_points_computed": 12,
+    "model_vector_point_events": 15600
+  }
+}

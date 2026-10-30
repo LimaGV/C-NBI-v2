@@ -11,6 +11,10 @@
 - Native-cardinality offline evaluation uses the unchanged Phase10C API.
 - Descriptive summaries, scientific figures and explicit computational cost
   accounting; no inference, equalization, calibration or changes to earlier science.
+- 540/540 searches and evaluations completed without execution failures; all135
+  pairing blocks and1262 previous files passed the read-only scientific audit.
+- Nine PNG600/vector-PDF figure pairs, verified method chronology and540 original
+  lifecycle timing windows; retain three Varimax-cap flags and two pending HV estimates.
 
 ## Unreleased — Phase10C analytical Pareto reference and evaluation
 

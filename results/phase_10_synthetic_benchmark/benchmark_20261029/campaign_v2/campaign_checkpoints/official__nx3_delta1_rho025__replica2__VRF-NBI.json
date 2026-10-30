@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho025__replica2",
+    "scenario_id": "nx3_delta1_rho025",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "56807557628734274134298972245751642562"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho025__replica2__VRF-NBI.npz": "103503807abac7fd21c8ae44e665228d5baa999171cad840f9f0e2d35b76796a",
+    "raw_rsm_responses/official__nx3_delta1_rho025__replica2__VRF-NBI.npz": "2bb75130c4a169ebe9369262c6774cc6cf3dcaa263aaf440b39625403e2c3127",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica2__VRF-NBI.npz": "763d1bcba5d0c596fc3d16561c32a71e480c9b91d08cbd2953211b23110e36c8",
+    "algorithm_diagnostics/official__nx3_delta1_rho025__replica2__VRF-NBI.json": "2035d10105b3d17a094cae00ac5587ebdda2ad269b12f46d3c7172a4203afa6f"
+  },
+  "payload_run_id": "official__nx3_delta1_rho025__replica2__VRF-NBI",
+  "output_count": 56,
+  "timings": {
+    "preparation": 6.8448014000896364,
+    "solver": 0.24815399991348386,
+    "postprocessing": 0.0008985998574644327,
+    "total": 7.093853999860585
+  },
+  "counters": {
+    "vrf_vector_evaluations": 66493,
+    "vrf_jacobian_calls": 8448,
+    "extreme_solves": 168,
+    "extreme_iterations": 8525,
+    "nbi_subproblems": 56,
+    "nbi_attempts": 53,
+    "nbi_iterations": 372,
+    "factor_model_vector_evaluations": 75296,
+    "factor_model_jacobian_calls": 8731,
+    "original_rsm_point_evaluations": 56,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 221,
+    "original_full_vector_points_computed": 112,
+    "model_vector_point_events": 75408
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128454656
+}

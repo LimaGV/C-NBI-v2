@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx5_delta5_rho060__replica1",
+    "scenario_id": "nx5_delta5_rho060",
+    "replica_id": 1,
+    "method": "VRF-NBI",
+    "seed": "210523449925625723430470140443075796835"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx5_delta5_rho060__replica1__VRF-NBI.npz": "e5c9f1452d6ddc9d56590bd4118aea7e95129b6b4f825e7efe26d2a783649720",
+    "raw_rsm_responses/official__nx5_delta5_rho060__replica1__VRF-NBI.npz": "148a74311322d5dd3ead01b6aaa4e250f95dfea9ccc03701fff0997edd8d5eb3",
+    "algorithm_diagnostics/official__nx5_delta5_rho060__replica1__VRF-NBI.npz": "08c264bdc39e5b5c397f142cc0f7ea33c34d13b5d05fb2da85308c404e4345c3",
+    "algorithm_diagnostics/official__nx5_delta5_rho060__replica1__VRF-NBI.json": "4d469c617ca6743a6db2133d401daa2d02572a0a4b0a84df91b1579635a8a4f6"
+  },
+  "payload_run_id": "official__nx5_delta5_rho060__replica1__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 6.308114799903706,
+    "solver": 0.08882380020804703,
+    "postprocessing": 0.0008577997796237469,
+    "total": 6.3977963998913765
+  },
+  "counters": {
+    "vrf_vector_evaluations": 45835,
+    "vrf_jacobian_calls": 6927,
+    "extreme_solves": 165,
+    "extreme_iterations": 7263,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 208,
+    "factor_model_vector_evaluations": 53169,
+    "factor_model_jacobian_calls": 7288,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 183,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 53211
+  },
+  "nx": 5,
+  "m": 11,
+  "peak_process_memory_bytes": 128864256
+}

@@ -3,13 +3,15 @@
 ## Fase10D — escopo atual nesta branch
 
 MDR0016 EXPERIMENTAL, PR17 aberto, integração10C c0646768. Piloto corrigido
-12/12 PASS, X/Y bitwise contra o piloto sequencial. Campanha540 em execução,
+12/12 PASS, X/Y bitwise contra o piloto sequencial. Campanha540 concluída,
 com135 tarefas por método e barreiras C-NBI → VRF-NBI → NSGA-III → MOEA/D.
-INCOMPLETE até concluir execução, avaliação externa e auditoria. Fonte numérica
+540 avaliações e auditoria aprovadas, zero falhas de execução. Fonte numérica
 8f9d60f, B2000, todos subsets elegíveis e PA estrita; VRF completo e18 calibrações
 EA transferidas. Nenhum novo RSM original, referência, âncora ou dado experimental.
 Todos os resultados das tentativas anteriores preservados em diretórios separados.
 Sem10E, equalização ou inferência. Ver phase_10d_verification.md.
+Três flags Varimax500 e dois HV PRECISION_PENDING permanecem explícitos.
+Conclusão da campanha não promove automaticamente MDR0016 a ACCEPTED.
 
 ## Fase10C — escopo atual nesta branch
 

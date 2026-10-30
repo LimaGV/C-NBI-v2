@@ -1,13 +1,15 @@
 # C-NBI v2
 
-## Fase10D — benchmark sintético em execução no PR17
+## Fase10D — campanha sintética concluída no PR17
 
 Fase10C integrada pelo PR16 em c0646768, com CI verde Ubuntu/Windows.
 Campanha de540 execuções sobre os mesmos135 RSMs congelados, na ordem
 C-NBI → VRF-NBI → NSGA-III → MOEA/D,135 por bloco. Piloto corrigido12/12
 aprovado e reprodução bitwise das decisões/respostas. Migração da v1 auditada,
-B=2000 e protocolo10C preservados. Estado oficial: **INCOMPLETE** até terminar
-a campanha, avaliação externa e auditoria. Ver [verificação10D](docs/phase_10d_verification.md)
+B=2000 e protocolo10C preservados. **540/540 buscas e avaliações concluídas**,
+zero falhas de execução; auditoria540/135 blocos e1262 arquivos anteriores íntegros.
+Três rotações Varimax atingiram500 iterações e dois HV mantêm PRECISION_PENDING.
+Ver [verificação10D](docs/phase_10d_verification.md)
 e [artefatos](results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v2/README.md).
 As seções abaixo descrevem as entregas históricas; não iniciam nova fase.
 
@@ -25,13 +27,13 @@ HV validado no regime das referências:4 scrambles ×65536,com flags por conjunt
 [Artefatos congelados](results/phase_10_synthetic_pareto/analytical_20261029/README.md).
 Os escopos abaixo registram o estado e as entregas de cada fase anterior.
 
-**Estado atual: Fases0–9 concluídas e integradas em main.** RSM, incerteza,
+**Estado integrado: Fases0–10C concluídas em main; Fase10D no PR17.** RSM, incerteza,
 âncoras, CHIM/PA, Simplex-Lattice/NBI e benchmark aplicado estão implementados.
 Baseline: **H5 standalone,492 aceitos,411 decisões únicas,409 ND**. Referência
 empírica18503/zeroCNBI; métricas GD,IGD,HV,Spacing,Sparsity. Não é frente verdadeira.
 Ver [consolidação](docs/consolidation_20261029.md) e
 [reprodutibilidade](docs/reproducibility.md). Fase10A integrada no PR14 (d68aef7),
-com CI verde Ubuntu/Windows. O benchmark sintético multiobjetivo ainda não começou.
+com CI verde Ubuntu/Windows. A campanha sintética10D está concluída nesta branch.
 
 ## Fase10B — CCD, ruído e RSM sintéticos nesta branch
 

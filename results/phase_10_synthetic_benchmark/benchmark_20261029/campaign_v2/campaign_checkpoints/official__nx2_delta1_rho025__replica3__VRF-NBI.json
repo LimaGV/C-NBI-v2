@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx2_delta1_rho025__replica3",
+    "scenario_id": "nx2_delta1_rho025",
+    "replica_id": 3,
+    "method": "VRF-NBI",
+    "seed": "101437169764490945381549891650226941997"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx2_delta1_rho025__replica3__VRF-NBI.npz": "ea6fca2fc69e924fa74c2d287260d33e1cb9ade6ed364d6caa08201fe2a23982",
+    "raw_rsm_responses/official__nx2_delta1_rho025__replica3__VRF-NBI.npz": "066db568749108d05b59836e41e4409002f0ac5a8979f4fab6d730084d2cee6e",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica3__VRF-NBI.npz": "1c42d0c0c38363a9a6bb946d3539207cbebd61c33d09b8873212c07e94ea875b",
+    "algorithm_diagnostics/official__nx2_delta1_rho025__replica3__VRF-NBI.json": "024575fbd2743b61dbef7bb1d38d136ed4f35a07e7583ab5b2c949fad483c441"
+  },
+  "payload_run_id": "official__nx2_delta1_rho025__replica3__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 2.0688065998256207,
+    "solver": 0.035738800186663866,
+    "postprocessing": 0.0006506999488919973,
+    "total": 2.1051960999611765
+  },
+  "counters": {
+    "vrf_vector_evaluations": 23035,
+    "vrf_jacobian_calls": 3182,
+    "extreme_solves": 96,
+    "extreme_iterations": 3290,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 99,
+    "factor_model_vector_evaluations": 26353,
+    "factor_model_jacobian_calls": 3296,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 114,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 26395
+  },
+  "nx": 2,
+  "m": 4,
+  "peak_process_memory_bytes": 128602112
+}

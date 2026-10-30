@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "stage": "official",
+    "instance_id": "nx3_delta1_rho060__replica2",
+    "scenario_id": "nx3_delta1_rho060",
+    "replica_id": 2,
+    "method": "VRF-NBI",
+    "seed": "141002500251686769447783024704015796494"
+  },
+  "protocol_hash": "19dff29411ad39293f4e429f8f77babd424213a5da61baf7e69855c0ea7209cf",
+  "state": "COMPLETED",
+  "attempt": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "state": "RUNNING"
+    },
+    {
+      "attempt": 1,
+      "state": "COMPLETED"
+    }
+  ],
+  "algorithm_status": "COMPLETED",
+  "payload_checksums": {
+    "raw_decisions/official__nx3_delta1_rho060__replica2__VRF-NBI.npz": "2f89dda9f79ecf0d3c9c7d748ef3ccb963513569d693bf3a2c8bc99abd8d7f99",
+    "raw_rsm_responses/official__nx3_delta1_rho060__replica2__VRF-NBI.npz": "fae39434b9aa8b52e7760bd0f07f42fdb3f374b1880dfbeeac145226637c80d7",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica2__VRF-NBI.npz": "233daed3463064a6033655f120ea3e08748a2104680052e5ecb11160c82ef3c6",
+    "algorithm_diagnostics/official__nx3_delta1_rho060__replica2__VRF-NBI.json": "eca1d3060a8776306cc875444ba9509e81ae14dbc2f842dd6ddfd42b2874a2e0"
+  },
+  "payload_run_id": "official__nx3_delta1_rho060__replica2__VRF-NBI",
+  "output_count": 21,
+  "timings": {
+    "preparation": 4.508015200030059,
+    "solver": 0.059544699965044856,
+    "postprocessing": 0.0008611001539975405,
+    "total": 4.568421000149101
+  },
+  "counters": {
+    "vrf_vector_evaluations": 43421,
+    "vrf_jacobian_calls": 5673,
+    "extreme_solves": 120,
+    "extreme_iterations": 5813,
+    "nbi_subproblems": 21,
+    "nbi_attempts": 18,
+    "nbi_iterations": 166,
+    "factor_model_vector_evaluations": 49324,
+    "factor_model_jacobian_calls": 5875,
+    "original_rsm_point_evaluations": 21,
+    "original_rsm_vectorized_calls": 1,
+    "slsqp_solves": 138,
+    "original_full_vector_points_computed": 42,
+    "model_vector_point_events": 49366
+  },
+  "nx": 3,
+  "m": 5,
+  "peak_process_memory_bytes": 128192512
+}

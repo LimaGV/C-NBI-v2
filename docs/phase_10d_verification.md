@@ -1,8 +1,9 @@
 # Phase10D — synthetic benchmark verification
 
-Current status: **INCOMPLETE**. The corrected pilot passed. The official ordered
-campaign is running; no claim of540 completed searches or final evaluation is
-made until the remaining gates and artifact audit finish.
+Numerical status: **COMPLETED**. All540 official searches completed without
+execution failures, followed by540 independent evaluations and a passing
+artifact audit. Final software-quality and exact-head CI evidence is recorded
+below. The PR remains open; MDR0016 remains EXPERIMENTAL pending review.
 
 ## Repository and numerical provenance
 
@@ -180,19 +181,165 @@ NFE alone does not establish cost equivalence. Primary analysis uses native
 cardinality. Summaries first aggregate the five nested replicas within each
 structural cell; no claim of statistical superiority, inference or equalization.
 
-## Official campaign, indicators and final integrity
+## Official campaign and verified execution order
 
-Pending final execution/evaluation:a method table with135 planned searches per
-method, all540 terminal states, GD/IGD/HV/Spacing/Sparsity, native cardinality,
-runtime/NFE accounting and HV precision diagnostics will be recorded here.
-The read-only auditor validates raw float64 reload/recomposition, pairing,
-MC ensembles/subsets, VRF policy, EA records/budgets, external truth/normalization,
-metric replay, method barriers, hashes and all1262 frozen previous files.
-HV sampling is not recalibrated or rerun simply to improve a precision flag.
+| Method | Planned | Completed | Failed | Incomplete/pending |
+|---|---:|---:|---:|---:|
+| C-NBI | 135 | 135 | 0 | 0 |
+| VRF-NBI | 135 | 135 | 0 | 0 |
+| NSGA-III | 135 | 135 | 0 | 0 |
+| MOEA/D | 135 | 135 | 0 | 0 |
+| Total | 540 | 540 | 0 | 0 |
 
-Final gates still required:artifact checksums and staged-Git byte integrity;
-uv sync --locked; full pytest coverage; Ruff; strict mypy; exact-head CI on
-Ubuntu/Windows; nine English PNG600/vector-PDF scientific figure types without
-decorative grids. The final PR remains open and is not merged automatically.
-No Phase10E, new noise/CCDs/anchors/original-response RSM fits, retuning or
-reference modification. The specified VRF auxiliary factor fits remain permitted.
+Original checkpoint creation/final-write observations independently confirm
+that every preceding method finished before the next method started. The
+following windows are local UTC−03 on2026-10-30; they describe checkpoint
+activity, rather than the complete lifecycle of the first/last process.
+
+| Method | First checkpoint | Last checkpoint | Window(s) |
+|---|---|---|---:|
+| C-NBI | 08:20:12.311 | 09:18:25.612 | 3493.301 |
+| VRF-NBI | 09:18:27.823 | 09:21:08.204 | 160.382 |
+| NSGA-III | 09:21:10.391 | 09:37:56.198 | 1005.807 |
+| MOEA/D | 09:37:58.337 | 10:50:36.026 | 4357.690 |
+
+The complete scheduler/worker lifecycle lasted9029.539s (**2h30m29.539s**),
+08:20:06.779–10:50:36.317. Offline evaluation of27 cells/540 runs took299.964s.
+The additional read-only scientific artifact audit took359.386s. These wall
+times are separate from sums of concurrent per-process durations.
+
+## Descriptive indicators and native cardinality
+
+Each entry below is the median across27 structural-cell medians, each cell
+containing its five nested replicas. Allfive indicators were defined in all540
+runs. Per-replica paired rows, defined counts, quartiles, extrema and summaries
+by nx/m/delta/rho remain in the CSV/JSON artifacts. HV values include the two
+explicit precision-pending estimates described below.
+
+| Method | GD | IGD | HV | Spacing | Sparsity | Native ND |
+|---|---:|---:|---:|---:|---:|---:|
+| C-NBI | 0.026547514 | 0.052934202 | 0.80296565 | 0.033807677 | 0.045069794 | 261 |
+| VRF-NBI | 0.040074591 | 0.25777247 | 0.53231845 | 0.10106689 | 0.21544450 | 11 |
+| NSGA-III | 0.030765842 | 0.13402653 | 0.67186375 | 0.045358218 | 0.034897496 | 186 |
+| MOEA/D | 0.008867811 | 0.32391259 | 0.58553543 | 0.026897635 | 0.015603713 | 84 |
+
+These are descriptive summaries, not a statistical superiority claim. Native
+cardinality differs substantially. GD/IGD also include the fixed finite-reference
+approximation; the analytical continuous front is distinct from its5000-point
+sample. No reference, normalization, metric or method configuration was adapted
+after seeing these results. Equalization and inferential comparisons remain10E.
+
+| Method | Returned | Feasible | Unique | True full-m ND |
+|---|---:|---:|---:|---:|
+| C-NBI | 443097 | 427608 | 373113 | 156789 |
+| VRF-NBI | 2627 | 2617 | 2617 | 2011 |
+| NSGA-III | 39630 | 39630 | 39630 | 35335 |
+| MOEA/D | 39750 | 39750 | 39700 | 39671 |
+
+The unchanged strict sphere test excludes15489 C-NBI raw points in94 runs and
+10 VRF-NBI points in6 runs. Maximum raw norm excess was1.0962342145e-11 and
+1.7779111516e-11, respectively. Both EAs had zero raw sphere violations. These
+small boundary excesses remain in the raw artifacts and affect native counts;
+no external projection, repair or hidden feasibility tolerance was introduced.
+Raw points with any true normalized objective above1 were76914/594/1035/0 for
+C-NBI/VRF-NBI/NSGA-III/MOEA/D. Values outside[0,1] remain unchanged.
+
+## Computational cost and observed lifecycle windows
+
+Time columns use the same median-of-cell-medians convention. The additional
+lifecycle observations include startup/protocol checks/persistence and were
+verified in all540 tasks; the original primary worker timer is preserved.
+
+| Method | Worker(s) | Observed lifecycle(s) | Sum worker(s) | Maximum worker(s) | Peak before archive(MiB) |
+|---|---:|---:|---:|---:|---:|
+| C-NBI | 19.019930 | 21.189254 | 16066.997 | 1752.574 | 906.562 |
+| VRF-NBI | 3.606188 | 5.701545 | 675.714 | 16.669 | 123.227 |
+| NSGA-III | 14.882193 | 16.971099 | 5314.689 | 193.313 | 138.855 |
+| MOEA/D | 106.460395 | 109.394854 | 24591.786 | 596.706 | 123.766 |
+
+| Method | Original-RSM point evaluations | Model-vector point events | Additional work |
+|---|---:|---:|---|
+| C-NBI | 443097 | 96843149 | 502581993 scalar values;68980209 scalar gradients |
+| VRF-NBI | 2627 | 6061943 | 6056689 auxiliary factor-vector evaluations |
+| NSGA-III | 18701400 | 18780660 | Full final populations/export/validation counted separately |
+| MOEA/D | 18701400 | 18780900 | Full final populations/export/validation counted separately |
+
+For NBI methods, original-RSM point counts chiefly describe original-objective
+recomposition; they exclude the separately recorded scalar/factor work. These
+categories cannot be treated as equal computational effort. Both EAs used the
+predeclared ceiling and full-generation floor, with no overshoot or retuning.
+
+C-NBI screened all38100 eligible local subsets, selected16532, solved444331 NBI
+subproblems in459476 trials and14458055 iterations, and retained all1,980,000 MC
+anchor optimizations(B2000 across990 original responses). No global-only NBI
+substitution or early stopping was used. The largest worker runtime was the
+nx5_delta5_rho060/replica3 C-NBI task. Raw trials and selected/rejected subsets
+are preserved for every run. Run environment:Windows, Python3.12.15, NumPy2.5.4,
+SciPy1.18.1, pymoo0.6.2; plotting Matplotlib3.11.2. CI tests both operating systems.
+
+## Precision and migration limitations retained
+
+Of540 HV results,470 passed the frozen QMC precision criteria and68 used the
+exact small-set branch. Two VRF-NBI estimates remain PRECISION_PENDING, both
+nx5_delta5_rho025; no unresolved-zero estimate or fabricated zero occurred.
+
+| Replica | HV estimate | HV SE | Status |
+|---:|---:|---:|---|
+| 2 | 0.01030693634294957 | 0.00017806426035488158 | PRECISION_PENDING |
+| 3 | 0.018796282010848903 | 0.00013579301396345143 | PRECISION_PENDING |
+
+Maximum relative SE for QMC estimates was0.2302%/1.7276%/0.3776%/0.3269% by
+C-NBI/VRF-NBI/NSGA-III/MOEA/D. A small SE alone does not imply every precision
+criterion passed. The two flags remain pending; resolution/scrambles/reference
+were not changed to improve them. Exact roundoff/raw inclusion-exclusion values,
+SE and status remain in benchmark_hv_precision.csv and the primary records.
+
+Three VRF-NBI rotations reached500 iterations with varimax_converged=false:
+nx2_delta1_rho085 replicas4/5 and nx3_delta5_rho085 replica3. The final iterate
+is retained exactly as the pinned v1 dependency specifies. Neither the cap nor
+the tolerance was changed. All135 VRF runs remain admissible and completed;
+these convergence diagnostics are distinct from execution failures.
+
+## Artifact integrity, figures and final quality
+
+The read-only audit passed all540 runs and135 pairing blocks. It verifies raw
+float64 reload/recomposition, coefficient identity, MC ensembles/subsets,
+VRF policy/weights/full variance, EA records/budgets/populations, external true
+responses/normalization, all-m ND/cardinality and GD/IGD/density replay. It also
+verifies all1262 protected previous files. HV estimates were not rerun or
+recalibrated for this audit; original precision flags remain intact.
+
+Nine English scientific figure types are present as PNG600 and vector PDF,
+with consistent method colors, integer dimension/objective ticks and no grids.
+Representative PNGs and rendered PDFs were visually inspected; DPI metadata
+is599.9988, the PNG pixels-per-metre representation of600dpi. Source/data and
+all18 output digests are in figures/figure_provenance.json. The parallel plots
+show every native ND line for the three preselected replica1 cases.
+
+Final local quality:uv sync --locked passed(131 resolved/128 checked packages);
+**885 tests passed in133.59s,98.24% coverage**, above the96.15% gate. Ruff passed;
+strict mypy passed all79 source files. The five targeted audit tests also passed,
+including dtype/tampering/PA/clipping checks and preservation of original runtime
+observations after checkout. No historical test or numerical source was edited.
+
+The release inventory verifies all24 prior pilot executions and77 initial
+official attempts, including their two failures and source blobs at their own
+recorded commits. The inventory counts5848 files/1155355542 bytes across versions,
+5074 files/1103002068 bytes in the corrected campaign, excluding its own record,
+checksum files and the separate Git-index observation. Largest payload:41882448
+bytes. Direct versioning of the requested synthetic results follows the explicit
+Phase10D preserve/version/push instruction; no LFS or material-license change.
+
+Final-case checksums SHA-256:
+31f970ea06024c4e992d039c3c98f28d71f3b45f99694d131241ad49d6c5f537.
+All-version checksums SHA-256:
+77d4edab80c8c385d72070a1ef1111d215598733c9f9c2eae411b619b3d6f820.
+The Git-index byte observation is stored separately in staged_git_integrity.json
+to avoid a circular self-digest:5851 staged blobs/1156889826 bytes matched their
+working files exactly, with no omitted artifacts. Final Ubuntu/Windows CI evidence is attached to
+the exact latest PR head in [PR17 checks](https://github.com/LimaGV/C-NBI-v2/pull/17/checks);
+both operating-system checks are required before marking the PR ready for review.
+
+The final PR remains open and is not merged automatically. No Phase10E, new
+noise/CCDs/anchors/original-response RSM fits, retuning or reference modification.
+The specified VRF auxiliary factor fits remain permitted.
