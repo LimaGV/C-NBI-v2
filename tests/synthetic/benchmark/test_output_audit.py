@@ -3,11 +3,12 @@
 import copy
 import shutil
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import pytest
 
-from cnbi_v2.synthetic.benchmark.archive import read_json
+from cnbi_v2.synthetic.benchmark.archive import read_json, write_json
 from cnbi_v2.synthetic.benchmark.inputs import load_search_inputs
 from cnbi_v2.synthetic.pareto.serialization import load_evaluation_context
 
@@ -80,3 +81,28 @@ def test_external_audit_detects_clipping_without_mutating_raw(auditor, data, tmp
     with pytest.raises(ValueError, match="fixed analytical normalization"):
         auditor.check_external(tmp_path, NAME, data, x, context)
     np.testing.assert_array_equal(x, original)
+
+
+def test_original_lifecycle_observation_and_checkout_independence(auditor, tmp_path, monkeypatch):
+    import postprocess_phase10d as reporting
+    original_stat = Path.stat
+    timestamps = dict(log=(10., 10.), cp=(12., 17.), receipt=(19., 19.))
+    folders = dict(logs="log", campaign_checkpoints="cp", scheduler_receipts="receipt")
+
+    def observed_stat(path, *args, **kwargs):
+        if path.parent.name in folders:
+            birth, written = timestamps[folders[path.parent.name]]
+            return SimpleNamespace(st_birthtime=birth, st_mtime=written)
+        return original_stat(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "stat", observed_stat)
+    window = reporting.lifecycle_window(tmp_path, "toy", dict(attempt=1), 5.)
+    assert window["observed_lifecycle_seconds"] == 9.
+    assert window["lifecycle_status"] == "ORIGINAL_TIMESTAMP_ORDER_VERIFIED"
+    timestamps["cp"] = (12., 21.)
+    uncertain = reporting.lifecycle_window(tmp_path, "toy", dict(attempt=1), 5.)
+    assert uncertain["observed_lifecycle_seconds"] is None
+    assert uncertain["lifecycle_status"] == "UNRESOLVED_TIMESTAMP_ORDER"
+    write_json(tmp_path/"runtime_observations.json", dict(runs=dict(toy=window)))
+    # A later checkout changes filesystem times; the original observation remains.
+    assert reporting.lifecycle_window(tmp_path, "toy", dict(attempt=1), 5.) == window

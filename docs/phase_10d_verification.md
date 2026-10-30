@@ -97,7 +97,7 @@ gates passed. All12 X/Y pairs match the original sequential pilot bitwise;
 common counters and scientific statuses match. Counter schema2 adds separate
 kernel/gradient/point-event counters, rather than changing the objective or seed.
 
-| Method | Pilot runs | Summed kernel wall time(s) | Peak process memory(MiB) |
+| Method | Pilot runs | Summed kernel wall time(s) | Peak before archive(MiB) |
 |---|---:|---:|---:|
 | C-NBI | 3 | 76.61 | 212.75 |
 | VRF-NBI | 3 | 9.79 | 122.67 |
@@ -111,16 +111,33 @@ summed kernel wall time, conservative planning78908s. Those estimates are not
 parameter tuning or a guarantee; actual time includes process/input/validation
 and disclosed concurrency. Primary per-run timing is input_load_plus_search_seconds;
 the kernel timer includes validation and full-objective ND postprocessing.
+Search runtimes include the Python call-event profiling overhead used for the
+archived counters; they describe these instrumented implementations.
 The primary timer excludes process startup, pre-run protocol/hash verification
 and artifact serialization/disk persistence. Those exclusions are explicit;
 the separate campaign wall-clock observation includes scheduler/worker lifecycle
 and persistence, and offline evaluation time is reported separately.
+Additional per-task lifecycle windows use the original log's creation before
+process launch and the receipt's creation after child exit. They include startup,
+protocol checks, loading, optimization, validation, persistence and shutdown.
+The original wall-clock observations and event-order checks are preserved in
+runtime_observations.json before Git checkout can change filesystem timestamps.
+These are additional lifecycle diagnostics; the predeclared worker timer remains
+unchanged. Missing or contradictory event windows remain explicitly unavailable.
+The Windows peak-working-set query occurs before artifact persistence; memory
+allocated by later serialization is outside that observation window. It is not
+a measurement of the full worker lifecycle's peak or total host memory usage.
 
 Hardware:i5-12400F, six physical cores/twelve logical. At most six independent
 processes use masks1,4,16,64,256,1024; no sibling threads, one BLAS/OpenMP thread
 per search. Strict barriers run all135 C-NBI, then all135 VRF-NBI, then all135
 NSGA-III, finally all135 MOEA/D. Task seeds do not depend on lane/order.
 Timers measure the archived concurrent environment, not isolated idle-host time.
+The completed C-NBI case nx5_delta3_rho060/replica3 illustrates the NBI cost:
+241 of456 candidate subsets,6991 lattice subproblems,8342 trials and829505
+iterations. Its solver took1250.18s out of1267.44s kernel wall time; sampled
+anchor reoptimization took12.15s. This is an observed cost example, not a
+quality-based selection or an upper runtime bound for other instances.
 
 ## Method and evaluation contracts
 
@@ -177,4 +194,5 @@ Final gates still required:artifact checksums and staged-Git byte integrity;
 uv sync --locked; full pytest coverage; Ruff; strict mypy; exact-head CI on
 Ubuntu/Windows; nine English PNG600/vector-PDF scientific figure types without
 decorative grids. The final PR remains open and is not merged automatically.
-No Phase10E, new noise/CCDs/anchors/RSM fits, retuning or reference modification.
+No Phase10E, new noise/CCDs/anchors/original-response RSM fits, retuning or
+reference modification. The specified VRF auxiliary factor fits remain permitted.

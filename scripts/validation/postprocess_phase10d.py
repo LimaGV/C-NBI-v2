@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from execute_synthetic_benchmark import OUTPUT, run_id
 
-from cnbi_v2.synthetic.benchmark.archive import read_json, write_json
+from cnbi_v2.synthetic.benchmark.archive import file_hash, read_json, write_json
 from cnbi_v2.synthetic.benchmark.contracts import METHODS, PILOT_SCENARIOS
 
 matplotlib.use("Agg")
@@ -29,8 +29,36 @@ def export(path: Path, rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
+def lifecycle_window(directory: Path, name: str, checkpoint: dict, worker_seconds) -> dict:
+    """Original host observations only; archived JSON survives a later checkout."""
+    saved = directory/"runtime_observations.json"
+    if saved.exists():
+        return read_json(saved)["runs"][name]
+    paths = [directory/f"logs/{name}.log", directory/f"campaign_checkpoints/{name}.json",
+             directory/f"scheduler_receipts/{name}.json"]
+    if checkpoint.get("attempt") != 1 or not all(path.exists() for path in paths):
+        return dict(observed_lifecycle_seconds=None, lifecycle_status="UNAVAILABLE_ATTEMPT_WINDOW")
+    log, cp, receipt = (path.stat() for path in paths)
+    if not all(hasattr(info, "st_birthtime") for info in (log, cp, receipt)):
+        return dict(observed_lifecycle_seconds=None, lifecycle_status="UNAVAILABLE_CREATION_TIMES")
+    start, end = log.st_birthtime, receipt.st_birthtime
+    duration = end-start
+    valid = (log.st_birthtime <= cp.st_birthtime <= cp.st_mtime <= receipt.st_birthtime
+             and duration >= 0 and (worker_seconds is None or duration >= worker_seconds))
+    return dict(
+        observed_lifecycle_seconds=duration if valid else None,
+        lifecycle_status=("ORIGINAL_TIMESTAMP_ORDER_VERIFIED" if valid
+                          else "UNRESOLVED_TIMESTAMP_ORDER"),
+        log_creation_epoch=start, checkpoint_creation_epoch=cp.st_birthtime,
+        checkpoint_final_write_epoch=cp.st_mtime, receipt_creation_epoch=end,
+    )
+
+
 def tables(directory: Path) -> pd.DataFrame:
+    if (directory/"scheduler.lock").exists():
+        raise ValueError("wait for all search workers before offline postprocessing")
     metrics, counts, runtimes, precision, failures = [], [], [], [], []
+    observations = {}
     tasks = [task for task in read_json(directory/"seed_manifest.json")["tasks"]
              if task["stage"] == "official"]
     for task in tasks:
@@ -56,6 +84,7 @@ def tables(directory: Path) -> pd.DataFrame:
                            N_above_normalized_one=diagnostic.get("above_normalized_one")))
         times, counters = metadata.get("timings", {}), metadata.get("counters", {})
         total = metadata.get("input_load_plus_search_seconds")
+        observations[name] = lifecycle_window(directory, name, cp, total)
         kernel = times.get("total")
         runtime = dict(**base, state=cp["state"], end_to_end_seconds=total,
                        kernel_preparation_seconds=times.get("preparation"),
@@ -67,8 +96,11 @@ def tables(directory: Path) -> pd.DataFrame:
                        external_evaluation_seconds=external.get("external_evaluation_seconds"),
                        peak_process_memory_bytes=metadata.get("peak_process_memory_bytes"),
                        **counters)
+        runtime.update(observations[name])
         runtimes.append(runtime)
         precision.append(dict(**base, HV=values.get("HV"), HV_SE=values.get("HV_SE"),
+                              HV_roundoff_bound=values.get("HV_roundoff_bound"),
+                              HV_raw_inclusion_exclusion=values.get("HV_raw_inclusion_exclusion"),
                               HV_status=values.get("HV_status", "UNDEFINED_NO_EVALUATION"),
                               HV_method=values.get("HV_method"),
                               precision_protocol="Phase10C_frozen_four_scrambles_2^16_or_exact"))
@@ -80,6 +112,17 @@ def tables(directory: Path) -> pd.DataFrame:
     export(directory/"benchmark_runtime.csv", runtimes)
     export(directory/"benchmark_hv_precision.csv", precision)
     export(directory/"benchmark_failures.csv", failures)
+    observation_path = directory/"runtime_observations.json"
+    if not observation_path.exists() and all(
+            row["state"] in {"COMPLETED", "FAILED", "INCOMPLETE"} for row in metrics):
+        write_json(observation_path, dict(
+            definition="original log creation before process launch to receipt creation after exit",
+            source="original Windows filesystem timestamps captured before checkout",
+            includes="startup; protocol checks; loading; search; validation; persistence; exit",
+            comparison_role="additional lifecycle diagnostic; primary worker timer unchanged",
+            assumptions="fresh per-task log; one attempt; consistent original host wall clock",
+            unavailable_windows_are_not_estimated=True, runs=observations,
+        ))
     # Keep the evaluator's detailed primary table unchanged; this aligned table
     # includes PENDING/FAILED tasks as well, without manufacturing their metrics.
     export(directory/"benchmark_task_metrics.csv", metrics)
@@ -141,6 +184,9 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
     cells = frame.groupby(["scenario_id", "method", "nx", "m"])[numeric].median().reset_index()
 
     def save(fig, name):
+        if name not in {"run_outcomes", "representative_parallel_coordinates"}:
+            fig.suptitle("Each point: within-cell median (up to five defined nested replicas)",
+                         fontsize=8)
         fig.savefig(out/f"{name}.png", dpi=600, bbox_inches="tight")
         fig.savefig(out/f"{name}.pdf", bbox_inches="tight")
         plt.close(fig)
@@ -221,7 +267,7 @@ def figures(directory: Path, frame: pd.DataFrame) -> None:
         ax.set(title=sid.replace("_", " "), xlabel="Original objective index",
                ylabel="True normalized objective")
         ax.grid(False)
-    fig.suptitle("Preselected replica1 cases — all native ND lines", fontsize=9)
+    fig.suptitle("Preselected replica1 cases: all native ND lines", fontsize=9)
     fig.legend([Line2D([], [], color=COLORS[m]) for m in METHODS], METHODS,
                loc="outside lower center", ncol=4, frameon=False, fontsize=8)
     save(fig, "representative_parallel_coordinates")
@@ -235,3 +281,15 @@ if __name__ == "__main__":
     frame = tables(args.directory)
     if args.figures:
         figures(args.directory, frame)
+        outputs = sorted(p for p in (args.directory/"figures").iterdir()
+                         if p.suffix in {".pdf", ".png"})
+        if len(outputs) != 18:
+            raise ValueError("nine PDF/PNG figure pairs required")
+        write_json(args.directory/"figures/figure_provenance.json", dict(
+            script_sha256=file_hash(Path(__file__)), matplotlib_version=matplotlib.__version__,
+            native_metrics_sha256=file_hash(args.directory/"benchmark_native_metrics.csv"),
+            png_dpi=600, pdf_vector=True, decorative_grids=False, language="English",
+            aggregation="within-cell medians; five nested replicas, defined counts archived",
+            parallel_coordinates="preselected three replica1 cases; all native ND lines",
+            artifacts={p.name: file_hash(p) for p in outputs},
+        ))

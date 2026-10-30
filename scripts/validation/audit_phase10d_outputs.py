@@ -108,6 +108,9 @@ def check_vrf(data, diagnostic, arrays, status):
     same_float(diagnostic["scores"], z@weights, "VRF observed-data scores")
     require(arrays["factor_coefficients"].shape == (len(data.model.coefficients), k)
             and arrays["factor_residuals"].shape == (len(data.ccd), k), "auxiliary factor shapes")
+    require(all(arrays[key].dtype == np.float64 and np.isfinite(arrays[key]).all()
+                for key in ("factor_coefficients", "factor_residuals")),
+            "auxiliary factor arrays must preserve finite float64")
     if not diagnostic["varimax_converged"]:
         require(diagnostic["varimax_iterations"] == 500, "Varimax cap not disclosed")
 
@@ -131,6 +134,9 @@ def check_external(directory, name, data, x, context):
     record = read_json(directory/f"external_evaluation/{name}.json")
     metrics, diagnostics = record["metrics"], record["diagnostics"]
     with np.load(directory/f"external_evaluation/{name}.npz", allow_pickle=False) as arrays:
+        require(arrays["true_responses"].dtype == arrays["normalized_responses"].dtype
+                == np.float64,
+                "external response matrices must preserve float64")
         truth = evaluate(x, context.anchors) if len(x) else np.empty((0, data.m))
         same_float(arrays["true_responses"], truth, "true objective replay")
         normalized = context.normalization.transform(truth)

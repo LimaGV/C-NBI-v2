@@ -11,6 +11,19 @@ máximo6 processos em núcleos físicos distintos, um thread numérico por proce
 Seeds pertencem à identidade cenário/réplica/método, nunca à ordem ou ao núcleo.
 O piloto corrigido12/12 reproduziu X/Y bitwise contra o piloto sequencial.
 
+Para uma nova execução numérica independente, usar um checkout/worktree vazio
+e separado no commit8f9d60f89fc06814a78d1a1cd9c42ea3ac37fbee: nesse commit,
+campaign_v2/ ainda não existe. Após uv sync --locked, preparar com
+`uv run python scripts/validation/synthetic_benchmark_audit.py --legacy <repo_v1>`
+e validar a migração com
+`uv run python scripts/validation/validate_synthetic_benchmark_migration.py --legacy <repo_v1>`.
+Usar a v1 fixada em7bd4915; as rotinas leem blobs desse commit. Seguir então
+a sequência piloto/gate/campanha/avaliação do README do caso. A preparação
+recusa sobrescrever diretório existente. As ferramentas finais de relatório
+e auditoria, versionadas depois da fonte numérica, podem ser usadas separadamente;
+os hashes do protocolo verificam os mesmos arquivos numéricos. O pacote
+arquivado permite recarga e verificação sem executar uma segunda campanha.
+
 Checkpoint concluído somente recarrega após validar hashes. Não sobrescrever
 payload nem repetir execução para melhorar métricas. Recuperação operacional
 exige motivo e histórico; resultado científico retido não pode ser substituído.

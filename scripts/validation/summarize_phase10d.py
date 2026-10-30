@@ -1,6 +1,7 @@
 """Descriptive release tables, with structural cells as the aggregation unit."""
 
 import json
+from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
@@ -9,6 +10,38 @@ from execute_synthetic_benchmark import OUTPUT
 
 from cnbi_v2.synthetic.benchmark.archive import file_hash, read_json, write_json
 from cnbi_v2.synthetic.benchmark.contracts import METHODS
+
+
+def checkpoint_chronology():
+    """Capture original filesystem observations; reload them after Git checkout."""
+    target = OUTPUT/"execution_chronology.json"
+    if target.exists():
+        return read_json(target)
+    windows = []
+    for method in METHODS:
+        paths = list((OUTPUT/"campaign_checkpoints").glob(
+            "official__*__"+method.replace("/", "_")+".json"))
+        if len(paths) != 135:
+            raise ValueError("chronology requires all135 checkpoints for each method")
+        times = [path.stat() for path in paths]
+        if any(not hasattr(info, "st_birthtime") for info in times):
+            raise ValueError("original creation timestamps required for chronology capture")
+        start = min(info.st_birthtime for info in times)
+        end = max(info.st_mtime for info in times)
+        windows.append(dict(method=method, runs=135, first_checkpoint_epoch=start,
+                            last_checkpoint_epoch=end,
+                            first_checkpoint_utc=datetime.fromtimestamp(start, UTC).isoformat(),
+                            last_checkpoint_utc=datetime.fromtimestamp(end, UTC).isoformat(),
+                            checkpoint_activity_seconds=end-start))
+    if any(left["last_checkpoint_epoch"] > right["first_checkpoint_epoch"]
+           for left, right in zip(windows, windows[1:], strict=False)):
+        raise ValueError("observed method windows overlap or are out of order")
+    result = dict(status="PASS", method_order=list(METHODS), windows=windows,
+                  source="original Windows checkpoint creation/last-write times before checkout",
+                  definition="checkpoint activity windows, not complete process lifecycle timers",
+                  all_previous_checkpoints_finished_before_next_method_started=True)
+    write_json(target, result)
+    return result
 
 
 def summarize():
@@ -22,6 +55,7 @@ def summarize():
     runs = pd.read_csv(OUTPUT/"campaign_runs.csv")
     if len(native) != 540 or len(runs) != 540 or runs.state.isin(["PENDING", "RUNNING"]).any():
         raise ValueError("all540 official attempts and evaluations are required")
+    chronology = checkpoint_chronology()
     quantities = ("GD", "IGD", "HV", "Spacing", "Sparsity", "N_ND", "end_to_end_seconds",
                   "model_vector_point_events", "original_rsm_point_evaluations")
     result = {}
@@ -54,9 +88,24 @@ def summarize():
             hv_max_relative_se=float(ratio.max()) if ratio.notna().any() else None,
             hv_median_relative_se=float(ratio.median()) if ratio.notna().any() else None,
             undefined_per_run_metrics=per_run_undefined,
+            counter_totals={key: int(times[key].sum()) for key in (
+                "original_rsm_point_evaluations", "original_full_vector_points_computed",
+                "model_vector_point_events", "scalar_quadratic_values",
+                "scalar_quadratic_gradients", "factor_model_vector_evaluations",
+                "mc_anchor_solves", "nbi_subproblems", "nbi_attempts", "nbi_iterations",
+            ) if key in times},
             summed_worker_wall_seconds=float(times.end_to_end_seconds.sum()),
             summed_kernel_wall_seconds=float(times.kernel_total_seconds.sum()),
             summed_external_evaluation_seconds=float(times.external_evaluation_seconds.sum()),
+            minimum_per_run_worker_seconds=(float(times.end_to_end_seconds.min())
+                                            if times.end_to_end_seconds.notna().any() else None),
+            maximum_per_run_worker_seconds=(float(times.end_to_end_seconds.max())
+                                            if times.end_to_end_seconds.notna().any() else None),
+            lifecycle_observation_statuses=times.lifecycle_status.value_counts().to_dict(),
+            observed_lifecycle_seconds_median_of_cell_medians=(
+                float(times.groupby("scenario_id").observed_lifecycle_seconds.median().median())
+                if times.observed_lifecycle_seconds.notna().any() else None),
+            summed_observed_lifecycle_seconds=float(times.observed_lifecycle_seconds.sum()),
             maximum_process_memory_bytes=(
                 int(times.peak_process_memory_bytes.max())
                 if times.peak_process_memory_bytes.notna().any() else None),
@@ -75,7 +124,10 @@ def summarize():
         statistical_superiority_claim=False, equalized_cardinality=False,
         numerical_source=audit["frozen_scientific_source"], protocol_hash=audit["protocol_hash"],
         source_sha256=file_hash(Path(__file__)), methods=result,
+        observed_method_order_status=chronology["status"],
         varimax_nonconverged_runs=sum(r.get("varimax_nonconverged", False) for r in audit["runs"]),
+        cnbi_candidate_subsets=sum(r.get("candidate_subsets") or 0 for r in audit["runs"]),
+        cnbi_selected_subsets=sum(r.get("selected_subsets") or 0 for r in audit["runs"]),
     )
     write_json(OUTPUT/"release_summary.json", values)
     lines = ["# Descriptive benchmark release tables\n\n",
