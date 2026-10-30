@@ -1,8 +1,16 @@
-# Phase10D — final frozen protocol
+# Phase10D — archived initial campaign
 
-Status: INCOMPLETE until the required pilot gate and all official tasks have
-been executed and audited. Planned:27 structural cells ×5 frozen noisy RSM
-replicas ×4 methods =540 official runs. Final pilot:12 preselected tasks.
+Status: ARCHIVED_IMPLEMENTATION_ERROR / INCOMPLETE. Twelve pilot runs completed
+and passed the original gate. Of540 planned official runs,77 were attempted:
+75 COMPLETED and two FAILED. The retained failures identify VRF-NBI on
+nx2_delta1_rho085, replicas4 and5. All checkpoints, logs and numerical outputs
+are preserved. STOP_REQUESTED.json permanently identifies this stopped queue.
+
+The adapter raised at500 Varimax iterations, while factor-analyzer0.5.1/v1
+returns the last iterate. The corrected implementation preserves500 and1e-5
+and records nonconvergence explicitly. Its two boundary-case regressions match
+the legacy library. A separate, complete new campaign lives in ../campaign_v2/;
+these77 attempts are not mixed with it. Do not resume this archived scheduler.
 
 Scientific source77c8e12 and protocol
 93193c91852710591b7062ac64732f5cb403fa79af399bb168a3c1b33281e7df
@@ -23,7 +31,9 @@ and cannot replace a retained scientific outcome. The540-task manifest keeps
 failures and pending tasks. Native true full-objective ND cardinality is primary;
 no cardinality equalization, tuning, inference or Phase10E is performed.
 
-Commands from the repository root use the dedicated v2 uv environment:
+The command sequence below documents the original workflow. It must not be
+executed against this archived directory. The default now selects campaign_v2.
+The dedicated v2 uv environment is used:
 
 ```powershell
 uv run python scripts/validation/run_phase10d_campaign.py --pilot

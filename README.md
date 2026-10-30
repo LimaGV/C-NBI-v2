@@ -1,5 +1,16 @@
 # C-NBI v2
 
+## Fase10D — benchmark sintético em execução no PR17
+
+Fase10C integrada pelo PR16 em c0646768, com CI verde Ubuntu/Windows.
+Campanha de540 execuções sobre os mesmos135 RSMs congelados, na ordem
+C-NBI → VRF-NBI → NSGA-III → MOEA/D,135 por bloco. Piloto corrigido12/12
+aprovado e reprodução bitwise das decisões/respostas. Migração da v1 auditada,
+B=2000 e protocolo10C preservados. Estado oficial: **INCOMPLETE** até terminar
+a campanha, avaliação externa e auditoria. Ver [verificação10D](docs/phase_10d_verification.md)
+e [artefatos](results/phase_10_synthetic_benchmark/benchmark_20261029/campaign_v2/README.md).
+As seções abaixo descrevem as entregas históricas; não iniciam nova fase.
+
 ## Fase10C — referência Pareto analítica e avaliação sintética
 
 Fase10B integrada por merge no PR15,main47a0e4d,CI Ubuntu/Windows verde.

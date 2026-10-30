@@ -1,5 +1,14 @@
 # Roadmap
 
+## Fase10D — escopo atual autorizado
+
+PR16 integrado em c0646768, CI Ubuntu/Windows aprovada. Branch
+feature/10d-synthetic-algorithm-benchmark e PR17. Piloto corrigido12/12 PASS;
+540 execuções em andamento,135 por método, com barreiras na ordem C-NBI,
+VRF-NBI, NSGA-III e MOEA/D. Encerrar com avaliação externa, integridade,
+documentação e CI. Não iniciar10E, inferência, retuning ou equalização.
+Resultados e limites: docs/phase_10d_verification.md. Escopos abaixo históricos.
+
 ## Fase10C — escopo atual autorizado
 
 PR15 integrado em47a0e4d,CI main40919991675 verde Ubuntu/Windows.
