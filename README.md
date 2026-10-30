@@ -1,5 +1,18 @@
 # C-NBI v2
 
+## Fase 10E — análise sintética pareada
+
+Análise offline das 540 execuções oficiais, com 27 cenários estruturais e
+cinco réplicas aninhadas. O C-NBI apresenta vantagem nativa agregada em IGD/HV
+após Holm; essa vantagem não permanece na cardinalidade equalizada. O HV
+equalizado é inferior a NSGA-III e MOEA/D. Sensibilidades de precisão e
+viabilidade permanecem separadas dos resultados oficiais, que são imutáveis.
+[Relatório científico](docs/phase_10e_verification.md),
+[protocolo](docs/policies/synthetic_analysis_10e.json) e
+[artefatos](results/phase_10_synthetic_analysis/statistical_20261030/README.md).
+PR dependente da Fase 10D, sem integração automática de nenhum dos dois PRs.
+As seções seguintes preservam o histórico das entregas anteriores.
+
 ## Fase10D — campanha sintética concluída no PR17
 
 Fase10C integrada pelo PR16 em c0646768, com CI verde Ubuntu/Windows.

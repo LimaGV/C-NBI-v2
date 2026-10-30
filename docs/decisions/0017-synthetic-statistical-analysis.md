@@ -8,7 +8,7 @@
 - Commit/PR: recorded in the generation manifest and PR after validation
 - Version: 1
 - Supersedes: no previous scientific result; explicitly authorizes Phase10E
-- Validation gate: IN_PROGRESS
+- Validation gate: PASSED locally; final-head Ubuntu/Windows CI required before PR readiness
 
 ## Context and definition
 

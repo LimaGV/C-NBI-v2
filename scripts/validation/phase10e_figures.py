@@ -136,9 +136,20 @@ def figures():
             index=frame.index,
             columns=METHODS,
         ).reindex(scenarios)
-        cmap = plt.get_cmap("viridis_r").copy()
-        cmap.set_bad("#e5e5e5")
-        image = ax.imshow(ranks, aspect="auto", cmap=cmap, vmin=1, vmax=4)
+        cmap = plt.get_cmap("viridis_r").with_extremes(bad="#e5e5e5")
+        image = ax.pcolormesh(
+            np.arange(5) - 0.5,
+            np.arange(28) - 0.5,
+            ranks.to_numpy(),
+            cmap=cmap,
+            vmin=1,
+            vmax=4,
+            shading="flat",
+            edgecolors="none",
+            rasterized=False,
+        )
+        ax.set_ylim(26.5, -0.5)
+        ax.set_xlim(-0.5, 3.5)
         for i in range(27):
             for j in range(4):
                 value = ranks.iloc[i, j]
@@ -149,12 +160,14 @@ def figures():
                     ha="center",
                     va="center",
                     fontsize=7,
-                    color="white" if value < 2 else "black",
+                    color="black" if not np.isfinite(value) or value <= 2 else "white",
                 )
         ax.set_xticks(range(4), METHODS, rotation=30, ha="right")
         ax.set_title(f"{metric}: scenario ranks")
     axes[0].set_yticks(range(27), [s.replace("nx", "n").replace("delta", "d") for s in scenarios])
-    fig.colorbar(image, ax=axes[-1], fraction=0.025, pad=0.02, label="Rank (1 = best)")
+    colorbar = fig.colorbar(image, ax=axes[-1], fraction=0.025, pad=0.02, label="Rank (1 = best)")
+    if colorbar.solids is not None:
+        colorbar.solids.set_rasterized(False)
     finish(fig, "scenario_rankings")
 
     for metric, stem in (("IGD", "igd_native_equalized"), ("HV", "hv_native_equalized")):

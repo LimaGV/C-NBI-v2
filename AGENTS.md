@@ -1,5 +1,12 @@
 # Escopo atual — Fase10E, autorizado em2026-10-30
 
+Conclusão local: 904 testes, cobertura98.29%, Ruff/mypy83 PASS; auditoria540
+subconjuntos/135 blocos e7156 arquivos anteriores íntegros. Inferência nativa
+favorável ao C-NBI; vantagem IGD não permanece equalizada e HV equalizado é
+inferior a NSGA-III/MOEA/D. Dois HV suplementares passam em2^20, sem promover
+status oficial. Onze figuras PNG600/PDF vetorial sem grades. CI final no novo
+PR empilhado; nenhum merge nem nova execução de busca oficial.
+
 PR17 permanece aberto no SHA5c3829db, com CI Ubuntu/Windows aprovada; não integrar.
 Branch feature/10e-synthetic-statistical-analysis dependente da branch10D;
 novo PR empilhado, sem merge automático. Somente análise offline da campaign_v2:

@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — Phase10E paired synthetic statistical analysis
+
+- Scenario-level Friedman permutations, exact conditional Wilcoxon, joint
+  primary Holm correction, effect sizes and paired scenario-bootstrap intervals.
+- Deterministic minimum-cardinality FPS on real native ND points, preserving IDs.
+- Separate higher-resolution HV and explicit norm-feasibility sensitivity studies.
+- Full fixed-factor association, native/equalized, runtime and internal-cost tables;
+  eleven English PNG600/vector-PDF figure pairs, independent audit and hashes.
+- Report loss of C-NBI's native IGD advantage after equalization and inferior
+  equalized HV versus NSGA-III/MOEA/D. No official optimizer rerun or earlier-result edit.
+
 ## Unreleased — Phase10D frozen synthetic algorithm benchmark
 
 - Oracle-free adapters for complete C-NBI, full VRF-NBI, NSGA-III and MOEA/D.
