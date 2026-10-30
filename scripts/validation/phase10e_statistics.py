@@ -214,7 +214,9 @@ def factor_associations(contrasts, metadata):
                     if denominator > 0
                     else None,
                     residual_covariate_sum_squares=denominator,
-                    interpretation="descriptive_partial_association; geometry confounded; no p value",
+                    interpretation=(
+                        "descriptive_partial_association; geometry confounded; no p value"
+                    ),
                 )
             )
     return decomposition, associations, marginals, covariates
