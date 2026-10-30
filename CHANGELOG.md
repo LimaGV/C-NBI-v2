@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — Phase10E independent pairwise cardinality correction
+
+- Replace the current joint-four-method equalization with three independent
+  C-NBI pairs, executed in order VRF-NBI, NSGA-III, MOEA/D; pair-specific K only.
+- Preserve all earlier artifacts/source at784650a; new separate paired archive.
+- Export810 real subsets/405 paired blocks, pair-specific HV validity, six-test
+  quality Holm families, updated factor summaries and six vector figure pairs.
+- C-NBI retains equalized IGD/HV advantages against NSGA-III and MOEA/D under
+  this revised protocol; no significant differences versus VRF-NBI. No new search.
+
 ## Unreleased — Phase10E paired synthetic statistical analysis
 
 - Scenario-level Friedman permutations, exact conditional Wilcoxon, joint

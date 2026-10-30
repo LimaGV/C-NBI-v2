@@ -7,7 +7,7 @@
 - Branch: feature/10e-synthetic-statistical-analysis; existing stacked PR18
 - Supersedes: only joint four-method equalization as the current Phase10E analysis
 - Original record: commit784650a and statistical_20261030 remain byte-identical
-- Validation gate: IN_PROGRESS
+- Validation gate: PASSED locally; exact-head Ubuntu/Windows CI required before PR readiness
 
 ## Authorization and definition
 
@@ -58,3 +58,8 @@ third methods, real point membership and exact FPS replay. Verify all inputs,
 run full pytest/coverage, Ruff, mypy and exact-head Ubuntu/Windows CI. Keep the
 existing PR18 in draft until checks pass. Do not merge PR17 or PR18. Passing
 validation does not automatically accept this experimental methodological record.
+
+Local validation:910 tests,98.30% coverage, Ruff and mypy84 passed. Independent
+audit:810 subsets,405 blocks,268 fresh metric replays and542 identical-set cache
+checks. All7795 previous files are unchanged. CI evidence is attached to the
+final stacked PR18 head; neither PR17 nor PR18 is merged automatically.

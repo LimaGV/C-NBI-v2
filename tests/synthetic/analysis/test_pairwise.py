@@ -64,3 +64,73 @@ def test_pair_specific_complete_replicas_and_HV_validity(monkeypatch):
         pair_medians(frame.iloc[:-1], "HV", "NSGA-III")
     with pytest.raises(ValueError):
         pair_medians(frame, "HV", "VRF-NBI")
+
+
+def test_pairwise_archive_has_independent_counts_and_six_quality_tests(monkeypatch):
+    from pathlib import Path
+
+    import pandas as pd
+
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[3] / "scripts/validation"))
+    from phase10e_pairwise_inputs import INPUT, OUTPUT, read
+
+    native = pd.read_csv(INPUT / "benchmark_native_metrics.csv").set_index(
+        ["scenario_id", "replica_id", "method"]
+    )
+    diag = pd.read_csv(OUTPUT / "selection_diagnostics.csv")
+    assert len(diag) == 810
+    for row in diag.itertuples():
+        expected = min(
+            native.loc[row.scenario_id, row.replica_id, "C-NBI"].nondominated_count,
+            native.loc[row.scenario_id, row.replica_id, row.comparator].nondominated_count,
+        )
+        assert row.K == expected
+    example = diag[
+        (diag.scenario_id == "nx2_delta1_rho025")
+        & (diag.replica_id == 1)
+        & (diag.method == "C-NBI")
+    ].set_index("comparator")
+    assert list(example.loc[["VRF-NBI", "NSGA-III", "MOEA/D"], "K"]) == [9, 32, 35]
+    tests = pd.read_csv(OUTPUT / "statistical_tests.csv")
+    for variant in ("native", "equalized"):
+        quality = tests[(tests.variant == variant) & tests.metric.isin(["IGD", "HV"])]
+        assert len(quality) == 6 and quality.family_size.eq(6).all()
+        assert quality[quality.metric == "IGD"].n_scenarios.eq(27).all()
+        hv = quality[quality.metric == "HV"].set_index("comparator")
+        assert hv.loc["VRF-NBI", "n_scenarios"] == 26
+        assert (hv.loc[["NSGA-III", "MOEA/D"], "n_scenarios"] == 27).all()
+    assert not tests.test.str.contains("Friedman").any()
+    assert read(OUTPUT / "audit_report.json")["sets"] == 810
+
+
+def test_pairwise_protected_inputs_and_complete_output_hashes(monkeypatch):
+    from pathlib import Path
+
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[3] / "scripts/validation"))
+    from phase10e_pairwise_finalize import verify_outputs
+    from phase10e_pairwise_inputs import OUTPUT, read
+
+    assert read(OUTPUT / "generation_manifest.json")["optimization_executions"] == 0
+    verify_outputs()
+
+
+def test_six_pairwise_figures_have_no_grids_or_joint_ranking(monkeypatch):
+    from pathlib import Path
+
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[3] / "scripts/validation"))
+    import matplotlib.pyplot as plt
+    import phase10e_pairwise_figures as module
+
+    stems = []
+
+    def check(fig, stem):
+        stems.append(stem)
+        for ax in fig.axes:
+            assert not any(g.get_visible() for g in ax.get_xgridlines() + ax.get_ygridlines())
+        plt.close(fig)
+
+    monkeypatch.setattr(module, "finish", check)
+    monkeypatch.setattr(module, "write", lambda *args: None)
+    module.figures()
+    assert len(stems) == len(set(stems)) == 6
+    assert not any("rank" in stem for stem in stems)

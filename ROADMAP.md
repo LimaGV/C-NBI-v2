@@ -1,6 +1,14 @@
 # Roadmap
 
-## Fase 10E — análise offline autorizada em 2026-10-30
+## Fase 10E — correção pareada autorizada em 2026-10-30
+
+Equalização atual em três pares C-NBI/comparador, K independente por bloco,
+na ordem VRF-NBI, NSGA-III, MOEA/D. Resultados globais anteriores são preservados
+e substituídos somente para a conclusão equalizada vigente. Ver MDR0018,
+docs/phase_10e_pairwise_verification.md e pairwise_20261030. Sem novas buscas,
+ajustes, referências ou merge. PR18 continua dependente do PR17 aberto.
+
+## Histórico da Fase 10E inicial — análise offline autorizada em 2026-10-30
 
 Branch feature/10e-synthetic-statistical-analysis empilhada sobre a branch do PR17,
 que permanece aberto e não é integrado automaticamente. Campanha oficial intacta.

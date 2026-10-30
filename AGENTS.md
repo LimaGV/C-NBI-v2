@@ -1,5 +1,10 @@
 # Escopo atual — correção pareada da Fase 10E, autorizada em 2026-10-30
 
+Validação local:910 testes/98.30%, Ruff e mypy84 PASS; auditoria810 conjuntos/
+405 blocos,7795 arquivos anteriores intactos. K medianos12/153/84 nos três
+pares; vantagem IGD/HV C-NBI persiste contra NSGA-III/MOEA/D, não significativa
+contra VRF-NBI, com Holm6. CI final e estado do PR18 registrados no head atual.
+
 O usuário substituiu a equalização conjunta por três pares independentes, nesta
 ordem: C-NBI/VRF-NBI, C-NBI/NSGA-III, C-NBI/MOEA/D. K é o menor tamanho apenas
 do par em cada cenário/réplica; nenhum terceiro método entra. C-NBI pode ter
