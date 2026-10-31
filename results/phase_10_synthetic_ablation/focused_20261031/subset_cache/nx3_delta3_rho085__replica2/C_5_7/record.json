@@ -1,0 +1,210 @@
+{
+  "weights": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "subproblems": [
+    {
+      "weight_id": 0,
+      "accepted": true,
+      "attempts": 1
+    },
+    {
+      "weight_id": 1,
+      "accepted": true,
+      "attempts": 1
+    },
+    {
+      "weight_id": 2,
+      "accepted": true,
+      "attempts": 1
+    },
+    {
+      "weight_id": 3,
+      "accepted": true,
+      "attempts": 1
+    },
+    {
+      "weight_id": 4,
+      "accepted": true,
+      "attempts": 1
+    },
+    {
+      "weight_id": 5,
+      "accepted": true,
+      "attempts": 1
+    }
+  ],
+  "trials": [
+    {
+      "weight_id": 0,
+      "point": [
+        -1.232728730578642,
+        0.8543038095829898,
+        0.36976240240968766
+      ],
+      "t": 0.0,
+      "sphere_margin": 0.4422477682483663,
+      "eq_norm": 0.0,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 1,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.232728730578642,
+          0.8543038095829898,
+          0.36976240240968766
+        ],
+        "t": 0.0,
+        "kind": "CONVEX_COMBINATION"
+      }
+    },
+    {
+      "weight_id": 1,
+      "point": [
+        -1.303317384565291,
+        0.8291157590528325,
+        0.3498943403225676
+      ],
+      "t": 0.21748423153182325,
+      "sphere_margin": 0.3199319285365596,
+      "eq_norm": 2.8795898057745654e-14,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 8,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.232728730578642,
+          0.8543038095829898,
+          0.36976240240968766
+        ],
+        "t": 0.0,
+        "kind": "NEAREST_WEIGHT:0"
+      }
+    },
+    {
+      "weight_id": 2,
+      "point": [
+        -1.3716926500801732,
+        0.8069221403941825,
+        0.33370928981720643
+      ],
+      "t": 0.3180130138521808,
+      "sphere_margin": 0.1844011676935886,
+      "eq_norm": 6.88002440411164e-15,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 9,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.303317384565291,
+          0.8291157590528325,
+          0.3498943403225676
+        ],
+        "t": 0.21748423153182325,
+        "kind": "NEAREST_WEIGHT:1"
+      }
+    },
+    {
+      "weight_id": 3,
+      "point": [
+        -1.4378198245699227,
+        0.7872684790519797,
+        0.32002790877012105
+      ],
+      "t": 0.3188261984627445,
+      "sphere_margin": 0.038891756319312076,
+      "eq_norm": 4.1372541452727635e-14,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 9,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.3716926500801732,
+          0.8069221403941825,
+          0.33370928981720643
+        ],
+        "t": 0.3180130138521808,
+        "kind": "NEAREST_WEIGHT:2"
+      }
+    },
+    {
+      "weight_id": 4,
+      "point": [
+        -1.4835913284165652,
+        0.7354696595314493,
+        0.29405488416630515
+      ],
+      "t": 0.22102408338360655,
+      "sphere_margin": -3.9968028886505635e-15,
+      "eq_norm": 2.8175887723868837e-14,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 7,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.4378198245699227,
+          0.7872684790519797,
+          0.32002790877012105
+        ],
+        "t": 0.3188261984627445,
+        "kind": "NEAREST_WEIGHT:3"
+      }
+    },
+    {
+      "weight_id": 5,
+      "point": [
+        -1.5198764874051418,
+        0.6690216408783829,
+        0.2661064294893927
+      ],
+      "t": 0.0,
+      "sphere_margin": 4.440892098500626e-16,
+      "eq_norm": 0.0,
+      "solver_success": true,
+      "accepted": true,
+      "iterations": 1,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "start": {
+        "point": [
+          -1.5198764874051418,
+          0.6690216408783829,
+          0.2661064294893927
+        ],
+        "t": 0.0,
+        "kind": "CONVEX_COMBINATION"
+      }
+    }
+  ],
+  "iterations": 35,
+  "attempts": 6,
+  "counters": {
+    "quadratic_response_vector_calls": 56,
+    "scalar_quadratic_values": 112,
+    "slsqp_solves": 6,
+    "sphere_constraint_calls": 54,
+    "nbi_equality_jacobians": 35,
+    "scalar_quadratic_gradients": 70,
+    "sphere_constraint_jacobians": 35
+  },
+  "geometry_seconds": 0.0008806998375803232,
+  "solver_seconds": 0.009378800168633461,
+  "elapsed_seconds": 0.010351399891078472,
+  "source": "NEW_A2",
+  "solver_seconds_estimate": 0.009378800168633461
+}
