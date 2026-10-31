@@ -645,7 +645,7 @@ def figures(summary):
     for ax, metric in zip(axes, ["IGD", "HV"], strict=True):
         ax.bar(focus.index, focus[metric + "_relative_A0_pct"], color=colors)
         ax.axhline(0, color="black", linewidth=0.6)
-        ax.set(ylabel=metric + " change vs A0 (%)", title="Focused quality — " + metric)
+        ax.set(ylabel=metric + " change vs A0 (%)", title="Focused quality â€” " + metric)
     save(fig, "quality_by_variant")
     fig, axes = plt.subplots(1, 2, figsize=(7, 2.9), layout="constrained")
     for ax, ids, title in zip(
@@ -693,7 +693,7 @@ def finalize_outputs():
     for archive_name, current, functions in (
         (
             "ablation.py",
-            ROOT / "src/cnbi_v2/synthetic/ablation.py",
+            ROOT / "src/cnbi_v2/synthetic/ablation/core.py",
             ("random_subsets", "subset_counts", "solve_subset"),
         ),
         ("run_phase10f_focused_ablation.py", Path(__file__), ("prepare", "search", "quality")),
@@ -819,7 +819,7 @@ def finalize_outputs():
             p.relative_to(ROOT).as_posix(): file_hash(p)
             for p in (
                 Path(__file__),
-                ROOT / "src/cnbi_v2/synthetic/ablation.py",
+                ROOT / "src/cnbi_v2/synthetic/ablation/core.py",
                 ROOT / "tests/synthetic/test_focused_ablation.py",
                 ROOT / "uv.lock",
             )
@@ -879,7 +879,7 @@ def main():
         return
     archive = OUT / "execution_source"
     archive.mkdir(exist_ok=True)
-    for source in (Path(__file__), ROOT / "src/cnbi_v2/synthetic/ablation.py"):
+    for source in (Path(__file__), ROOT / "src/cnbi_v2/synthetic/ablation/core.py"):
         target = archive / source.name
         if not target.exists():
             target.write_bytes(source.read_bytes())
@@ -907,7 +907,7 @@ def main():
             p.relative_to(ROOT).as_posix(): file_hash(p)
             for p in (
                 Path(__file__),
-                ROOT / "src/cnbi_v2/synthetic/ablation.py",
+                ROOT / "src/cnbi_v2/synthetic/ablation/core.py",
                 ROOT / "tests/synthetic/test_focused_ablation.py",
                 ROOT / "uv.lock",
             )
